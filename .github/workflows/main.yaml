@@ -1,0 +1,38 @@
+name: Extension Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Set up environment
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl jq unzip
+
+      - name: Fetch extension content
+        run: |
+          chmod +x .github/scripts/pull.sh
+          .github/scripts/pull.sh
+
+      - name: Commit data
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "GitHub Actions [Bot]"
+          git add -A
+          if git diff-index --quiet HEAD --; then
+              exit 0 # nothing to commit
+          else
+              git commit -m "Automated sync ($(date --iso-8601=seconds))" --quiet
+              git push --quiet
+          fi
