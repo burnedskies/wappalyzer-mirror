@@ -171,6 +171,9 @@
     "description": "JTL Shop is an ecommerce product created by JTL Software company.",
     "dom": "input[name*='JTLSHOP']",
     "icon": "JTL Shop.svg",
+    "js": {
+      "JtlHelpers": ""
+    },
     "website": "https://www.jtl-software.de/online-shopsystem"
   },
   "JUST": {
@@ -191,7 +194,7 @@
       14
     ],
     "description": "JW Player is a online video player with video engagement analytics, custom video player skins, and live video streaming capability.",
-    "dom": "div[data-video-provider*=jwplayer]",
+    "dom": "div[data-video-provider*=jwplayer], div[class^='jwplayer']",
     "icon": "JW Player.svg",
     "js": {
       "jwDefaults": "",
@@ -206,10 +209,7 @@
       "freemium"
     ],
     "saas": true,
-    "scriptSrc": [
-      "\\.jwplayer\\.com",
-      "\\.jwpcdn\\.com"
-    ],
+    "scriptSrc": "\\.(?:jwplayer|jwpcdn)\\.com",
     "website": "https://www.jwplayer.com",
     "xhr": "\\.jwpsrv\\.com"
   },
@@ -284,6 +284,20 @@
     ],
     "saas": true,
     "website": "https://www.jalios.com"
+  },
+  "JamFeed": {
+    "cats": [
+      1
+    ],
+    "description": "JamFeed is a web-based platform that allows users to create automated music websites.",
+    "icon": "JamFeed.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.jamfeed\\.com",
+    "website": "https://www.jamfeed.com"
   },
   "Jameda": {
     "cats": [

@@ -55,6 +55,21 @@
     "scriptSrc": "\\.net-results\\.io/",
     "website": "https://www.net-results.com"
   },
+  "NOCNOK": {
+    "cats": [
+      53
+    ],
+    "description": "NOCNOK is a CRM for real estate agencies that uses AI to automate lead responses, reduce response time, and support sales workflow management.",
+    "icon": "NOCNOK.svg",
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "static\\.nocnok\\.com",
+    "website": "https://www.nocnok.com"
+  },
   "NProgress": {
     "cats": [
       59
@@ -374,6 +389,21 @@
     "scriptSrc": "\\.naturalint\\.com/",
     "website": "https://www.naturalint.com/"
   },
+  "Naukri": {
+    "cats": [
+      101
+    ],
+    "description": "Naukri is a job board that connects employers and job seekers by listing employment opportunities across industries and locations.",
+    "icon": "Naukri.svg",
+    "js": {
+      "naukriWidget": ""
+    },
+    "meta": {
+      "author": "www\\.naukri\\.com"
+    },
+    "saas": true,
+    "website": "https://www.naukri.com"
+  },
   "Navegg": {
     "cats": [
       10
@@ -586,6 +616,19 @@
     "saas": true,
     "scriptSrc": "trackings\\.nemu\\.com\\.br",
     "website": "https://usenemu.com"
+  },
+  "NeoAsist": {
+    "cats": [
+      52
+    ],
+    "description": "NeoAssist is an omnichannel customer service platform from Brazil focused on improving brand visibility across search engines and AI-driven platforms such as Google and GPT-based systems.",
+    "icon": "NeoAssist.svg",
+    "js": {
+      "NeoAssistTag": ""
+    },
+    "saas": true,
+    "scriptSrc": "\\.neoassist\\.com",
+    "website": "https://neoassist.com"
   },
   "Neon CRM": {
     "cats": [
@@ -1118,7 +1161,6 @@
       "__NEXT_DATA__": "",
       "next.version": "^(.+)$\\;version:\\1"
     },
-    "scripts": "\\.next\\.react",
     "website": "https://nextjs.org"
   },
   "NextAuth.js": {
@@ -1265,6 +1307,16 @@
     "saas": true,
     "scriptSrc": "\\.nexxt\\.com/",
     "website": "https://www.nexxt.com"
+  },
+  "Nexxtmove": {
+    "cats": [
+      32
+    ],
+    "description": "Nexxtmove is a marketing platform for real estate agencies that provides targeted, personalized communication tools designed to reach the appropriate audience and support improved campaign outcomes.",
+    "icon": "Nexxtmove.svg",
+    "saas": true,
+    "scripts": "nexxtmove-313510\\.web\\.app",
+    "website": "https://nexxtmove.nl"
   },
   "Ngage Live Chat": {
     "cats": [
@@ -1484,6 +1536,17 @@
     "requires": "WordPress",
     "scriptSrc": "/wp-content/plugins/ninja-forms/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
     "website": "https://ninjaforms.com"
+  },
+  "NinjaCat": {
+    "cats": [
+      10,
+      32
+    ],
+    "description": "NinjaCat is a marketing analytics platform that aggregates, analyzes, and reports performance data across multiple marketing channels.",
+    "icon": "NinjaCat.svg",
+    "saas": true,
+    "scriptSrc": "scripts\\.ninjacat\\.io",
+    "website": "https://www.ninjacat.io"
   },
   "NitroPack": {
     "cats": [
@@ -1980,6 +2043,41 @@
     "saas": true,
     "scriptSrc": "api\\.novabusca\\.com\\.br",
     "website": "https://novabusca.com.br"
+  },
+  "NovaDB": {
+    "cats": [
+      1
+    ],
+    "description": "NovaDB is a unified content cloud that combines headless CMS and product information management to create, manage, and deliver structured digital content.",
+    "icon": "NovaDB.svg",
+    "meta": {
+      "generator": "^NovaDB$"
+    },
+    "oss": true,
+    "pricing": [
+      "high",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.novadb.com"
+  },
+  "Novaresa": {
+    "cats": [
+      9
+    ],
+    "description": "Novaresa is a cloud-based platform designed to manage, operate, and promote hosting services through centralized tools for administration, service delivery, and customer engagement.",
+    "icon": "Novaresa.svg",
+    "js": {
+      "jquery_novaresa.Animation": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "www\\.novaresa\\.net/",
+    "website": "https://www.novaresa.fr"
   },
   "Novel": {
     "cats": [

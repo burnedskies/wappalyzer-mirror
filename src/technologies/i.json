@@ -1089,6 +1089,19 @@
     "scriptSrc": "cdn\\.useinfluence\\.co/",
     "website": "https://useinfluence.co"
   },
+  "Influenster": {
+    "cats": [
+      90
+    ],
+    "description": "Influenster is a product reviews widget that displays feedback and ratings from shoppers on websites.",
+    "icon": "Influenster.svg",
+    "js": {
+      "showInfluensterWidget": ""
+    },
+    "saas": true,
+    "scriptSrc": "widget\\.influenster\\.com",
+    "website": "https://www.influenster.com"
+  },
   "Influx CMS": {
     "cats": [
       1,
@@ -1176,6 +1189,20 @@
     "saas": true,
     "scripts": "connect\\.informamarkets\\.com",
     "website": "https://www.informamarkets.com"
+  },
+  "Informizely": {
+    "cats": [
+      73
+    ],
+    "description": "Informizely is a customer feedback platform used to run surveys on websites and applications to understand user behavior and generate actionable insights.",
+    "dom": "script[id*='_informizely_script_tag']",
+    "icon": "Informizely.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.informizely.com"
   },
   "Infoset": {
     "cats": [
@@ -1270,6 +1297,21 @@
     "saas": true,
     "website": "https://www.innovid.com/solutions/advertising-measurement"
   },
+  "Innovorder": {
+    "cats": [
+      6
+    ],
+    "description": "Innovorder is a point-of-sale solution for restaurateurs that uses AI to support order management and in-store operations.",
+    "dom": "link[href*='static.innovorder.fr/']",
+    "icon": "Innovorder.svg",
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.innovorder.com"
+  },
   "Inplayer": {
     "cats": [
       14
@@ -1342,6 +1384,21 @@
     "saas": true,
     "scriptSrc": "app\\.insignal\\.co/",
     "website": "https://insignal.co/"
+  },
+  "Inso": {
+    "cats": [
+      21
+    ],
+    "description": "Inso is an application for kindergartens and nurseries that facilitates communication with parents and supports the automated preparation of billing information.",
+    "headers": {
+      "Access-Control-Allow-Origin": "app\\.inso\\.pl"
+    },
+    "icon": "Inso.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://inso.pl"
   },
   "Inspectlet": {
     "cats": [
@@ -1709,6 +1766,21 @@
     "scriptSrc": "embed\\.interactivecalculator\\.com/",
     "website": "https://www.interactivecalculator.com"
   },
+  "Interago": {
+    "cats": [
+      32
+    ],
+    "description": "Interago is a Brazilian platform that aggregates modern digital tools to support and streamline online business operations.",
+    "icon": "Interago.svg",
+    "pricing": [
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scripts": "www\\.interago\\.com\\.br",
+    "website": "https://www.interago.com.br"
+  },
   "Interakt": {
     "cats": [
       52
@@ -1800,6 +1872,27 @@
     "saas": true,
     "scriptSrc": "(?:is-bin|INTERSHOP)",
     "website": "https://intershop.com"
+  },
+  "Intervo": {
+    "cats": [
+      47
+    ],
+    "description": "Intervo is a platform for building and managing enterprise-grade voice agents at scale, enabling reliable voice automation, system integration, and deployment across large organizations.",
+    "icon": "Intervo.svg",
+    "js": {
+      "IntervoWidget": ""
+    },
+    "oss": true,
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring",
+      "payg",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "widget\\.intervo\\.ai",
+    "website": "https://intervo.ai"
   },
   "Intiaro": {
     "cats": [
@@ -2331,6 +2424,20 @@
     "saas": true,
     "scriptSrc": "\\.idxhome\\.com/",
     "website": "https://www.ihomefinder.com"
+  },
+  "iMagaza": {
+    "cats": [
+      6
+    ],
+    "description": "iMagaza is an ecommerce website system from Turkey.",
+    "icon": "iMagaza.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "connect\\.imagaza\\.net/",
+    "website": "https://imagaza.net"
   },
   "iPaper": {
     "cats": [

@@ -96,12 +96,13 @@
     },
     "cpe": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
     "description": "PHP is a general-purpose scripting language used for web development.",
-    "dom": "form[action*='login_process.php']",
+    "dom": "form[action*='login_process.php'], form[action*='assets/mail.php']",
     "headers": {
       "Server": "php/?([\\d.]+)?\\;version:\\1",
       "X-Powered-By": "^PHP/?([\\d.]+)\\;version:\\1"
     },
     "icon": "PHP.svg",
+    "scripts": "/admin/index\\.php",
     "url": "\\.php(?:$|\\?)",
     "website": "https://php.net"
   },
@@ -509,6 +510,21 @@
     "scriptSrc": "cdn\\.pagefly\\.io",
     "website": "https://pagefly.io"
   },
+  "PageNudge": {
+    "cats": [
+      76
+    ],
+    "description": "PageNudge is a website personalization tool that displays contextual messages and prompts to visitors based on behavior or page content, helping tailor interactions and guide user actions across a site.",
+    "icon": "PageNudge.svg",
+    "pricing": [
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "embed\\.pagenudge\\.com/",
+    "website": "https://pagenudge.com"
+  },
   "PageUp": {
     "cats": [
       101
@@ -631,6 +647,16 @@
     },
     "website": "https://www.pagevamp.com"
   },
+  "PagineGialle": {
+    "cats": [
+      1
+    ],
+    "description": "PagineGialle is a business website builder by ItaliaOnline that enables Italian businesses to create and manage professional websites and establish an online presence.",
+    "icon": "PagineGialle.svg",
+    "saas": true,
+    "scriptSrc": "ssc\\.paginegialle\\.it/",
+    "website": "https://www.paginegialle.it"
+  },
   "Paidy": {
     "cats": [
       41,
@@ -688,6 +714,23 @@
     "saas": true,
     "scriptSrc": "\\.getpaloma\\.com/",
     "website": "https://www.getpaloma.com"
+  },
+  "Pancake": {
+    "cats": [
+      52
+    ],
+    "description": "Pancake is an omnichannel business messaging platform that centralizes customer communications across multiple channels into a single system for managing conversations, routing messages, and maintaining consistent engagement.",
+    "icon": "Pancake.svg",
+    "js": {
+      "PancakeAnalytics": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "analytics\\.pancake\\.vn",
+    "website": "https://pancake.vn"
   },
   "Panda CSS": {
     "cats": [
@@ -1033,6 +1076,22 @@
     "scripts": "app\\.partnerdriven\\.com",
     "website": "https://partnerdriven.com"
   },
+  "Partner Fleet": {
+    "cats": [
+      51
+    ],
+    "description": "Partner Fleet is a platform that enables organizations to build app marketplaces within their websites or products in a short timeframe without requiring engineering resources.",
+    "icon": "PartnerFleet.svg",
+    "js": {
+      "promoted_partners": "",
+      "related_partners": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.partnerfleet.io"
+  },
   "PartnerStack": {
     "cats": [
       71
@@ -1219,6 +1278,16 @@
     "saas": true,
     "scriptSrc": "next-api\\.patientprism\\.com",
     "website": "https://www.patientprism.com"
+  },
+  "PatientLoop": {
+    "cats": [
+      10
+    ],
+    "description": "PatientLoop is a software platform that helps organizations measure, demonstrate, and report the return on investment of their services to clients, supporting scalable performance tracking and impact analysis.",
+    "icon": "PatientLoop.svg",
+    "saas": true,
+    "scriptSrc": "cdn\\.patientloop\\.com/",
+    "website": "https://www.patientloop.com"
   },
   "PatientSites": {
     "cats": [
@@ -1493,6 +1562,19 @@
     ],
     "website": "https://app.paywhirl.com/"
   },
+  "Paycove": {
+    "cats": [
+      41
+    ],
+    "description": "Paycove is a revenue operations platform that unifies payments, billing, and reporting in a single system to streamline financial workflows and provide centralized visibility into transactions.",
+    "icon": "Paycove.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scripts": "paycove\\.io/js/",
+    "website": "https://www.paycove.io"
+  },
   "Paydock": {
     "cats": [
       41
@@ -1701,6 +1783,24 @@
     "saas": true,
     "scriptSrc": "checkout-sdk\\.payva\\.com",
     "website": "https://www.payva.com"
+  },
+  "Peachie": {
+    "cats": [
+      21
+    ],
+    "description": "Peachie is an all-in-one CMS for creating and selling online courses while managing website content and related digital operations.",
+    "dom": "iframe[src*='.mypeachie.com']",
+    "headers": {
+      "Access-Control-Allow-Origin": "go\\.mypeachie\\.com"
+    },
+    "icon": "Peachie.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://peachie.io"
   },
   "Peachs": {
     "cats": [
@@ -2289,6 +2389,22 @@
     "scriptSrc": "static\\.personizely\\.net/",
     "website": "https://www.personizely.net"
   },
+  "Personyze": {
+    "cats": [
+      76
+    ],
+    "description": "Personyze is a real-time visitor segmentation and website personalization platform offering omnichannel customer service capabilities, developed in Brazil.",
+    "icon": "Personyze.svg",
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "counter\\.personyze\\.com",
+    "scripts": "counter\\.personyze\\.com",
+    "website": "https://www.personyze.com"
+  },
   "Perzonalization": {
     "cats": [
       76
@@ -2868,6 +2984,24 @@
     "saas": true,
     "scriptSrc": "\\.piiojs\\.com/",
     "website": "https://piio.co"
+  },
+  "Pilera": {
+    "cats": [
+      53
+    ],
+    "description": "Pilera is a property management software platform that organizes community operations, resident communications, and maintenance activities.",
+    "icon": "Pilera.svg",
+    "js": {
+      "Pilera.logosRootUrl": "",
+      "PileraBackboneCollection": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "\\.pilera\\.com",
+    "website": "https://www.pilera.com"
   },
   "Piman": {
     "cats": [
@@ -6464,6 +6598,20 @@
     "scriptSrc": "\\.prospa\\.com/",
     "website": "https://www.prospa.com"
   },
+  "Prosperous AI": {
+    "cats": [
+      52
+    ],
+    "description": "Prosperous AI is a messaging platform that uses artificial intelligence to help local businesses automate customer communication, manage inquiries, and respond across digital channels.",
+    "icon": "ProsperousAI.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "app\\.prosperousai\\.com",
+    "website": "https://prosperousai.com"
+  },
   "Prostoy": {
     "cats": [
       53
@@ -6745,19 +6893,6 @@
     "scriptSrc": "cdn\\.pubguru\\.com/",
     "website": "https://pubguru.com"
   },
-  "PubLive": {
-    "cats": [
-      1
-    ],
-    "description": "PubLive is a headless CMS for online publishers.",
-    "dom": "link[href*='.thepublive.com/'], img[src*='.thepublive.com/']",
-    "icon": "PubLive.svg",
-    "pricing": [
-      "poa"
-    ],
-    "saas": true,
-    "website": "https://thepublive.com"
-  },
   "PubMatic": {
     "cats": [
       36
@@ -6884,6 +7019,19 @@
     ],
     "saas": true,
     "website": "https://publishrr.com"
+  },
+  "Publive": {
+    "cats": [
+      1
+    ],
+    "description": "Publive is a headless CMS for online publishers.",
+    "dom": "link[href*='.thepublive.com/'], img[src*='.thepublive.com/']",
+    "icon": "PubLive.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.thepublive.com"
   },
   "Publy": {
     "cats": [

@@ -225,11 +225,15 @@
       "x-yandex-captcha": ""
     },
     "icon": "yandex_smartcaptcha.svg",
+    "js": {
+      "smartCaptcha": ""
+    },
     "pricing": [
       "freemium",
       "payg"
     ],
     "saas": true,
+    "scripts": "Yandex SmartCaptcha",
     "website": "https://cloud.yandex.com/en/services/smartcaptcha"
   },
   "Yandex.Cloud": {
@@ -415,6 +419,19 @@
       "yektanet_session_last_activity": ""
     },
     "website": "https://www.yektanet.com"
+  },
+  "Yell eCommerce": {
+    "cats": [
+      6
+    ],
+    "description": "Yell eCommerce is a service providing eCommerce website design focused on attracting customers and increasing sales.",
+    "icon": "YelleCommerce.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scripts": "business\\.yell\\.com",
+    "website": "https://business.yell.com/features/websites/ecommerce/"
   },
   "Yelp Reservations": {
     "cats": [
@@ -689,6 +706,7 @@
       51
     ],
     "description": "Yola is a website builder and website hosting company headquartered in San Francisco.",
+    "dom": "script[data-url*='.yolacdn.net/']",
     "icon": "Yola.svg",
     "pricing": [
       "freemium",
@@ -698,6 +716,17 @@
     "saas": true,
     "scriptSrc": "\\.yola(?:cdn)?\\.(?:net|com)/",
     "website": "https://www.yola.com"
+  },
+  "Yomdel": {
+    "cats": [
+      52
+    ],
+    "description": "Yomdel is a fully managed live chat service that handles website conversations and delivers qualified sales leads directly to businesses.",
+    "icon": "Yomdel.svg",
+    "saas": true,
+    "scriptSrc": "clients\\.yomdel\\.com/",
+    "scripts": "clients\\.yomdel\\.com/",
+    "website": "https://www.yomdel.com"
   },
   "Yonder": {
     "cats": [
@@ -901,6 +930,20 @@
     "saas": true,
     "website": "https://youcanpay.com"
   },
+  "YouLead": {
+    "cats": [
+      32
+    ],
+    "description": "YouLead is a sales and marketing automation system from Poland that helps businesses manage leads, streamline customer engagement, and optimize marketing workflows through integrated digital tools.",
+    "icon": "YouLead.svg",
+    "js": {
+      "YouLeadDynamicContent": "",
+      "YouLeadHtmlBlocks": ""
+    },
+    "saas": true,
+    "scripts": "\\.youlead\\.pl",
+    "website": "https://www.youlead.pl"
+  },
   "YouPay": {
     "cats": [
       100
@@ -955,6 +998,25 @@
     ],
     "saas": true,
     "website": "https://youform.com"
+  },
+  "YourGPT": {
+    "cats": [
+      47
+    ],
+    "description": "YourGPT is a platform that provides customizable AI and GPT tools, enabling the integration of large language models for diverse operational needs and supporting more efficient business processes.",
+    "icon": "YourGPT.svg",
+    "js": {
+      "$yourgptChatbot": "",
+      "YOURGPT_WIDGET_UID": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "widget\\.yourgpt\\.ai",
+    "website": "https://yourgpt.ai"
   },
   "Youzan": {
     "cats": [

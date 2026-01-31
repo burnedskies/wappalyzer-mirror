@@ -566,6 +566,20 @@
     "scriptSrc": "tagpro\\.adpromedia\\.net/",
     "website": "https://tagpro.adpromedia.net"
   },
+  "Tagalys": {
+    "cats": [
+      76
+    ],
+    "description": "Tagalys is an ecommerce personalization software that enables data-driven product discovery, recommendations, and merchandising optimization across online stores.",
+    "icon": "Tagalys.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.tagalys\\.com",
+    "website": "https://www.tagalys.com"
+  },
   "Tagboard": {
     "cats": [
       96
@@ -2886,6 +2900,21 @@
     "scriptSrc": "\\.thinkingchat\\.com/",
     "website": "https://thinkingchat.com"
   },
+  "Thinkstack": {
+    "cats": [
+      47
+    ],
+    "description": "Thinkstack is a platform that develops custom AI chatbots tailored to specific business requirements.",
+    "icon": "Thinkstack.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "app\\.thinkstack\\.ai/",
+    "website": "https://www.thinkstack.ai"
+  },
   "Thor-Media": {
     "cats": [
       36
@@ -3445,6 +3474,22 @@
     "scriptSrc": "\\.by\\.tiller\\.co/",
     "website": "https://www.tillerhq.com"
   },
+  "TimeTap": {
+    "cats": [
+      72
+    ],
+    "description": "TimeTap is a scheduling automation platform that helps organizations manage and customize appointment booking workflows to streamline scheduling operations.",
+    "dom": "iframe[src*='www.timetap.com']",
+    "icon": "TimeTap.svg",
+    "pricing": [
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scripts": "\\.timetap\\.com/",
+    "website": "https://timetap.com"
+  },
   "Timeago": {
     "cats": [
       59
@@ -3454,6 +3499,16 @@
     "saas": true,
     "scriptSrc": "jquery\\.timeago\\.js",
     "website": "https://timeago.yarp.com"
+  },
+  "Timepad": {
+    "cats": [
+      104
+    ],
+    "description": "Timepad is a Russian events system for creating, managing, and ticketing events online.",
+    "icon": "Timepad.svg",
+    "saas": true,
+    "scripts": "\\.timepad\\.ru",
+    "website": "https://afisha.timepad.ru"
   },
   "Timeplot": {
     "cats": [
@@ -4623,6 +4678,16 @@
     "scriptSrc": "www\\.travelpayouts\\.com",
     "website": "https://www.travelpayouts.com"
   },
+  "Travello": {
+    "cats": [
+      93
+    ],
+    "description": "Travello is a booking platform that provides discounted travel options, tours, and holiday packages across multiple destinations worldwide.",
+    "icon": "Travello.svg",
+    "saas": true,
+    "scripts": "\\.travelloapp\\.com",
+    "website": "https://www.travello.com"
+  },
   "Tray": {
     "cats": [
       6
@@ -5318,6 +5383,19 @@
     "saas": true,
     "website": "https://tulasoftware.com"
   },
+  "Tulo": {
+    "cats": [
+      6
+    ],
+    "description": "Tulo is a subscription management platform designed to support recurring billing, customer access control, and subscription lifecycle operations for digital businesses.",
+    "icon": "Tulo.svg",
+    "js": {
+      "Tulo.account": ""
+    },
+    "saas": true,
+    "scriptSrc": "\\.worldoftulo\\.com/",
+    "website": "https://worldoftulo.com"
+  },
   "Tumblr": {
     "cats": [
       11
@@ -5347,6 +5425,16 @@
     "saas": true,
     "scriptSrc": "app\\.tunosite\\.com",
     "website": "https://tunosite.com"
+  },
+  "TuoTempo": {
+    "cats": [
+      52
+    ],
+    "description": "TuoTempo is a patient CRM designed to manage appointments, patient communications, and care workflows for medical centers.",
+    "icon": "TuoTempo.svg",
+    "saas": true,
+    "scriptSrc": "app\\.tuotempo\\.com",
+    "website": "https://tuotempo.com"
   },
   "Turbo": {
     "cats": [
@@ -5434,6 +5522,21 @@
     ],
     "saas": true,
     "website": "https://tutorlms.com"
+  },
+  "TutorCruncher": {
+    "cats": [
+      21
+    ],
+    "description": "TutorCruncher is a tutoring management software.",
+    "icon": "TutorCruncher.svg",
+    "pricing": [
+      "mid",
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.tutorcruncher\\.com/",
+    "website": "https://tutorcruncher.com"
   },
   "Twenty Eleven": {
     "cats": [
@@ -6063,6 +6166,16 @@
     "saas": true,
     "website": "https://tyslo.com"
   },
+  "theCut": {
+    "cats": [
+      72
+    ],
+    "description": "theCut is a barber booking app that allows users to schedule appointments with barbers through a centralized digital platform.",
+    "dom": "iframe[src*='.thecut.co']",
+    "icon": "theCut.svg",
+    "saas": true,
+    "website": "https://thecut.co"
+  },
   "theMarketer": {
     "cats": [
       32,
@@ -6149,6 +6262,23 @@
     "scripts": "api\\.tinyalbert\\.ai",
     "website": "https://www.tinyalbert.ai"
   },
+  "tlooto": {
+    "cats": [
+      20
+    ],
+    "description": "tlooto is an AI assistant designed to support academic writing, research tasks, and information synthesis for educational and scholarly use.",
+    "icon": "tlooto.svg",
+    "js": {
+      "tlooto.copilot": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://tlooto.com"
+  },
   "toastr": {
     "cats": [
       12
@@ -6188,5 +6318,20 @@
     "saas": true,
     "scriptSrc": "app\\.trackthemetric\\.com",
     "website": "https://trackthemetric.com"
+  },
+  "true": {
+    "cats": [
+      90
+    ],
+    "description": "true is a social proof platform that helps organizations increase conversions and credibility by displaying verified user interactions and trust signals on digital properties.",
+    "icon": "true.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.usetrue\\.com",
+    "scripts": "cdn\\.usetrue\\.com",
+    "website": "https://usetrue.com"
   }
 }

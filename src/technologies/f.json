@@ -1139,6 +1139,18 @@
     "saas": true,
     "website": "https://fibosearch.com"
   },
+  "Fider": {
+    "cats": [
+      90
+    ],
+    "description": "Fider is an open-source platform for collecting, organizing, and prioritizing customer feedback to support product development decisions.",
+    "icon": "Fider.svg",
+    "js": {
+      "webpackChunkfider": ""
+    },
+    "oss": true,
+    "website": "https://fider.io"
+  },
   "FieldStack Omni": {
     "cats": [
       6
@@ -1150,6 +1162,23 @@
     },
     "saas": true,
     "website": "https://www.fieldstack.com/platform/omnichannel-ecommerce-software"
+  },
+  "Fieldd": {
+    "cats": [
+      72
+    ],
+    "description": "Fieldd is a scheduling software used to plan, assign, and manage field service operations.",
+    "icon": "Fieldd.svg",
+    "js": {
+      "FielddBooking.init": "",
+      "FielddLeadForm": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://fieldd.co"
   },
   "Filamentphp": {
     "cats": [
@@ -1223,6 +1252,19 @@
     "scriptSrc": "\\.filestackapi\\.com",
     "scripts": "\\.filestackapi\\.com",
     "website": "https://www.filestack.com"
+  },
+  "FinConnect": {
+    "cats": [
+      41
+    ],
+    "description": "FinConnect is a platform that enables financial transactions and connections between individuals and businesses, supporting money management and access to related services.",
+    "icon": "FinConnect.svg",
+    "js": {
+      "FinConnect.documentReady": ""
+    },
+    "saas": true,
+    "scriptSrc": "app\\.finconnect\\.nl",
+    "website": "https://finconnect.nl"
   },
   "Finalsite": {
     "cats": [
@@ -1397,6 +1439,10 @@
     ],
     "description": "Finsweet is a platform that designs and develops websites exclusively using Webflow.",
     "icon": "Finsweet.svg",
+    "js": {
+      "FinsweetAttributes.load": "",
+      "FinsweetConsentPro": ""
+    },
     "pricing": [
       "low",
       "recurring"
@@ -1721,6 +1767,17 @@
     "saas": true,
     "scriptSrc": "script\\.fixel\\.ai/",
     "website": "https://fixel.ai"
+  },
+  "Fixer": {
+    "cats": [
+      47
+    ],
+    "description": "Fixer is a lightweight JSON API that provides current and historical foreign exchange rates and supports currency conversion.",
+    "icon": "Fixer.svg",
+    "pricing": [],
+    "saas": true,
+    "scripts": "api\\.fixer\\.io/",
+    "website": "https://fixer.io"
   },
   "Flable": {
     "cats": [
@@ -2903,6 +2960,17 @@
     "scriptSrc": "static\\.foratable\\.com",
     "website": "https://go.foratable.com"
   },
+  "ForeUP": {
+    "cats": [
+      72
+    ],
+    "description": "ForeUP is a golf course management platform that provides integrated tools for operations in a single system.",
+    "icon": "ForeUP.svg",
+    "requires": "WordPress",
+    "saas": true,
+    "scripts": "foreupsoftware\\.com",
+    "website": "https://www.foreupgolf.com"
+  },
   "Forento": {
     "cats": [
       21
@@ -3120,6 +3188,20 @@
     "saas": true,
     "scripts": "app\\.formwise\\.ai",
     "website": "https://www.formwise.ai"
+  },
+  "Formalize CSS": {
+    "cats": [
+      66
+    ],
+    "description": "Formalize CSS is a stylesheet that standardizes the appearance and behavior of HTML form elements across browsers to ensure consistent rendering.",
+    "icon": "Formalize.svg",
+    "js": {
+      "FORMALIZE.init": ""
+    },
+    "pricing": [],
+    "saas": true,
+    "scriptSrc": "/js/jquery\\.formalize\\.js",
+    "website": "https://formalize.me"
   },
   "Formaloo": {
     "cats": [
@@ -3359,6 +3441,22 @@
     "requires": "jQuery",
     "scriptSrc": "jquery\\.formstone\\.min\\.js",
     "website": "https://formstone.it"
+  },
+  "Formtoro": {
+    "cats": [
+      32
+    ],
+    "description": "Formtoro is a platform that converts popup signups into marketing insights by collecting zero-party data through popups, quizzes, and post-purchase surveys.",
+    "icon": "Formtoro.svg",
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "sdk\\.formtoro\\.com",
+    "scripts": "sdk\\.formtoro\\.com",
+    "website": "https://www.formtoro.com"
   },
   "ForoshGostar": {
     "cats": [
@@ -4789,6 +4887,20 @@
     "saas": true,
     "scriptSrc": "\\.fynd\\.com/",
     "website": "https://platform.fynd.com"
+  },
+  "freewebstore": {
+    "cats": [
+      6
+    ],
+    "description": "freewebstore is a platform that allows users to create and manage a free ecommerce store, including product listings, a shopping cart, and basic payment and order management.",
+    "headers": {
+      "Content-Security-Policy": "\\.freewebstore\\.com",
+      "X-Fws-Platform": "^freewebstore$"
+    },
+    "icon": "freewebstore.svg",
+    "pricing": [],
+    "saas": true,
+    "website": "https://freewebstore.com"
   },
   "fullPage.js": {
     "cats": [

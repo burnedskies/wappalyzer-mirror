@@ -171,6 +171,16 @@
     "scriptSrc": "cdn\\.gob2b\\.com",
     "website": "https://gob2b.com"
   },
+  "GOrendezvous": {
+    "cats": [
+      72
+    ],
+    "description": "GOrendezvous is an online scheduling and appointment booking software for managing availability, bookings, and calendar coordination across services and users.",
+    "icon": "GOrendezvous.svg",
+    "saas": true,
+    "scriptSrc": "www\\.gorendezvous\\.com",
+    "website": "https://gorendezvous.com"
+  },
   "GPT AI Power": {
     "cats": [
       87
@@ -3396,6 +3406,24 @@
     "saas": true,
     "website": "https://graphy.com"
   },
+  "Grappos": {
+    "cats": [
+      6
+    ],
+    "description": "Grappos is a feature-rich product locator that helps users find products through structured search and location-based discovery.",
+    "icon": "Grappos.svg",
+    "js": {
+      "grapposConfig.autoSearch": "",
+      "grapposLoadLocator": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "locator\\.grappos\\.com",
+    "website": "https://www.grappos.com/"
+  },
   "Grasp": {
     "cats": [
       52
@@ -4157,6 +4185,16 @@
       "recurring"
     ],
     "website": "https://genez.io"
+  },
+  "getUBetter": {
+    "cats": [
+      1
+    ],
+    "description": "getUBetter is a healthcare platform that provides online access to mental health support services.",
+    "icon": "getUBetter.svg",
+    "saas": true,
+    "scripts": "app\\.getubetter\\.com",
+    "website": "https://www.getubetter.com"
   },
   "git": {
     "cats": [

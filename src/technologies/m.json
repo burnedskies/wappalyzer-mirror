@@ -945,6 +945,19 @@
     "scripts": "app\\.mailocator\\.com",
     "website": "https://mailocator.com"
   },
+  "Mailshake": {
+    "cats": [
+      32
+    ],
+    "description": "Mailshake is an AI-powered sales engagement and B2B lead management platform for creating, automating, and tracking outreach campaigns.",
+    "icon": "Mailshake.svg",
+    "js": {
+      "Mailshake.clearRecipient": ""
+    },
+    "saas": true,
+    "scriptSrc": "cdn\\.mailshake\\.com",
+    "website": "https://mailshake.com"
+  },
   "MainAd": {
     "cats": [
       36
@@ -1072,6 +1085,20 @@
       "MakeshopLogUniqueId": ""
     },
     "website": "https://www.makeshop.co.kr"
+  },
+  "Makeplans": {
+    "cats": [
+      72
+    ],
+    "description": "Makeplans is a scheduling system designed for appointment booking and event registration, providing tools to manage availability, reservations, and attendee organization.",
+    "icon": "Makeplans.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.makeplans\\.com",
+    "website": "https://makeplans.com"
   },
   "Maker": {
     "cats": [
@@ -2798,6 +2825,23 @@
     "scriptSrc": "sitecontent-menufycom\\.netdna-ssl\\.com/",
     "website": "https://restaurant.menufy.com"
   },
+  "Menuu": {
+    "cats": [
+      93
+    ],
+    "description": "MENUU is an online ordering system for restaurants and food delivery.",
+    "headers": {
+      "Access-Control-Allow-Origin": "frontend\\.menuu\\.com"
+    },
+    "icon": "Menuu.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "frontend\\.menuu\\.com/",
+    "website": "https://menuu.com"
+  },
   "Mercado Shops": {
     "cats": [
       6
@@ -2923,6 +2967,20 @@
     "saas": true,
     "scripts": "\\.swrve\\.com",
     "website": "https://messagegears.com/swrve/"
+  },
+  "MessageMedia": {
+    "cats": [
+      52
+    ],
+    "description": "MessageMedia is a software service provider that helps businesses communicate with their customers and other contacts using SMS messages.",
+    "icon": "MessageMedia.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "chatwidget\\.messagemedia\\.com/",
+    "website": "https://messagemedia.com"
   },
   "MetaMap": {
     "cats": [
@@ -3131,6 +3189,25 @@
     "scriptSrc": "\\.mews\\.li/",
     "website": "https://www.mews.com"
   },
+  "Mexty": {
+    "cats": [
+      21
+    ],
+    "description": "Mexty is a no-code, AI-powered authoring platform that enables educators to create interactive lessons, activities, and courses quickly.",
+    "icon": "Mexty.svg",
+    "meta": {
+      "author": "^Mexty Team$",
+      "creator": "^Mexty$"
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://mexty.ai"
+  },
   "Mezereon": {
     "cats": [
       76
@@ -3187,6 +3264,19 @@
     ],
     "website": "https://dev.michijs.com",
     "xhr": "\\.michijs\\.com"
+  },
+  "Mico": {
+    "cats": [
+      53
+    ],
+    "description": "Mico is a customer relationship management platform that supports personalized, continuous communication between businesses and customers and includes tools to improve brand visibility across search engines and AI-driven platforms.",
+    "icon": "Mico.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.mico-cloud\\.jp/",
+    "website": "https://mico-inc.com"
   },
   "Microsoft 365": {
     "cats": [
@@ -3368,9 +3458,14 @@
     ],
     "description": "Microsoft Power BI is a data analytics platform that transforms company data into rich visuals for insights and decision-making.",
     "headers": {
-      "Content-Security-Policy": "app\\.powerbi\\.com"
+      "Content-Security-Policy": "app\\.powerbi\\.com",
+      "Timing-Allow-Origin": "app\\.powerbi\\.com"
     },
     "icon": "MicrosoftPowerBI.svg",
+    "js": {
+      "powerBIAccessToken": "",
+      "powerBIEmbedToken": ""
+    },
     "pricing": [
       "freemium",
       "low",
@@ -3378,6 +3473,7 @@
       "poa"
     ],
     "saas": true,
+    "scriptSrc": "content\\.powerapps\\.com",
     "website": "https://www.microsoft.com/en-us/power-platform/products/power-bi"
   },
   "Microsoft PowerPoint": {
@@ -3750,6 +3846,23 @@
     "saas": true,
     "scriptSrc": "api\\.minerstat\\.com",
     "website": "https://minerstat.com"
+  },
+  "MiniBC": {
+    "cats": [
+      41
+    ],
+    "description": "MiniBC is a BigCommerce payment app builder that enables the creation and management of custom payment solutions within the BigCommerce platform.",
+    "icon": "MiniBC.svg",
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
+    ],
+    "requires": "BigCommerce",
+    "saas": true,
+    "scriptSrc": "apps\\.minibc\\.com",
+    "scripts": "apps\\.minibc\\.com",
+    "website": "https://www.minibc.com"
   },
   "MiniServ": {
     "cats": [
@@ -4897,6 +5010,17 @@
     },
     "website": "https://moodle.org"
   },
+  "Moofx": {
+    "cats": [
+      59
+    ],
+    "description": "Moofx is a CSS3-enabled JavaScript animation library for creating and managing lightweight, hardware-accelerated animations.",
+    "js": {
+      "moofx.parse": ""
+    },
+    "oss": true,
+    "website": "https://github.com/kamicane/moofx"
+  },
   "Moon": {
     "cats": [
       12
@@ -5024,6 +5148,24 @@
     "saas": true,
     "scripts": "\\.mopro\\.com/",
     "website": "https://www.mopro.com"
+  },
+  "MoreVago": {
+    "cats": [
+      90
+    ],
+    "description": "MoreVago is a platform that displays customer testimonials and reviews to help businesses increase conversions and sales.",
+    "icon": "MoreVago.svg",
+    "js": {
+      "morevagoOptions": "",
+      "objMorevago": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "app\\.morevago\\.com",
+    "website": "https://www.morevago.com"
   },
   "Morningtrain": {
     "cats": [
@@ -5671,6 +5813,30 @@
       "generator": "Mijnwebwinkel"
     },
     "website": "https://www.myonlinestore.com/ "
+  },
+  "MyPersonas": {
+    "cats": [
+      4
+    ],
+    "description": "MyPersonas is an AI-powered platform that creates digital replicas of key employees to handle repetitive, routine inquiries, reducing interruptions and streamlining access to internal knowledge.",
+    "icon": "MyPersonas.svg",
+    "pricing": [
+      "high",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.mypersonas\\.ai/",
+    "website": "https://mypersonas.ai"
+  },
+  "MyPlay": {
+    "cats": [
+      6
+    ],
+    "description": "MyPlay is a network of Sony Music–owned online stores that enable musicians to sell and distribute their music and related merchandise.",
+    "icon": "MyPlay.svg",
+    "saas": true,
+    "scriptSrc": "\\.myplay\\.com/",
+    "website": "https://www.myplay.com"
   },
   "MyRest": {
     "cats": [

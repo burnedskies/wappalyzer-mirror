@@ -1,4 +1,14 @@
 {
+  "W3 Ataiva": {
+    "cats": [
+      10
+    ],
+    "description": "W3 Ataiva is a website valuation and analysis tool that estimates site value, traffic metrics, and technical indicators using publicly available web data.",
+    "icon": "W3Ataiva.svg",
+    "saas": true,
+    "scriptSrc": "static\\.statvoo\\.com/",
+    "website": "https://w3.ataiva.com"
+  },
   "W3 Total Cache": {
     "cats": [
       23,
@@ -403,6 +413,22 @@
     "saas": true,
     "scriptSrc": "/wp-content/plugins/wp-rocket/",
     "website": "https://wp-rocket.me"
+  },
+  "WP SEO AI": {
+    "cats": [
+      54
+    ],
+    "description": "WP SEO AI is a tool that optimizes brand visibility by positioning companies as expert answers across search engines and AI platforms like Google and GPT.",
+    "dom": "script[id*='seoaic_front_main_js-js']",
+    "icon": "WPSEOAI.svg",
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
+    ],
+    "requires": "WordPress",
+    "saas": true,
+    "website": "https://wpseoai.com"
   },
   "WP-Optimize": {
     "cats": [
@@ -2308,6 +2334,21 @@
     "scripts": "static\\.weezbe\\.com",
     "website": "https://www.weezbe.com"
   },
+  "Weezevent": {
+    "cats": [
+      104
+    ],
+    "description": "Weezevent is an online ticketing and event management solution that enables organizers to sell tickets, manage registrations, and track attendance for events.",
+    "icon": "Weezevent.svg",
+    "pricing": [
+      "freemium",
+      "payg",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "widget\\.weezevent\\.com/",
+    "website": "https://weezevent.com"
+  },
   "Weglot": {
     "cats": [
       89
@@ -2494,6 +2535,26 @@
     "scriptSrc": "cdn\\.wheelysales\\.com/",
     "website": "https://wheelysales.com"
   },
+  "Whelp": {
+    "cats": [
+      52
+    ],
+    "description": "Whelp is an AI-based omnichannel customer support platform that provides automated chatbot-driven assistance across multiple communication channels.",
+    "icon": "Whelp.svg",
+    "js": {
+      "Whelp.Init": "",
+      "WhelpConfig": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "widget\\.getwhelp\\.com",
+    "website": "https://whelp.co"
+  },
   "Wherewolf": {
     "cats": [
       72
@@ -2550,6 +2611,23 @@
     "saas": true,
     "website": "https://whitespark.ca/seo-services"
   },
+  "Wholesale Suite": {
+    "cats": [
+      6
+    ],
+    "description": "Wholesale Suite is a plugin that enables businesses to manage and streamline wholesale operations online, supporting pricing, ordering, and workflow efficiency.",
+    "icon": "WholesaleSuite.svg",
+    "meta": {
+      "wwp": "^yes$"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "\\.wholesalesuiteplugin\\.com",
+    "website": "https://wholesalesuiteplugin.com"
+  },
   "Whooshkaa": {
     "cats": [
       5
@@ -2557,6 +2635,24 @@
     "dom": "iframe[src*='whooshkaa.com']",
     "icon": "Whooshkaa.svg",
     "website": "https://www.whooshkaa.com"
+  },
+  "WhosOn": {
+    "cats": [
+      52
+    ],
+    "description": "WhosOn is a secure live chat and AI platform for managing and automating customer communications.",
+    "icon": "WhosOn.svg",
+    "js": {
+      "whoson_global": "",
+      "whoson_init": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.whoson\\.com/",
+    "website": "https://www.whoson.com"
   },
   "Whova": {
     "cats": [
@@ -3047,6 +3143,17 @@
     "requires": "Shopify",
     "saas": true,
     "website": "https://appmate.io"
+  },
+  "Wishloop": {
+    "cats": [
+      32
+    ],
+    "description": "Wishloop is a lead generation platform that enables the creation of marketing campaigns without coding, using structured workflows and tools designed to support conversion-focused data collection.",
+    "icon": "Wishloop.svg",
+    "pricing": [],
+    "saas": true,
+    "scriptSrc": "app\\.wishloop\\.com/",
+    "website": "https://wishloop.com"
   },
   "Wistia": {
     "cats": [
@@ -4125,6 +4232,16 @@
     "saas": true,
     "scriptSrc": "\\.offerpop\\.com/",
     "website": "https://www.wyng.com"
+  },
+  "Wyre": {
+    "cats": [
+      41
+    ],
+    "description": "Wyre is a financial technology platform that enables cryptocurrency companies to connect digital assets with traditional fiat payment systems.",
+    "icon": "Wyre.svg",
+    "saas": true,
+    "scriptSrc": "verify\\.sendwyre\\.com/",
+    "website": "https://sendwyre.com"
   },
   "WysiBB": {
     "cats": [

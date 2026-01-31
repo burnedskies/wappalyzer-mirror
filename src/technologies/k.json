@@ -131,6 +131,29 @@
     "scriptSrc": "\\.kukui\\.com/",
     "website": "https://www.kukui.com"
   },
+  "KVCore": {
+    "cats": [
+      53
+    ],
+    "description": "KVCore is an all-in-one real estate technology platform for agents, teams, and brokers, offering CRM, lead generation, marketing automation, and transaction tools in a single system.",
+    "icon": "KVCore.svg",
+    "saas": true,
+    "scripts": "sociallogin\\.kvcore\\.com",
+    "website": "https://kvcore.com"
+  },
+  "KYKLO": {
+    "cats": [
+      6
+    ],
+    "description": "KYKLO is a cloud-based ecommerce platform designed for the automation and electrical industry.",
+    "icon": "KYKLO.svg",
+    "js": {
+      "Kyklo.Branding": ""
+    },
+    "saas": true,
+    "scriptSrc": "\\.kyklo\\.co/",
+    "website": "https://www.kyklo.co"
+  },
   "KaTeX": {
     "cats": [
       25
@@ -406,6 +429,23 @@
     "icon": "KanzOboz.svg",
     "saas": true,
     "website": "https://kanzoboz.ru"
+  },
+  "Kapa.ai": {
+    "cats": [
+      29
+    ],
+    "description": "Kapa.ai is a platform that converts documents into an LLM-powered chatbot for information retrieval and question answering.",
+    "icon": "Kapa.svg",
+    "js": {
+      "Kapa": "",
+      "KapaWidget.init": ""
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "widget\\.kapa\\.ai",
+    "website": "https://www.kapa.ai"
   },
   "Kapix Studio": {
     "cats": [
@@ -1086,7 +1126,7 @@
       "poa"
     ],
     "saas": true,
-    "scripts": "api\\.kimonix\\.com",
+    "scripts": "\\.kimonix\\.com",
     "website": "https://www.kimonix.com"
   },
   "Kindful": {
@@ -1215,6 +1255,21 @@
     "scriptSrc": "/wp-content/plugins/kirki/",
     "website": "https://kirki.org"
   },
+  "Kit": {
+    "cats": [
+      32
+    ],
+    "description": "Kit is a platform that provides email, mobile, and social list management tools for organizing, managing, and engaging contact audiences across digital communication channels.",
+    "icon": "Kit.svg",
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "www\\.fanbridge\\.com/",
+    "website": "https://kit.com/fanbridge"
+  },
   "Kitcart": {
     "cats": [
       6
@@ -1281,6 +1336,16 @@
     "saas": true,
     "scriptSrc": "cdn\\.static\\.kiwisizing\\.com/",
     "website": "https://www.kiwisizing.com"
+  },
+  "Kiwify": {
+    "cats": [
+      21
+    ],
+    "description": "Kiwify is an AI-powered platform for creators and students that provides smart tools to support teaching, learning, and content creation.",
+    "icon": "Kiwify.svg",
+    "saas": true,
+    "scripts": "\\.kiwify\\.com\\.br",
+    "website": "https://kiwify.com.br"
   },
   "Kizen": {
     "cats": [
@@ -1478,27 +1543,6 @@
     "saas": true,
     "scriptSrc": "member\\.kleer\\.com/",
     "website": "https://www.kleer.com"
-  },
-  "Klevu": {
-    "cats": [
-      29
-    ],
-    "description": "Klevu is a highly advanced AI-Powered search solution for ecommerce platforms.",
-    "icon": "Klevu.svg",
-    "js": {
-      "klevu.version": "([\\d\\.]+)\\;version:\\1",
-      "klevu_apiKey": "",
-      "klevu_layout": "",
-      "klevu_sessionId": "",
-      "sendKlevuAnalytics": ""
-    },
-    "pricing": [
-      "mid",
-      "recurring"
-    ],
-    "saas": true,
-    "scriptSrc": "js\\.klevu\\.\\w+/klevu-js-v([\\d.]+)\\;version:\\1",
-    "website": "https://www.klevu.com"
   },
   "KlickPages": {
     "cats": [
