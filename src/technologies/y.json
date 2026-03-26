@@ -3,7 +3,7 @@
     "cats": [
       6
     ],
-    "description": "Ymcart is a cross-border ecommerce platform providing a one-stop SaaS system for building independent online stores, primarily supporting Chinese ecommerce sellers.",
+    "description": "Ymcart is a cross-border ecommerce platform providing an one-stop SaaS system for building independent online stores, primarily supporting Chinese ecommerce sellers.",
     "icon": "YMCart.svg",
     "js": {
       "exec_ymcart_collect": "",
@@ -16,7 +16,7 @@
     "cats": [
       100
     ],
-    "description": "YMQ Product Options Variant Option help add an unlimited number of product options to your items so you're not restricted by Shopify's limit of 3 options and 100 variants.",
+    "description": "YMQ Product Options Variant Option help add a unlimited number of product options to your items so you're not restricted by Shopify's limit of 3 options and 100 variants.",
     "icon": "YMQ Product Options Variant Option.svg",
     "implies": "Shopify",
     "js": {
@@ -87,13 +87,6 @@
     "icon": "Yahoo.svg",
     "website": "https://developer.yahoo.com/yui/yuidoc"
   },
-  "YaBB": {
-    "cats": [
-      2
-    ],
-    "icon": "YaBB.png",
-    "website": "https://www.yabbforum.com"
-  },
   "YachtSys": {
     "cats": [
       72
@@ -109,12 +102,35 @@
     "scriptSrc": "apps\\.yachtsys\\.com/",
     "website": "https://www.yachtsys.com"
   },
+  "Yacla": {
+    "cats": [
+      32
+    ],
+    "description": "Yacla is a service that delivers prequalified, engaged sales contacts directly to a CRM at a predetermined fixed price.",
+    "icon": "Yacla.svg",
+    "saas": true,
+    "scripts": "\\.yac\\.la",
+    "website": "https://yacla.com"
+  },
+  "Yaghoot Web": {
+    "cats": [
+      47,
+      54
+    ],
+    "description": "Yaghoot Web is a provider of website design, search engine optimization, and performance optimization.",
+    "icon": "YaghootWeb.svg",
+    "meta": {
+      "generator": "^yaghootweb$"
+    },
+    "saas": true,
+    "website": "https://yaghootweb.com"
+  },
   "Yahoo Advertising": {
     "cats": [
       36,
       77
     ],
-    "description": "Yahoo Advertising includes a comprehensive suite of web, mobile, and video ad products across native, audience, and premium display, which are accessible through a new buying platform.",
+    "description": "Yahoo Advertising includes a suite of web, mobile, and video ad products across native, audience, and display, which are accessible through a new buying platform.",
     "dom": "link[href*='bc.yahoo.com']",
     "icon": "Yahoo.svg",
     "js": {
@@ -141,14 +157,6 @@
     },
     "website": "https://smallbusiness.yahoo.com/ecommerce"
   },
-  "Yahoo! Tag Manager": {
-    "cats": [
-      42
-    ],
-    "icon": "Yahoo.svg",
-    "scriptSrc": "b\\.yjtag\\.jp/iframe",
-    "website": "https://tagmanager.yahoo.co.jp/"
-  },
   "Yahoo! Web Analytics": {
     "cats": [
       10
@@ -160,23 +168,11 @@
     "scriptSrc": "d\\.yimg\\.com/mi/ywa\\.js",
     "website": "https://web.analytics.yahoo.com"
   },
-  "YalinHost": {
-    "cats": [
-      88
-    ],
-    "description": "YalinHost is a web hosting service provider.",
-    "dns": {
-      "NS": "\\.yalinhost\\.com",
-      "SOA": "\\.yalinhost\\.com"
-    },
-    "icon": "YalinHost.svg",
-    "website": "https://yalinhost.com"
-  },
   "Yamada UI": {
     "cats": [
       66
     ],
-    "description": "Yamada UI is a versatile React component library.",
+    "description": "Yamada UI is a React component library.",
     "dom": "a[aria-label*='Yamada UI']",
     "icon": "YamadaUI.svg",
     "website": "https://yamada-ui.com"
@@ -185,7 +181,7 @@
     "cats": [
       41
     ],
-    "description": "Yampi Checkout is an payment processor from Brazil.",
+    "description": "Yampi Checkout is a payment processor from Brazil.",
     "icon": "Yampi.svg",
     "js": {
       "yampiCheckoutUrl": ""
@@ -240,7 +236,7 @@
     "cats": [
       62
     ],
-    "description": "Yandex.Cloud is a public cloud platform where companies can create and develop projects using Yandex's scalable computing power, advanced technologies, and infrastructure.",
+    "description": "Yandex. Cloud is a public cloud platform where companies can create and develop projects using Yandex's scalable computing power, advanced technologies, and infrastructure.",
     "icon": "Yandex.Cloud.svg",
     "pricing": [
       "payg"
@@ -252,7 +248,7 @@
     "cats": [
       31
     ],
-    "description": "Yandex.Cloud CDN helps you streamline static content delivery for your web service.",
+    "description": "Yandex. Cloud CDN helps you streamline static content delivery for your web service.",
     "dom": "[href*='storage.yandexcloud.net'], [src*='storage.yandexcloud.net']",
     "icon": "Yandex.Cloud.svg",
     "implies": "Yandex.Cloud",
@@ -277,7 +273,7 @@
       5,
       52
     ],
-    "description": "Yandex.Messenger is an instant messaging application.",
+    "description": "Yandex. Messenger is an instant messaging application.",
     "icon": "Yandex.Messenger.svg",
     "js": {
       "yandexChatWidget": ""
@@ -292,7 +288,7 @@
     "cats": [
       10
     ],
-    "description": "Yandex.Metrica is a free web analytics service that tracks and reports website traffic.",
+    "description": "Yandex. Metrica is a free web analytics service that tracks and reports website traffic.",
     "icon": "Yandex.Metrika.svg",
     "js": {
       "yandex_metrika": ""
@@ -307,7 +303,7 @@
     "cats": [
       111
     ],
-    "description": "Yapla is a web-based software platform that provides event management and fundraising solutions for non-profit organisations, associations, and event planners.",
+    "description": "Yapla is a web-based software platform that provides event management and fundraising solutions for non-profit organizations, associations, and event planners.",
     "dom": "a[href*='\\.yapla\\.com/'][target='_blank']",
     "icon": "Yapla.svg",
     "js": {
@@ -328,7 +324,8 @@
     "cats": [
       22
     ],
-    "description": "Yaws (Yet Another Web Server) is an open-source web server designed to deliver dynamic content efficiently. It was developed by Claes (klacke) Wikström and is written in Erlang, a functional programming language.",
+    "cpe": "cpe:2.3:a:yaws:yaws:*:*:*:*:*:*:*:*",
+    "description": "Yaws (Yet Another Web Server) is an open-source web server designed to deliver dynamic content efficiently.",
     "headers": {
       "Server": "Yaws(?: ([\\d.]+))?\\;version:\\1"
     },
@@ -341,7 +338,7 @@
       73,
       110
     ],
-    "description": "Yay! Forms is an AI-powered tool for creating forms and surveys designed to capture audience sentiments.",
+    "description": "Yay! Forms is an AI-based tool for creating forms and surveys designed to capture audience sentiments.",
     "icon": "YayForms.svg",
     "pricing": [
       "low",
@@ -376,7 +373,7 @@
       6
     ],
     "cpe": "cpe:2.3:a:open-classifieds:open_classifieds:*:*:*:*:*:*:*:*",
-    "description": "Yclas is a platform that allows users to create and manage customizable online classified ads websites, available as both a hosted service and an open-source self-hosted solution​ .",
+    "description": "Yclas is a platform that allows users to create and manage customizable online classified ads websites, available as both a hosted service and an open-source self-hosted solution​.",
     "icon": "Yclas.svg",
     "meta": {
       "author": "open-classifieds\\.com",
@@ -480,7 +477,7 @@
       32,
       75
     ],
-    "description": "Yeps is a minimalist bar that can be added to the top or bottom of your website to collect visitor’s emails and promote content.",
+    "description": "Yeps is a minimalist bar that can be added to the top or bottom of a website to collect visitor’s emails and promote content.",
     "icon": "Yeps.svg",
     "js": {
       "Yeps": ""
@@ -493,6 +490,7 @@
     "cats": [
       8
     ],
+    "cpe": "cpe:2.3:a:yeswiki:yeswiki:*:*:*:*:*:*:*:*",
     "description": "YesWiki is a collaborative website creation and management Free Software under the AGPL license, enabling any web user to create, delete, edit, or comment on site pages with unlimited editors or pages.",
     "dom": "#yw-container",
     "icon": "YesWiki.svg",
@@ -559,7 +557,7 @@
     "cats": [
       76
     ],
-    "description": "Yieldify is a customer journey optimisation platform that brings personalisation to the full customer journey.",
+    "description": "Yieldify is a customer journey optimization platform that brings personalization to the full customer journey.",
     "icon": "Yieldify.svg",
     "js": {
       "_yieldify": ""
@@ -603,21 +601,6 @@
     ],
     "website": "https://www.yiiframework.com"
   },
-  "Yo!Coach": {
-    "cats": [
-      21
-    ],
-    "description": "Yo!Coach is a tutoring and consultation platform designed to connect learners with experts for one-on-one sessions.",
-    "headers": {
-      "Set-Cookie": "\\.yo-coach\\.com"
-    },
-    "icon": "Yo!Coach.svg",
-    "pricing": [
-      "poa"
-    ],
-    "saas": true,
-    "website": "https://www.yo-coach.com"
-  },
   "YoPlanning": {
     "cats": [
       72
@@ -643,7 +626,7 @@
       54,
       87
     ],
-    "description": "Yoast SEO is a search engine optimisation plugin for WordPress and other platforms.",
+    "description": "Yoast SEO is a search engine optimization plugin for WordPress and other platforms.",
     "dom": "script[class*='yoast-schema-graph']",
     "icon": "Yoast SEO.png",
     "oss": true,
@@ -653,7 +636,7 @@
     "cats": [
       54
     ],
-    "description": "Yoast SEO Premium is a search engine optimisation plugin for WordPress and other platforms.",
+    "description": "Yoast SEO is a search engine optimization plugin for WordPress and other platforms.",
     "icon": "Yoast SEO.png",
     "oss": true,
     "pricing": [
@@ -790,6 +773,7 @@
     "cats": [
       6
     ],
+    "cpe": "cpe:2.3:a:yopify:yopify:*:*:*:*:*:*:*:*",
     "description": "Yopify is an ecommerce app suite designed to boost sales, increase conversions, and enhance the customer experience.",
     "pricing": [
       "freemium",
@@ -849,23 +833,13 @@
     "scripts": "/smsbump_timer\\.js",
     "website": "https://www.yotpo.com/platform/smsbump-sms-marketing/"
   },
-  "Yotpo Subscriptions": {
-    "cats": [
-      100
-    ],
-    "description": "Yotpo Subscriptions is a Shopify app designed for merchants to provide subscription services to customers.",
-    "icon": "Yotpo.svg",
-    "requires": "Shopify",
-    "saas": true,
-    "website": "https://www.yotpo.com/platform/subscriptions/"
-  },
   "Yottaa": {
     "cats": [
       42,
       74,
       92
     ],
-    "description": "Yottaa is an ecommerce optimisation platform that helps with conversions, performance and security.",
+    "description": "Yottaa is an ecommerce optimization platform that helps with conversions, performance and security.",
     "icon": "Yottaa.svg",
     "meta": {
       "X-Yottaa-Metrics": "",
@@ -896,7 +870,7 @@
     "cats": [
       6
     ],
-    "description": "YouCan is an integrated platform specialised in ecommerce, offering a wide range of services needed by merchants and entrepreneurs.",
+    "description": "YouCan is an integrated platform specialized in ecommerce, offering a wide range of services needed by merchants and entrepreneurs.",
     "headers": {
       "x-powered-by": "Youcan\\.Private\\.DC/"
     },
@@ -929,6 +903,21 @@
     ],
     "saas": true,
     "website": "https://youcanpay.com"
+  },
+  "YouCanBookMe": {
+    "cats": [
+      72
+    ],
+    "description": "YouCanBookMe is an online scheduling solution for small businesses that enables appointment booking, calendar integration, and automated availability management.",
+    "icon": "YouCanBookMe.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "\\.youcanbook\\.me",
+    "website": "https://youcanbook.me"
   },
   "YouLead": {
     "cats": [
@@ -967,6 +956,7 @@
     "cats": [
       13
     ],
+    "cpe": "cpe:2.3:a:jetbrains:youtrack:*:*:*:*:*:*:*:*",
     "description": "YouTrack is a browser-based bug tracker, issue tracking system and project management software.",
     "dom": "[no-title='YouTrack'], link[type='application/opensearchdescription+xml'][title='YouTrack']",
     "icon": "YouTrack.svg",
@@ -1050,7 +1040,7 @@
       28
     ],
     "cpe": "cpe:2.3:o:yunohost:yunohost:*:*:*:*:*:*:*:*",
-    "description": "YunoHost is a server operating system that is free and open-source, allowing users to host their own web applications, email services, and other online tools. It is based on Debian GNU/Linux.",
+    "description": "YunoHost is a server operating system that is free and open-source, allowing users to host their own web applications, email services, and other online tools.",
     "icon": "YunoHost.svg",
     "implies": "Debian",
     "oss": true,
@@ -1094,17 +1084,5 @@
     "saas": true,
     "scriptSrc": "cdn\\.yellowmessenger\\.com",
     "website": "https://yellow.ai/"
-  },
-  "youCMS": {
-    "cats": [
-      1
-    ],
-    "description": "youCMS is an enterprise content management system developed in Denmark, designed to support large-scale digital content organization and delivery.",
-    "icon": "youCMS.svg",
-    "meta": {
-      "generator": "^youCMS(?:\\b|\\s|\\s*-)"
-    },
-    "saas": true,
-    "website": "https://www.youcms.eu"
   }
 }

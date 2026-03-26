@@ -3,7 +3,8 @@
     "cats": [
       6
     ],
-    "description": " X-Cart is an open source PHP shopping cart ecommerce software platform.",
+    "cpe": "cpe:2.3:a:qualiteam:x-cart:*:*:*:*:*:*:*:*",
+    "description": "X-Cart is an open source PHP shopping cart ecommerce software platform.",
     "icon": "X-Cart.svg",
     "implies": "PHP",
     "js": {
@@ -46,21 +47,20 @@
     "scriptSrc": "(?:cdn)?x\\.ai/.*/xdotai-embed\\.js",
     "website": "https://x.ai"
   },
-  "XAMPP": {
+  "XCompliant": {
     "cats": [
-      22
+      68
     ],
-    "icon": "XAMPP.png",
-    "implies": [
-      "Apache HTTP Server",
-      "MySQL",
-      "PHP",
-      "Perl"
+    "description": "XCompliant is an automated accessibility solution designed to support ADA and WCAG compliance by identifying and addressing accessibility issues across digital platforms.",
+    "icon": "XCompliant.svg",
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
     ],
-    "meta": {
-      "author": "Kai Oswald Seidler\\;confidence:10"
-    },
-    "website": "https://www.apachefriends.org/en/xampp.html"
+    "saas": true,
+    "scriptSrc": "app\\.xcompliant\\.com",
+    "website": "https://xcompliant.com"
   },
   "XGen Ai": {
     "cats": [
@@ -90,6 +90,7 @@
     "cats": [
       1
     ],
+    "cpe": "cpe:2.3:a:xoops:xoops:*:*:*:*:*:*:*:*",
     "icon": "XOOPS.png",
     "implies": "PHP",
     "js": {
@@ -127,6 +128,7 @@
     "cats": [
       8
     ],
+    "cpe": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
     "description": "XWiki is a free wiki software platform written in Java.",
     "dom": "html[data-xwiki-]",
     "excludes": "MediaWiki",
@@ -144,7 +146,7 @@
     "cats": [
       87
     ],
-    "description": "XYZScripts is a provider of PHP clone scripts and WordPress plugins. It offers top-quality PHP and MySQL scripts to help build online businesses, with ready-to-deploy solutions that enable website setup.",
+    "description": "XYZScripts is a provider of PHP clone scripts and WordPress plugins.",
     "dom": "a[href*='xyzscripts.com/'] + a[href*='www.xyzscripts.com']",
     "icon": "XYZScripts.svg",
     "saas": true,
@@ -162,7 +164,7 @@
     "cats": [
       6
     ],
-    "description": "Xanario is an ecommerce platform that offers a comprehensive system for online shop solutions, including CMS, CRM, shop management, blog integration, POS system, and warehouse management.",
+    "description": "Xanario is an ecommerce platform that offers a system for online shop solutions, including CMS, CRM, shop management, blog integration, POS system, and warehouse management.",
     "icon": "Xanario.svg",
     "meta": {
       "generator": "xanario shopsoftware"
@@ -196,6 +198,7 @@
       "xf_csrf": "",
       "xf_session": ""
     },
+    "cpe": "cpe:2.3:a:xenforo:xenforo:*:*:*:*:*:*:*:*",
     "description": "XenForo is a PHP-based forum hosting program for communities that is designed to be deployed on a remote web server.",
     "dom": "html[id*='XenForo'], html[id*='XF']",
     "icon": "XenForo.svg",
@@ -207,6 +210,22 @@
       "XF.GuestUsername": ""
     },
     "website": "https://xenforo.com"
+  },
+  "Xendit": {
+    "cats": [
+      41
+    ],
+    "description": "Xendit is a payment gateway in Indonesia and Southeast Asia.",
+    "icon": "Xendit.svg",
+    "js": {
+      "Xendit.card": ""
+    },
+    "pricing": [
+      "payg"
+    ],
+    "saas": true,
+    "scriptSrc": "js\\.xendit\\.co/",
+    "website": "https://www.xendit.co"
   },
   "Xenioo": {
     "cats": [
@@ -243,24 +262,11 @@
     "scriptSrc": "cdn\\.xeno\\.app",
     "website": "https://xenoapp.com"
   },
-  "Xeora": {
-    "cats": [
-      18
-    ],
-    "dom": "input[type='hidden'][name^='_sys_bind_'][id^='_sys_bind_']",
-    "headers": {
-      "Server": "XeoraEngine",
-      "X-Powered-By": "XeoraCube"
-    },
-    "icon": "xeora.png",
-    "implies": "Microsoft ASP.NET",
-    "scriptSrc": "/_bi_sps_v.+\\.js",
-    "website": "https://www.xeora.org"
-  },
   "Xitami": {
     "cats": [
       22
     ],
+    "cpe": "cpe:2.3:a:xitami:xitami:*:*:*:*:*:*:*:*",
     "headers": {
       "Server": "Xitami(?:/([\\d.]+))?\\;version:\\1"
     },
@@ -297,6 +303,7 @@
     "cats": [
       1
     ],
+    "cpe": "cpe:2.3:a:xpressengine:xpressengine:*:*:*:*:*:*:*:*",
     "description": "XpressEngine (XE) is an open-source content management system (CMS) designed for building and managing websites, blogs, and online communities.",
     "icon": "XpressEngine.svg",
     "meta": {
@@ -389,7 +396,7 @@
     "cats": [
       80
     ],
-    "description": "Xtra is a creative, responsive, live drag and drop and easy-to-use WordPress theme for any kind of websites.",
+    "description": "Xtra is a creative, responsive, live drag and drop and WordPress theme for any kind of websites.",
     "dom": {
       "link[href*='/wp-content/themes/xtra/']": {
         "attributes": {
@@ -410,7 +417,7 @@
     "cats": [
       32
     ],
-    "description": "Xtremepush is a customer engagement, personalisation and data platform. It's purpose-built for multichannel and mobile marketing.",
+    "description": "Xtremepush is a customer engagement, personalization and data platform.",
     "icon": "Xtremepush.svg",
     "js": {
       "xtremepush": ""
@@ -443,35 +450,6 @@
     "scriptSrc": "www\\.xverify\\.com",
     "website": "https://www.xverify.com"
   },
-  "Xzero Analytics": {
-    "cats": [
-      10
-    ],
-    "description": "Xzero Analytics is a tool for monitoring user journeys, analysing visitor sessions, gathering heatmaps, and more, enabling the observation and evolution of site traffic.",
-    "icon": "XZeroAnalytics.png",
-    "js": {
-      "xzero-analytics": ""
-    },
-    "pricing": [
-      "low",
-      "freemium"
-    ],
-    "saas": true,
-    "scriptSrc": "analytics\\.xzero\\.co\\.uk",
-    "website": "https://analytics.xzero.co.uk"
-  },
-  "Xzero JS": {
-    "cats": [
-      25
-    ],
-    "description": "Xzero JS is a JavaScript library (ES6 module) for displaying 3D models, scenes and 360° panoramas on the web.",
-    "icon": "XzeroJS.svg",
-    "pricing": [
-      "freemium"
-    ],
-    "scriptSrc": "xzero-js@([\\d.]+)/xzero\\.min\\.js.*\\;version:\\1",
-    "website": "https://xzerojs.org"
-  },
   "xCharts": {
     "cats": [
       25
@@ -488,6 +466,7 @@
     "cats": [
       6
     ],
+    "cpe": "cpe:2.3:a:xt-commerce:xt-commerce:*:*:*:*:*:*:*:*",
     "description": "xtCommerce is an ecommerce platform offering a complete solution for online shop management, including SEO, mobile optimization, and integrated payment systems.",
     "icon": "xtCommerce.svg",
     "js": {

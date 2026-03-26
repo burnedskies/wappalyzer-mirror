@@ -22,6 +22,7 @@
     "cats": [
       6
     ],
+    "cpe": "cpe:2.3:a:hcltechsw:hcl_commerce:*:*:*:*:*:*:*:*",
     "description": "HCL Commerce is a software platform framework for ecommerce, including marketing, sales, customer and order processing functionality.",
     "dom": "link[href*='/wcsstore/'], link[href*='webapp/wcs/'], a[href*='/wcsstore/'], a[href*='webapp/wcs/'], script[src*='/wcsstore/'], script[src*='webapp/wcs/']",
     "icon": "HCL Commerce.svg",
@@ -81,7 +82,7 @@
     "headers": {
       "X-Powered-By": "HHVM/?([\\d.]+)?\\;version:\\1"
     },
-    "icon": "HHVM.png",
+    "icon": "HHVM.svg",
     "implies": "PHP\\;confidence:75",
     "website": "https://hhvm.com"
   },
@@ -95,18 +96,15 @@
     "icon": "HP.svg",
     "website": "https://hp.com"
   },
-  "HP iLO": {
+  "HR Hotlink": {
     "cats": [
-      22,
-      46
+      101
     ],
-    "cpe": "cpe:2.3:h:hp:integrated_lights-out:*:*:*:*:*:*:*:*",
-    "description": "HP iLO is a tool that provides multiple ways to configure, update, monitor, and run servers remotely.",
-    "headers": {
-      "Server": "HP-iLO-Server(?:/([\\d.]+))?\\;version:\\1"
-    },
-    "icon": "HP.svg",
-    "website": "https://hp.com"
+    "description": "HR Hotlink is a software tool that supports human resources processes for automotive organizations, including recruitment, employee records, and workforce management.",
+    "icon": "HRHotlink.svg",
+    "saas": true,
+    "scripts": "\\.hrhotlink\\.com",
+    "website": "https://corporate.hrhotlink.com"
   },
   "HSTS": {
     "cats": [
@@ -145,14 +143,6 @@
     "icon": "HTTP3.svg",
     "website": "https://httpwg.org/"
   },
-  "Haddock": {
-    "cats": [
-      4
-    ],
-    "description": "Haddock is a tool for automatically generating documentation from annotated Haskell source code.",
-    "scriptSrc": "haddock-util\\.js",
-    "website": "https://www.haskell.org/haddock/"
-  },
   "Haku": {
     "cats": [
       104
@@ -172,7 +162,8 @@
       1,
       11
     ],
-    "description": "Halo is a powerful, user-friendly open-source website building tool that supports dynamic themes, real-time editing, and multilingual setups.",
+    "cpe": "cpe:2.3:a:halo:halo:*:*:*:*:*:*:*:*",
+    "description": "Halo is an open-source website building tool that supports dynamic themes, real-time editing, and multilingual setups.",
     "icon": "Halo.svg",
     "implies": "Java",
     "meta": {
@@ -377,6 +368,16 @@
     "scriptSrc": "\\.happyfoxchat\\.com/",
     "website": "https://www.happyfox.com/live-chat"
   },
+  "HappyOrNot": {
+    "cats": [
+      73
+    ],
+    "description": "HappyOrNot is a feedback system that collects and analyzes customer and employee satisfaction data to measure experience and inform service improvements.",
+    "icon": "HappyOrNot.svg",
+    "saas": true,
+    "scriptSrc": "feedback\\.happy-or-not\\.com",
+    "website": "https://www.happy-or-not.com"
+  },
   "HappySync": {
     "cats": [
       32
@@ -451,6 +452,7 @@
     "cats": [
       60
     ],
+    "cpe": "cpe:2.3:a:linuxfoundation:harbor:*:*:*:*:*:*:*:*",
     "description": "Harbor is an open-source registry that secures artifacts with policies and role-based access control, ensures images are scanned and free from vulnerabilities, and signs images as trusted.",
     "dom": "harbor-app",
     "icon": "Harbor.svg",
@@ -458,23 +460,21 @@
     "oss": true,
     "website": "https://goharbor.io"
   },
-  "HarborByte": {
+  "Harmonizely": {
     "cats": [
-      19
+      72
     ],
-    "description": "HarborByte is a small business website platform that provides templated sites with integrated ecommerce, marketing, and hosting solutions.",
-    "headers": {
-      "Access-Control-Allow-Origin": "harborbyte\\.com"
-    },
-    "icon": "HarborByte.svg",
-    "meta": {
-      "content-security-policy": "harborbyte-media-assets\\.pages\\.dev",
-      "generator": "^Website by HarborByte$"
-    },
+    "description": "Harmonizely is a scheduling system that enables online appointment booking, calendar management, and time coordination through a web-based interface.",
+    "dom": "link[href*='app.harmonizely.com/']",
+    "icon": "Harmonizely.svg",
     "pricing": [
+      "freemium",
+      "low",
+      "recurring",
       "poa"
     ],
-    "website": "https://harborbyte.com"
+    "saas": true,
+    "website": "https://harmonizely.com"
   },
   "Harness": {
     "cats": [
@@ -492,11 +492,22 @@
     "scriptSrc": "\\.harnessapp\\.com",
     "website": "https://www.goharness.com/nonprofits"
   },
+  "Harri": {
+    "cats": [
+      101
+    ],
+    "description": "Harri is a platform offering tools to automate HR processes, support remote work, and provide analytics on hiring trends and labor costs.",
+    "dom": "link[href*='.ourstory.harri.com']",
+    "icon": "Harri.svg",
+    "saas": true,
+    "scripts": "\\.ourstory\\.harri\\.com",
+    "website": "https://harri.com"
+  },
   "HashThemes Total": {
     "cats": [
       80
     ],
-    "description": "HashThemes Total is the powerful and creative multipurpose WordPress theme.",
+    "description": "HashThemes Total is the and creative multipurpose WordPress theme.",
     "icon": "HashThemes.svg",
     "pricing": [
       "freemium",
@@ -539,7 +550,7 @@
     "cats": [
       27
     ],
-    "icon": "Haskell.png",
+    "icon": "Haskell.svg",
     "website": "https://wiki.haskell.org/Haskell"
   },
   "Hasura": {
@@ -611,7 +622,7 @@
     "cats": [
       36
     ],
-    "description": "Header Bidding Ai is a provider of an automated and managed header bidding solution. Header bidding cutting-edge technique where publishers offer their ad inventory to many ad exchanges.",
+    "description": "Header Bidding Ai is a provider of an automated and managed header bidding solution.",
     "icon": "Header Bidding Ai.svg",
     "pricing": [
       "poa",
@@ -625,7 +636,7 @@
     "cats": [
       66
     ],
-    "description": "Headless UI is an unstyled component library for either React.js or Vue.js from the same people that created Tailwind CSS.",
+    "description": "Headless UI is a unstyled component library for either React.js or Vue.js from the same people that created Tailwind CSS.",
     "dom": {
       "button": {
         "attributes": {
@@ -696,7 +707,7 @@
     "cats": [
       41
     ],
-    "description": "Heartland Payment Systems is a US-based payment processing and technology provider.",
+    "description": "Heartland Payment Systems is an US-based payment processing and technology provider.",
     "icon": "Heartland Payment Systems.svg",
     "pricing": [
       "payg",
@@ -734,7 +745,7 @@
     "cookies": {
       "_Heights_session": ""
     },
-    "description": "Heights Platform is an all-in-one platform for creating and selling online courses.",
+    "description": "Heights Platform is a platform for creating and selling online courses.",
     "headers": {
       "Access-Control-Allow-Origin": "uploads\\.heightsplatform\\.com"
     },
@@ -835,7 +846,7 @@
     "cats": [
       80
     ],
-    "description": "Hello Elementor is a WordPress theme built for the Elementor website builder platform. It uses minimal styling and scripts for maximum speed and design freedom.",
+    "description": "Hello Elementor is a WordPress theme built for the Elementor website builder platform.",
     "dom": {
       "link[id*='elementor-hello']": {
         "attributes": {
@@ -932,7 +943,7 @@
     "cats": [
       4
     ],
-    "description": "HelpDocs is an knowledge management system.",
+    "description": "HelpDocs is a knowledge management system.",
     "icon": "HelpDocs.svg",
     "js": {
       "HDAnalytics": "\\;confidence:25",
@@ -1025,21 +1036,6 @@
     "oss": true,
     "website": "https://nextui.org/"
   },
-  "Heroic": {
-    "cats": [
-      51
-    ],
-    "description": "Heroic is a platform that offers design templates and tools for creating websites.",
-    "icon": "Heroic.svg",
-    "pricing": [
-      "onetime",
-      "low",
-      "recurring"
-    ],
-    "saas": true,
-    "scriptSrc": "app\\.heroicnow\\.com/",
-    "website": "https://heroicnow.com"
-  },
   "Heroku": {
     "cats": [
       62
@@ -1061,6 +1057,7 @@
     "cats": [
       53
     ],
+    "cpe": "cpe:2.3:a:hesk:hesk:*:*:*:*:*:*:*:*",
     "description": "Hesk is a helpdesk and customer support system.",
     "icon": "Hesk.svg",
     "js": {
@@ -1153,6 +1150,7 @@
     "cats": [
       57
     ],
+    "cpe": "cpe:2.3:a:hexo:hexo:*:*:*:*:*:node.js:*:*",
     "description": "Hexo is a blog framework powered by Node.js.",
     "icon": "Hexo.svg",
     "implies": "Node.js",
@@ -1165,7 +1163,7 @@
     "cats": [
       100
     ],
-    "description": "Free Shipping Bar is a Shopify app built by Hextom. Free Shipping Bar help promote free shipping with progressive messages to motivate customers to buy more.",
+    "description": "Free Shipping Bar is a Shopify app built by Hextom.",
     "icon": "Hextom.png",
     "implies": "Shopify",
     "pricing": [
@@ -1257,7 +1255,7 @@
       51,
       110
     ],
-    "description": "Heyflow is an all-in-one platform that enables users to create interactive lead funnels, multi-step forms, and customized landing pages that drive conversions and engage website visitors, all without the need for coding.",
+    "description": "Heyflow is a platform that enables users to create interactive lead funnels, multi-step forms, and customized landing pages that drive conversions and engage website visitors, all without the need for coding.",
     "icon": "Heyflow.svg",
     "js": {
       "webpackChunk_heyflow_widget": ""
@@ -1319,6 +1317,7 @@
     "cats": [
       22
     ],
+    "cpe": "cpe:2.3:a:hiawatha-webserver:hiawatha:*:*:*:*:*:*:*:*",
     "description": "Hiawatha is a secure, lightweight web server developed by Hugo Leisink, designed for ease of use and advanced security features such as protection against SQL injections, XSS, and CSRF attacks.",
     "headers": {
       "Server": "Hiawatha v([\\d.]+)\\;version:\\1"
@@ -1348,7 +1347,7 @@
       32,
       53
     ],
-    "description": "HighLevel is an all-in-one marketing and automation platform designed for marketing agencies and small businesses to manage CRM, marketing campaigns, sales funnels, appointment scheduling, and more.",
+    "description": "HighLevel is a marketing and automation platform designed for marketing agencies and small businesses to manage CRM, marketing campaigns, sales funnels, appointment scheduling, and more.",
     "icon": "HighLevel.svg",
     "js": {
       "leadConnector.chatWidget": ""
@@ -1381,7 +1380,8 @@
     "cats": [
       25
     ],
-    "description": "Highcharts is a charting library written in pure JavaScript, for adding interactive charts to a website or web application. Highcharts meets accessibility standards and works with Python, Angular, React, iOS, Android, and more.",
+    "cpe": "cpe:2.3:a:highcharts:highcharts:*:*:*:*:*:*:*:*",
+    "description": "Highcharts is a charting library written in pure JavaScript, for adding interactive charts to a website or web application.",
     "icon": "Highcharts.svg",
     "js": {
       "Highcharts": "",
@@ -1407,7 +1407,7 @@
     "cats": [
       2
     ],
-    "description": "Higher Logic Vanilla is a cloud-based customer community platform offering features like discussion forums, Q&A, ideation, gamification, and advanced analytics, enabling businesses to enhance customer engagement and support.",
+    "description": "Higher Logic Vanilla is a cloud-based customer community platform offering features like discussion forums, Q&an ideation, gamification, and advanced analytics, enabling businesses to enhance customer engagement and support.",
     "dom": "body#DiscussionsPage, body#vanilla",
     "headers": {
       " x-vanilla-version": "([\\d\\.]+)\\;version:\\1",
@@ -1484,6 +1484,7 @@
     "cats": [
       6
     ],
+    "cpe": "cpe:2.3:a:hikashop:hikashop:*:*:*:*:*:joomla\\!:*:*",
     "description": "HikaShop is a Joomla extension for managing shop content, handling price management, and customizing store views with an intuitive interface.",
     "icon": "HikaShop.svg",
     "js": {
@@ -1514,7 +1515,7 @@
     "cats": [
       68
     ],
-    "description": "HikeOrders is a web accessibility overlay that claims to make your site disability friendly.",
+    "description": "HikeOrders is a web accessibility overlay that claims to make a site disability friendly.",
     "icon": "HikeOrders.svg",
     "pricing": [
       "low",
@@ -1570,7 +1571,7 @@
     "cats": [
       19
     ],
-    "description": "Manage session history with JavaScript",
+    "description": "Manage session history with JavaScript.",
     "scriptSrc": [
       "/history(@|/)([\\d.]+)(?:/[a-z]+)?/history(?:(.production|.development))?(?:.min)?\\.js\\;version:\\2"
     ],
@@ -1645,7 +1646,7 @@
     "cats": [
       17
     ],
-    "description": "Hoefler&Co is a digital type foundry (font design studio) in Woburn, Massachusetts (formerly New York City), founded by type designer Jonathan Hoefler. Hoefler&Co designs typefaces for clients and for retail on its website.",
+    "description": "Hoefler&Co is a digital type foundry (font design studio) in Woburn, Massachusetts (formerly New York City), founded by type designer Jonathan Hoefler.",
     "dom": "link[href*='cloud.typography.com/']",
     "icon": "Hoefler&Co.svg",
     "pricing": [
@@ -1670,16 +1671,6 @@
       "([\\d.]+)/hogan(?:\\.min)?\\.js\\;version:\\1"
     ],
     "website": "https://twitter.github.io/hogan.js/"
-  },
-  "Hoiio": {
-    "cats": [
-      52
-    ],
-    "description": "Hoiio is a cloud communications platform that simplifies the setup of messaging, voice, and other communication services.",
-    "icon": "Hoiio.svg",
-    "saas": true,
-    "scripts": "hoiio\\.notifyEmpty",
-    "website": "https://www.hoiio.com"
   },
   "HoldMyTicket": {
     "cats": [
@@ -1739,6 +1730,16 @@
     ],
     "saas": true,
     "website": "https://homhero.com.au"
+  },
+  "HomeJunction": {
+    "cats": [
+      10
+    ],
+    "description": "HomeJunction is a provider of data applications for the real estate industry.",
+    "icon": "HomeJunction.svg",
+    "saas": true,
+    "scripts": "\\.homejunction\\.com",
+    "website": "https://www.homejunction.com"
   },
   "Homebot": {
     "cats": [
@@ -1885,7 +1886,7 @@
     "cats": [
       6
     ],
-    "description": "Horoshop is an all-in-one platform designed to support launching and managing online stores tailored for businesses in  Ukraine.",
+    "description": "Horoshop is a platform designed to support launching and managing online stores tailored for businesses in Ukraine.",
     "js": {
       "Horoshop.Widgets": "",
       "horoshopReCaptcha": "",
@@ -1898,26 +1899,23 @@
     "saas": true,
     "website": "https://horoshop.ua"
   },
-  "HostEurope": {
+  "HostChefs": {
     "cats": [
       88
     ],
-    "description": "HostEurope is a European website hosting, email and domain name registrar company headquartered Hayes, West London.",
-    "dns": {
-      "SOA": "\\.hosteurope\\.com"
+    "description": "HostChefs is a web hosting service that provides infrastructure and tools for deploying, managing, and maintaining websites online.",
+    "headers": {
+      "Server": "^HostChefs DDoS Protected$"
     },
-    "icon": "HostEurope.svg",
-    "pricing": [
-      "low",
-      "recurring"
-    ],
-    "website": "https://www.hosteurope.de"
+    "icon": "HostChefs.svg",
+    "saas": true,
+    "website": "https://hostchefs.eu"
   },
   "Hostens": {
     "cats": [
       88
     ],
-    "description": "Hostens is a web hosting company specialising in hosting services, virtual private server hosting, and the domain name or transition.",
+    "description": "Hostens is a web hosting company specializing in hosting services, virtual private server hosting, and the domain name or transition.",
     "dns": {
       "SOA": "\\.hostens\\.com"
     },
@@ -2048,7 +2046,7 @@
       93,
       72
     ],
-    "description": "Hostmeapp is an restaurant software. Includes reservation, waitlist, guestbook and marketing tools.",
+    "description": "Hostmeapp is a restaurant software.",
     "icon": "Hostmeapp.svg",
     "pricing": [
       "low",
@@ -2110,6 +2108,7 @@
     "cookies": {
       "hotaru_mobile": ""
     },
+    "cpe": "cpe:2.3:a:hotarucms:hotarucms:*:*:*:*:*:*:*:*",
     "icon": "Hotaru CMS.png",
     "implies": "PHP",
     "meta": {
@@ -2133,20 +2132,6 @@
     "saas": true,
     "scriptSrc": "api\\.hotbot\\.ai",
     "website": "https://hotbot.ai"
-  },
-  "Hotel Propeller": {
-    "cats": [
-      51
-    ],
-    "description": "Hotel Propeller is a web design platform that creates responsive websites tailored for hotels.",
-    "icon": "HotelPropeller.svg",
-    "pricing": [
-      "mid",
-      "recurring"
-    ],
-    "saas": true,
-    "scripts": "\\.hotelpropeller\\.com",
-    "website": "https://hotelpropeller.com"
   },
   "Hotjar": {
     "cats": [
@@ -2226,19 +2211,6 @@
       "howler/([\\d.]+)/howler(?:\\.core)?\\.min\\.js\\;version:\\1"
     ],
     "website": "https://howlerjs.com"
-  },
-  "HrFlow.ai": {
-    "cats": [
-      101
-    ],
-    "description": "HrFlow.ai is an HR data automation API platform.",
-    "icon": "HrFlow.ai.svg",
-    "pricing": [
-      "payg"
-    ],
-    "saas": true,
-    "scriptSrc": "\\.hrflow\\.ai",
-    "website": "https://hrflow.ai"
   },
   "Htmx": {
     "cats": [
@@ -2351,7 +2323,7 @@
     "cats": [
       87
     ],
-    "description": "HubSpot is a platform with all the tools and integrations you need for marketing, sales, and customer service. HubSpot WordPress plugin allows you to manage contacts (CRM), engage visitors with live chat and chatbots, add beautiful forms to pages, create engaging email marketing campaigns, and more.",
+    "description": "HubSpot is a platform with all the tools and integrations you need for marketing, sales, and customer service.",
     "icon": "HubSpot.svg",
     "implies": [
       "HubSpot",
@@ -2367,7 +2339,7 @@
     "cats": [
       10
     ],
-    "description": "Hubalz is an all-in-one analytics and marketing tool.",
+    "description": "Hubalz is an analytics and marketing tool.",
     "icon": "Hubalz.svg",
     "js": {
       "Hubalz.getClickDetails": "",
@@ -2384,7 +2356,7 @@
     "cats": [
       1
     ],
-    "description": "Hubb is an all-in-one integrated system designed for churches, enabling website content management without the need for technical expertise.",
+    "description": "Hubb is an integrated system designed for churches, enabling website content management without the need for technical expertise.",
     "dom": "div.endis-jquery-ui",
     "icon": "Hubb.svg",
     "js": {
@@ -2400,39 +2372,6 @@
     ],
     "saas": true,
     "website": "https://www.hubb.church"
-  },
-  "Huberway": {
-    "cats": [
-      1
-    ],
-    "cookies": {
-      "huberway_session": ""
-    },
-    "description": "Huberway is a content management system, based on PHP and JavaScript, used to create advanced sales portals oriented towards industrialization 4.0.",
-    "icon": "Huberway.svg",
-    "implies": [
-      "PHP",
-      "MySQL"
-    ],
-    "pricing": [
-      "low",
-      "recurring"
-    ],
-    "saas": true,
-    "website": "https://www.huberway.com"
-  },
-  "Huberway Analytics": {
-    "cats": [
-      10
-    ],
-    "description": "Huberway Analytics is a free web analytics service that tracks and reports website traffic.",
-    "icon": "Huberway.svg",
-    "pricing": [
-      "freemium"
-    ],
-    "saas": true,
-    "scriptSrc": "analytics\\.huberway\\.com/pixel/",
-    "website": "https://www.huberway.com/analytics-software"
   },
   "Hubilo": {
     "cats": [
@@ -2470,7 +2409,7 @@
     "cats": [
       54
     ],
-    "description": "Huckabuy is a software product utilising Google's dynamic rendering and structured data initiatives to enhance organic channel growth.",
+    "description": "Huckabuy is a software product using Google's dynamic rendering and structured data initiatives to enhance organic channel growth.",
     "icon": "Huckabuy.svg",
     "js": {
       "HUCKABUY NAMESPACE.sd": "",
@@ -2483,7 +2422,7 @@
     "cats": [
       21
     ],
-    "description": "Huddle is a digital product agency based in Amsterdam, Netherlands, specialising in developing and designing custom software solutions for startups and enterprises, including e-learning products, community platforms, and mobile applications.",
+    "description": "Huddle is a digital product agency based in Amsterdam, Netherlands, specializing in developing and designing custom software solutions for startups and enterprises, including e-learning products, community platforms, and mobile applications.",
     "dom": "link[href*='.thehuddle.nl/']",
     "icon": "Huddle.svg",
     "js": {
@@ -2532,7 +2471,7 @@
     "cats": [
       100
     ],
-    "description": "HulkApps Age Verification allow your customers to certify their age before they land in your store.",
+    "description": "HulkApps Age Verification allow customers to certify their age before they land in a store.",
     "icon": "HulkApps.svg",
     "implies": "Shopify",
     "pricing": [
@@ -2585,7 +2524,7 @@
       76,
       100
     ],
-    "description": "HulkApps Infinite Product Options is a unlimited custom options for products. Display variant options as buttons, color and image swatches, and more.",
+    "description": "HulkApps Infinite Product Options is a unlimited custom options for products.",
     "icon": "HulkApps.svg",
     "implies": "Shopify",
     "js": {
@@ -2656,6 +2595,7 @@
     "cats": [
       1
     ],
+    "cpe": "cpe:2.3:a:humhub:humhub:*:*:*:*:*:*:*:*",
     "description": "HumHub is a software platform that digitizes organizational processes by enabling structured internal communication, collaboration, and information sharing.",
     "icon": "HumHub.svg",
     "js": {
@@ -2686,7 +2626,7 @@
     "cats": [
       10
     ],
-    "description": "Humblytics is an analytics tool that simplifies tracking custom events without coding. It monitors real-time metrics, optimises conversion rates, and provides valuable insights.",
+    "description": "Humblytics is an analytics tool that simplifies tracking custom events without coding.",
     "icon": "Humblytics.svg",
     "pricing": [
       "freemium",
@@ -2747,7 +2687,7 @@
     "cats": [
       32
     ],
-    "description": "Hushly is an all-in-one B2B marketing software platform.",
+    "description": "Hushly is a B2B marketing software platform.",
     "dom": "link[href*='.hushly.com/']",
     "icon": "Hushly.svg",
     "js": {
@@ -2806,22 +2746,6 @@
     "scriptSrc": "api\\.hypelab\\.com",
     "website": "https://www.hypelab.com"
   },
-  "Hypercloudhost": {
-    "cats": [
-      88
-    ],
-    "description": "Hypercloudhost is a hosting service solution in Indonesia offering anti-DDoS protection and high-performance cloud hosting.",
-    "icon": "Hypercloudhost.svg",
-    "meta": {
-      "generator": "^hypercloudhost$"
-    },
-    "pricing": [
-      "low",
-      "recurring"
-    ],
-    "saas": true,
-    "website": "https://hypercloudhost.com"
-  },
   "Hypercorn": {
     "cats": [
       22
@@ -2864,6 +2788,18 @@
     "scriptSrc": "\\.hyperlane\\.co/",
     "scripts": "\\.hyperlane\\.co/",
     "website": "https://hyperlane.co"
+  },
+  "Hypersoft": {
+    "cats": [
+      41
+    ],
+    "description": "Hypersoft is a provider of POS systems designed for restaurants and cafés.",
+    "headers": {
+      "Access-Control-Allow-Origin": "\\.myhypersoftapp\\.de"
+    },
+    "icon": "Hypersoft.svg",
+    "saas": true,
+    "website": "https://hypersoft.de"
   },
   "Hyperspeed": {
     "cats": [
@@ -2910,7 +2846,7 @@
     "cats": [
       10
     ],
-    "description": "Hyros is a marketing analytics and optimisation platform.",
+    "description": "Hyros is a marketing analytics and optimization platform.",
     "icon": "Hyros.svg",
     "pricing": [
       "recurring",
@@ -2924,7 +2860,7 @@
     "cats": [
       108
     ],
-    "description": "Hyva Themes is a performance-optimised theme for Magento 2 which eliminated the third-party libraries and having only two dependencies Alpine.js and Tailwind CSS.",
+    "description": "Hyva Themes is a performance-optimized theme for Magento 2 which eliminated the third-party libraries and having only two dependencies Alpine.js and Tailwind CSS.",
     "headers": {
       "X-Built-With": "^Hyva Themes$"
     },
@@ -2943,6 +2879,7 @@
     "cats": [
       19
     ],
+    "cpe": "cpe:2.3:a:h5ai_project:h5ai:*:*:*:*:*:*:*:*",
     "description": "h5ai is a modern HTTP web server index for Apache httpd, lighttpd, and nginx.",
     "icon": "default.svg",
     "implies": "PHP",

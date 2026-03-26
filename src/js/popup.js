@@ -7,37 +7,41 @@ const { agent, open, i18n, getOption, setOption, promisify, sendMessage } =
 
 const baseUrl = 'https://www.wappalyzer.com'
 const utm = '?utm_source=popup&utm_medium=extension&utm_campaign=wappalyzer'
+const apiKeyRetryDelays = [3000, 5000, 10000, 15000, 30000]
+const apiKeyActivationWindow = 1000 * 60 * 5
+const apiKeyActivationMessage =
+  'New API keys can take a few minutes to activate. Please wait a moment and try again.'
 
 const footers = [
   {
-    heading: 'Generate sales leads',
-    body: 'Find new prospects by the technologies they use. Reach out to customers of Shopify, Magento, Salesforce and others.',
-    buttonText: 'Create a lead list',
+    heading: 'Need more than the extension?',
+    body: 'Wappalyzer also helps teams build lead lists, enrich CRM records, analyze websites in bulk, and automate prospecting workflows.',
+    buttonText: 'See plans',
+    buttonLink: `${baseUrl}/pricing/${utm}`,
+  },
+  {
+    heading: 'Find better prospects',
+    body: 'Build lead lists by technology or keyword, with company details, contacts, and social profiles for faster qualification.',
+    buttonText: 'Build lead lists',
     buttonLink: `${baseUrl}/lists/${utm}`,
   },
   {
-    heading: 'Connect Wappalyzer to your CRM',
-    body: 'See the technology stacks of your leads without leaving your CRM. Connect to HubSpot, Pipedrive and many others.',
-    buttonText: 'See all apps',
+    heading: 'Enrich your CRM automatically',
+    body: 'Bring technographics into HubSpot, Salesforce, Pipedrive, and more so your team can qualify accounts faster.',
+    buttonText: 'See apps',
     buttonLink: `${baseUrl}/apps/${utm}`,
   },
   {
-    heading: 'Enrich your data with tech stacks',
-    body: 'Upload a list of websites to get a report of the technologies in use, such as CMS or ecommerce platforms.',
-    buttonText: 'Upload a list',
-    buttonLink: `${baseUrl}/lookup/${utm}#bulk`,
+    heading: 'Build targeted prospect lists',
+    body: 'Find companies by technology or keyword and export account lists with the context your team needs to prioritize outreach.',
+    buttonText: 'See lead lists',
+    buttonLink: `${baseUrl}/lists/${utm}`,
   },
   {
-    heading: 'Automate technology lookups',
-    body: 'Our APIs provide instant access to website technology stacks, contact details and social media profiles.',
-    buttonText: 'Compare APIs',
-    buttonLink: `${baseUrl}/api/${utm}`,
-  },
-  {
-    heading: 'Wappalyzer for businesses',
-    body: 'Sign up to use our tools for lead generation, market research and competitor analysis.',
-    buttonText: 'Compare plans',
-    buttonLink: `${baseUrl}/pricing/${utm}`,
+    heading: 'Bring website intelligence into your workflow',
+    body: 'Use Wappalyzer with HubSpot, Salesforce, Pipedrive, Zapier, Make, and more to enrich records and trigger follow-up automatically.',
+    buttonText: 'See apps',
+    buttonLink: `${baseUrl}/apps/${utm}`,
   },
 ]
 
@@ -229,7 +233,46 @@ function getTechnologySpend(technologies) {
   return spend
 }
 
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+function isLocalDevelopmentUrl(url) {
+  if (!/^https?:/i.test(String(url || ''))) {
+    return false
+  }
+
+  try {
+    const { hostname } = new URL(url)
+
+    return (
+      hostname === 'localhost' ||
+      hostname.endsWith('.localhost') ||
+      hostname.endsWith('.local') ||
+      hostname.endsWith('.test') ||
+      /^(?:\d{1,3}\.){3}\d{1,3}$/.test(hostname) ||
+      (/^\[?[a-f0-9:]+\]?$/i.test(hostname) && hostname.includes(':'))
+    )
+  } catch {
+    return false
+  }
+}
+
 const Popup = {
+  async openSettings() {
+    try {
+      if (typeof chrome.runtime.openOptionsPage === 'function') {
+        await chrome.runtime.openOptionsPage()
+
+        return
+      }
+    } catch {
+      // Continue with the bundled options page fallback.
+    }
+
+    open(chrome.runtime.getURL('html/options.html'))
+  },
+
   /**
    * Initialise popup
    */
@@ -247,14 +290,12 @@ const Popup = {
       empty: document.querySelector('.empty'),
       emptyReload: document.querySelector('.empty__reload'),
       footer: document.querySelector('.footer'),
-      game: document.querySelector('.ttt-game'),
       headerSwitchDisabled: document.querySelector('.header__switch--disabled'),
       headerSwitchEnabled: document.querySelector('.header__switch--enabled'),
       headerSwitches: document.querySelectorAll('.header__switch'),
       plusDownloadLink: document.querySelector(
         '.plus-download__button .button__link'
       ),
-      playGame: document.querySelector('.empty__play-game'),
       plusConfigureApiKey: document.querySelector('.plus-configure__apikey'),
       plusConfigureSave: document.querySelector('.plus-configure__save'),
       plusDownload: document.querySelector('.plus-download'),
@@ -316,8 +357,17 @@ const Popup = {
     }
 
     // Terms
-    const termsAccepted =
+    let termsAccepted =
       agent === 'chrome' || (await getOption('termsAccepted', false))
+    let plusSupported = false
+
+    const syncPlusTabState = () => {
+      el.tabPlus.classList[termsAccepted && plusSupported ? 'remove' : 'add'](
+        'tab--disabled'
+      )
+    }
+
+    syncPlusTabState()
 
     if (termsAccepted) {
       el.terms.classList.add('terms--hidden')
@@ -329,15 +379,16 @@ const Popup = {
       el.detections.classList.add('detections--hidden')
       el.issue.classList.add('issue--hidden')
       el.footer.classList.add('footer--hidden')
-      el.tabPlus.classList.add('tab--disabled')
+      syncPlusTabState()
 
       el.termsButtonAccept.addEventListener('click', async () => {
         await setOption('termsAccepted', true)
         await setOption('tracking', true)
+        termsAccepted = true
 
         el.terms.classList.add('terms--hidden')
         el.footer.classList.remove('footer--hidden')
-        el.tabPlus.classList.remove('tab--disabled')
+        syncPlusTabState()
 
         Popup.driver('getDetections').then(Popup.onGetDetections.bind(this))
       })
@@ -345,10 +396,11 @@ const Popup = {
       el.termsButtonDecline.addEventListener('click', async () => {
         await setOption('termsAccepted', true)
         await setOption('tracking', false)
+        termsAccepted = true
 
         el.terms.classList.add('terms--hidden')
         el.footer.classList.remove('footer--hidden')
-        el.tabPlus.classList.remove('tab--disabled')
+        syncPlusTabState()
 
         Popup.driver('getDetections').then(Popup.onGetDetections.bind(this))
       })
@@ -368,6 +420,9 @@ const Popup = {
         Popup.cache.url = url
 
         const { hostname } = new URL(url)
+        plusSupported = !isLocalDevelopmentUrl(url)
+
+        syncPlusTabState()
 
         setDisabledDomain(disabledDomains.includes(hostname))
 
@@ -397,7 +452,8 @@ const Popup = {
           headerSwitch.classList.add('header__switch--hidden')
         }
 
-        el.tabPlus.classList.add('tab--disabled')
+        plusSupported = false
+        syncPlusTabState()
       }
     }
 
@@ -406,14 +462,13 @@ const Popup = {
 
     el.plusConfigureSave.addEventListener('click', async (event) => {
       await setOption('apiKey', el.plusConfigureApiKey.value)
+      await setOption('apiKeyUpdatedAt', Date.now())
 
       await Popup.getPlus(url)
     })
 
     // Header
-    el.headerSettings.addEventListener('click', () =>
-      chrome.runtime.openOptionsPage()
-    )
+    el.headerSettings.addEventListener('click', Popup.openSettings)
 
     // Theme
     el.headerThemes.forEach((headerTheme) =>
@@ -455,12 +510,7 @@ const Popup = {
     el.plusDownloadLink.addEventListener('click', Popup.downloadCsv)
 
     // Footer
-    const item =
-      footers[
-        Math.round(Math.random())
-          ? 0
-          : Math.round(Math.random() * (footers.length - 1))
-      ]
+    const item = footers[Math.floor(Math.random() * footers.length)]
 
     el.footerHeadingText.textContent = item.heading
     el.footerContentBody.textContent = item.body
@@ -505,15 +555,6 @@ const Popup = {
     // Reload
     el.emptyReload.addEventListener('click', (event) => {
       chrome.tabs.reload({ bypassCache: true })
-    })
-
-    // Game
-    el.playGame.addEventListener('click', (event) => {
-      event.preventDefault()
-      event.stopImmediatePropagation()
-
-      el.playGame.classList.add('empty__play-game--hidden')
-      el.game.classList.remove('ttt-game--hidden')
     })
 
     // Apply internationalization
@@ -566,8 +607,6 @@ const Popup = {
 
     const el = {
       empty: document.querySelector('.empty'),
-      playGame: document.querySelector('.empty__play-game'),
-      game: document.querySelector('.ttt-game'),
       detections: document.querySelector('.detections'),
       issue: document.querySelector('.issue'),
       plusDownload: document.querySelector('.plus-download'),
@@ -579,8 +618,6 @@ const Popup = {
 
     if (!detections || !detections.length) {
       el.empty.classList.remove('empty--hidden')
-      el.playGame.classList.remove('empty__play-game--hidden')
-      el.game.classList.add('ttt-game--hidden')
       el.detections.classList.add('detections--hidden')
       el.issue.classList.add('issue--hidden')
       el.plusDownload.classList.add('plus-download--hidden')
@@ -701,6 +738,7 @@ const Popup = {
    */
   async getPlus(url) {
     const apiKey = await getOption('apiKey', '')
+    const apiKeyUpdatedAt = parseInt(await getOption('apiKeyUpdatedAt', 0), 10)
 
     const el = {
       loading: document.querySelector('.loading'),
@@ -743,25 +781,44 @@ const Popup = {
     }
 
     try {
-      const response = await fetch(
-        `https://api.wappalyzer.com/v2/plus/${encodeURIComponent(url)}`,
-        {
-          method: 'GET',
-          headers: {
-            'x-api-key': apiKey,
-          },
+      let data
+      let response
+
+      for (let attempt = 0; ; attempt += 1) {
+        response = await fetch(
+          `https://api.wappalyzer.com/v2/plus/${encodeURIComponent(url)}`,
+          {
+            method: 'GET',
+            headers: {
+              'x-api-key': apiKey,
+            },
+          }
+        )
+
+        data = await response.json()
+
+        if (response.ok) {
+          await setOption('apiKeyUpdatedAt', 0)
+
+          break
         }
-      )
 
-      const data = await response.json()
+        const recentApiKey =
+          apiKeyUpdatedAt &&
+          Date.now() - apiKeyUpdatedAt < apiKeyActivationWindow &&
+          [403, 429].includes(response.status)
 
-      if (!response.ok) {
-        const error = new Error()
+        if (!recentApiKey || attempt >= apiKeyRetryDelays.length) {
+          const error = new Error()
 
-        error.data = data
-        error.response = response
+          error.data = data
+          error.response = response
+          error.apiKeyPendingActivation = recentApiKey
 
-        throw error
+          throw error
+        }
+
+        await delay(apiKeyRetryDelays[attempt])
       }
 
       const { attributes, crawl } = data
@@ -946,7 +1003,9 @@ const Popup = {
       }. Please try again later.`
 
       if (error.response) {
-        if (error.response.status === 403) {
+        if (error.apiKeyPendingActivation) {
+          el.errorMessage.textContent = apiKeyActivationMessage
+        } else if (error.response.status === 403) {
           el.errorMessage.textContent =
             typeof error.data === 'string'
               ? error.data

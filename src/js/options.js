@@ -44,10 +44,10 @@ const Options = {
     document
       .querySelector('[data-i18n="optionApiKey"]')
       .parentNode.querySelector('input')
-      .addEventListener(
-        'input',
-        async (event) => await setOption('apiKey', event.target.value)
-      )
+      .addEventListener('input', async (event) => {
+        await setOption('apiKey', event.target.value)
+        await setOption('apiKeyUpdatedAt', Date.now())
+      })
 
     document
       .querySelector('.options__cache')

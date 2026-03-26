@@ -4,7 +4,7 @@
       52,
       53
     ],
-    "description": "11Sight is an AI-powered, omnichannel platform enabling users to receive inbound video calls from any online channel, facilitating sales conversations and lead conversions.",
+    "description": "11Sight is an AI-based, omnichannel platform enabling users to receive inbound video calls from any online channel, facilitating sales conversations and lead conversions.",
     "icon": "11Sight.svg",
     "js": {
       "elevensight": "",
@@ -44,6 +44,16 @@
     "saas": true,
     "scriptSrc": "bitrix(?:\\.info/|/js/main/core)",
     "website": "https://www.1c-bitrix.ru"
+  },
+  "220Marketing": {
+    "cats": [
+      32
+    ],
+    "description": "220Marketing is a marketing service that provides solutions for the mortgage, insurance, real estate, and solar industries.",
+    "icon": "220Marketing.svg",
+    "saas": true,
+    "scripts": "\\.my220\\.com",
+    "website": "https://www.220marketing.com"
   },
   "24nettbutikk": {
     "cats": [
@@ -92,6 +102,20 @@
     "saas": true,
     "website": "https://2click.pl"
   },
+  "2people": {
+    "cats": [
+      101
+    ],
+    "description": "2people is a human resources and job board system that supports job postings, applicant tracking, and basic HR management functions for organizations.",
+    "icon": "2people.svg",
+    "pricing": [
+      "payg",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "api\\.2people\\.com",
+    "website": "https://2people.com"
+  },
   "321 CMS": {
     "cats": [
       1
@@ -131,7 +155,7 @@
     "cats": [
       88
     ],
-    "description": "34SP.com specialises in website hosting, discount domain names, low cost VPS servers and dedicated servers.",
+    "description": "34SP.com specializes in website hosting, discount domain names, low cost VPS servers and dedicated servers.",
     "dns": {
       "SOA": "ns(?:\\d+)?\\.34sp\\.com"
     },
@@ -151,7 +175,7 @@
       "4TellCart": "",
       "4TellSession": ""
     },
-    "description": "4-Tell is an ecommerce software company for retailers with AI-powered personalisation and recommendations products.",
+    "description": "4-Tell is an ecommerce software company for retailers with AI-based personalization and recommendations products.",
     "icon": "4-Tell.svg",
     "js": {
       "_4TellBoost": ""
@@ -177,7 +201,7 @@
     "cats": [
       6
     ],
-    "description": "42stores is a French SaaS ecommerce solution that was established in 2008. It offers a range of features such as monitoring, customer support, and regular updates. The platform is known for its flexibility and modularity, making it possible to integrate with various ERP systems.",
+    "description": "42stores is a French SaaS ecommerce solution that was established in 2008.",
     "headers": {
       "Powered-By": "^42stores$"
     },
@@ -223,7 +247,7 @@
     "cats": [
       10
     ],
-    "description": "51.LA is a Chinese based website visitor counter.",
+    "description": "51. LA is a Chinese based website visitor counter.",
     "icon": "51.LA.png",
     "js": {
       "LA.config.ck": ""
@@ -309,7 +333,7 @@
     "cats": [
       101
     ],
-    "description": "7Shifts is an all-in-one team management platform designed to streamline restaurant operations, providing tools for scheduling, communication, and task management to simplify day-to-day activities for both managers and staff.",
+    "description": "7Shifts is a team management platform designed to streamline restaurant operations, providing tools for scheduling, communication, and task management to simplify day-to-day activities for both managers and staff.",
     "dom": "a[href*='7shifts.com/'] > img[src*='.7shifts.com/']",
     "icon": "7Shifts.svg",
     "pricing": [
@@ -381,7 +405,7 @@
     "cats": [
       105
     ],
-    "description": "<model-viewer> is an open-source web component developed by Google and maintained through GitHub. <model-viewer> aims at putting 3D content on the web easily with a few lines of HTML code. This was first introduced with Chrome 72 in July 2019 and enables users to view 3D in the browser and mobile devices.",
+    "description": "<model-viewer> is an open-source web component developed by Google and maintained through GitHub.",
     "dom": "model-viewer",
     "icon": "model-viewer.svg",
     "oss": true,

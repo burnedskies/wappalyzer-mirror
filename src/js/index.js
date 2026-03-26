@@ -9,6 +9,7 @@ const {
   analyzeManyToMany,
   resolve,
   getTechnology,
+  getTechnologiesByTypes,
 } = Wappalyzer
 const { agent, promisify, getOption, setOption, open, close, globEscape } =
   Utils
@@ -16,6 +17,8 @@ const { agent, promisify, getOption, setOption, open, close, globEscape } =
 const expiry = 1000 * 60 * 60 * 48
 
 const maxHostnames = 100
+const maxExternalScriptChars = 100000
+const persistDebounce = 1000
 
 const hostnameIgnoreList =
   /\b((local|dev(elop(ment)?)?|sandbox|stag(e|ing)?|preprod|production|preview|internal|test(ing)?|[^a-z]demo(shop)?|cache)[.-]|dev\d|localhost|((wappalyzer|google|bing|baidu|microsoft|duckduckgo|facebook|adobe|twitter|reddit|yahoo|wikipedia|amazon|amazonaws|youtube|stackoverflow|github|stackexchange|w3schools|twitch)\.)|(live|office|herokuapp|shopifypreview)\.com|\.local|\.test|\.netlify\.app|ngrok|web\.archive\.org|zoom\.us|^([0-9.]+|[\d.]+)$|^([a-f0-9:]+:+)+[a-f0-9]+$)/
@@ -46,49 +49,130 @@ function isSimilarUrl(a, b) {
   return normalise(a) === normalise(b)
 }
 
+function hasValues(value) {
+  if (Array.isArray(value)) {
+    return value.length > 0
+  }
+
+  if (value && value.constructor === Object) {
+    return Object.keys(value).length > 0
+  }
+
+  return !!value
+}
+
+function getItemTypes(items) {
+  return Object.keys(items).filter((type) => hasValues(items[type]))
+}
+
+async function fetchTextSnippet(url, maxChars = maxExternalScriptChars) {
+  const response = await fetch(url)
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch script: ${response.status} ${url}`)
+  }
+
+  if (!response.body || !response.body.getReader) {
+    return (await response.text()).slice(0, maxChars)
+  }
+
+  const reader = response.body.getReader()
+  const decoder = new TextDecoder()
+  let text = ''
+
+  try {
+    while (text.length < maxChars) {
+      const { done, value } = await reader.read()
+
+      if (done) {
+        break
+      }
+
+      text += decoder.decode(value, { stream: true })
+    }
+
+    text += decoder.decode()
+  } finally {
+    reader.cancel().catch(() => {})
+  }
+
+  return text.slice(0, maxChars)
+}
+
+const optionCache = new Map()
+
+async function getCachedOption(name, defaultValue = null) {
+  if (optionCache.has(name)) {
+    return optionCache.get(name)
+  }
+
+  const value = await getOption(name, defaultValue)
+
+  optionCache.set(name, value)
+
+  return value
+}
+
+function setCachedOption(name, value) {
+  optionCache.set(name, value)
+
+  return setOption(name, value)
+}
+
+chrome.storage.onChanged.addListener((changes, areaName) => {
+  if (areaName !== 'local') {
+    return
+  }
+
+  Object.keys(changes).forEach((name) => {
+    if ('newValue' in changes[name]) {
+      optionCache.set(name, changes[name].newValue)
+    } else {
+      optionCache.delete(name)
+    }
+  })
+})
+
 const Driver = {
+  persistTimer: null,
+
   /**
    * Initialise driver
    */
   async init() {
     await Driver.loadTechnologies()
 
-    const hostnameCache = await getOption('hostnames', {})
+    const hostnameCache = await getCachedOption('hostnames', {})
+    const hostnames = {}
+
+    for (const hostname of Object.keys(hostnameCache)) {
+      hostnames[hostname] = {
+        ...hostnameCache[hostname],
+        detections: hostnameCache[hostname].detections.map(
+          ({ technology: name, pattern: { regex, confidence }, version }) => ({
+            technology: getTechnology(name, true),
+            pattern: {
+              regex: new RegExp(regex, 'i'),
+              confidence,
+            },
+            version,
+          })
+        ),
+      }
+    }
 
     Driver.cache = {
-      hostnames: Object.keys(hostnameCache).reduce(
-        (cache, hostname) => ({
-          ...cache,
-          [hostname]: {
-            ...hostnameCache[hostname],
-            detections: hostnameCache[hostname].detections.map(
-              ({
-                technology: name,
-                pattern: { regex, confidence },
-                version,
-              }) => ({
-                technology: getTechnology(name, true),
-                pattern: {
-                  regex: new RegExp(regex, 'i'),
-                  confidence,
-                },
-                version,
-              })
-            ),
-          },
-        }),
-        {}
-      ),
-      robots: await getOption('robots', {}),
+      hostnames,
+      robots: await getCachedOption('robots', {}),
     }
 
     const { version } = chrome.runtime.getManifest()
-    const previous = await getOption('version')
-    const upgradeMessage = await getOption('upgradeMessage', true)
+    const previous = await getCachedOption('version')
+    const upgradeMessage = await getCachedOption('upgradeMessage', true)
 
-    await setOption('version', version)
+    await setCachedOption('version', version)
 
-    const current = await getOption('version')
+    const current = await getCachedOption('version')
 
     if (!previous) {
       await Driver.clearCache()
@@ -99,7 +183,7 @@ const Driver = {
         )
 
         const termsAccepted =
-          agent === 'chrome' || (await getOption('termsAccepted', false))
+          agent === 'chrome' || (await getCachedOption('termsAccepted', false))
 
         if (!termsAccepted) {
           open(chrome.runtime.getURL('html/terms.html'))
@@ -139,6 +223,69 @@ const Driver = {
     Driver.log(error, source, 'error')
   },
 
+  getTechnologiesForItems(items, requires, categoryRequires) {
+    return (
+      getRequiredTechnologies(requires, categoryRequires) ||
+      getTechnologiesByTypes(getItemTypes(items))
+    )
+  },
+
+  pruneHostnamesCache() {
+    Driver.cache.hostnames = Object.fromEntries(
+      Object.entries(Driver.cache.hostnames)
+        .sort(([, a], [, b]) => (a.dateTime > b.dateTime ? -1 : 1))
+        .filter(
+          ([, cache], index) =>
+            cache.dateTime > Date.now() - expiry && index < maxHostnames
+        )
+    )
+  },
+
+  async persistHostnames() {
+    Driver.pruneHostnamesCache()
+
+    const hostnames = {}
+
+    for (const hostname of Object.keys(Driver.cache.hostnames)) {
+      const cache = Driver.cache.hostnames[hostname]
+
+      hostnames[hostname] = {
+        ...cache,
+        detections: cache.detections
+          .filter(({ technology }) => technology)
+          .map(
+            ({
+              technology: { name: technology },
+              pattern: { regex, confidence },
+              version,
+              rootPath,
+              lastUrl,
+            }) => ({
+              technology,
+              pattern: {
+                regex: regex.source,
+                confidence,
+              },
+              version,
+              rootPath,
+              lastUrl,
+            })
+          ),
+      }
+    }
+
+    await setCachedOption('hostnames', hostnames)
+  },
+
+  scheduleCachePersist() {
+    clearTimeout(Driver.persistTimer)
+
+    Driver.persistTimer = setTimeout(() => {
+      Driver.persistTimer = null
+      Driver.persistHostnames().catch(Driver.error)
+    }, persistDebounce)
+  },
+
   /**
    * Load technologies and categories into memory
    */
@@ -148,18 +295,18 @@ const Driver = {
         await fetch(chrome.runtime.getURL('categories.json'))
       ).json()
 
-      let technologies = {}
+      const technologies = {}
+      const technologyData = await Promise.all(
+        Array.from({ length: 27 }, async (_, index) => {
+          const character = index ? String.fromCharCode(index + 96) : '_'
 
-      for (const index of Array(27).keys()) {
-        const character = index ? String.fromCharCode(index + 96) : '_'
-
-        technologies = {
-          ...technologies,
-          ...(await (
+          return (
             await fetch(chrome.runtime.getURL(`technologies/${character}.json`))
-          ).json()),
-        }
-      }
+          ).json()
+        })
+      )
+
+      technologyData.forEach((data) => Object.assign(technologies, data))
 
       Object.keys(technologies).forEach((name) => {
         delete technologies[name].description
@@ -213,14 +360,15 @@ const Driver = {
     const technologies =
       getRequiredTechnologies(requires, categoryRequires) ||
       Wappalyzer.technologies
+    const technologiesByName = Object.fromEntries(
+      technologies.map((technology) => [technology.name, technology])
+    )
 
     return Driver.onDetect(
       url,
       js
         .map(({ name, chain, value }) => {
-          const technology = technologies.find(
-            ({ name: _name }) => name === _name
-          )
+          const technology = technologiesByName[name]
 
           return technology
             ? analyzeManyToMany(technology, 'js', { [chain]: [value] })
@@ -239,6 +387,9 @@ const Driver = {
     const technologies =
       getRequiredTechnologies(requires, categoryRequires) ||
       Wappalyzer.technologies
+    const technologiesByName = Object.fromEntries(
+      technologies.map((technology) => [technology.name, technology])
+    )
 
     return Driver.onDetect(
       url,
@@ -248,9 +399,7 @@ const Driver = {
             { name, selector, exists, text, property, attribute, value },
             index
           ) => {
-            const technology = technologies.find(
-              ({ name: _name }) => name === _name
-            )
+            const technology = technologiesByName[name]
 
             if (!technology) {
               return []
@@ -411,7 +560,10 @@ const Driver = {
             )
           })
 
-          Driver.onDetect(request.url, analyze({ headers })).catch(Driver.error)
+          Driver.onDetect(
+            request.url,
+            analyze({ headers }, getTechnologiesByTypes(['headers']))
+          ).catch(Driver.error)
         }
       } catch (error) {
         Driver.error(error)
@@ -443,17 +595,28 @@ const Driver = {
       Driver.cache.hostnames[hostname].analyzedScripts = []
     }
 
+    if (
+      Driver.cache.hostnames[hostname].analyzedScripts.includes(request.url)
+    ) {
+      return
+    }
+
     if (Driver.cache.hostnames[hostname].analyzedScripts.length >= 25) {
       return
     }
 
     Driver.cache.hostnames[hostname].analyzedScripts.push(request.url)
 
-    const response = await fetch(request.url)
+    try {
+      const scripts = await fetchTextSnippet(request.url)
 
-    const scripts = (await response.text()).slice(0, 500000)
-
-    Driver.onDetect(initiatorUrl, analyze({ scripts })).catch(Driver.error)
+      Driver.onDetect(
+        initiatorUrl,
+        analyze({ scripts }, getTechnologiesByTypes(['scripts']))
+      ).catch(Driver.error)
+    } catch (error) {
+      Driver.error(error)
+    }
   },
 
   /**
@@ -492,7 +655,7 @@ const Driver = {
 
           Driver.onDetect(
             request.originUrl || request.initiator,
-            analyze({ xhr: hostname })
+            analyze({ xhr: hostname }, getTechnologiesByTypes(['xhr']))
           ).catch(Driver.error)
         }
       }, 1000)
@@ -527,7 +690,11 @@ const Driver = {
         }
       })
 
-      const technologies = getRequiredTechnologies(requires, categoryRequires)
+      const technologies = Driver.getTechnologiesForItems(
+        { url, ...items },
+        requires,
+        categoryRequires
+      )
 
       await Driver.onDetect(
         url,
@@ -554,7 +721,7 @@ const Driver = {
     try {
       const { hostname } = new URL(url)
 
-      return (await getOption('disabledDomains', [])).includes(hostname)
+      return (await getCachedOption('disabledDomains', [])).includes(hostname)
     } catch (error) {
       return false
     }
@@ -567,15 +734,9 @@ const Driver = {
    * @param {String} language
    * @param {Boolean} incrementHits
    */
-  async onDetect(
-    url,
-    detections = [],
-    language,
-    incrementHits = false,
-    analyzeRequires = true
-  ) {
+  onDetect(url, detections = [], language, incrementHits = false) {
     if (!url || !detections.length) {
-      return
+      return Promise.resolve()
     }
 
     url = url.split('#')[0]
@@ -656,74 +817,19 @@ const Driver = {
       ),
     ]
 
-    try {
-      await Driver.content(url, 'analyzeRequires', [url, requires])
-    } catch (error) {
-      // Continue
-    }
-
-    await Driver.setIcon(url, resolved)
-
-    await Driver.ping()
-
     cache.hits += incrementHits ? 1 : 0
     cache.language = cache.language || language
 
-    // Expire cache
-    Driver.cache.hostnames = Object.keys(Driver.cache.hostnames)
-      .sort((a, b) =>
-        Driver.cache.hostnames[a].dateTime > Driver.cache.hostnames[b].dateTime
-          ? -1
-          : 1
-      )
-      .reduce((hostnames, hostname) => {
-        const cache = Driver.cache.hostnames[hostname]
+    Driver.pruneHostnamesCache()
+    Driver.scheduleCachePersist()
 
-        if (
-          cache.dateTime > Date.now() - expiry &&
-          Object.keys(hostnames).length < maxHostnames
-        ) {
-          hostnames[hostname] = cache
-        }
-
-        return hostnames
-      }, {})
-
-    // Save cache
-    await setOption(
-      'hostnames',
-      Object.keys(Driver.cache.hostnames).reduce(
-        (hostnames, hostname) => ({
-          ...hostnames,
-          [hostname]: {
-            ...cache,
-            detections: Driver.cache.hostnames[hostname].detections
-              .filter(({ technology }) => technology)
-              .map(
-                ({
-                  technology: { name: technology },
-                  pattern: { regex, confidence },
-                  version,
-                  rootPath,
-                  lastUrl,
-                }) => ({
-                  technology,
-                  pattern: {
-                    regex: regex.source,
-                    confidence,
-                  },
-                  version,
-                  rootPath,
-                  lastUrl,
-                })
-              ),
-          },
-        }),
-        {}
-      )
-    )
+    Driver.content(url, 'analyzeRequires', [url, requires]).catch(() => {})
+    Driver.setIcon(url, resolved).catch(Driver.error)
+    Driver.ping().catch(Driver.error)
 
     Driver.log({ hostname, technologies: resolved })
+
+    return Promise.resolve()
   },
 
   /**
@@ -736,9 +842,9 @@ const Driver = {
       technologies = []
     }
 
-    const dynamicIcon = await getOption('dynamicIcon', false)
-    const showCached = await getOption('showCached', true)
-    const badge = await getOption('badge', true)
+    const dynamicIcon = await getCachedOption('dynamicIcon', false)
+    const showCached = await getCachedOption('showCached', true)
+    const badge = await getCachedOption('badge', true)
 
     let icon = 'default.svg'
 
@@ -749,7 +855,10 @@ const Driver = {
     )
 
     if (dynamicIcon) {
-      const pinnedCategory = parseInt(await getOption('pinnedCategory'), 10)
+      const pinnedCategory = parseInt(
+        await getCachedOption('pinnedCategory'),
+        10
+      )
 
       const pinned = _technologies.find(({ categories }) =>
         categories.some(({ id }) => id === pinnedCategory)
@@ -823,7 +932,7 @@ const Driver = {
       return
     }
 
-    const showCached = await getOption('showCached', true)
+    const showCached = await getCachedOption('showCached', true)
 
     const { hostname } = new URL(url)
 
@@ -845,7 +954,7 @@ const Driver = {
    */
   async getRobots(hostname, secure = false) {
     if (
-      !(await getOption('tracking', true)) ||
+      !(await getCachedOption('tracking', true)) ||
       hostnameIgnoreList.test(hostname)
     ) {
       return []
@@ -902,7 +1011,7 @@ const Driver = {
           {}
         )
 
-      await setOption('robots', Driver.cache.robots)
+      await setCachedOption('robots', Driver.cache.robots)
 
       return Driver.cache.robots[hostname]
     } catch (error) {
@@ -935,11 +1044,13 @@ const Driver = {
    * Clear caches
    */
   async clearCache() {
+    clearTimeout(Driver.persistTimer)
+    Driver.persistTimer = null
     Driver.cache.hostnames = {}
 
     xhrAnalyzed = {}
 
-    await setOption('hostnames', {})
+    await setCachedOption('hostnames', {})
   },
 
   /**
@@ -947,9 +1058,9 @@ const Driver = {
    * This function can be disabled in the extension settings
    */
   async ping() {
-    const tracking = await getOption('tracking', true)
+    const tracking = await getCachedOption('tracking', true)
     const termsAccepted =
-      agent === 'chrome' || (await getOption('termsAccepted', false))
+      agent === 'chrome' || (await getCachedOption('termsAccepted', false))
 
     if (tracking && termsAccepted) {
       const urls = Object.keys(Driver.cache.hostnames).reduce(
@@ -993,14 +1104,14 @@ const Driver = {
 
       const count = Object.keys(urls).length
 
-      const lastPing = await getOption('lastPing', Date.now())
+      const lastPing = await getCachedOption('lastPing', Date.now())
 
       if (
         count &&
         ((count >= 25 && lastPing < Date.now() - 1000 * 60 * 60) ||
           (count >= 5 && lastPing < Date.now() - expiry))
       ) {
-        await setOption('lastPing', Date.now())
+        await setCachedOption('lastPing', Date.now())
 
         try {
           await Driver.post('https://ping.wappalyzer.com/v2/', {
@@ -1046,7 +1157,7 @@ chrome.tabs.onUpdated.addListener(async (id, { status, url }) => {
   if (url) {
     const { hostname } = new URL(url)
 
-    const showCached = await getOption('showCached', true)
+    const showCached = await getCachedOption('showCached', true)
 
     const cache = Driver.cache?.hostnames?.[hostname]
 

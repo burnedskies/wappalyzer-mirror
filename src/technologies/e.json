@@ -27,7 +27,7 @@
     "cats": [
       1
     ],
-    "description": "E-monsite is a web-based platform that allows users to create and customise their own websites using a range of templates and features, without requiring coding or technical skills.",
+    "description": "E-monsite is a web-based platform that allows users to create and customize their own websites using a range of templates and features, without requiring coding or technical skills.",
     "icon": "E-monsite.svg",
     "implies": [
       "Symfony",
@@ -92,21 +92,11 @@
     ],
     "website": "https://www.ec-cube.net"
   },
-  "ECBB": {
-    "cats": [
-      10
-    ],
-    "description": "ECBB is a Japan-based platform providing data analytics and business intelligence solutions.",
-    "icon": "ECBB.svg",
-    "saas": true,
-    "scriptSrc": "\\.ecbb\\.jp/",
-    "website": "https://ecbb.jp"
-  },
   "ECharts": {
     "cats": [
       25
     ],
-    "description": "ECharts is an open-source JavaScript visualisation library.",
+    "description": "ECharts is an open-source JavaScript charting and data visualization library.",
     "dom": "div[_echarts_instance_]",
     "icon": "echarts.svg",
     "oss": true,
@@ -124,7 +114,7 @@
     "cookies": {
       "ekmpowershop": ""
     },
-    "description": "EKM is an all-in-one online store builder, with the company based in the UK.",
+    "description": "EKM is an online store builder, with the company based in the UK.",
     "icon": "EKM.svg",
     "js": {
       "_ekmpinpoint": ""
@@ -150,6 +140,8 @@
     "cats": [
       19
     ],
+    "cpe": "cpe:2.3:a:eprints:eprints:*:*:*:*:*:*:*:*",
+    "description": "EPrints is an open-source platform for institutional repositories and research archives.",
     "icon": "EPrints.svg",
     "implies": "Perl",
     "js": {
@@ -198,7 +190,7 @@
       87,
       92
     ],
-    "description": "EWWW Image Optimizer is an image optimisation WordPress plugin designed to improve the performance of your website.",
+    "description": "EWWW Image Optimizer is an image optimization WordPress plugin designed to improve the performance of a website.",
     "icon": "EWWW Image Optimizer.png",
     "js": {
       "ewww_webp_supported": ""
@@ -212,7 +204,7 @@
     "cats": [
       5
     ],
-    "description": "EX.CO (formerly Playbuzz) is an online publishing platform for publishers, brand agencies, and individual content creators to create content in interactive formats such as polls, quizzes, lists, video snippets, slideshows, and countdowns.",
+    "description": "EX. CO (formerly Playbuzz) is an online publishing platform for publishers, brand agencies, and individual content creators to create content in interactive formats such as polls, quizzes, lists, video snippets, slideshows, and countdowns.",
     "icon": "EX.CO.svg",
     "js": {
       "__EXCO": "",
@@ -349,7 +341,7 @@
     "cats": [
       87
     ],
-    "description": "Easy Accordion is a flexible and customisable accordion and FAQs builder plugin for WordPress.",
+    "description": "Easy Accordion is a flexible and customizable accordion and FAQs builder plugin for WordPress.",
     "dom": "link[href*='/wp-content/plugins/easy-accordion-free/']",
     "icon": "EasyAccordion.svg",
     "pricing": [
@@ -462,6 +454,7 @@
       6,
       87
     ],
+    "cpe": "cpe:2.3:a:awesomemotive:easy_digital_downloads:*:*:*:*:*:wordpress:*:*",
     "description": "Easy Digital Downloads is a WordPress ecommerce plugin that focuses purely on digital products.",
     "icon": "EasyDigitalDownloads.svg",
     "meta": {
@@ -492,7 +485,7 @@
     "cats": [
       100
     ],
-    "description": "EasyGift is a tool that automates the addition of free gifts or products to the cart based on custom rules, allowing for upsells, BOGO (Buy 1 Get 1) offers, and the creation of rules based on cart value or specific products, with the ability to schedule start times for offer activation.",
+    "description": "EasyGift is a tool that automates the addition of free gifts or products to the cart based on custom rules, allowing for upsells, BOGO (Buy 1 Get 1) offers, and the creation of rules based on cart value or specific products.",
     "icon": "EasyGift.svg",
     "js": {
       "EasyGift.nonTargetingRules": "",
@@ -557,7 +550,7 @@
     "cats": [
       66
     ],
-    "description": "EasyUI is a UI framework that provides a set of customizable components and widgets for building interactive web applications.",
+    "description": "EasyUI is an UI framework that provides a set of customizable components and widgets for building interactive web applications.",
     "oss": true,
     "scriptSrc": "/jquery\\.easyui\\.min\\.js",
     "website": "https://jeasyui.com"
@@ -672,7 +665,7 @@
     "cats": [
       1
     ],
-    "description": "Ebasnet is a web project creation and management platform in the cloud. It allows anyone to set up an online store or corporate website without prior IT knowledge.",
+    "description": "Ebasnet is a web project creation and management platform in the cloud.",
     "icon": "Ebasnet.svg",
     "implies": [
       "PHP",
@@ -716,7 +709,7 @@
     "cookies": {
       "_ec_force_session": ""
     },
-    "description": "EcForce is an all-in-one ecommerce platform with all the functions necessary for ecommerce, from landing-page creation to order and customer data management analysis.",
+    "description": "EcForce is an ecommerce platform with all the functions necessary for ecommerce, from landing-page creation to order and customer data management analysis.",
     "icon": "EcForce.svg",
     "implies": [
       "Ruby",
@@ -749,12 +742,26 @@
     "scripts": "\\.ecal\\.com",
     "website": "https://ecal.com"
   },
+  "Ecom": {
+    "cats": [
+      6
+    ],
+    "description": "Ecom is a website builder and application development platform designed for online businesses to create, manage, and deploy web-based commerce solutions.",
+    "icon": "Ecom.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "\\.ecom\\.md",
+    "website": "https://ecom.md"
+  },
   "EcomArtists": {
     "cats": [
       6,
       76
     ],
-    "description": "EcomArtists is a provider of custom drawn products and gifts, tailored for personalisation, ideal for sharing with loved ones.",
+    "description": "EcomArtists is a provider of custom drawn products and gifts, tailored for personalization, for sharing with loved ones.",
     "icon": "EcomArtists.svg",
     "js": {
       "ECOMARTISTS_UPLOAD": ""
@@ -784,7 +791,7 @@
     "cats": [
       10
     ],
-    "description": "EcomScout is a platform providing AI-powered tools for analytics, attribution, merchandising, and forecasting.",
+    "description": "EcomScout is a platform providing AI-based tools for analytics, attribution, merchandising, and forecasting.",
     "icon": "EcomScout.svg",
     "pricing": [
       "low",
@@ -793,22 +800,6 @@
     "saas": true,
     "scriptSrc": "api\\.ecomscout\\.io/",
     "website": "https://ecomscout.io"
-  },
-  "EcomX": {
-    "cats": [
-      32
-    ],
-    "description": "EcomX is a platform that automatically generates SEO-optimized product, collection, and blog content using AI.",
-    "dom": "link[href*='app.ecomx.ai/']",
-    "icon": "EcomX.svg",
-    "pricing": [
-      "freemium",
-      "low",
-      "recurring"
-    ],
-    "requiresCategory": 6,
-    "saas": true,
-    "website": "https://www.ecomx.ai"
   },
   "Ecommercen": {
     "cats": [
@@ -865,7 +856,7 @@
     "cats": [
       10
     ],
-    "description": "Econda is a provider of web analytics solutions for online shops, offering detailed insights into customer behaviour, website performance, and sales optimisation.",
+    "description": "Econda is a provider of web analytics solutions for online shops, offering detailed insights into customer behavior, website performance, and sales optimization.",
     "icon": "Econda.svg",
     "js": {
       "econda": "",
@@ -999,7 +990,7 @@
     "cats": [
       24
     ],
-    "description": "Editor.js is a Javascript library which allows developers to implement a block base text editor with plugins on their page.",
+    "description": "Editor.js is a JavaScript library which allows developers to implement a block base text editor with plugins on their page.",
     "icon": "Editor.js.svg",
     "js": {
       "EditorJS": ""
@@ -1072,7 +1063,7 @@
       21,
       87
     ],
-    "description": "Edwiser Bridge is a Wordpress plugin facilitating the sale of Moodle courses with synchronized data and single sign-on capability.",
+    "description": "Edwiser Bridge is a WordPress plugin facilitating the sale of Moodle courses with synchronized data and single sign-on capability.",
     "dom": "link[href*='/wp-content/plugins/edwiser-bridge']",
     "icon": "EdwiserBridge.svg",
     "pricing": [
@@ -1118,6 +1109,20 @@
     "saas": true,
     "website": "https://efilli.com"
   },
+  "Eflorista": {
+    "cats": [
+      6
+    ],
+    "description": "Eflorista is an ecommerce and ERP platform for flower shops and businesses.",
+    "icon": "Eflorista.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "app\\.eflorista\\.com\\.br",
+    "website": "https://www.eflorista.com.br"
+  },
   "Eggflow": {
     "cats": [
       32
@@ -1151,7 +1156,7 @@
       1
     ],
     "cpe": "cpe:2.3:a:ektron:ektron_content_management_system:*:*:*:*:*:*:*:*",
-    "description": "Ektron CMS is developed on the Microsoft .NET framework and is 100% ASP.NET. In 2015 Ektron merged with EPiServer.",
+    "description": "Ektron CMS is developed on the Microsoft.",
     "icon": "Optimizely.svg",
     "implies": "Microsoft ASP.NET",
     "js": {
@@ -1238,7 +1243,7 @@
       "Magento"
     ],
     "scriptSrc": "/Smile_ElasticsuiteTracker/",
-    "scripts": "(?:\\.elasticsuite\\.io\\/|\\/elasticsuite-tracker\\/)",
+    "scripts": "\\.elasticsuite\\.io\\/|\\/elasticsuite-tracker\\/|Lmc_ElasticSuiteCatalog\\\\",
     "website": "https://elasticsuite.io"
   },
   "Elasticsearch": {
@@ -1246,7 +1251,7 @@
       29
     ],
     "cpe": "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*",
-    "description": "Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.",
+    "description": "Elasticsearch is a search engine based on the Lucene library.",
     "dom": "div#topsearchelastic_widget",
     "icon": "Elasticsearch.svg",
     "pricing": [
@@ -1273,7 +1278,7 @@
     "cats": [
       1
     ],
-    "description": "The Elcom Platform is a web content management and intranet portal software written in Microsoft ASP.NET and SQL Server by Elcom Technology.",
+    "description": "The Elcom Platform is a web content management and intranet portal software written in Microsoft ASP.",
     "icon": "elcom.svg",
     "implies": "Microsoft ASP.NET",
     "meta": {
@@ -1302,6 +1307,7 @@
     "cats": [
       52
     ],
+    "cpe": "cpe:2.3:a:matrix:element:*:*:*:*:*:*:*:*",
     "description": "Element is a Matrix-based end-to-end encrypted messenger and secure collaboration app.",
     "icon": "elementio.svg",
     "meta": {
@@ -1372,8 +1378,7 @@
     },
     "icon": "Elementor.svg",
     "implies": [
-      "WordPress",
-      "Elementor"
+      "WordPress"
     ],
     "pricing": [
       "recurring",
@@ -1385,7 +1390,7 @@
     "cats": [
       87
     ],
-    "description": "Elementor Header & Footer Builder is a simple yet powerful WordPress plugin that allows you to create a layout with Elementor and set it as.",
+    "description": "Elementor Header & Footer Builder is a simple WordPress plugin that allows you to create a layout with Elementor and set it as.",
     "dom": "link[href*='/wp-content/plugins/header-footer-elementor/']",
     "icon": "Elementor Header & Footer Builder.svg",
     "implies": "Elementor",
@@ -1402,7 +1407,7 @@
     "cats": [
       87
     ],
-    "description": "ElementsKit is an addon for Elementor that adds additional customisation options to the page builder.",
+    "description": "ElementsKit is an addon for Elementor that adds additional customization options to the page builder.",
     "icon": "elementskit.svg",
     "js": {
       "ElementsKit_Helper": "",
@@ -1420,7 +1425,7 @@
     "cats": [
       53
     ],
-    "description": "Elenore is an all-in-one business management software platform designed to streamline operations and support business growth.",
+    "description": "Elenore is a business management software platform designed to streamline operations and support business growth.",
     "icon": "Elenore.svg",
     "pricing": [
       "mid",
@@ -1492,7 +1497,7 @@
     "cats": [
       5
     ],
-    "description": "Elfsight is an all-in-one platform offering 70+ customisable widgets for websites.",
+    "description": "Elfsight is a platform offering 70+ customizable widgets for websites.",
     "icon": "Elfsight.svg",
     "pricing": [
       "freemium",
@@ -1502,6 +1507,19 @@
     "saas": true,
     "scriptSrc": "\\.elfsight\\.com/",
     "website": "https://elfsight.com"
+  },
+  "Elgg": {
+    "cats": [
+      2
+    ],
+    "cpe": "cpe:2.3:a:elgg:elgg:*:*:*:*:*:*:*:*",
+    "description": "Elgg is an open source social networking engine for building online communities and social applications.",
+    "icon": "Elgg.svg",
+    "js": {
+      "elgg.ElggEntity": ""
+    },
+    "oss": true,
+    "website": "https://elgg.org"
   },
   "Elina PMS": {
     "cats": [
@@ -1521,7 +1539,7 @@
       52,
       53
     ],
-    "description": "EliseAI is an AI-powered conversational platform for business automation.",
+    "description": "EliseAI is an AI-based conversational platform for business automation.",
     "dom": "div#meetelise-chat-launcher-container",
     "icon": "EliseAI.svg",
     "js": {
@@ -1547,7 +1565,7 @@
     "cats": [
       2
     ],
-    "description": "ElkArte is an open-source PHP-based forum software with MySQL integration, offering features such as user authentication, topic categorisation, post formatting, private messaging, moderation tools, and customisable themes and extensions.",
+    "description": "ElkArte is an open-source PHP-based forum software with MySQL integration, offering features such as user authentication, topic categorisation, post formatting, private messaging, moderation tools, and customizable themes and extensions.",
     "icon": "ElkArte.svg",
     "implies": "MySQL",
     "js": {
@@ -1562,7 +1580,7 @@
     "cats": [
       6
     ],
-    "description": "Elloha is an all-in-one platform designed to manage and increase tourism-related revenue.",
+    "description": "Elloha is a platform designed to manage and increase tourism-related revenue.",
     "headers": {
       "Access-Control-Allow-Headers": "\\.elloha\\.com"
     },
@@ -1583,7 +1601,7 @@
       53,
       101
     ],
-    "description": "Ellucian CRM Recruit is a comprehensive solution that supports your entire recruiting and admissions lifecycle.",
+    "description": "Ellucian CRM Recruit is a solution that supports your entire recruiting and admissions lifecycle.",
     "dom": " a[href*='.elluciancrmrecruit.com/']",
     "icon": "Ellucian CRM Recruit.svg",
     "js": {
@@ -1609,19 +1627,6 @@
     "oss": true,
     "website": "https://elm-lang.org/"
   },
-  "Eloomi": {
-    "cats": [
-      21
-    ],
-    "description": "Eloomi is a cloud-based learning management system (LMS) and performance management platform.",
-    "icon": "Eloomi.svg",
-    "pricing": [
-      "poa"
-    ],
-    "saas": true,
-    "scriptSrc": "//cdn\\.eloomi\\.com/",
-    "website": "https://eloomi.com"
-  },
   "Elopage": {
     "cats": [
       21
@@ -1644,7 +1649,7 @@
     "cookies": {
       "ELOQUA": ""
     },
-    "description": "Eloqua is a Software-as-a-Service (SaaS) platform for marketing automation offered that aims to help B2B marketers and organisations manage marketing campaigns and sales lead generation.",
+    "description": "Eloqua is a Software-as-a-Service (SaaS) platform for marketing automation offered that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation.",
     "icon": "Oracle.svg",
     "js": {
       "_elq": "",
@@ -1734,7 +1739,7 @@
       32,
       97
     ],
-    "description": "Emarsys is a cloud-based B2C marketing platform.",
+    "description": "Emarsys is a B2C customer engagement and marketing automation platform.",
     "icon": "Emarsys.svg",
     "js": {
       "Scarab": "",
@@ -1747,7 +1752,7 @@
     "cats": [
       32
     ],
-    "description": "Ematic Solutions is part of Ematic Group and started to revolve around transforming email marketing into an ROI machine.",
+    "description": "Ematic Solutions is part of Ematic Group and started to revolve around transforming email marketing into a ROI machine.",
     "icon": "Ematic Solutions.svg",
     "js": {
       "EmaticsObject": "",
@@ -1798,6 +1803,7 @@
       22
     ],
     "cpe": "cpe:2.3:a:embedthis:appweb:*:*:*:*:*:*:*:*",
+    "description": "Appweb is an embeddable web server for applications and devices.",
     "headers": {
       "Server": "Mbedthis-Appweb(?:/([\\d.]+))?\\;version:\\1"
     },
@@ -1827,7 +1833,7 @@
       12
     ],
     "cpe": "cpe:2.3:a:emberjs:ember.js:*:*:*:*:*:*:*:*",
-    "description": "Ember.js is a comprehensive JavaScript framework that simplifies the development of modern web applications by providing a powerful CLI, a built-in router, and a fast rendering engine.",
+    "description": "Ember.js is a JavaScript framework that simplifies the development of modern web applications by providing a CLI, a built-in router, and a fast rendering engine.",
     "icon": "Ember.js.svg",
     "js": {
       "Ember": "",
@@ -1836,6 +1842,22 @@
     },
     "scripts": "@overview\\s+Ember -[\\s\\S]+@version\\s+(.+)\\;version:\\1",
     "website": "https://emberjs.com"
+  },
+  "Emergent": {
+    "cats": [
+      51
+    ],
+    "description": "Emergent is a website cloning AI website and app builder that replicates existing sites and applications while enabling the creation and customization of new digital experiences through automated design and development tools.",
+    "icon": "Emergent.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "assets\\.emergent\\.sh",
+    "website": "https://emergent.sh"
   },
   "Emfont": {
     "cats": [
@@ -1901,7 +1923,7 @@
     "cats": [
       96
     ],
-    "description": "Emplifi UGC is a platform that helps brands curate, measure, and integrate user-generated content to enhance engagement, authenticity, and ecommerce performance by offering features like product page galleries, social media contests, shoppable content, and detailed analytics.",
+    "description": "Emplifi UGC is a platform that helps brands curate, measure, and integrate user-generated content to enhance engagement, authenticity, and ecommerce performance by offering features like product page galleries, social media contests.",
     "icon": "Emplifi.svg",
     "js": {
       "Pixlee": "",
@@ -2014,16 +2036,6 @@
     "scriptSrc": "surveys\\.enalyzer\\.com/",
     "website": "https://www.enalyzer.com"
   },
-  "Enecto": {
-    "cats": [
-      10
-    ],
-    "description": "Enecto is a tool for analyzing web visitor demographics to provide insights into audience composition and behavior.",
-    "icon": "Enecto.svg",
-    "saas": true,
-    "scriptSrc": "trk\\.enecto\\.com",
-    "website": "https://www.enecto.com"
-  },
   "Engaga": {
     "cats": [
       32
@@ -2120,7 +2132,7 @@
     "cats": [
       100
     ],
-    "description": "Enlistly tracks referral orders in realtime. Orders that are partially refunded, refunded, or cancelled update on the fly.",
+    "description": "Enlistly tracks referral orders in realtime.",
     "icon": "Enlistly.svg",
     "implies": "Shopify",
     "pricing": [
@@ -2130,6 +2142,15 @@
     ],
     "scriptSrc": "cdn\\.enlistly\\.com/",
     "website": "https://enlistly.com"
+  },
+  "Enllax": {
+    "cats": [
+      59
+    ],
+    "description": "Enllax.js is a JavaScript plugin that enables parallax scrolling effects by adjusting the position and speed of page elements relative to the scroll movement.",
+    "oss": true,
+    "scriptSrc": "/jquery\\.enllax\\.min\\.js",
+    "website": "https://github.com/mmkjony/enllax.js"
   },
   "Enonic": {
     "cats": [
@@ -2202,7 +2223,7 @@
     "cats": [
       52
     ],
-    "description": "Enterprise Bot specializes in developing and deploying complex conversational AI systems tailored for enterprise settings, leveraging natural language processing, machine learning, and automation to improve customer interactions and streamline operations.",
+    "description": "Enterprise Bot specializes in developing and deploying complex conversational AI systems tailored for enterprise settings, leveraging natural language processing, machine learning.",
     "icon": "Enterprise Bot.svg",
     "pricing": [
       "poa"
@@ -2245,13 +2266,28 @@
     "cats": [
       99
     ],
-    "description": "",
+    "description": ".",
     "icon": "Envialia.png",
     "requiresCategory": 6,
     "text": [
       "\\bEnvialia\\b"
     ],
     "website": "https://www.envialia.com"
+  },
+  "EnvialoSimple": {
+    "cats": [
+      75
+    ],
+    "description": "EnvialoSimple is a marketing platform and newsletter management system used to create, send, and track email campaigns.",
+    "icon": "EnvialoSimple.svg",
+    "pricing": [
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.envialosimple\\.com/",
+    "website": "https://envialosimple.com"
   },
   "Enviopack": {
     "cats": [
@@ -2455,6 +2491,7 @@
     "cats": [
       36
     ],
+    "description": "Epom is an ad serving and ad management platform for publishers, advertisers, and networks.",
     "icon": "Epom.svg",
     "js": {
       "epomCustomParams": ""
@@ -2481,27 +2518,34 @@
     "scriptSrc": "cdn\\.equalweb\\.com.*\\.js",
     "website": "https://www.equalweb.com/"
   },
-  "EraofEcom Cartroids": {
+  "Equalbrowse": {
     "cats": [
-      100
+      68
     ],
-    "description": "EraofEcom Cartroids makes it easy for you to create highly targeted upsells, cross-sells and bundle offers.",
-    "icon": "EraofEcom.svg",
-    "implies": "Shopify",
+    "description": "Equalbrowse is a website accessibility platform that supports compliance with legal and regulatory standards through automated remediation, monitoring, and accessibility management features.",
+    "icon": "Equalbrowse.svg",
     "js": {
-      "cartroids.appBase": "cartroids\\.eraofecom\\.org"
+      "hhpEqualbrowsifyOptions": ""
     },
-    "pricing": [
-      "poa"
-    ],
     "saas": true,
-    "website": "https://eraofecom.org/collections/tech/products/cartroids"
+    "scriptSrc": "app\\.equalbrowse\\.com",
+    "website": "https://equalbrowse.com"
+  },
+  "Equalture": {
+    "cats": [
+      101
+    ],
+    "description": "Equalture is a product that applies neuroscience-based methods to support hiring processes by assessing candidate behavior and decision-making to inform recruitment outcomes.",
+    "icon": "Equalture.svg",
+    "saas": true,
+    "scriptSrc": "app\\.equalture\\.com",
+    "website": "https://www.equalture.com"
   },
   "EraofEcom MTL": {
     "cats": [
       100
     ],
-    "description": "EraofEcom MTL is a Shopify pop up app that enables you to catch your website visitors.",
+    "description": "EraofEcom MTL is a Shopify pop up app that enables you to catch a website visitors.",
     "icon": "EraofEcom.svg",
     "implies": "Shopify",
     "pricing": [
@@ -2515,7 +2559,7 @@
     "cats": [
       100
     ],
-    "description": "EraofEcom WinAds is an all-in-one Facebook pixel app for Shopify.",
+    "description": "EraofEcom WinAds is a Facebook pixel app for Shopify.",
     "dom": "link[href*='winads.eraofecom.org']",
     "icon": "EraofEcom.svg",
     "implies": "Shopify",
@@ -2545,7 +2589,7 @@
     "cats": [
       10
     ],
-    "description": "Errorception is a error reporting service for client-side in-browser JavaScript errors.",
+    "description": "Errorception is an error reporting service for client-side in-browser JavaScript errors.",
     "icon": "Errorception.svg",
     "js": {
       "_errs": ""
@@ -2561,6 +2605,7 @@
     "cats": [
       53
     ],
+    "cpe": "cpe:2.3:a:erxes:erxes:*:*:*:*:*:*:*:*",
     "description": "Erxes is a platform that provides tools for marketing, sales, and customer service management.",
     "icon": "Erxes.svg",
     "js": {
@@ -2579,6 +2624,7 @@
     "cats": [
       53
     ],
+    "cpe": "cpe:2.3:a:espocrm:espocrm:*:*:*:*:*:*:*:*",
     "description": "EspoCRM is an open-source CRM software solution designed for businesses of all sizes.",
     "icon": "EspoCRM.svg",
     "implies": [
@@ -2617,6 +2663,7 @@
     "cats": [
       87
     ],
+    "cpe": "cpe:2.3:a:wpdeveloper:essential_addons_for_elementor:*:*:*:*:*:wordpress:*:*",
     "description": "Essential Addons for Elementor gives you 70+ creative elements and extensions to help you extend the stock features of Elementor page builder.",
     "dom": "link[href*='/wp-content/uploads/essential-addons-elementor/']",
     "icon": "Essential Addons for Elementor.svg",
@@ -2634,6 +2681,7 @@
       12,
       59
     ],
+    "description": "Essential JS 2 is Syncfusion's JavaScript UI component suite for web applications.",
     "dom": "[class*='e-control'][class~='e-lib']",
     "icon": "Syncfusion.svg",
     "oss": true,
@@ -2643,7 +2691,7 @@
     "cats": [
       32
     ],
-    "description": "Estate Track is an all-in-one website platform for estate agents that facilitates automated marketing and lead generation.",
+    "description": "Estate Track is a website platform for estate agents that facilitates automated marketing and lead generation.",
     "icon": "EstateTrack.svg",
     "pricing": [
       "mid",
@@ -2657,7 +2705,7 @@
     "cats": [
       74
     ],
-    "description": "Estore Compare is a website optimisation software that offers A/B testing, CVR and LTV measuring tools.",
+    "description": "Estore Compare is a website optimization software that offers A/B testing, CVR and LTV measuring tools.",
     "icon": "EstoreCompare.svg",
     "scriptSrc": "cdn\\d+\\.estore\\.jp/",
     "website": "https://estore.co.jp/estorecompare/"
@@ -2666,7 +2714,7 @@
     "cats": [
       6
     ],
-    "description": "Estore Shopserve is an all-in-one payment processing and ecommerce solution.",
+    "description": "Estore Shopserve is a payment processing and ecommerce solution.",
     "icon": "EstoreShopserve.svg",
     "pricing": [
       "mid",
@@ -2680,7 +2728,7 @@
     "cats": [
       6
     ],
-    "description": "Etail Systems is an all-in-one centralized platform to manage all of your ecommerce operations.",
+    "description": "Etail Systems is a centralized platform to manage all of your ecommerce operations.",
     "icon": "EtailSystems.svg",
     "js": {
       "EtailAlert": "",
@@ -2728,7 +2776,7 @@
       24
     ],
     "cpe": "cpe:2.3:a:etherpad:etherpad:*:*:*:*:*:*:*:*",
-    "description": "Etherpad is an open-source, web-based collaborative real-time editor, allowing authors to simultaneously edit a text document, and see all of the participants' edits in real-time, with the ability to display each author's text in their own colour.",
+    "description": "Etherpad is an open-source, web-based collaborative real-time editor, allowing authors to simultaneously edit a text document, and see all of the participants' edits in real-time, with the ability to display each author's text in their own color.",
     "headers": {
       "Server": "^Etherpad"
     },
@@ -2759,7 +2807,7 @@
     "cats": [
       36
     ],
-    "description": "EthicalAds is a privacy-preserving ad network targeting developers.",
+    "description": "EthicalAds is a privacy-focused advertising network for developer and technical audiences.",
     "icon": "EthicalAds.svg",
     "saas": true,
     "scriptSrc": [
@@ -2771,7 +2819,7 @@
     "cats": [
       6
     ],
-    "description": "Eticex is as an ecommerce infrastructure provider that offers ecommerce packages and customisable high-performance ecommerce solutions.",
+    "description": "Eticex is as an ecommerce infrastructure provider that offers ecommerce packages and customizable high-performance ecommerce solutions.",
     "icon": "Eticex.svg",
     "implies": [
       "MySQL",
@@ -2807,7 +2855,7 @@
       10,
       74
     ],
-    "description": "Etracker is a web optimisation solution.",
+    "description": "Etracker is a web optimization solution.",
     "icon": "Etracker.svg",
     "js": {
       "_etracker": ""
@@ -2819,6 +2867,16 @@
     "saas": true,
     "scriptSrc": "\\.etracker\\.com",
     "website": "https://www.etracker.com"
+  },
+  "Euroweb": {
+    "cats": [
+      1
+    ],
+    "description": "Euroweb is a website builder that provides tools for creating, managing, and publishing websites for businesses and individuals.",
+    "icon": "Euroweb.svg",
+    "saas": true,
+    "scripts": "\\.euroweb\\.de",
+    "website": "https://www.euroweb.de"
   },
   "Eveho": {
     "cats": [
@@ -2885,11 +2943,25 @@
     "scripts": "api\\.everwondr\\.com",
     "website": "https://everwondr.com"
   },
+  "Everest Forms": {
+    "cats": [
+      110
+    ],
+    "description": "Everest Forms is a form builder plugin for creating customizable contact, registration, and submission forms on websites.",
+    "icon": "EverestForms.svg",
+    "meta": {
+      "generator": "Everest Forms ([\\d\\.]+)\\;version:\\1"
+    },
+    "pricing": [],
+    "requires": "WordPress",
+    "saas": true,
+    "website": "https://everestforms.net"
+  },
   "Everflow": {
     "cats": [
       10
     ],
-    "description": "Everflow is a partner marketing analytics platform.",
+    "description": "Everflow is a partner marketing platform for affiliate, influencer, and referral tracking.",
     "icon": "Everflow.svg",
     "pricing": [
       "high",
@@ -2913,6 +2985,7 @@
     "cats": [
       50
     ],
+    "cpe": "cpe:2.3:a:evernote:evernote:*:*:*:*:*:*:*:*",
     "description": "Evernote is a digital workspace that organizes notes, tasks, and schedules in one place for project management and information retention.",
     "icon": "Evernote.svg",
     "js": {
@@ -2949,7 +3022,7 @@
     "cats": [
       111
     ],
-    "description": "EveryAction provides fundraising software, donor management software, and CRM software to nonprofit organisations.",
+    "description": "EveryAction provides fundraising software, donor management software, and CRM software to nonprofit organizations.",
     "dom": "a[href*='secure.everyaction.com/'], div[data-form-url*='secure.everyaction.com/']",
     "icon": "EveryAction.svg",
     "pricing": [
@@ -3060,7 +3133,8 @@
       87,
       10
     ],
-    "description": "ExactMetrics (formerly Google Analytics Dashboard for WP) plugin helps you properly setup all the powerful Google Analytics tracking features without writing any code or hiring a developer.",
+    "cpe": "cpe:2.3:a:monsterinsights:exactmetrics:*:*:*:*:*:wordpress:*:*",
+    "description": "ExactMetrics (formerly Google Analytics Dashboard for WP) plugin helps you properly setup all the Google Analytics tracking features without writing any code or hiring a developer.",
     "icon": "ExactMetrics.svg",
     "js": {
       "ExactMetrics": "",
@@ -3160,7 +3234,7 @@
     "cats": [
       32
     ],
-    "description": "ExitIntel is a full service conversion optimisation agency that focuses on ecommerce companies.",
+    "description": "ExitIntel is a full service conversion optimization agency that focuses on ecommerce companies.",
     "icon": "ExitIntel.svg",
     "js": {
       "exitintel.VERSION": "(.+)$\\;version:\\1",
@@ -3222,6 +3296,16 @@
     "scriptSrc": "\\.exoclick\\.com/",
     "website": "https://www.exoclick.com"
   },
+  "Experiture": {
+    "cats": [
+      32
+    ],
+    "description": "Experiture is a customer experience marketing platform that manages campaigns, customer data, and engagement across digital channels.",
+    "icon": "Experiture.svg",
+    "saas": true,
+    "scriptSrc": "\\.experiture\\.com",
+    "website": "https://www.experiture.com"
+  },
   "ExpertRec": {
     "cats": [
       29
@@ -3243,7 +3327,7 @@
     "cats": [
       105
     ],
-    "description": "Expivi specialises in 3D visualisation technology for ecommerce stores.",
+    "description": "Expivi specializes in 3D visualization technology for ecommerce stores.",
     "dom": "iframe[src*='.expivi.net/']",
     "icon": "Expivi.svg",
     "js": {
@@ -3262,7 +3346,7 @@
     "cats": [
       97
     ],
-    "description": "Exponea is a cloud-based marketing analysis platform suitable for large and midsize organisations in a variety of industries.",
+    "description": "Exponea is a cloud-based marketing analysis platform suitable for large and midsize organizations in a variety of industries.",
     "icon": "Exponea.svg",
     "js": {
       "exponea.version": "^v([\\d.]+)$\\;version:\\1"
@@ -3280,7 +3364,7 @@
       22
     ],
     "cpe": "cpe:2.3:a:expressjs:express:*:*:*:*:*:*:*:*",
-    "description": "Express is a web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.",
+    "description": "Express is a minimal web framework for building HTTP servers and APIs in Node.js.",
     "headers": {
       "X-Powered-By": "^Express(?:$|,)"
     },
@@ -3309,7 +3393,7 @@
       12
     ],
     "cpe": "cpe:2.3:a:sencha:ext_js:*:*:*:*:*:*:*:*",
-    "description": "ExtJS is a JavaScript framework developed by Sencha, designed for creating feature-rich, cross-platform web applications with a comprehensive set of UI components and tools.",
+    "description": "ExtJS is a JavaScript framework developed by Sencha, designed for creating feature-rich, cross-platform web applications with a set of UI components and tools.",
     "icon": "ExtJS.svg",
     "js": {
       "Ext": "",
@@ -3339,7 +3423,7 @@
     "cats": [
       80
     ],
-    "description": "ExtendThemes Calliope is an flexible, multipurpose WordPress child theme of Colibri WP.",
+    "description": "ExtendThemes Calliope is a flexible, multipurpose WordPress child theme of Colibri WP.",
     "dom": "link[href*='/wp-content/themes/calliope/']",
     "icon": "ExtendThemes.svg",
     "requires": "WordPress",
@@ -3350,7 +3434,7 @@
     "cats": [
       80
     ],
-    "description": "ExtendThemes EmpowerWP is an flexible, multipurpose WordPress theme.",
+    "description": "ExtendThemes EmpowerWP is a flexible, multipurpose WordPress theme.",
     "dom": "link[href*='/wp-content/themes/empowerwp']",
     "excludes": "ExtendThemes Mesmerize",
     "icon": "ExtendThemes.svg",
@@ -3368,7 +3452,7 @@
     "cats": [
       80
     ],
-    "description": "ExtendThemes Highlight is an flexible, multipurpose WordPress theme.",
+    "description": "ExtendThemes Highlight is a flexible, multipurpose WordPress theme.",
     "dom": "link[href*='/wp-content/themes/highlight/'], link[href*='/wp-content/themes/highlight-pro/']",
     "excludes": "ExtendThemes Mesmerize",
     "icon": "ExtendThemes.svg",
@@ -3386,7 +3470,7 @@
     "cats": [
       80
     ],
-    "description": "ExtendThemes Materialis is an flexible, multipurpose WordPress theme.",
+    "description": "ExtendThemes Materialis is a flexible, multipurpose WordPress theme.",
     "dom": "link#materialis-style-css",
     "icon": "ExtendThemes.svg",
     "js": {
@@ -3408,7 +3492,7 @@
     "cats": [
       80
     ],
-    "description": "ExtendThemes Mesmerize is an flexible, multipurpose WordPress theme.",
+    "description": "ExtendThemes Mesmerize is a flexible, multipurpose WordPress theme.",
     "dom": "link#mesmerize-style-css",
     "icon": "ExtendThemes.svg",
     "js": {
@@ -3484,6 +3568,7 @@
     "cats": [
       1
     ],
+    "cpe": "cpe:2.3:a:eyoucms:eyoucms:*:*:*:*:*:*:*:*",
     "description": "Eyou CMS is a stable, open-source enterprise content management system built on the TP5.0 framework.",
     "icon": "EyouCMS.svg",
     "meta": {
@@ -3513,7 +3598,7 @@
       10,
       36
     ],
-    "description": "Ezoic is a website optimisation platform for digital publishers and website owners powered by machine learning.",
+    "description": "Ezoic is a website optimization platform for digital publishers and website owners powered by machine learning.",
     "icon": "Ezoic.svg",
     "js": {
       "EzoicA": "",
@@ -3534,7 +3619,7 @@
     "cats": [
       6
     ],
-    "description": "e-Shop is a all-in-one Software-as-a-Service (SaaS) that allows Israeli customers to set up an online store and sell their products.",
+    "description": "e-Shop is a Software-as-a-Service (SaaS) that allows Israeli customers to set up an online store and sell their products.",
     "icon": "eShop eCommerce.svg",
     "pricing": [
       "mid",
@@ -3571,6 +3656,8 @@
     "cookies": {
       "e107_tz": ""
     },
+    "cpe": "cpe:2.3:a:e107:e107:*:*:*:*:*:*:*:*",
+    "description": "e107 is an open-source content management system written in PHP.",
     "headers": {
       "X-Powered-By": "e107"
     },
@@ -3621,20 +3708,6 @@
     "scriptSrc": "cdn\\.ecshop\\.com\\.br",
     "website": "https://www.ecshop.com.br"
   },
-  "eCaupo": {
-    "cats": [
-      6
-    ],
-    "description": "eCaupo is no delivery portal, but your own shop.",
-    "icon": "eCaupo.png",
-    "pricing": [
-      "low",
-      "recurring",
-      "payg"
-    ],
-    "scriptSrc": "\\.ecaupo\\.(?:at|com)/",
-    "website": "https://www.ecaupo.com"
-  },
   "eChalk": {
     "cats": [
       21
@@ -3659,16 +3732,6 @@
       "fe_eclass_guest": "\\;confidence:50"
     },
     "website": "https://www.eclass.com.hk"
-  },
-  "eComchain": {
-    "cats": [
-      6
-    ],
-    "description": "eComchain is a cloud-based ecommerce platform offering B2B and B2C solutions with integrated enterprise resource planning (ERP).",
-    "icon": "eComchain.svg",
-    "saas": true,
-    "scriptSrc": "cdn\\.ecomchain\\.com",
-    "website": "https://ecomchain.com"
   },
   "eDirectory": {
     "cats": [
@@ -3785,7 +3848,7 @@
       54,
       96
     ],
-    "description": "ePublishing is a media tech stack that enhances revenue, productivity, and engagement through AI-powered solutions, SEO dominance, and audience integration.",
+    "description": "ePublishing is a media tech stack that enhances revenue, productivity, and engagement through AI-based solutions, SEO dominance, and audience integration.",
     "icon": "ePublishing.svg",
     "js": {
       "Ellington.Admin": "",
@@ -3868,7 +3931,7 @@
     "cats": [
       41
     ],
-    "description": "eWAY is a global omnichannel payment provider. The company processes secure credit card payments for merchants. eWay works through eCommerce.",
+    "description": "eWAY is a global omnichannel payment provider.",
     "icon": "eway.svg",
     "js": {
       "eWAY.eventHandler": "",
@@ -3912,7 +3975,7 @@
     "cats": [
       6
     ],
-    "description": "ebisumart is a cloud-based storefront system for developing and renewing high-quality ecommerce websites.",
+    "description": "ebisumart is a cloud-based storefront system for developing and renewing ecommerce websites.",
     "icon": "ebisumart.svg",
     "js": {
       "Ebisu.FontChanger": "",

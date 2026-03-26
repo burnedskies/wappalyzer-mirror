@@ -4,6 +4,18 @@ function toArray(value) {
   return Array.isArray(value) ? value : [value]
 }
 
+function hasValues(value) {
+  if (Array.isArray(value)) {
+    return value.length > 0
+  }
+
+  if (value && value.constructor === Object) {
+    return Object.keys(value).length > 0
+  }
+
+  return !!value
+}
+
 const benchmarkEnabled =
   typeof process !== 'undefined' ? !!process.env.WAPPALYZER_BENCHMARK : false
 
@@ -69,6 +81,7 @@ function benchmarkSummary() {
 
 const Wappalyzer = {
   technologies: [],
+  technologiesByType: {},
   categories: [],
   requires: [],
   categoryRequires: [],
@@ -90,6 +103,32 @@ const Wappalyzer = {
     ].find(({ name: _name }) => name === _name),
 
   getCategory: (id) => Wappalyzer.categories.find(({ id: _id }) => id === _id),
+
+  getTechnologiesByTypes(types = []) {
+    const seen = new Set()
+    const technologies = []
+
+    for (const type of [...new Set(types)]) {
+      if (!Wappalyzer.technologiesByType[type]) {
+        Wappalyzer.technologiesByType[type] = Wappalyzer.technologies.filter(
+          (technology) => hasValues(technology[type])
+        )
+      }
+
+      const matches = Wappalyzer.technologiesByType[type]
+
+      for (const technology of matches) {
+        if (seen.has(technology.name)) {
+          continue
+        }
+
+        seen.add(technology.name)
+        technologies.push(technology)
+      }
+    }
+
+    return technologies
+  },
 
   /**
    * Resolve promises for implied technology.
@@ -315,11 +354,18 @@ const Wappalyzer = {
       url: oo,
       xhr: oo,
     }
+    const itemTypes = Object.keys(relations).filter((type) =>
+      hasValues(items[type])
+    )
+    const relevantTechnologies =
+      technologies === Wappalyzer.technologies
+        ? Wappalyzer.getTechnologiesByTypes(itemTypes)
+        : technologies
 
     try {
-      const detections = technologies
+      const detections = relevantTechnologies
         .map((technology) =>
-          Object.keys(relations)
+          itemTypes
             .map(
               (type) =>
                 items[type] && relations[type](technology, type, items[type])
@@ -462,6 +508,7 @@ const Wappalyzer = {
       ({ requires, requiresCategory }) =>
         !requires.length && !requiresCategory.length
     )
+    Wappalyzer.technologiesByType = {}
   },
 
   /**

@@ -1,219 +1,638 @@
 {
-	"github":                          { "message": "GitHubda Wappalyzer dan nusxa olish!" },
-	"twitter":                         { "message": "Twitterda Wappalyzerni kuzatib boring" },
-	"website":                         { "message": "wappalyzer.com ga o'tish" },
-	"options":                         { "message": "Sozlovlar" },
-	"optionsSave":                     { "message": "Saqlash" },
-	"optionsSaved":                    { "message": "Saqlandi" },
-	"optionUpgradeMessage":            { "message": "Yangilanishlar haqida habar berish" },
-	"optionDynamicIcon":               { "message": "Wappalyzer logotipi o'rnida dastur logotipidan foydalanish" },
-	"optionTracking":                  { "message": "Wappalyzer takomillashtirish uchun hisobotlarni maxfiy ravishda serverga jo'natish" },
-	"optionThemeMode":                 { "message": "qorong'i rejimi mosligini yoqish." },
-	"optionBadge":                     { "message": "Show the number of identified technologies on the icon" },
-	"optionShowCached":                { "message": "Include cached detections in results" },
-	"optionApiKey":                    { "message": "API key" },
-	"optionApiKeyDescription":         { "message": "get your API key" },
-	"disableOnDomain":                 { "message": "Disable on this website" },
-	"clearCache":                      { "message": "Clear cached detections" },
-	"nothingToDo":                     { "message": "Bu yerda tekshirib bolmaydi." },
-	"noAppsDetected":                  { "message": "Hech qanday dastur aniqlanmadi." },
-	"playGame":                        { "message": "Play a game?" },
-  "categoryPin":                     { "message": "Always show icon" },
-	"termsAccept":                     { "message": "I'm ok with that" },
-	"termsDecline":                    { "message": "Disable" },
-  "termsContent":                    { "message": "This extension sends anonymous information about websites you visit, including domain name and identified technologies, to <a href='https://www.wappalyzer.com'>wappalyzer.com</a>. This can be disabled in the settings." },
-  "privacyPolicy":                   { "message": "Privacy policy" },
-  "createAlert":                     { "message": "Create an alert for this website" },
-  "leadLists":                       { "message": "Lead generation tools" },
-  "tabTechnologies":                 { "message": "Technologies" },
-  "tabPlus":                         { "message": "More info" },
-  "creditBalance":                   { "message": "Credits:" },
-  "plusMessageHeading":              { "message": "Get Plus for $$10/mo" },
-  "plusMessage":                     { "message": "With Plus, company and contact details of websites you visit are shown here." },
-  "plusButton":                      { "message": "Sign up" },
-  "plusEmpty":                       { "message": "No results found." },
-  "plusCrawl":                       { "message": "No results found, please check back later." },
-  "formSave":                        { "message": "Save" },
-  "issue":                           { "message": "Something wrong or missing?" },
-
-  "setCompany":                      { "message": "Company information" },
-  "setKeywords":                     { "message": "Keywords" },
-  "setEmail":                        { "message": "Email addresses" },
-  "setPhone":                        { "message": "Phone numbers" },
-  "setAddress":                      { "message": "Addresses" },
-  "setContact":                      { "message": "Contact details" },
-  "setSocial":                       { "message": "Social media accounts" },
-  "setMeta":                         { "message": "Metadata" },
-  "setLocale":                       { "message": "Locale" },
-  "setTrackers":                     { "message": "Trackers" },
-  "setSecurity":                     { "message": "Security" },
-  "setSignals":                      { "message": "Signals" },
-
-  "attributeTechnologySpend":        { "message": "Technology spend" },
-  "attributeIpCountry":              { "message": "IP country" },
-  "attributeIpRegion":               { "message": "IP region" },
-  "attributeLanguage":               { "message": "Language" },
-  "attributeEmail":                  { "message": "Email address" },
-  "attributeVerifiedEmail":          { "message": "Email address (verified)" },
-  "attributeSafeEmail":              { "message": "Email address (safe)" },
-  "attributePhone":                  { "message": "Phone number" },
-  "attributeSkype":                  { "message": "Skype" },
-  "attributeWhatsapp":               { "message": "WhatsApp" },
-  "attributeInferredCompanyName":    { "message": "Inferred company name" },
-  "attributeTwitter":                { "message": "Twitter" },
-  "attributeFacebook":               { "message": "Facebook" },
-  "attributeInstagram":              { "message": "Instagram" },
-  "attributeGithub":                 { "message": "GitHub" },
-  "attributeTiktok":                 { "message": "TikTok" },
-  "attributeYoutube":                { "message": "YouTube" },
-  "attributePinterest":              { "message": "Pinterest" },
-  "attributeLinkedin":               { "message": "LinkedIn" },
-  "attributeOwler":                  { "message": "Owler" },
-  "attributeTitle":                  { "message": "Title" },
-  "attributeDescription":            { "message": "Description" },
-  "attributeCopyright":              { "message": "Copyright" },
-  "attributeCopyrightYear":          { "message": "Copyright year" },
-  "attributeResponsive":             { "message": "Responsive" },
-  "attributeCertInfo_subjectOrg":    { "message": "Cert organisation" },
-  "attributeCertInfo_subjectCountry":{ "message": "Cert country" },
-  "attributeCertInfo_subjectState":  { "message": "Cert state" },
-  "attributeCertInfo_subjectLocality":{ "message": "Cert locality" },
-  "attributeCertInfo_issuer":        { "message": "Cert issuer" },
-  "attributeCertInfo_protocol":      { "message": "Cert protocol" },
-  "attributeCertInfo_validTo":       { "message": "Cert expiry" },
-  "attributeHttps":                  { "message": "SSL/TLS enabled" },
-  "attributeTrackerGoogleAnalytics": { "message": "Google Analytics" },
-  "attributeTrackerGoogleAdSense":   { "message": "Google AdSense" },
-  "attributeTrackerMedianet":        { "message": "Medianet" },
-  "attributeTrackerFacebook":        { "message": "Facebook" },
-  "attributeTrackerOptimizely":      { "message": "Optimizely" },
-  "attributeCompanyName":            { "message": "Company name" },
-  "attributeIndustry":               { "message": "Industry" },
-  "attributeAbout":                  { "message": "About" },
-  "attributeLocations":              { "message": "Locations" },
-  "attributeCompanySize":            { "message": "Company size" },
-  "attributeCompanyType":            { "message": "Company type" },
-  "attributeCompanyFounded":         { "message": "Company founded" },
-  "attributeKeywords":               { "message": "Keywords" },
-  "attributeEmployees":              { "message": "People" },
-  "attributeDns_spf":                { "message": "SPF record" },
-  "attributeDns_dmarc":              { "message": "DMARC record" },
-  "attributeSchemaOrgTypes":         { "message": "schema.org types" },
-  "attributeFundingTotalUsd":        { "message": "Funding total" },
-  "attributeFundingRounds":          { "message": "Funding rounds" },
-  "attributeStockSymbol":            { "message": "Stock symbol" },
-  "attributeSemrushGlobalRank":      { "message": "Semrush global rank" },
-  "attributeSemrushVisits":          { "message": "Semrush monthly visits" },
-
-	"categoryName1":                   { "message": "CMS (KBT)" },
-	"categoryName2":                   { "message": "Forum" },
-	"categoryName3":                   { "message": "MB boshqaruvi" },
-	"categoryName4":                   { "message": "Qo'llanmalar" },
-	"categoryName5":                   { "message": "Vidjet" },
-	"categoryName6":                   { "message": "E-tijorat" },
-	"categoryName7":                   { "message": "Foto galereya" },
-	"categoryName8":                   { "message": "Vikilar" },
-	"categoryName9":                   { "message": "Hosting Panel" },
-	"categoryName10":                  { "message": "Analitika" },
-	"categoryName11":                  { "message": "Blog" },
-	"categoryName12":                  { "message": "JavaScript Freymvork" },
-	"categoryName13":                  { "message": "Bag treker" },
-	"categoryName14":                  { "message": "Video Player" },
-	"categoryName15":                  { "message": "Izohlar tizimi" },
-	"categoryName16":                  { "message": "Security" },
-	"categoryName17":                  { "message": "Shrift" },
-	"categoryName18":                  { "message": "Veb Freymvork" },
-	"categoryName19":                  { "message": "Boshqalar" },
-	"categoryName20":                  { "message": "Muharrir" },
-	"categoryName21":                  { "message": "LMS" },
-	"categoryName22":                  { "message": "Veb Server" },
-	"categoryName23":                  { "message": "Keshlash vositasi" },
-	"categoryName24":                  { "message": "WYSIWYG muharriri" },
-	"categoryName25":                  { "message": "JavaScript grafika" },
-	"categoryName26":                  { "message": "Mobile Freymvork" },
-	"categoryName27":                  { "message": "Dasturlash tili" },
-	"categoryName28":                  { "message": "Operatsion tizim" },
-	"categoryName29":                  { "message": "Qidiruv vositasi" },
-	"categoryName30":                  { "message": "Veb Mail" },
-	"categoryName31":                  { "message": "CDN" },
-	"categoryName32":                  { "message": "Marketing Boshqaruv Tizim" },
-	"categoryName33":                  { "message": "Veb Server Ilovasi" },
-	"categoryName34":                  { "message": "Ma'lumotlar ombori" },
-	"categoryName35":                  { "message": "Xarita" },
-	"categoryName36":                  { "message": "Reklama tarmog'i" },
-	"categoryName37":                  { "message": "Tarmoq xizmati" },
-	"categoryName38":                  { "message": "Media Server" },
-	"categoryName39":                  { "message": "Veb kamera" },
-	"categoryName40":                  { "message": "Printer" },
-	"categoryName41":                  { "message": "To'lov tizimi" },
-	"categoryName42":                  { "message": "Tag Menejeri" },
-	"categoryName43":                  { "message": "Paywall" },
-	"categoryName44":                  { "message": "CI Tizim" },
-	"categoryName45":                  { "message": "SCADA Tizim" },
-	"categoryName46":                  { "message": "Masofaviy boshqaruv" },
-	"categoryName47":                  { "message": "Dasturchilar uchun" },
-	"categoryName48":                  { "message": "Tarmoq omborlar" },
-	"categoryName49":                  { "message": "Feed Readers" },
-	"categoryName50":                  { "message": "Qo'llanma tuzuvchi tizim" },
-	"categoryName51":                  { "message": "Sahifa generatorlari" },
-	"categoryName52":                  { "message": "Live Chat" },
-	"categoryName53":                  { "message": "CRM" },
-	"categoryName54":                  { "message": "SEO" },
-  "categoryName55":                  { "message": "Accounting" },
-  "categoryName56":                  { "message": "Cryptominer" },
-  "categoryName57":                  { "message": "Static Site Generator" },
-	"categoryName58":                  { "message": "User Onboarding" },
-	"categoryName59":                  { "message": "JavaScript Libraries" },
-	"categoryName60":                  { "message": "Containers" },
-	"categoryName61":                  { "message": "SaaS" },
-	"categoryName62":                  { "message": "PaaS" },
-	"categoryName63":                  { "message": "IaaS" },
-	"categoryName64":                  { "message": "Reverse Proxy" },
-	"categoryName65":                  { "message": "Load Balancer" },
-	"categoryName66":                  { "message": "UI Frameworks" },
-	"categoryName67":                  { "message": "Cookie compliance" },
-	"categoryName68":                  { "message": "Accessibility" },
-	"categoryName69":                  { "message": "Authentication" },
-	"categoryName70":                  { "message": "SSL/TLS certificate authorities" },
-	"categoryName71":                  { "message": "Affiliate programs" },
-	"categoryName72":                  { "message": "Appointment scheduling" },
-	"categoryName73":                  { "message": "Surveys" },
-	"categoryName74":                  { "message": "A/B testing" },
-	"categoryName75":                  { "message": "Email" },
-	"categoryName76":                  { "message": "Personalisation" },
-	"categoryName77":                  { "message": "Retargeting" },
-	"categoryName78":                  { "message": "RUM" },
-	"categoryName79":                  { "message": "Geolocation" },
-	"categoryName80":                  { "message": "WordPress themes" },
-	"categoryName81":                  { "message": "Shopify themes" },
-	"categoryName82":                  { "message": "Drupal themes" },
-	"categoryName83":                  { "message": "Browser fingerprinting" },
-	"categoryName84":                  { "message": "Loyalty & rewards" },
-	"categoryName85":                  { "message": "Feature management" },
-	"categoryName86":                  { "message": "Segmentation" },
-	"categoryName87":                  { "message": "WordPress plugins" },
-	"categoryName88":                  { "message": "Hosting" },
-	"categoryName89":                  { "message": "Translation" },
-	"categoryName90":                  { "message": "Reviews" },
-	"categoryName91":                  { "message": "Buy now pay later" },
-	"categoryName92":                  { "message": "Performance" },
-	"categoryName93":                  { "message": "Reservations & delivery" },
-	"categoryName94":                  { "message": "Referral marketing" },
-	"categoryName95":                  { "message": "Digital asset management" },
-	"categoryName96":                  { "message": "Content curation" },
-	"categoryName97":                  { "message": "Customer data platform" },
-	"categoryName98":                  { "message": "Cart abandonment" },
-	"categoryName99":                  { "message": "Shipping carriers" },
-	"categoryName100":                 { "message": "Shopify apps" },
-	"categoryName101":                 { "message": "Recruitment & staffing" },
-	"categoryName102":                 { "message": "Returns" },
-	"categoryName103":                 { "message": "Livestreaming" },
-	"categoryName104":                 { "message": "Ticket booking" },
-	"categoryName105":                 { "message": "Augmented reality" },
-	"categoryName106":                 { "message": "Cross border ecommerce" },
-	"categoryName107":                 { "message": "Fulfilment" },
-	"categoryName108":                 { "message": "Ecommerce frontends" },
-	"categoryName109":                 { "message": "Domain parking" },
-	"categoryName110":                 { "message": "Form builders" },
-	"categoryName111":                 { "message": "Fundraising & donations" }
+  "github": {
+    "message": "GitHubda Wappalyzer dan nusxa olish!"
+  },
+  "twitter": {
+    "message": "Twitterda Wappalyzerni kuzatib boring"
+  },
+  "website": {
+    "message": "wappalyzer.com ga o'tish"
+  },
+  "options": {
+    "message": "Sozlovlar"
+  },
+  "optionsSave": {
+    "message": "Saqlash"
+  },
+  "optionsSaved": {
+    "message": "Saqlandi"
+  },
+  "optionUpgradeMessage": {
+    "message": "Yangilanishlar haqida habar berish"
+  },
+  "optionDynamicIcon": {
+    "message": "Wappalyzer logotipi o'rnida dastur logotipidan foydalanish"
+  },
+  "optionTracking": {
+    "message": "Wappalyzer takomillashtirish uchun hisobotlarni maxfiy ravishda serverga jo'natish"
+  },
+  "optionThemeMode": {
+    "message": "qorong'i rejimi mosligini yoqish."
+  },
+  "optionBadge": {
+    "message": "Belgida aniqlangan texnologiyalar sonini ko'rsatish"
+  },
+  "optionShowCached": {
+    "message": "Natijalarda keshlangan aniqlashlarni ko'rsatish"
+  },
+  "optionApiKey": {
+    "message": "API kaliti"
+  },
+  "optionApiKeyDescription": {
+    "message": "API kalitingizni oling"
+  },
+  "disableOnDomain": {
+    "message": "Bu veb-saytda o'chirish"
+  },
+  "clearCache": {
+    "message": "Keshlangan aniqlashlarni tozalash"
+  },
+  "nothingToDo": {
+    "message": "Bu yerda tekshirib bolmaydi."
+  },
+  "noAppsDetected": {
+    "message": "Hech qanday dastur aniqlanmadi."
+  },
+  "reloadPage": {
+    "message": "Qayta yuklash"
+  },
+  "categoryPin": {
+    "message": "Har doim ikonani ko'rsatish"
+  },
+  "termsAccept": {
+    "message": "Menga ma'qul"
+  },
+  "termsDecline": {
+    "message": "O'chirish"
+  },
+  "termsContent": {
+    "message": "Ushbu kengaytma siz tashrif buyuradigan veb-saytlar haqida anonim ma'lumotlarni, jumladan domen nomi va aniqlangan texnologiyalarni, <a href='https://www.wappalyzer.com'>wappalyzer.com</a> ga yuboradi. Buni sozlamalarda o'chirish mumkin."
+  },
+  "privacyPolicy": {
+    "message": "Maxfiylik siyosati"
+  },
+  "createAlert": {
+    "message": "Bu veb-sayt uchun ogohlantirish yarating"
+  },
+  "leadLists": {
+    "message": "Lid yaratish vositalari"
+  },
+  "tabTechnologies": {
+    "message": "Texnologiyalar"
+  },
+  "tabPlus": {
+    "message": "Batafsil ma'lumot"
+  },
+  "creditBalance": {
+    "message": "Kreditlar:"
+  },
+  "plusMessageHeading": {
+    "message": "Plus'ni oyiga $$10 evaziga oling"
+  },
+  "plusMessage": {
+    "message": "Plus bilan siz tashrif buyuradigan veb-saytlarning kompaniya va aloqa ma'lumotlari shu yerda ko'rsatiladi."
+  },
+  "plusButton": {
+    "message": "Ro'yxatdan o'tish"
+  },
+  "plusEmpty": {
+    "message": "Natijalar topilmadi."
+  },
+  "plusCrawl": {
+    "message": "Natijalar topilmadi, keyinroq yana tekshiring."
+  },
+  "formSave": {
+    "message": "Saqlash"
+  },
+  "issue": {
+    "message": "Nima noto'g'ri yoki nimadir yetishmayaptimi?"
+  },
+  "setCompany": {
+    "message": "Kompaniya ma'lumotlari"
+  },
+  "setKeywords": {
+    "message": "Kalit so'zlar"
+  },
+  "setEmail": {
+    "message": "Email manzillari"
+  },
+  "setPhone": {
+    "message": "Telefon raqamlari"
+  },
+  "setAddress": {
+    "message": "Manzillar"
+  },
+  "setContact": {
+    "message": "Aloqa ma'lumotlari"
+  },
+  "setSocial": {
+    "message": "Ijtimoiy tarmoq akkauntlari"
+  },
+  "setMeta": {
+    "message": "Metama'lumotlar"
+  },
+  "setLocale": {
+    "message": "Hudud"
+  },
+  "setTrackers": {
+    "message": "Kuzatuvchilar"
+  },
+  "setSecurity": {
+    "message": "Xavfsizlik"
+  },
+  "setSignals": {
+    "message": "Signallar"
+  },
+  "attributeTechnologySpend": {
+    "message": "Texnologiya xarajatlari"
+  },
+  "attributeIpCountry": {
+    "message": "IP mamlakati"
+  },
+  "attributeIpRegion": {
+    "message": "IP hududi"
+  },
+  "attributeLanguage": {
+    "message": "Til"
+  },
+  "attributeEmail": {
+    "message": "Email manzili"
+  },
+  "attributeVerifiedEmail": {
+    "message": "Email manzili (tasdiqlangan)"
+  },
+  "attributeSafeEmail": {
+    "message": "Email manzili (xavfsiz)"
+  },
+  "attributePhone": {
+    "message": "Telefon raqami"
+  },
+  "attributeSkype": {
+    "message": "Skype"
+  },
+  "attributeWhatsapp": {
+    "message": "WhatsApp"
+  },
+  "attributeInferredCompanyName": {
+    "message": "Taxmin qilingan kompaniya nomi"
+  },
+  "attributeTwitter": {
+    "message": "Twitter"
+  },
+  "attributeFacebook": {
+    "message": "Facebook"
+  },
+  "attributeInstagram": {
+    "message": "Instagram"
+  },
+  "attributeGithub": {
+    "message": "GitHub"
+  },
+  "attributeTiktok": {
+    "message": "TikTok"
+  },
+  "attributeYoutube": {
+    "message": "YouTube"
+  },
+  "attributePinterest": {
+    "message": "Pinterest"
+  },
+  "attributeLinkedin": {
+    "message": "LinkedIn"
+  },
+  "attributeOwler": {
+    "message": "Owler"
+  },
+  "attributeTitle": {
+    "message": "Sarlavha"
+  },
+  "attributeDescription": {
+    "message": "Tavsif"
+  },
+  "attributeCopyright": {
+    "message": "Mualliflik huquqi"
+  },
+  "attributeCopyrightYear": {
+    "message": "Mualliflik huquqi yili"
+  },
+  "attributeResponsive": {
+    "message": "Moslashuvchan"
+  },
+  "attributeCertInfo_subjectOrg": {
+    "message": "Cert organisation"
+  },
+  "attributeCertInfo_subjectCountry": {
+    "message": "Cert country"
+  },
+  "attributeCertInfo_subjectState": {
+    "message": "Cert state"
+  },
+  "attributeCertInfo_subjectLocality": {
+    "message": "Cert locality"
+  },
+  "attributeCertInfo_issuer": {
+    "message": "Cert issuer"
+  },
+  "attributeCertInfo_protocol": {
+    "message": "Cert protocol"
+  },
+  "attributeCertInfo_validTo": {
+    "message": "Cert expiry"
+  },
+  "attributeHttps": {
+    "message": "SSL/TLS enabled"
+  },
+  "attributeTrackerGoogleAnalytics": {
+    "message": "Google Analytics"
+  },
+  "attributeTrackerGoogleAdSense": {
+    "message": "Google AdSense"
+  },
+  "attributeTrackerMedianet": {
+    "message": "Medianet"
+  },
+  "attributeTrackerFacebook": {
+    "message": "Facebook"
+  },
+  "attributeTrackerOptimizely": {
+    "message": "Optimizely"
+  },
+  "attributeCompanyName": {
+    "message": "Kompaniya nomi"
+  },
+  "attributeIndustry": {
+    "message": "Sanoat"
+  },
+  "attributeAbout": {
+    "message": "Haqida"
+  },
+  "attributeLocations": {
+    "message": "Joylashuvlar"
+  },
+  "attributeCompanySize": {
+    "message": "Kompaniya hajmi"
+  },
+  "attributeCompanyType": {
+    "message": "Kompaniya turi"
+  },
+  "attributeCompanyFounded": {
+    "message": "Kompaniya tashkil etilgan yil"
+  },
+  "attributeKeywords": {
+    "message": "Kalit so'zlar"
+  },
+  "attributeEmployees": {
+    "message": "Odamlar"
+  },
+  "attributeDns_spf": {
+    "message": "SPF yozuvi"
+  },
+  "attributeDns_dmarc": {
+    "message": "DMARC yozuvi"
+  },
+  "attributeSchemaOrgTypes": {
+    "message": "schema.org turlari"
+  },
+  "attributeFundingTotalUsd": {
+    "message": "Jami moliyalashtirish"
+  },
+  "attributeFundingRounds": {
+    "message": "Moliyalashtirish bosqichlari"
+  },
+  "attributeStockSymbol": {
+    "message": "Aksiya belgisi"
+  },
+  "attributeSemrushGlobalRank": {
+    "message": "Semrush global reytingi"
+  },
+  "attributeSemrushVisits": {
+    "message": "Semrush oylik tashriflari"
+  },
+  "categoryName1": {
+    "message": "CMS (KBT)"
+  },
+  "categoryName2": {
+    "message": "Forum"
+  },
+  "categoryName3": {
+    "message": "Ma'lumotlar bazasi boshqaruvi"
+  },
+  "categoryName4": {
+    "message": "Qo'llanmalar"
+  },
+  "categoryName5": {
+    "message": "Vidjet"
+  },
+  "categoryName6": {
+    "message": "E-tijorat"
+  },
+  "categoryName7": {
+    "message": "Foto galereya"
+  },
+  "categoryName8": {
+    "message": "Vikilar"
+  },
+  "categoryName9": {
+    "message": "Xosting panellari"
+  },
+  "categoryName10": {
+    "message": "Analitika"
+  },
+  "categoryName11": {
+    "message": "Blog"
+  },
+  "categoryName12": {
+    "message": "JavaScript Freymvork"
+  },
+  "categoryName13": {
+    "message": "Muammolar kuzatuvchisi"
+  },
+  "categoryName14": {
+    "message": "Video Player"
+  },
+  "categoryName15": {
+    "message": "Izohlar tizimi"
+  },
+  "categoryName16": {
+    "message": "Xavfsizlik"
+  },
+  "categoryName17": {
+    "message": "Shrift"
+  },
+  "categoryName18": {
+    "message": "Veb Freymvork"
+  },
+  "categoryName19": {
+    "message": "Boshqalar"
+  },
+  "categoryName20": {
+    "message": "Muharrir"
+  },
+  "categoryName21": {
+    "message": "LMS"
+  },
+  "categoryName22": {
+    "message": "Veb Server"
+  },
+  "categoryName23": {
+    "message": "Keshlash vositasi"
+  },
+  "categoryName24": {
+    "message": "WYSIWYG muharriri"
+  },
+  "categoryName25": {
+    "message": "JavaScript grafika"
+  },
+  "categoryName26": {
+    "message": "Mobile Freymvork"
+  },
+  "categoryName27": {
+    "message": "Dasturlash tili"
+  },
+  "categoryName28": {
+    "message": "Operatsion tizim"
+  },
+  "categoryName29": {
+    "message": "Qidiruv vositasi"
+  },
+  "categoryName30": {
+    "message": "Veb pochta"
+  },
+  "categoryName31": {
+    "message": "CDN"
+  },
+  "categoryName32": {
+    "message": "Marketing Boshqaruv Tizim"
+  },
+  "categoryName33": {
+    "message": "Veb Server Ilovasi"
+  },
+  "categoryName34": {
+    "message": "Ma'lumotlar ombori"
+  },
+  "categoryName35": {
+    "message": "Xarita"
+  },
+  "categoryName36": {
+    "message": "Reklama tarmog'i"
+  },
+  "categoryName37": {
+    "message": "Tarmoq xizmati"
+  },
+  "categoryName38": {
+    "message": "Media Server"
+  },
+  "categoryName39": {
+    "message": "Veb kamera"
+  },
+  "categoryName40": {
+    "message": "Printerlar"
+  },
+  "categoryName41": {
+    "message": "To'lov tizimi"
+  },
+  "categoryName42": {
+    "message": "Tag Menejeri"
+  },
+  "categoryName44": {
+    "message": "CI Tizim"
+  },
+  "categoryName46": {
+    "message": "Masofaviy boshqaruv"
+  },
+  "categoryName47": {
+    "message": "Dasturchilar uchun"
+  },
+  "categoryName48": {
+    "message": "Tarmoq omborlar"
+  },
+  "categoryName49": {
+    "message": "Feed o'quvchilari"
+  },
+  "categoryName50": {
+    "message": "Qo'llanma tuzuvchi tizim"
+  },
+  "categoryName51": {
+    "message": "Sahifa generatorlari"
+  },
+  "categoryName52": {
+    "message": "Jonli chat"
+  },
+  "categoryName53": {
+    "message": "CRM"
+  },
+  "categoryName54": {
+    "message": "SEO"
+  },
+  "categoryName55": {
+    "message": "Buxgalteriya"
+  },
+  "categoryName56": {
+    "message": "Kriptomayner"
+  },
+  "categoryName57": {
+    "message": "Statik sayt generatori"
+  },
+  "categoryName58": {
+    "message": "Foydalanuvchini tanishtirish"
+  },
+  "categoryName59": {
+    "message": "JavaScript Libraries"
+  },
+  "categoryName60": {
+    "message": "Konteynerlar"
+  },
+  "categoryName61": {
+    "message": "SaaS"
+  },
+  "categoryName62": {
+    "message": "PaaS"
+  },
+  "categoryName63": {
+    "message": "IaaS"
+  },
+  "categoryName64": {
+    "message": "Teskari proksi"
+  },
+  "categoryName65": {
+    "message": "Yuk muvozanatlagichi"
+  },
+  "categoryName66": {
+    "message": "UI Frameworks"
+  },
+  "categoryName67": {
+    "message": "Cookie muvofiqligi"
+  },
+  "categoryName68": {
+    "message": "Qulaylik"
+  },
+  "categoryName69": {
+    "message": "Autentifikatsiya"
+  },
+  "categoryName70": {
+    "message": "SSL/TLS sertifikat markazlari"
+  },
+  "categoryName71": {
+    "message": "Hamkorlik dasturlari"
+  },
+  "categoryName72": {
+    "message": "Uchrashuvlarni rejalashtirish"
+  },
+  "categoryName73": {
+    "message": "So'rovnomalar"
+  },
+  "categoryName74": {
+    "message": "A/B sinovlari"
+  },
+  "categoryName75": {
+    "message": "Elektron pochta"
+  },
+  "categoryName76": {
+    "message": "Shaxsiylashtirish"
+  },
+  "categoryName77": {
+    "message": "Qayta nishonlash"
+  },
+  "categoryName78": {
+    "message": "RUM"
+  },
+  "categoryName79": {
+    "message": "Geolokatsiya"
+  },
+  "categoryName80": {
+    "message": "WordPress mavzulari"
+  },
+  "categoryName81": {
+    "message": "Shopify mavzulari"
+  },
+  "categoryName82": {
+    "message": "Drupal mavzulari"
+  },
+  "categoryName83": {
+    "message": "Brauzer barmoq izi"
+  },
+  "categoryName84": {
+    "message": "Sadoqat va mukofotlar"
+  },
+  "categoryName85": {
+    "message": "Funksiyalarni boshqarish"
+  },
+  "categoryName86": {
+    "message": "Segmentatsiya"
+  },
+  "categoryName87": {
+    "message": "WordPress plaginlari"
+  },
+  "categoryName88": {
+    "message": "Xosting"
+  },
+  "categoryName89": {
+    "message": "Tarjima"
+  },
+  "categoryName90": {
+    "message": "Sharhlar"
+  },
+  "categoryName91": {
+    "message": "Hozir sotib oling, keyin to'lang"
+  },
+  "categoryName92": {
+    "message": "Samaradorlik"
+  },
+  "categoryName93": {
+    "message": "Bronlash va yetkazib berish"
+  },
+  "categoryName94": {
+    "message": "Tavsiya marketingi"
+  },
+  "categoryName95": {
+    "message": "Raqamli aktivlarni boshqarish"
+  },
+  "categoryName96": {
+    "message": "Kontent kuratsiyasi"
+  },
+  "categoryName97": {
+    "message": "Mijoz ma'lumotlari platformasi"
+  },
+  "categoryName98": {
+    "message": "Savatni tashlab ketish"
+  },
+  "categoryName99": {
+    "message": "Yetkazib beruvchilar"
+  },
+  "categoryName100": {
+    "message": "Shopify ilovalari"
+  },
+  "categoryName101": {
+    "message": "Ishga yollash va kadrlar bilan ta'minlash"
+  },
+  "categoryName102": {
+    "message": "Qaytarishlar"
+  },
+  "categoryName103": {
+    "message": "Jonli efir"
+  },
+  "categoryName104": {
+    "message": "Chipta bron qilish"
+  },
+  "categoryName105": {
+    "message": "Kengaytirilgan reallik"
+  },
+  "categoryName106": {
+    "message": "Transchegaraviy elektron tijorat"
+  },
+  "categoryName107": {
+    "message": "Buyurtmalarni bajarish"
+  },
+  "categoryName108": {
+    "message": "Elektron tijorat frontendlari"
+  },
+  "categoryName109": {
+    "message": "Domen parkovkasi"
+  },
+  "categoryName110": {
+    "message": "Forma yaratuvchilari"
+  },
+  "categoryName111": {
+    "message": "Mablag' yig'ish va xayriyalar"
+  }
 }

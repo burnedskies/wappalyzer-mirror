@@ -24,7 +24,7 @@
       64
     ],
     "cpe": "cpe:2.3:a:ibm:datapower_gateway:*:*:*:*:*:*:*:*",
-    "description": "IBM DataPower Gateway is a single multi-channel gateway designed to help provide security, control, integration and optimized access to a full range of mobile, web, application programming interface (API), service-oriented architecture (SOA), B2B and cloud workloads.",
+    "description": "IBM DataPower Gateway is a single multi-channel gateway designed to help provide security, control, integration and optimized access to a full range of mobile, web, application programming interface (API), service-oriented architecture (SOA).",
     "headers": {
       "X-Backside-Transport": "",
       "X-Global-Transaction-ID": ""
@@ -275,7 +275,7 @@
     "cats": [
       19
     ],
-    "description": "IconScout is a platform that offers a diverse collection of high-quality icons and design resources for creative professionals, allowing them to enhance their projects with visually appealing elements.",
+    "description": "IconScout is a platform that offers a diverse collection of icons and design resources for creative professionals, allowing them to enhance their projects with visually appealing elements.",
     "dom": "link[href*='.iconscout.com/'], img[src*='.iconscout.com/']",
     "icon": "IconScout.svg",
     "website": "https://iconscout.com"
@@ -284,7 +284,7 @@
     "cats": [
       10
     ],
-    "description": "Iconosquare is an all-in-one social media management platform that facilitates the lives of SMMs with multiple profiles to manage.",
+    "description": "Iconosquare is a social media management platform that facilitates the lives of SMMs with multiple profiles to manage.",
     "dom": "iframe[src*='iconosquare.com/']",
     "icon": "Iconosquare.svg",
     "pricing": [
@@ -389,7 +389,7 @@
       32,
       86
     ],
-    "description": "Ifdo is a marketing and segmentation tool ",
+    "description": "Ifdo is a marketing and segmentation tool.",
     "icon": "Ifdo.svg",
     "js": {
       "_NBIFDOBODYINNERHTML": "",
@@ -427,7 +427,7 @@
     "cats": [
       55
     ],
-    "description": "Ignition is an all-in-one platform streamlining proposals, billing, payments, and workflows for accounting and professional services firms.",
+    "description": "Ignition is a platform streamlining proposals, billing, payments, and workflows for accounting and professional services firms.",
     "icon": "Ignition.svg",
     "pricing": [
       "mid",
@@ -466,7 +466,7 @@
     "cats": [
       52
     ],
-    "description": "Ikeono is an all-in-one communication tool that provides business text messaging solutions for independent retailers.",
+    "description": "Ikeono is a communication tool that provides business text messaging solutions for independent retailers.",
     "icon": "Ikeono.svg",
     "js": {
       "ikeono": ""
@@ -483,6 +483,7 @@
     "cats": [
       21
     ],
+    "cpe": "cpe:2.3:a:ilias:ilias:*:*:*:*:*:*:*:*",
     "description": "Ilias is an open source learning management system.",
     "icon": "Ilias.svg",
     "js": {
@@ -552,7 +553,7 @@
       31,
       92
     ],
-    "description": "ImageEngine is an intelligent image content delivery network. ImageEngine will resize your image content tailored to the end users device.",
+    "description": "ImageEngine is an intelligent image content delivery network.",
     "dom": "link[href*='.imgeng.in/'], img[src*='.imgeng.in/'], img[data-src*='.imgeng.in/'], source[srcset*='.imgeng.in/']",
     "icon": "ImageEngine.svg",
     "pricing": [
@@ -566,7 +567,7 @@
     "cats": [
       7
     ],
-    "description": "ImageKit is an image optimisation and transformation server for web and mobile app developers.",
+    "description": "ImageKit is an image optimization and transformation server for web and mobile app developers.",
     "dom": "link[href*='ik.imagekit.io/']",
     "icon": "ImageKit.svg",
     "pricing": [
@@ -616,7 +617,7 @@
     "cats": [
       52
     ],
-    "description": "Imber is an all-in-one marketing automation platform built for customer support (live chat), sales, and marketing.",
+    "description": "Imber is a marketing automation platform built for customer support (live chat), sales, and marketing.",
     "icon": "Imber.png",
     "js": {
       "$imber.getVisitor": "",
@@ -636,7 +637,8 @@
       31,
       95
     ],
-    "description": "Imgix is a visual media platform for managing, processing, rendering, optimising and delivering your existing images.",
+    "cpe": "cpe:2.3:a:imgix:imgix:*:*:*:*:*:*:*:*",
+    "description": "Imgix is a visual media platform for managing, processing, rendering, optimizing and delivering your existing images.",
     "dns": {
       "SOA": "\\.imgix\\.net"
     },
@@ -679,6 +681,20 @@
     "scriptSrc": "^immutable\\.(?:min\\.)?js$",
     "website": "https://facebook.github.io/immutable-js/"
   },
+  "ImobiBrasil": {
+    "cats": [
+      53
+    ],
+    "description": "ImobiBrasil is a real estate CRM and sales funnel system that integrates with property portals to manage listings, leads, and client interactions within a centralized platform.",
+    "icon": "ImobiBrasil.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "\\.imobibrasil\\.app\\.br",
+    "website": "https://imobibrasil.com.br"
+  },
   "Impact": {
     "cats": [
       71
@@ -691,6 +707,20 @@
     },
     "scriptSrc": "d\\.impactradius-event\\.com",
     "website": "https://impact.com/"
+  },
+  "Impel": {
+    "cats": [
+      6
+    ],
+    "description": "Impel is an automotive software platform that provides digital retailing and merchandising tools designed to assist vehicle shoppers in evaluating and selecting cars online.",
+    "icon": "Impel.svg",
+    "js": {
+      "ImpelAna": "",
+      "ImpelSpinviewer": ""
+    },
+    "saas": true,
+    "scriptSrc": "cdn\\.impel\\.io",
+    "website": "https://impel.ai"
   },
   "Impero": {
     "cats": [
@@ -778,7 +808,7 @@
       1
     ],
     "cpe": "cpe:2.3:a:impresspages:impresspages_cms:*:*:*:*:*:*:*:*",
-    "description": "ImpressPages is an open-source content management system (CMS) that enables users to create and manage websites easily, featuring a user-friendly interface and customizable templates.",
+    "description": "ImpressPages is an open-source content management system (CMS) that enables users to create and manage websites easily, featuring an interface and customizable templates.",
     "icon": "ImpressPages.svg",
     "implies": "PHP",
     "meta": {
@@ -791,7 +821,7 @@
     "cats": [
       73
     ],
-    "description": "Impressure is a platform for creating and publishing offer paths, dynamic forms, and surveys through a user-friendly interface.",
+    "description": "Impressure is a platform for creating and publishing offer paths, dynamic forms, and surveys through an interface.",
     "icon": "Impressure.svg",
     "js": {
       "Impressure.commands": ""
@@ -807,7 +837,7 @@
     "cats": [
       16
     ],
-    "description": "Imunify360 is a comprehensive security platform for Linux web servers which utilises machine learning technology and other advanced techniques to provide protection against various types of cyber threats, such as malware, viruses, and other attacks.",
+    "description": "Imunify360 is a security platform for Linux web servers which uses machine learning technology and other advanced techniques to provide protection against various types of cyber threats, such as malware, viruses, and other attacks.",
     "headers": {
       "Server": "imunify360-webshield/([\\d\\.]+)\\;version:\\1"
     },
@@ -824,7 +854,7 @@
     "cats": [
       6
     ],
-    "description": "Imweb is a ecommerce website builder software.",
+    "description": "Imweb is an ecommerce website builder software.",
     "icon": "Imweb.svg",
     "js": {
       "IMWEB_TEMPLATE": ""
@@ -951,6 +981,22 @@
     "icon": "Includable.svg",
     "website": "https://includable.com"
   },
+  "Incomaker": {
+    "cats": [
+      32
+    ],
+    "description": "Incomaker is a marketing and sales automation platform that centralizes lead capture, campaign management, customer engagement, and sales workflows across digital channels.",
+    "icon": "Incomaker.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.incomaker\\.com/",
+    "website": "https://www.incomaker.com"
+  },
   "Indeed": {
     "cats": [
       101
@@ -988,31 +1034,6 @@
       "generator": "Indexhibit"
     },
     "website": "https://www.indexhibit.org"
-  },
-  "Indexic": {
-    "cats": [
-      104
-    ],
-    "description": "Indexic is a booking management platform designed for tours, activities, and rental operations.",
-    "icon": "Indexic.svg",
-    "pricing": [
-      "poa"
-    ],
-    "saas": true,
-    "scripts": "\\.web\\.indexic\\.net",
-    "website": "https://www.indexic.net"
-  },
-  "Indico": {
-    "cats": [
-      1
-    ],
-    "cookies": {
-      "MAKACSESSION": ""
-    },
-    "description": "Indico is an open-source event management system designed for organizing scientific conferences and workshops.",
-    "icon": "Indico.svg",
-    "oss": true,
-    "website": "https://getindico.io"
   },
   "Indy": {
     "cats": [
@@ -1060,7 +1081,7 @@
     "cats": [
       47
     ],
-    "description": "Infinity is an all-in-one workspace that allows project organization, task tracking, and team collaboration in a centralized platform.",
+    "description": "Infinity is a workspace that allows project organization, task tracking, and team collaboration in a centralized platform.",
     "dom": "iframe[src*='app.startinfinity.com/']",
     "icon": "Infinity.svg",
     "pricing": [
@@ -1076,7 +1097,7 @@
     "cats": [
       32
     ],
-    "description": "Influence is a conversion optimisation tool for ecommerce that leverages real-time social proof.",
+    "description": "Influence is a conversion optimization tool for ecommerce that leverages real-time social proof.",
     "icon": "Influence.svg",
     "js": {
       "Influence": ""
@@ -1107,7 +1128,7 @@
       1,
       32
     ],
-    "description": "Influx CMS is a medical marketing platform specialising in custom web design and marketing for doctors, surgeons, and medical spas.",
+    "description": "Influx CMS is a medical marketing platform specializing in custom web design and marketing for doctors, surgeons, and medical spas.",
     "dom": "a[href*='www.influxmarketing.com'] > svg[class*='influx-footer-logo'",
     "icon": "InfluxCMS.svg",
     "meta": {
@@ -1120,7 +1141,7 @@
     "cats": [
       5
     ],
-    "description": "Infogram is a web-based data visualisation and infographics platform.",
+    "description": "Infogram is a web-based data visualization and infographics platform.",
     "dom": "iframe[src*='.infogram.com/']",
     "icon": "Infogram.svg",
     "js": {
@@ -1237,11 +1258,22 @@
     ],
     "website": "https://www.infront.sport"
   },
+  "Ingresse": {
+    "cats": [
+      72
+    ],
+    "description": "Ingresse is a booking system that enables users to manage reservations.",
+    "icon": "Ingresse.svg",
+    "saas": true,
+    "scriptSrc": "\\.ingresse\\.com",
+    "scripts": "\\.ingresse\\.com",
+    "website": "https://ingresse.com"
+  },
   "InkSoft": {
     "cats": [
       6
     ],
-    "description": "InkSoft is a comprehensive platform offering online designer tools and ecommerce solutions tailored for printing companies.",
+    "description": "InkSoft is a platform offering online designer tools and ecommerce solutions tailored for printing companies.",
     "icon": "InkSoft.svg",
     "pricing": [
       "mid",
@@ -1341,7 +1373,7 @@
     "cats": [
       97
     ],
-    "description": "Insider is the first integrated Growth Management Platform helping digital marketers drive growth across the funnel, from Acquisition to Activation, Retention, and Revenue from a unified platform powered by Artificial Intelligence and Machine Learning.",
+    "description": "Insider is the first integrated Growth Management Platform helping digital marketers drive growth across the funnel, from Acquisition to Activation, Retention.",
     "icon": "Insider.svg",
     "js": {
       "Insider": "\\;confidence:20"
@@ -1357,7 +1389,7 @@
     "cats": [
       53
     ],
-    "description": "Insightly CRM is a cloud-based customer relationship management software, helps businesses manage leads, contacts, and opportunities, track customer interactions, create custom reports, automate workflows, and integrate with third-party applications, improving customer engagement and streamlining business processes.",
+    "description": "Insightly CRM is a cloud-based customer relationship management software, helps businesses manage leads, contacts, and opportunities, track customer interactions, create custom reports, automate workflows, and integrate with third-party applications.",
     "dom": "form[action*='.insightly.com/']",
     "icon": "Insightly.svg",
     "pricing": [
@@ -1464,7 +1496,7 @@
       13,
       78
     ],
-    "description": "Instana is a Kubernetes-native APM tool which is built for new-stack including Microservices and lately Serverless but also supports the existing VM based stacks  including several supported technologies.",
+    "description": "Instana is a Kubernetes-native APM tool which is built for new-stack including Microservices and lately Serverless but also supports the existing VM based stacks including several supported technologies.",
     "icon": "Instana.svg",
     "js": {
       "ineum": ""
@@ -1504,7 +1536,7 @@
       59,
       92
     ],
-    "description": "Instant.Page is a JavaScript library which uses just-in-time preloading technique to make websites faster.",
+    "description": "Instant. Page is a JavaScript library which uses just-in-time preloading technique to make websites faster.",
     "icon": "Instant.page.svg",
     "oss": true,
     "scriptSrc": "instant\\.page",
@@ -1530,7 +1562,7 @@
       59,
       92
     ],
-    "description": "InstantClick is a JavaScript library that speeds up your website, making navigation faster.",
+    "description": "InstantClick is a JavaScript library that speeds up a website, making navigation faster.",
     "icon": "InstantClick.svg",
     "js": {
       "InstantClick": ""
@@ -1543,7 +1575,7 @@
     "cats": [
       59
     ],
-    "description": "InstantGeo is a service that provides IP geolocation to web pages",
+    "description": "InstantGeo is a service that provides IP geolocation to web pages.",
     "icon": "InstantGeo.svg",
     "js": {
       "geojs": ""
@@ -1557,6 +1589,20 @@
       "script\\.instantgeo\\.info"
     ],
     "website": "https://instantgeo.info"
+  },
+  "InstanteStore": {
+    "cats": [
+      6
+    ],
+    "description": "InstanteStore is a hosted shopping cart system that enables businesses to manage online stores.",
+    "icon": "InstanteStore.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.instantestore\\.com",
+    "website": "https://instantestore.com"
   },
   "Instapage": {
     "cats": [
@@ -1630,7 +1676,7 @@
     "cats": [
       36
     ],
-    "description": "Integral Ad Science is an American publicly owned technology company that analyses the value of digital advertising placements.",
+    "description": "Integral Ad Science is an American publicly owned technology company that analyzes the value of digital advertising placements.",
     "dom": "link[href*='.adsafeprotected.com']",
     "icon": "Integral Ad Science.svg",
     "pricing": [
@@ -1655,19 +1701,6 @@
     "saas": true,
     "scripts": "app\\.integrately\\.com",
     "website": "https://integrately.com"
-  },
-  "Intel Active Management Technology": {
-    "cats": [
-      22,
-      46
-    ],
-    "cpe": "cpe:2.3:a:intel:active_management_technology:*:*:*:*:*:*:*:*",
-    "description": "Intel Active Management Technology (AMT) is a proprietary remote management and control system for personal computers with Intel CPUs.",
-    "headers": {
-      "Server": "Intel\\(R\\) Active Management Technology(?: ([\\d.]+))?\\;version:\\1"
-    },
-    "icon": "Intel Active Management Technology.svg",
-    "website": "https://intel.com"
   },
   "Intelligems": {
     "cats": [
@@ -1706,11 +1739,21 @@
     "scriptSrc": "\\.intellimize\\.co/",
     "website": "https://www.intellimize.com"
   },
+  "Intelliplan": {
+    "cats": [
+      101
+    ],
+    "description": "Intelliplan is a recruitment and staffing system designed to support modern hiring workflows, candidate management, and workforce planning.",
+    "icon": "Intelliplan.svg",
+    "saas": true,
+    "scripts": "\\.app\\.intelliplan\\.eu",
+    "website": "https://www.intelliplan.se"
+  },
   "IntenseDebate": {
     "cats": [
       15
     ],
-    "description": "IntenseDebate is a blog commenting system that supports Typepad, Blogger and Wordpress blogs. The system allows blog owners to track and moderate comments from one place with features like threading, comment analytics, user reputation, and comment aggregation.",
+    "description": "IntenseDebate is a blog commenting system that supports Typepad, Blogger and WordPress blogs.",
     "icon": "IntenseDebate.svg",
     "scriptSrc": "intensedebate\\.com",
     "website": "https://intensedebate.com"
@@ -1819,15 +1862,6 @@
     "scriptSrc": "(?:api\\.intercom\\.io/api|static\\.intercomcdn\\.com/intercom\\.v1)",
     "website": "https://www.intercom.com"
   },
-  "Intercom Articles": {
-    "cats": [
-      4
-    ],
-    "description": "Intercom Articles is a tool to create, organise and publish help articles.",
-    "icon": "Intercom.svg",
-    "saas": true,
-    "website": "https://www.intercom.com/articles"
-  },
   "Internet Brands": {
     "cats": [
       36
@@ -1863,7 +1897,7 @@
     "cats": [
       6
     ],
-    "description": "Intershop is an ecommerce platform, tailored to the needs of complex business processes and major organisations.",
+    "description": "Intershop is an ecommerce platform, tailored to the needs of complex business processes and major organizations.",
     "icon": "Intershop.svg",
     "pricing": [
       "onetime",
@@ -1872,6 +1906,22 @@
     "saas": true,
     "scriptSrc": "(?:is-bin|INTERSHOP)",
     "website": "https://intershop.com"
+  },
+  "Interspire Shopping Cart": {
+    "cats": [
+      6
+    ],
+    "description": "Interspire Shopping Cart is a platform that enables businesses to create, manage, and operate online stores.",
+    "icon": "Interspire.svg",
+    "meta": {
+      "generator": "^Interspire Shopping Cart$"
+    },
+    "pricing": [
+      "onetime",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.interspire.com"
   },
   "Intervo": {
     "cats": [
@@ -1893,6 +1943,27 @@
     "saas": true,
     "scriptSrc": "widget\\.intervo\\.ai",
     "website": "https://intervo.ai"
+  },
+  "Interwow": {
+    "cats": [
+      10
+    ],
+    "cookies": {
+      "interwow_session": ""
+    },
+    "description": "Interwow is a user behavior analytics platform that collects and analyzes user interaction data to understand behavior patterns and measure engagement across digital products.",
+    "icon": "Interwow.svg",
+    "js": {
+      "Interwow.trackConversion": "",
+      "InterwowToken": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://interwow.com"
   },
   "Intiaro": {
     "cats": [
@@ -1989,6 +2060,7 @@
     "cats": [
       1
     ],
+    "cpe": "cpe:2.3:a:invisioncommunity:invisioncommunity:*:*:*:*:*:*:*:*",
     "description": "Invision Community is a scalable and customizable platform designed to build and grow online communities.",
     "icon": "InvisionCommunity.svg",
     "pricing": [
@@ -2008,6 +2080,7 @@
       "ipbWWLmodpids": "",
       "ipbWWLsession_id": ""
     },
+    "cpe": "cpe:2.3:a:invisioncommunity:invision_power_board:*:*:*:*:*:*:*:*",
     "description": "Invision Power Board is a commercial Internet forum software developed by Invision Community (formerly Invision Power Services).",
     "icon": "Invision Power Board.svg",
     "implies": [
@@ -2048,7 +2121,7 @@
       32,
       10
     ],
-    "description": "Invoca is an AI-powered call tracking and conversational analytics company.",
+    "description": "Invoca is an AI-based call tracking and conversational analytics company.",
     "icon": "Invoca.svg",
     "js": {
       "Invoca.PNAPI.version": "([\\d\\.]+)\\;version:\\1",
@@ -2060,6 +2133,24 @@
     "saas": true,
     "scriptSrc": "\\.dialogtech\\.com/",
     "website": "https://www.invoca.com"
+  },
+  "Inwink": {
+    "cats": [
+      32
+    ],
+    "description": "Inwink is an event management platform for creating, managing, and scaling events.",
+    "icon": "Inwink.svg",
+    "js": {
+      "inwink.absoluteUrl": "",
+      "inwinkEventContainer": ""
+    },
+    "pricing": [
+      "high",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.inwink\\.com/",
+    "website": "https://www.inwink.com"
   },
   "Ionic": {
     "cats": [
@@ -2163,7 +2254,7 @@
     "cats": [
       1
     ],
-    "description": "It’seeze is a website design platform with a custom CMS for seamless site updates and management.",
+    "description": "It’seeze is a website design platform with a custom CMS for site updates and management.",
     "dom": "footer > div[id*='itseezeFooter']",
     "icon": "Itseeze.svg",
     "pricing": [
@@ -2244,6 +2335,7 @@
     "cats": [
       87
     ],
+    "cpe": "cpe:2.3:a:ivorysearch:ivory_search:*:*:*:*:*:wordpress:*:*",
     "description": "Ivory Search is a WordPress search plugin that improves WordPress search by providing advanced options to extend search or exclude specific content from search.",
     "icon": "ivory_searc.svg",
     "js": {
@@ -2258,6 +2350,20 @@
     "requires": "WordPress",
     "scriptSrc": "/wp-content/plugins/add-search-to-menu/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
     "website": "https://ivorysearch.com"
+  },
+  "Iyong": {
+    "cats": [
+      32
+    ],
+    "description": "Iyong is an intelligent website designed to simplify internet marketing through streamlined tools and data-driven functionality.",
+    "icon": "Iyong.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "link\\.iyong\\.com",
+    "website": "https://m.iyong.com"
   },
   "Izooto": {
     "cats": [
@@ -2294,7 +2400,7 @@
     "cats": [
       36
     ],
-    "description": "i-mobile is a advertising platform for clients to advertise their product and for publishers to monetize their cyberspace.",
+    "description": "i-mobile is an advertising platform for clients to advertise their product and for publishers to monetize their cyberspace.",
     "dom": "img[src*='.i-mobile.co.jp/']",
     "icon": "i-mobile.png",
     "pricing": [
@@ -2308,20 +2414,11 @@
     "cats": [
       1
     ],
-    "description": "i-motor is a platform that enhances automotive dealer websites by providing innovative, connected solutions to improve the online experience.",
+    "description": "i-motor is a platform that enhances automotive dealer websites by providing, connected solutions to improve the online experience.",
     "dom": "link[href*='.i-motor.com.au/']",
     "icon": "i-motor.svg",
     "saas": true,
     "website": "https://www.i-motor.com.au"
-  },
-  "i30con": {
-    "cats": [
-      17
-    ],
-    "description": "i30con is an icon toolkit based on CSS and JavaScript.",
-    "dom": "[class^='i30con']",
-    "icon": "30namaPlayer.svg",
-    "website": "https://30nama.com/"
   },
   "iAdvize": {
     "cats": [
@@ -2403,7 +2500,7 @@
     "cats": [
       76
     ],
-    "description": "iGoDigital provides web-based commerce tools, personalisation, and product recommendations designed to increase customer interaction.",
+    "description": "iGoDigital provides web-based commerce tools, personalization, and product recommendations designed to increase customer interaction.",
     "icon": "default.svg",
     "scriptSrc": "\\.igodigital\\.com/",
     "website": "https://www.igodigital.com"
@@ -2519,19 +2616,6 @@
     "saas": true,
     "website": "https://www.iscripts.com"
   },
-  "iSina Chat": {
-    "cats": [
-      52
-    ],
-    "description": "iSina Chat is a live chat service that provides online support and FAQ for customers.",
-    "icon": "iSina Chat.svg",
-    "pricing": [
-      "poa"
-    ],
-    "saas": true,
-    "scriptSrc": "chat\\.isina\\.agency/",
-    "website": "https://isina.agency"
-  },
   "iTCHYROBOT": {
     "cats": [
       1
@@ -2551,7 +2635,8 @@
       87,
       16
     ],
-    "description": " iThemes Security(formerly known as Better WP Security) plugin enhances the security and protection of your WordPress website.",
+    "cpe": "cpe:2.3:a:ithemes:ithemes_security:*:*:*:*:*:wordpress:*:*",
+    "description": "iThemes Security(formerly known as Better WP Security) plugin enhances the security and protection of your WordPress website.",
     "dom": "link[href*='/wp-content/plugins/better-wp-security/']",
     "icon": "iThemes Security.svg",
     "pricing": [
@@ -2592,7 +2677,7 @@
     "cats": [
       32
     ],
-    "description": "icomm is a platform that helps companies manage their marketing automation strategy using AI-powered tools.",
+    "description": "icomm is a platform that helps companies manage their marketing automation strategy using AI-based tools.",
     "headers": {
       "Content-Security-Policy": "\\.icommarketing\\.com",
       "Server": "^ICOMMKT$"
@@ -2608,7 +2693,7 @@
     "cats": [
       32
     ],
-    "description": "Notifications Hub is an omnichannel marketing automation platform powered by AI.0",
+    "description": "Notifications Hub is an omnichannel marketing automation platform powered by AI.0.",
     "excludes": "TITANPush",
     "icon": "icomm.svg",
     "implies": "icomm",
@@ -2647,6 +2732,7 @@
     "cats": [
       8
     ],
+    "cpe": "cpe:2.3:a:ikiwiki:ikiwiki:*:*:*:*:*:*:*:*",
     "description": "ikiwiki is a free and open-source wiki application.",
     "dom": "link[rel='alternate'][type='application/x-wiki'][title='Edit this page'][href*='/ikiwiki.cgi']",
     "icon": "ikiwiki.png",
@@ -2681,6 +2767,32 @@
     ],
     "saas": true,
     "website": "https://www.pirobase-imperia.com/de/solutions/imperia-cms"
+  },
+  "inCMS": {
+    "cats": [
+      1
+    ],
+    "description": "inCMS is a software platform that enables users to create, edit, and manage website content online through a web-based interface.",
+    "icon": "inCMS.svg",
+    "js": {
+      "inCMS.members": ""
+    },
+    "meta": {
+      "generator": "inCMS[^\\d.]*([\\d.]+)?\\;version:\\1"
+    },
+    "saas": true,
+    "scriptSrc": "\\.incms\\.net",
+    "website": "https://incms.com"
+  },
+  "inPowered": {
+    "cats": [
+      32
+    ],
+    "description": "inPowered is a content amplification platform that distributes branded and editorial content across digital channels to extend reach and measure audience engagement.",
+    "icon": "inPowered.svg",
+    "saas": true,
+    "scriptSrc": "cdn\\.inpwrd\\.net",
+    "website": "https://inpowered.ai"
   },
   "inSales": {
     "cats": [
@@ -2759,21 +2871,6 @@
     "website": "https://ipapi.com",
     "xhr": "api\\.ipapi\\.com"
   },
-  "ipapi.co": {
-    "cats": [
-      79
-    ],
-    "description": "ipapi.co is a web analytics provider with IP address lookup and location API.",
-    "icon": "ipapi.co.svg",
-    "pricing": [
-      "freemium",
-      "low",
-      "payg"
-    ],
-    "saas": true,
-    "website": "https://ipapi.co",
-    "xhr": "ipapi\\.co/"
-  },
   "ipbase": {
     "cats": [
       79
@@ -2793,7 +2890,7 @@
     "cats": [
       79
     ],
-    "description": "ipdata is a JSON IP Address Geolocation API that allows to lookup the location of both IPv4 and IPv6.",
+    "description": "ipdata is a JSON IP Address Geolocation API that allows users to lookup the location of both IPv4 and IPv6.",
     "icon": "ipdata.svg",
     "pricing": [
       "freemium",

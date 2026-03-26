@@ -24,26 +24,25 @@
     },
     "website": "https://getk2.org"
   },
-  "KAMAR": {
+  "K50": {
     "cats": [
-      21
+      32
     ],
-    "description": "KAMAR is a Student Management System utilised by secondary schools.",
-    "icon": "KAMAR.svg",
-    "js": {
-      "KAMAR.has_address_ben_found": ""
-    },
+    "description": "K50 is a platform that automates online advertising and the promotion of products and services across digital channels.",
+    "icon": "K50.svg",
     "pricing": [
-      "poa"
+      "low",
+      "recurring"
     ],
     "saas": true,
-    "website": "https://kamar.nz"
+    "scriptSrc": "k50-a\\.akamaihd\\.net/k50/k50tracker2\\.js",
+    "website": "https://k50.ru"
   },
   "KIT CMS": {
     "cats": [
       1
     ],
-    "description": "KIT CMS is a .NET-based content management system created by Kontrolit.net for building and managing dynamic websites and digital content.",
+    "description": "KIT CMS is an ASP.NET-based content management system from Kontrolit.net.",
     "icon": "KITCMS.svg",
     "meta": {
       "generator": "^Kontrolit KIT CMS$"
@@ -84,6 +83,16 @@
     "saas": true,
     "website": "https://www.kmk.net.tr"
   },
+  "KPA": {
+    "cats": [
+      67
+    ],
+    "description": "KPA is a compliance solutions provider offering software, training, and advisory services that support automotive dealerships and related businesses in meeting regulatory and operational requirements.",
+    "icon": "KPA.svg",
+    "saas": true,
+    "scriptSrc": "publiccdn\\.mykpa\\.com",
+    "website": "https://kpa.io"
+  },
   "KPHP": {
     "cats": [
       27
@@ -122,7 +131,7 @@
     "cats": [
       32
     ],
-    "description": "KUKUI is an all-in-one solution designed to enhance profitability, streamline lead management, and boost customer engagement for shop marketing.",
+    "description": "KUKUI is a solution designed to enhance profitability, streamline lead management, and boost customer engagement for shop marketing.",
     "icon": "KUKUI.svg",
     "pricing": [
       "poa"
@@ -135,7 +144,7 @@
     "cats": [
       53
     ],
-    "description": "KVCore is an all-in-one real estate technology platform for agents, teams, and brokers, offering CRM, lead generation, marketing automation, and transaction tools in a single system.",
+    "description": "KVCore is a real estate technology platform for agents, teams, and brokers, offering CRM, lead generation, marketing automation, and transaction tools in a single system.",
     "icon": "KVCore.svg",
     "saas": true,
     "scripts": "sociallogin\\.kvcore\\.com",
@@ -158,6 +167,7 @@
     "cats": [
       25
     ],
+    "cpe": "cpe:2.3:a:katex:katex:*:*:*:*:*:*:*:*",
     "description": "KaTeX is a cross-browser JavaScript library that displays mathematical notation in web browsers.",
     "dom": {
       "link[href*=katex]": {
@@ -229,11 +239,25 @@
     "scriptSrc": "/wp-content/themes/virtue/.+main-min\\.js(?:\\?ver=([\\d\\.]+))?\\;version:\\1",
     "website": "https://www.kadencewp.com/product/virtue-free-theme"
   },
+  "Kaily.ai": {
+    "cats": [
+      32
+    ],
+    "description": "Kaily.ai is a conversational AI agent platform that connects to your data, APIs, and business tools to answer queries, execute actions, and automate workflows in real time.",
+    "icon": "KailyAI.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "app\\.copilotadvisor\\.com",
+    "website": "https://www.kaily.ai/"
+  },
   "Kaira Vogue": {
     "cats": [
       80
     ],
-    "description": "Vogue is a very easy to use multipurpose WordPress theme created by Kaira.",
+    "description": "Vogue is a very multipurpose WordPress theme created by Kaira.",
     "dom": "link#vogue-style-css",
     "icon": "Kaira.svg",
     "pricing": [
@@ -248,7 +272,7 @@
     "cats": [
       76
     ],
-    "description": "Kaisa is a platform that leverages data to maintain buyer and seller engagement through personalised customer experiences on a large scale.",
+    "description": "Kaisa is a platform that leverages data to maintain buyer and seller engagement through personalized customer experiences on a large scale.",
     "icon": "Kaisa.svg",
     "scriptSrc": "\\.freespee\\.com/js/external/fs\\.(?:min\\.)?js",
     "website": "https://www.kaisa.io"
@@ -274,7 +298,7 @@
     "cats": [
       19
     ],
-    "description": "Kakao platform provides various services such as Kakao Talk, Kakao Talk Channel, Kakao Story as well as Kakao Pay, Kakao Commerce, Kakao Page provided by the subsidiaries. Users can use all Kakao platform services with a united account called Kakao Account.",
+    "description": "Kakao platform provides various services such as Kakao Talk, Kakao Talk Channel, Kakao Story as well as Kakao Pay, Kakao Commerce, Kakao Page provided by the subsidiaries.",
     "dom": "a[href*='.kakao.com/'][target='_blank']",
     "icon": "Kakao.svg",
     "js": {
@@ -344,7 +368,7 @@
     "cookies": {
       "kameleoonVisitorCode": ""
     },
-    "description": "Kameleoon is a personalisation technology platform for real-time omnichannel optimisation and conversion.",
+    "description": "Kameleoon is a personalization technology platform for real-time omnichannel optimization and conversion.",
     "dom": "link[href*='.kameleoon.eu/kameleoon.js']",
     "icon": "Kameleoon.svg",
     "js": {
@@ -434,7 +458,7 @@
     "cats": [
       29
     ],
-    "description": "Kapa.ai is a platform that converts documents into an LLM-powered chatbot for information retrieval and question answering.",
+    "description": "Kapa.ai is a platform that converts documents into a LLM-powered chatbot for information retrieval and question answering.",
     "icon": "Kapa.svg",
     "js": {
       "Kapa": "",
@@ -446,28 +470,6 @@
     "saas": true,
     "scriptSrc": "widget\\.kapa\\.ai",
     "website": "https://www.kapa.ai"
-  },
-  "Kapix Studio": {
-    "cats": [
-      51
-    ],
-    "description": "Kapix Studio is a no-code platform that lets anyone build web apps without writing any code.",
-    "icon": "Kapix.svg",
-    "implies": [
-      "Vite",
-      "TypeScript"
-    ],
-    "js": {
-      "__INITIAL_STATE__": "KapixNoCode",
-      "kapixVersion": "([\\d\\.]+)\\;version:\\1"
-    },
-    "pricing": [
-      "freemium",
-      "low",
-      "recurring"
-    ],
-    "saas": true,
-    "website": "https://studio.kapix.fr"
   },
   "Kapture CRM": {
     "cats": [
@@ -492,6 +494,7 @@
     "cats": [
       59
     ],
+    "cpe": "cpe:2.3:a:karma_project:karma:*:*:*:*:*:node.js:*:*",
     "description": "Karma is a test runner for JavaScript that runs on Node.js.",
     "icon": "Karma.svg",
     "implies": "Node.js",
@@ -523,7 +526,7 @@
       74,
       76
     ],
-    "description": "Karte is a customer engagement and marketing automation platform that enables businesses to understand their customers, deliver personalised experiences, and optimise marketing strategies.",
+    "description": "Karte is a customer engagement and marketing automation platform that enables businesses to understand their customers, deliver personalized experiences, and optimize marketing strategies.",
     "icon": "Karte.svg",
     "js": {
       "__KARTE_REWRITE_ADMIN_CONFIG": "",
@@ -587,7 +590,8 @@
     "cats": [
       6
     ],
-    "description": "Kartris is an open-source ecommerce platform built with ASP.NET, designed for managing online stores.",
+    "cpe": "cpe:2.3:a:cactusoft:kartris:*:*:*:*:*:*:*:*",
+    "description": "Kartris is an open-source ecommerce platform built with ASP.",
     "icon": "Kartris.svg",
     "js": {
       "AddClassUpward__Kartris": "",
@@ -652,7 +656,7 @@
     "cats": [
       32
     ],
-    "description": "KeaBuilder is a platform that provides intelligent insights, strategic recommendations, advanced tools, and seamless integrations to strengthen online presence and support business growth.",
+    "description": "KeaBuilder is a platform that provides intelligent insights, strategic recommendations, advanced tools, and integrations to strengthen online presence and support business growth.",
     "dom": "link[href*='assets.keabuilder.com']",
     "icon": "KeaBuilder.svg",
     "pricing": [
@@ -683,7 +687,7 @@
     "cats": [
       99
     ],
-    "description": "Keen Delivery is a Dutch shipping platform ",
+    "description": "Keen Delivery is a Dutch shipping platform.",
     "icon": "Keen Delivery.svg",
     "requiresCategory": 6,
     "text": [
@@ -749,7 +753,8 @@
     "cats": [
       66
     ],
-    "description": "Kendo UI is a HTML5 user interface framework for building interactive and high-performance websites and applications.",
+    "cpe": "cpe:2.3:a:progress:kendo_ui:*:*:*:*:*:*:*:*",
+    "description": "Kendo UI is an HTML5 user interface framework for building interactive and high-performance websites and applications.",
     "dom": {
       "link[href*=kendo]": {
         "attributes": {
@@ -824,7 +829,7 @@
     "cats": [
       98
     ],
-    "description": "Keptify helps ecommerce sites of any size to increase sales and conversion rates by providing visitors with a personalised shopping experience.",
+    "description": "Keptify helps ecommerce sites of any size to increase sales and conversion rates by providing visitors with a personalized shopping experience.",
     "icon": "Keptify.png",
     "js": {
       "KEPTIFY_BASE_URL": "",
@@ -841,7 +846,7 @@
     "cats": [
       16
     ],
-    "description": "Kerberos is an authentication method commonly used by Windows servers",
+    "description": "Kerberos is an authentication method commonly used by Windows servers.",
     "headers": {
       "WWW-Authenticate": "^Kerberos"
     },
@@ -906,17 +911,6 @@
     "scriptSrc": "adzerk\\.net/",
     "website": "https://www.kevel.com"
   },
-  "KeyCDN": {
-    "cats": [
-      31
-    ],
-    "description": "KeyCDN is a content delivery network (CDN).",
-    "headers": {
-      "Server": "^keycdn-engine$"
-    },
-    "icon": "KeyCDN.svg",
-    "website": "https://www.keycdn.com"
-  },
   "KeyReply": {
     "cats": [
       52
@@ -935,7 +929,8 @@
     "cats": [
       16
     ],
-    "description": "Keybase is for keeping everyone's chats and files safe, from families to communities to companies. MacOS, Windows, Linux, iPhone, and Android.",
+    "cpe": "cpe:2.3:a:keybase:keybase:*:*:*:*:*:*:*:*",
+    "description": "Keybase is for keeping everyone's chats and files safe, from families to communities to companies.",
     "dns": {
       "TXT": [
         "keybase-site-verification"
@@ -1007,7 +1002,7 @@
       25
     ],
     "cpe": "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:*:*:*",
-    "description": "Kibana is an open-source data visualisation dashboard for Elasticsearch. It provides visualisation capabilities on top of the content indexed on an Elasticsearch cluster. Users can create bar, line and scatter plots, or pie charts and maps on top of large volumes of data.",
+    "description": "Kibana is an open-source data visualization dashboard for Elasticsearch.",
     "headers": {
       "kbn-name": "kibana",
       "kbn-version": "^([\\d.]+)$\\;version:\\1"
@@ -1024,7 +1019,7 @@
     "cats": [
       6
     ],
-    "description": "Kibo Commerce is a enterprise ecommerce platform  that offers a cloud-based, end-to-end commerce solution for retailers and branded manufacturers.",
+    "description": "Kibo Commerce is an enterprise ecommerce platform that offers a cloud-based, end-to-end commerce solution for retailers and branded manufacturers.",
     "icon": "Kibo.svg",
     "pricing": [
       "poa"
@@ -1037,7 +1032,7 @@
       76,
       74
     ],
-    "description": "Kibo Personalization is a omnichannel personalisation software powered by machine learning to deliver individualized customer experiences and powered by Monetate and Certona.",
+    "description": "Kibo Personalization is an omnichannel personalization software powered by machine learning to deliver individualized customer experiences and powered by Monetate and Certona.",
     "icon": "Kibo.svg",
     "js": {
       "BaynoteAPI": "",
@@ -1133,7 +1128,7 @@
     "cats": [
       111
     ],
-    "description": "Kindful is a cloud-based donor management and fundraising software and database designed for nonprofit organisations.",
+    "description": "Kindful is a cloud-based donor management and fundraising software and database designed for nonprofit organizations.",
     "dom": "a[href*='.kindful.com/']",
     "icon": "Kindful.svg",
     "js": {
@@ -1166,7 +1161,7 @@
       62,
       88
     ],
-    "description": "Kinsta is a managed WordPress hosting provider leveraging the Google Cloud Platform to offer high-performance, secure, and user-friendly hosting solutions for WordPress websites.",
+    "description": "Kinsta is a managed WordPress hosting provider leveraging the Google Cloud Platform to offer high-performance, secure, and hosting solutions for WordPress websites.",
     "headers": {
       "x-kinsta-cache": ""
     },
@@ -1183,7 +1178,7 @@
     "cats": [
       53
     ],
-    "description": "Kintone is a versatile cloud-based platform offering business data management, CRM, and custom app development.",
+    "description": "Kintone is a cloud-based platform offering business data management, CRM, and custom app development.",
     "dom": "iframe[src*='.kintoneapp.com/'], a[href*='.kintoneapp.com/'][target='_blank']",
     "icon": "Kintone.png",
     "js": {
@@ -1341,7 +1336,7 @@
     "cats": [
       21
     ],
-    "description": "Kiwify is an AI-powered platform for creators and students that provides smart tools to support teaching, learning, and content creation.",
+    "description": "Kiwify is an AI-based platform for creators and students that provides smart tools to support teaching, learning, and content creation.",
     "icon": "Kiwify.svg",
     "saas": true,
     "scripts": "\\.kiwify\\.com\\.br",
@@ -1368,7 +1363,7 @@
     "cats": [
       96
     ],
-    "description": "Klangoo is an AI-based audience engagement solution designed to enhance user interaction and optimise content delivery.",
+    "description": "Klangoo is an AI-based audience engagement solution designed to enhance user interaction and optimize content delivery.",
     "icon": "Klangoo.svg",
     "pricing": [
       "freemium",
@@ -1506,7 +1501,7 @@
     "cats": [
       6
     ],
-    "description": "Kleecks is a next-generation ecommerce performance and UX optimization platform designed to enhance site speed, streamline user interactions, and support scalable digital operations.",
+    "description": "Kleecks is an ecommerce performance and UX optimization platform designed to enhance site speed, streamline user interactions, and support scalable digital operations.",
     "icon": "Kleecks.svg",
     "meta": {
       "generator": "^Kleecks$"
@@ -1523,6 +1518,10 @@
       1
     ],
     "description": "Kleeja is a PHP-based solution for managing file upload services on websites.",
+    "dom": [
+      "a[href*='go.php?go=rules']",
+      "a[href*='ucp.php?go=login']"
+    ],
     "icon": "Kleeja.svg",
     "js": {
       "update_kleeja_captcha": ""
@@ -1655,7 +1654,7 @@
     "cats": [
       75
     ],
-    "description": "Knak is a platform that provides customisable email and landing page templates to simplify the creation of visually appealing marketing campaigns.",
+    "description": "Knak is a platform that provides customizable email and landing page templates to simplify the creation of visually appealing marketing campaigns.",
     "dom": "img[src*='.knak.io/']",
     "icon": "Knak.svg",
     "pricing": [
@@ -1744,7 +1743,7 @@
     "cats": [
       21
     ],
-    "description": "Knoma is a platform where users can search hundreds of courses from leading schools and bootcamps.",
+    "description": "Knoma is a platform where users can search hundreds of courses from schools and bootcamps.",
     "icon": "Knoma.svg",
     "pricing": [
       "poa"
@@ -1795,6 +1794,7 @@
       18,
       22
     ],
+    "cpe": "cpe:2.3:a:koajs:koa:*:*:*:*:*:node.js:*:*",
     "headers": {
       "X-Powered-By": "^koa$"
     },
@@ -1844,7 +1844,7 @@
     "cookies": {
       "kb-color-mode": ""
     },
-    "description": "Kobalte is a UI toolkit for building accessible web apps and design systems with SolidJS.",
+    "description": "Kobalte is an UI toolkit for building accessible web apps and design systems with SolidJS.",
     "dom": "div[data-kb-top-layer], html[data-kb-theme]",
     "icon": "kobalte.svg",
     "implies": [
@@ -1870,6 +1870,23 @@
     ],
     "saas": true,
     "website": "https://www.kobimaster.com.tr"
+  },
+  "Kobisi": {
+    "cats": [
+      6
+    ],
+    "description": "Kobisi is a Turkish ecommerce platform that provides tools for creating, managing, and operating online stores.",
+    "icon": "Kobisi.svg",
+    "meta": {
+      "author": "kobisi\\.com"
+    },
+    "pricing": [
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.kobisi.com"
   },
   "Kochava": {
     "cats": [
@@ -1947,11 +1964,30 @@
     "scriptSrc": "koken(?:\\.js\\?([\\d.]+)|/storage)\\;version:\\1",
     "website": "https://koken.me"
   },
+  "Komerza": {
+    "cats": [
+      6
+    ],
+    "description": "Komerza is a commerce engine designed for modern brands that provides scalable infrastructure for managing online sales and supporting growth without predefined limits.",
+    "icon": "Komerza.svg",
+    "js": {
+      "Komerza.open": "",
+      "initKomerza": ""
+    },
+    "pricing": [
+      "onetime",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.komerza\\.com",
+    "website": "https://komerza.com"
+  },
   "Kommand": {
     "cats": [
       1
     ],
-    "description": "Kommand is an all-in-one solution for marketing, store management, and website development.",
+    "description": "Kommand is a solution for marketing, store management, and website development.",
     "icon": "Kommand.svg",
     "pricing": [
       "low",
@@ -2020,6 +2056,7 @@
     "cats": [
       64
     ],
+    "cpe": "cpe:2.3:a:konghq:kong:*:*:*:*:*:*:*:*",
     "description": "Kong is an open-source API gateway and platform that acts as middleware between compute clients and the API-centric applications.",
     "headers": {
       "via": "^kong/([\\d\\.]+)(?:.+)?$\\;version:\\1"
@@ -2072,7 +2109,7 @@
     "cats": [
       25
     ],
-    "description": "Konva.js is a JavaScript library for creating 2D canvas applications on both desktop and mobile platforms, utilising HTML5.",
+    "description": "Konva.js is a JavaScript library for creating 2D canvas applications on both desktop and mobile platforms, using HTML5.",
     "icon": "KonvaJS.svg",
     "js": {
       "Konva": "",
@@ -2127,7 +2164,7 @@
     "cats": [
       6
     ],
-    "description": "Kooomo is a SaaS ecommerce platform with a focus on localisation and internationalisation.",
+    "description": "Kooomo is a SaaS ecommerce platform with a focus on localization and internationalisation.",
     "dom": "img[src*='.kooomo-cloud.com']",
     "icon": "Kooomo.svg",
     "implies": [
@@ -2149,7 +2186,7 @@
     "cats": [
       51
     ],
-    "description": "Kopage is an AI-powered website builder designed to simplify the process of creating and managing websites, offering automated tools and features that enable users to build functional websites without extensive technical knowledge.",
+    "description": "Kopage is an AI-based website builder designed to simplify the process of creating and managing websites, offering automated tools and features that enable users to build functional websites without extensive technical knowledge.",
     "icon": "Kopage.svg",
     "js": {
       "kopageBar": "",
@@ -2252,23 +2289,6 @@
     "scriptSrc": "data\\.krossbooking\\.com/",
     "website": "https://www.krossbooking.com"
   },
-  "Kssib": {
-    "cats": [
-      6
-    ],
-    "cookies": {
-      "kssib_session": ""
-    },
-    "description": "Kssib is a platform from Middle East that provides integrated ecommerce solutions.",
-    "icon": "Kssib.svg",
-    "pricing": [
-      "low",
-      "recurring"
-    ],
-    "saas": true,
-    "scripts": "cdn\\.kssib\\.co",
-    "website": "https://kssib.com"
-  },
   "Ktor": {
     "cats": [
       18
@@ -2283,15 +2303,6 @@
     "implies": "Kotlin",
     "oss": true,
     "website": "https://ktor.io"
-  },
-  "Kubernetes Dashboard": {
-    "cats": [
-      47
-    ],
-    "cpe": "cpe:2.3:a:kubernetes:kubernetes:*:*:*:*:*:*:*:*",
-    "dom": "[ng-app='kubernetesDashboard']",
-    "icon": "Kubernetes.svg",
-    "website": "https://kubernetes.io/"
   },
   "Kubio Builder": {
     "cats": [
@@ -2451,7 +2462,7 @@
     "cats": [
       32
     ],
-    "description": "Kwanzoo is an AI-powered GTM automation platform that enables adaptive account-based marketing.",
+    "description": "Kwanzoo is an AI-based GTM automation platform that enables adaptive account-based marketing.",
     "icon": "Kwanzoo.svg",
     "pricing": [
       "freemium",
@@ -2477,6 +2488,20 @@
     "scriptSrc": "api\\.kwipped\\.com",
     "website": "https://kwipped.com"
   },
+  "Kx AI Search & Discovery Agent": {
+    "cats": [
+      29
+    ],
+    "description": "Kx AI Search & Discovery Agent is an agentic search solution that interprets product data, collections, attributes, inventory, margins, and shopper intent to support product discovery and conversion optimization.",
+    "dom": "div#kxChatSearchBubbleBtn",
+    "icon": "KxAISearchDiscoveryAgent.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://apps.shopify.com/agentic-store"
+  },
   "Kyvio": {
     "cats": [
       51
@@ -2496,7 +2521,7 @@
     "cats": [
       6
     ],
-    "description": "k-eCommerce is mdf commerce’s platform for SMBs, providing all-in-one ecommerce and digital payment solutions integrated to Microsoft Dynamics and SAP Business One. ",
+    "description": "k-eCommerce is mdf commerce’s platform for SMBs, providing ecommerce and digital payment solutions integrated to Microsoft Dynamics and SAP Business One.",
     "dom": "a[href*='.k-ecommerce.com/'][target='_blank']",
     "icon": "k-eCommerce.svg",
     "meta": {

@@ -3,7 +3,7 @@
     "cats": [
       10
     ],
-    "description": "LEADIN is a tool that provides insights into individuals who fill out forms on a site, utilizing Hubspot's market-leading CRM for implementation.",
+    "description": "LEADIN is a tool that provides insights into individuals who fill out forms on a site, utilizing Hubspot's CRM for implementation.",
     "icon": "LEADIN.svg",
     "saas": true,
     "scriptSrc": "js\\.leadin\\.com",
@@ -37,7 +37,7 @@
     "cats": [
       1
     ],
-    "description": "LGC is a modern CMS designed to improve the management of your website.",
+    "description": "LGC is a modern CMS designed to improve the management of a website.",
     "icon": "LGC.svg",
     "meta": {
       "generator": "^LGC$"
@@ -75,15 +75,6 @@
     "scriptSrc": "\\.lkqd\\.net",
     "website": "https://wiki.lkqd.com",
     "xhr": "\\.lkqd\\.net"
-  },
-  "LOU": {
-    "cats": [
-      58
-    ],
-    "description": "LOU is a Digital Adoption Platform that streamlines user onboarding and training.",
-    "icon": "LOU.svg",
-    "scriptSrc": "cdn\\.louassist\\.com*",
-    "website": "https://www.louassist.com"
   },
   "LPQV": {
     "cats": [
@@ -246,23 +237,6 @@
     "scriptSrc": "\\.langshop\\.app/",
     "website": "https://langshop.io"
   },
-  "Lapis": {
-    "cats": [
-      6
-    ],
-    "description": "Lapis is an enterprise ecommerce solutions provider.",
-    "icon": "Lapis.svg",
-    "meta": {
-      "generator": "^Lapis$"
-    },
-    "pricing": [
-      "low",
-      "recurring",
-      "poa"
-    ],
-    "saas": true,
-    "website": "https://lapissoft.com"
-  },
   "Laravel": {
     "cats": [
       18
@@ -314,7 +288,7 @@
       41,
       91
     ],
-    "description": "Laterpay is a service that simplifies payments on the Internet. In addition to the classic immediate purchase option, Laterpay also allows you to buy digital content such as articles or videos now and pay later.",
+    "description": "Laterpay is a service that simplifies payments on the Internet.",
     "icon": "laterpay.png",
     "meta": {
       "laterpay:connector:callbacks:on_user_has_access": "deobfuscateText"
@@ -362,6 +336,21 @@
       "app\\.launchdarkly\\.com",
       "events\\.launchdarkly\\.com"
     ]
+  },
+  "LaunchLMS": {
+    "cats": [
+      21
+    ],
+    "description": "LaunchLMS is a learning management system that provides a customizable platform designed to adapt to different business training and development needs.",
+    "dom": "link[href*='static.launchlab.com.br/']",
+    "icon": "LaunchLMS.svg",
+    "pricing": [
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://launchlms.com.br"
   },
   "LaunchNotes": {
     "cats": [
@@ -512,6 +501,7 @@
     "cats": [
       66
     ],
+    "cpe": "cpe:2.3:a:layui:layui:*:*:*:*:*:*:*:*",
     "description": "Layui is an open-source modular front-end UI component library.",
     "icon": "Layui.svg",
     "js": {
@@ -540,6 +530,7 @@
       59,
       92
     ],
+    "cpe": "cpe:2.3:a:lazysizes_project:lazysizes:*:*:*:*:*:*:*:*",
     "description": "LazySizes is a JavaScript library used to delay the loading of images (iframes, scripts, etc) until they come into view.",
     "icon": "default.svg",
     "js": {
@@ -608,20 +599,6 @@
     "scripts": "api\\.leadprosper\\.io",
     "website": "https://leadprosper.io"
   },
-  "Lead-Finity Webchat": {
-    "cats": [
-      52
-    ],
-    "description": "Lead-Finity Webchat is a platform that converts website visitors into leads and facilitates sales conversations.",
-    "icon": "LeadFinity.svg",
-    "pricing": [
-      "mid",
-      "recurring"
-    ],
-    "saas": true,
-    "scripts": "app\\.lead-finity\\.com",
-    "website": "https://lead-finity.com"
-  },
   "LeadBoxer": {
     "cats": [
       10
@@ -652,7 +629,7 @@
     "cats": [
       53
     ],
-    "description": "LeadChat offers live-operators and CRM solutions that utilise LiveChat chat software to facilitate real-time engagement with website visitors for businesses.",
+    "description": "LeadChat offers live-operators and CRM solutions that use LiveChat chat software to facilitate real-time engagement with website visitors for businesses.",
     "icon": "LeadChat.svg",
     "pricing": [
       "recurring",
@@ -671,7 +648,7 @@
     "cookies": {
       "_leaddyno_session": ""
     },
-    "description": "LeadDyno is a platform that provides affiliate marketing and tracking services, allowing businesses to set up, manage, and analyse their affiliate programs.",
+    "description": "LeadDyno is a platform that provides affiliate marketing and tracking services, allowing businesses to set up, manage, and analyze their affiliate programs.",
     "icon": "LeadDyno.svg",
     "js": {
       "LeadDyno": ""
@@ -718,21 +695,6 @@
     "saas": true,
     "website": "https://www.leadscore.io/"
   },
-  "LeadSimple": {
-    "cats": [
-      53
-    ],
-    "description": "LeadSimple is a platform that allows property managers to automate their sales and operational processes.",
-    "icon": "LeadSimple.svg",
-    "pricing": [
-      "freemium",
-      "low",
-      "recurring"
-    ],
-    "saas": true,
-    "scriptSrc": "assets2\\.leadsimple\\.com/",
-    "website": "https://www.leadsimple.com"
-  },
   "LeadSlide": {
     "cats": [
       32
@@ -758,7 +720,7 @@
     "cats": [
       10
     ],
-    "description": "Leadfeeder is a B2B visitor identification software that tracks and identifies companies that visit your website.",
+    "description": "Leadfeeder is a B2B visitor identification software that tracks and identifies companies that visit a website.",
     "headers": {
       "Content-Security-Policy": "\\.(?:lfeeder|leadfeeder)\\.com"
     },
@@ -779,7 +741,7 @@
     "cats": [
       32
     ],
-    "description": "Leadferno is a conversion platform to increase your website leads.",
+    "description": "Leadferno is a conversion platform to increase a website leads.",
     "icon": "Leadferno.svg",
     "pricing": [
       "mid",
@@ -836,7 +798,7 @@
     "cats": [
       32
     ],
-    "description": "LeadsBridge is an all-in-one solution for lead generation.",
+    "description": "LeadsBridge is a solution for lead generation.",
     "icon": "LeadsBridge.svg",
     "pricing": [
       "freemium",
@@ -861,7 +823,7 @@
     "cats": [
       10
     ],
-    "description": "LeadsSight is a tool that converts lost visitors on your website into potential leads by tracking their behaviour.",
+    "description": "LeadsSight is a tool that converts lost visitors on a website into potential leads by tracking their behavior.",
     "icon": "LeadsSight.svg",
     "js": {
       "postURL": "app\\.leadssight\\.com/"
@@ -1050,6 +1012,7 @@
       21,
       87
     ],
+    "cpe": "cpe:2.3:a:learndash:learndash:*:*:*:*:*:wordpress:*:*",
     "description": "LearnDash is a WordPress plugin that enables the creation and management of online courses, quizzes, and educational content within a website.",
     "dom": {
       "link[href*='/wp-content/plugins/sfwd-lms/']": {
@@ -1086,7 +1049,7 @@
     "cats": [
       21
     ],
-    "description": "LearnWorlds is a powerful yet lightweight, user-friendly, white-labeled cloud-based LMS ideal for versatile employee training.",
+    "description": "LearnWorlds is a lightweight, white-labeled cloud-based LMS for employee training.",
     "icon": "LearnWorlds.svg",
     "js": {
       "LWClient.ebooks": "",
@@ -1104,7 +1067,7 @@
     "cats": [
       21
     ],
-    "description": "Learnbase is an AI-powered platform for creators and students that provides tools to support teaching, learning, and content creation.",
+    "description": "Learnbase is an AI-based platform for creators and students that provides tools to support teaching, learning, and content creation.",
     "icon": "Learnbase.svg",
     "js": {
       "Learnbase": "",
@@ -1124,7 +1087,7 @@
     "cats": [
       21
     ],
-    "description": "LearnyBox is an all-in-one platform that enables users to launch, manage, and sell training courses.",
+    "description": "LearnyBox is a platform that enables users to launch, manage, and sell training courses.",
     "icon": "LearnyBox.svg",
     "js": {
       "ExecuteActionLearnyMail": ""
@@ -1205,11 +1168,26 @@
     "scriptSrc": "\\.legalmonster\\.com/",
     "website": "https://www.legalmonster.com"
   },
+  "LegitFit": {
+    "cats": [
+      72
+    ],
+    "description": "Legitfit is a booking and management platform designed to support scheduling and operations for boutique fitness studios.",
+    "icon": "LegitFit.svg",
+    "meta": {
+      "application-name": "^LegitFit$"
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://legitfit.com"
+  },
   "Lemon Squeezy": {
     "cats": [
       41
     ],
-    "description": "Lemon Squeezy is a platform designed for SaaS businesses, providing functionalities such as payment processing, subscription management, global tax compliance, fraud prevention, multi-currency support, failed payment recovery, and integration with PayPal, with the aim of facilitating the operational management of software businesses.",
+    "description": "Lemon Squeezy is a platform designed for SaaS businesses.",
     "icon": "Lemon Squeezy.svg",
     "js": {
       "LemonSqueezy": "",
@@ -1238,7 +1216,7 @@
     "cats": [
       19
     ],
-    "description": "Lengow is an ecommerce automation solution that enables brands and retailers to integrate, structure and optimise their product content across all distribution channels: marketplaces, comparison shopping engines, affiliate platforms, display and retargeting.",
+    "description": "Lengow is an ecommerce automation solution that enables brands and retailers to integrate, structure and optimize their product content across all distribution channels: marketplaces, comparison shopping engines, affiliate platforms.",
     "icon": "Lengow.svg",
     "pricing": [
       "payg",
@@ -1293,6 +1271,17 @@
     "scripts": "export function microtask\\(f\\)\\;confidence:75",
     "website": "https://leptos.dev"
   },
+  "LerenTools": {
+    "cats": [
+      108
+    ],
+    "description": "LerenTools is a suite of Tiendanube storefront apps for badges, preorder flows, business rules, and related merchandising features.",
+    "icon": "LerenTools.png",
+    "saas": true,
+    "scriptSrc": "apps-scripts\\.tiendanube\\.com/[^?#]*lerentools/",
+    "website": "https://lerentools.com",
+    "xhr": "api\\.lerentools\\.com"
+  },
   "Less": {
     "cats": [
       19
@@ -1333,7 +1322,7 @@
       90,
       96
     ],
-    "description": "Letro is a UGC and review tool for ecommerce platforms.",
+    "description": "Letro is an UGC and review tool for ecommerce platforms.",
     "icon": "Letro.svg",
     "js": {
       "__letroUgcGadget": "",
@@ -1350,7 +1339,7 @@
     "cats": [
       105
     ],
-    "description": "Levar specialises in 3D visualisation technology for ecommerce stores.",
+    "description": "Levar specializes in 3D visualization technology for ecommerce stores.",
     "icon": "Levar.svg",
     "js": {
       "levARActivationHelper": "",
@@ -1369,7 +1358,7 @@
     "cats": [
       68
     ],
-    "description": "Level Access, formerly eSSENTIAL Accessibility, is a leading digital accessibility solutions provider offering tools and services to ensure compliance with standards such as ADA, Section 508, and WCAG​ ",
+    "description": "Level Access, formerly eSSENTIAL Accessibility, is a digital accessibility solutions provider offering tools and services to ensure compliance with standards such as ADA, Section 508, and WCAG​.",
     "dom": " a[href*='.essentialaccessibility.com'] > img, a[href*='.levelaccess.com'] > img",
     "icon": "Level Access.svg",
     "pricing": [
@@ -1398,7 +1387,7 @@
     "cats": [
       97
     ],
-    "description": "Lexer is a platform providing AI-powered tools for managing customer data and automating business workflows.",
+    "description": "Lexer is a platform providing AI-based tools for managing customer data and automating business workflows.",
     "icon": "Lexer.svg",
     "js": {
       "___lexer_tag": ""
@@ -1433,7 +1422,7 @@
     "cats": [
       41
     ],
-    "description": "Liberapay is a non-profit organisation subscription payment platform.",
+    "description": "Liberapay is a non-profit organization subscription payment platform.",
     "dom": "a[href*='//liberapay.com/'][target='_blank']",
     "icon": "Liberapay.svg",
     "scriptSrc": "//liberapay\\.com/",
@@ -1443,26 +1432,11 @@
     "cats": [
       19
     ],
-    "description": "Libravatar is a service for fetching avatar images for e-mail addresses and OpenIDs in a privacy respecting way.",
+    "description": "Libravatar is a service for fetching avatar images for email addresses and OpenIDs in a privacy respecting way.",
     "dom": "img[src*='.libravatar.org/avatar/']",
     "icon": "libravatar.svg",
     "oss": true,
     "website": "https://www.libravatar.org/"
-  },
-  "Lieferando": {
-    "cats": [
-      1,
-      93
-    ],
-    "description": "Lieferando is an online portal for food orders.",
-    "icon": "Lieferando.svg",
-    "js": {
-      "Tealium.pagedata.country": "lieferando\\.de"
-    },
-    "pricing": [
-      "payg"
-    ],
-    "website": "https://www.lieferando.de"
   },
   "Liferay": {
     "cats": [
@@ -1502,7 +1476,7 @@
     "cats": [
       76
     ],
-    "description": "LiftIgniter is a personalized content system designed to tailor recommendations and content to individual users based on their preferences and behaviours.",
+    "description": "LiftIgniter is a personalized content system designed to tailor recommendations and content to individual users based on their preferences and behaviors.",
     "dom": "phoenix-script[script-id*='liftigniter-init']",
     "icon": "LiftIgniter.svg",
     "js": {
@@ -1648,7 +1622,7 @@
     "cats": [
       53
     ],
-    "description": "Ligna is a sales, marketing, and enablement platform offering features to close clients, manage content, oversee projects, and track details, providing an all-in-one solution for business operations.",
+    "description": "Ligna is a sales, marketing, and enablement platform offering features to close clients, manage content, oversee projects, and track details, providing a solution for business operations.",
     "icon": "Ligna.svg",
     "pricing": [
       "mid",
@@ -1662,7 +1636,7 @@
     "cats": [
       53
     ],
-    "description": "Liine is an all-in-one platform for monitoring, optimizing, and incentivizing the management of new patient calls.",
+    "description": "Liine is a platform for monitoring, optimizing, and incentivizing the management of new patient calls.",
     "icon": "Liine.svg",
     "js": {
       "Liine.addURLChangeListener": ""
@@ -1719,7 +1693,7 @@
     "cats": [
       76
     ],
-    "description": "LimeSpot is an AI-powered personalisation platform for marketers and ecommerce professionals.",
+    "description": "LimeSpot is an AI-based personalization platform for marketers and ecommerce professionals.",
     "icon": "LimeSpot.svg",
     "js": {
       "LimeSpot.CartItems": "",
@@ -1775,7 +1749,8 @@
       87,
       16
     ],
-    "description": "Limit Login Attempts Reloaded stops brute-force attacks and optimizes your site performance by limiting the number of login attempts that are possible through the normal login as well as XMLRPC, Woocommerce and custom login pages.",
+    "cpe": "cpe:2.3:a:limitloginattempts:limit_login_attempts_reloaded:*:*:*:*:*:wordpress:*:*",
+    "description": "Limit Login Attempts Reloaded stops brute-force attacks and optimizes a site performance by limiting the number of login attempts that are possible through the normal login as well as XMLRPC, Woocommerce and custom login pages.",
     "dom": "link#llar-login-page-styles-css",
     "icon": "Limit Login Attempts Reloaded.svg",
     "pricing": [
@@ -1800,6 +1775,21 @@
     "saas": true,
     "scriptSrc": "gb-widget\\.linda\\.co",
     "website": "https://linda.co"
+  },
+  "Lindo.ai": {
+    "cats": [
+      51
+    ],
+    "description": "Lindo.ai is an AI-based website builder that generates and customizes websites from user inputs without requiring coding knowledge.",
+    "icon": "Lindo.svg",
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.lindoai\\.com",
+    "website": "https://lindo.ai"
   },
   "Lindy": {
     "cats": [
@@ -1867,27 +1857,11 @@
     "saas": true,
     "website": "https://linear.fi/hinnasto"
   },
-  "Linen": {
-    "cats": [
-      2
-    ],
-    "description": "Linen is a real-time chat platform built for communities.",
-    "icon": "Linen.svg",
-    "implies": [
-      "TypeScript",
-      "Elixir"
-    ],
-    "js": {
-      "__NEXT_DATA__.props.pageProps.currentCommunity.logoUrl": "static\\.main\\.linendev\\.com/"
-    },
-    "oss": true,
-    "website": "https://www.linen.dev"
-  },
   "Linguana": {
     "cats": [
       54
     ],
-    "description": "Linguana is a tool that provides AI-driven multi-language support ensuring SEO performance with translations and translated slugs for seamless multilingual user experiences.",
+    "description": "Linguana is a tool that provides AI-driven multi-language support ensuring SEO performance with translations and translated slugs for multilingual user experiences.",
     "icon": "Linguana.svg",
     "js": {
       "LINGUANA_MAIN_LANGUAGE_CODE": "",
@@ -2035,7 +2009,7 @@
     "cats": [
       6
     ],
-    "description": "Linx Commerce is an ecommerce platform, which provides seamless and personalised cross-channel solution that enables a true omni-channel shopping experience.",
+    "description": "Linx Commerce is an ecommerce platform, which provides and personalized cross-channel solution that enables a true omni-channel shopping experience.",
     "icon": "Linx.svg",
     "js": {
       "EzGaCfg.Config.Store": "",
@@ -2053,7 +2027,7 @@
       77,
       76
     ],
-    "description": "Linx Impulse is a personalisation, media and retargeting solutions built by Linx.",
+    "description": "Linx Impulse is a personalization, media and retargeting solutions built by Linx.",
     "dom": "link[href*='.linximpulse.net']",
     "icon": "Linx.svg",
     "js": {
@@ -2089,7 +2063,7 @@
       62,
       88
     ],
-    "description": "Liquid Web is a US-based host offering premium managed web hosting solutions.",
+    "description": "Liquid Web is an US-based host offering managed web hosting solutions.",
     "dns": {
       "SOA": "\\.liquidweb\\.com"
     },
@@ -2174,7 +2148,7 @@
       32,
       97
     ],
-    "description": "Listrak is a AI-based marketing automation and CRM solutions that unify, interpret and personalise data to engage customer across channels and devices.",
+    "description": "Listrak is an AI-based marketing automation and CRM solutions that unify, interpret and personalize data to engage customer across channels and devices.",
     "icon": "Listrak.svg",
     "js": {
       "_LTKSignup": "",
@@ -2208,7 +2182,8 @@
       23,
       87
     ],
-    "description": "LiteSpeed Cache is an all-in-one site acceleration plugin for WordPress.",
+    "cpe": "cpe:2.3:a:litespeedtech:litespeed_cache:*:*:*:*:*:wordpress:*:*",
+    "description": "LiteSpeed Cache is a site acceleration plugin for WordPress.",
     "headers": {
       "x-litespeed-cache": "",
       "x-turbo-charged-by": "LiteSpeed"
@@ -2240,7 +2215,7 @@
     "cats": [
       6
     ],
-    "description": "Litium is a versatile ecommerce solution tailored for businesses aiming to enhance their online presence.",
+    "description": "Litium is an ecommerce solution tailored for businesses aiming to enhance their online presence.",
     "icon": "Litium.svg",
     "meta": {
       "generator": "^Litium$"
@@ -2265,27 +2240,11 @@
     "saas": true,
     "website": "https://emltrk.com"
   },
-  "Little Hotelier": {
-    "cats": [
-      93
-    ],
-    "cookies": {
-      "_littlehotelier_session": ""
-    },
-    "description": "Little Hotelier is an all-in-one property management solution designed for small accomodation businesses.",
-    "icon": "LittleHotelier.svg",
-    "pricing": [
-      "mid",
-      "recurring"
-    ],
-    "saas": true,
-    "website": "https://www.littlehotelier.com"
-  },
   "Littledata": {
     "cats": [
       100
     ],
-    "description": "Littledata provides a seamless connection between your Shopify site, marketing channels, and Google Analytics.",
+    "description": "Littledata provides a connection between your Shopify site, marketing channels, and Google Analytics.",
     "icon": "Littledata.svg",
     "implies": "Shopify",
     "js": {
@@ -2322,7 +2281,7 @@
     "cats": [
       52
     ],
-    "description": "LiveAgent is an online live chat platform. The software provides a ticket management system.",
+    "description": "LiveAgent is an online live chat platform.",
     "icon": "LiveAgent.svg",
     "js": {
       "LiveAgent": ""
@@ -2512,6 +2471,7 @@
     "cats": [
       51
     ],
+    "cpe": "cpe:2.3:a:livesite:livesite:*:*:*:*:*:*:*:*",
     "description": "LiveSite is a professional website builder that enables users to create, manage, and publish websites.",
     "icon": "LiveSite.svg",
     "meta": {
@@ -2562,6 +2522,7 @@
     "cats": [
       52
     ],
+    "cpe": "cpe:2.3:a:livezilla:livezilla:*:*:*:*:*:*:*:*",
     "description": "LiveZilla is a web-based live support platform.",
     "dom": "#lz_overlay_chat",
     "icon": "LiveZilla.png",
@@ -2622,6 +2583,7 @@
       18,
       19
     ],
+    "cpe": "cpe:2.3:a:laravel:livewire:*:*:*:*:*:*:*:*",
     "description": "Livewire is a full-stack Laravel framework for building dynamic interfaces.",
     "icon": "Livewire.svg",
     "implies": "Laravel",
@@ -2661,17 +2623,6 @@
     },
     "oss": true,
     "website": "https://github.com/gregberge/loadable-components"
-  },
-  "Loadify": {
-    "cats": [
-      92,
-      100
-    ],
-    "description": "Loadify is a shopify app which helps merchants deploy performance techniques like loading screen, transitions & lazy Load.",
-    "icon": "Loadify.svg",
-    "implies": "Shopify",
-    "scriptSrc": "\\.loadifyapp\\.ninety9\\.dev",
-    "website": "https://apps.shopify.com/loadify"
   },
   "LobbyPMS": {
     "cats": [
@@ -2749,31 +2700,6 @@
     "saas": true,
     "scriptSrc": "\\.reachlocallivechat\\.com",
     "website": "https://localiq.com"
-  },
-  "Localised": {
-    "cats": [
-      106
-    ],
-    "description": "Localised is local-first ecommerce platform.",
-    "dom": {
-      "img[src='.localised.com']": {
-        "attributes": {
-          "src": ""
-        }
-      },
-      "span": {
-        "attributes": {
-          "text": ".+Localised Inc\\..+"
-        }
-      }
-    },
-    "icon": "Localised.svg",
-    "pricing": [
-      "poa"
-    ],
-    "saas": true,
-    "website": "https://www.localised.com",
-    "xhr": "api\\.localised\\.com"
   },
   "Locksmith": {
     "cats": [
@@ -2868,7 +2794,7 @@
     "cats": [
       32
     ],
-    "description": "Lofty is an all-in-one platform for real estate professionals that automates marketing campaigns and facilitates lead capture and conversion.",
+    "description": "Lofty is a platform for real estate professionals that automates marketing campaigns and facilitates lead capture and conversion.",
     "icon": "Lofty.svg",
     "saas": true,
     "scripts": "cdn\\.lofty\\.com",
@@ -2988,7 +2914,7 @@
     "cats": [
       10
     ],
-    "description": "Loglib is a Open Source and Privacy-First web analytics that aims to provide simple yet can be powerful based on your needs.",
+    "description": "Loglib is an Open Source and Privacy-First web analytics that aims to provide simple can be based on your needs.",
     "icon": "Loglib.svg",
     "js": {
       "llc": "",
@@ -3017,7 +2943,7 @@
     "cats": [
       6
     ],
-    "description": "Loja Integrada is an all-in-one platform for building and managing online stores, tailored for the Brazilian market.",
+    "description": "Loja Integrada is a platform for building and managing online stores, tailored for the Brazilian market.",
     "headers": {
       "X-Powered-By": "vtex-integrated-store"
     },
@@ -3037,7 +2963,7 @@
     "cats": [
       6
     ],
-    "description": "Loja Mestre is an all-in-one ecommerce platform from Brazil.",
+    "description": "Loja Mestre is an ecommerce platform from Brazil.",
     "icon": "Loja Mestre.svg",
     "meta": {
       "webmaster": "www\\.lojamestre\\.\\w+\\.br"
@@ -3054,7 +2980,7 @@
     "cats": [
       6
     ],
-    "description": "Loja Virtual is an all-in-one ecommerce platform from Brazil.",
+    "description": "Loja Virtual is an ecommerce platform from Brazil.",
     "icon": "Loja Virtual.svg",
     "js": {
       "id_loja_virtual": "",
@@ -3071,21 +2997,6 @@
       "cdn1\\.solojavirtual\\.com"
     ],
     "website": "https://www.lojavirtual.com.br"
-  },
-  "Loja2": {
-    "cats": [
-      6
-    ],
-    "description": "Loja2 is an all-in-one ecommerce platform from Brazil.",
-    "icon": "Loja2.svg",
-    "pricing": [
-      "low",
-      "freemium",
-      "recurring"
-    ],
-    "saas": true,
-    "scriptSrc": "loja2\\.com\\.br",
-    "website": "https://www.loja2.com.br"
   },
   "Lojas Online CTT": {
     "cats": [
@@ -3108,7 +3019,7 @@
     "cats": [
       84
     ],
-    "description": "Loloyal is a loyalty and rewards program for Shopify that helps small businesses increase customer engagement and retention through user-friendly features.",
+    "description": "Loloyal is a loyalty and rewards program for Shopify that helps small businesses increase customer engagement and retention through features.",
     "icon": "Loloyal.svg",
     "js": {
       "LOLOYAL_ONSITE": "",
@@ -3127,7 +3038,7 @@
     "cats": [
       10
     ],
-    "description": "Looker is a data platform used to analyze governed data, generate business insights, and develop AI-powered applications.",
+    "description": "Looker is a data platform used to analyze governed data, generate business insights, and develop AI-based applications.",
     "headers": {
       "Content-Security-Policy": "\\.cloud\\.looker\\.com"
     },
@@ -3200,7 +3111,7 @@
     "cats": [
       47
     ],
-    "description": "Loop Web is a provider in web, internet, network, and design services. Their offerings encompass website design, SMS, VoIP&IVR, Type, hosting, VPS, and more.",
+    "description": "Loop Web is a provider in web, internet, network, and design services.",
     "dom": "link[href*='.loopweb.net']",
     "icon": "Loop Web.svg",
     "meta": {
@@ -3221,7 +3132,7 @@
     "cookies": {
       "Loop54User": ""
     },
-    "description": "Loop54 is a ecommerce search and navigation SaaS product.",
+    "description": "Loop54 is an ecommerce search and navigation SaaS product.",
     "icon": "Loop54.svg",
     "js": {
       "Loop54.config.libVersion": "([\\d\\.]+)\\;version:\\1"
@@ -3237,7 +3148,7 @@
     "cats": [
       13
     ],
-    "description": "LoopedIn is an all-in-one tool for collecting feedback, building roadmaps, sharing changelogs, and publishing knowledge bases.",
+    "description": "LoopedIn is a tool for collecting feedback, building roadmaps, sharing changelogs, and publishing knowledge bases.",
     "icon": "LoopedIn.svg",
     "pricing": [
       "freemium",
@@ -3298,7 +3209,7 @@
     "cats": [
       90
     ],
-    "description": "Loox is a reviews app for Shopify that helps you gather reviews and user-generated photos from your customers.",
+    "description": "Loox is a reviews app for Shopify that helps you gather reviews and user-generated photos from customers.",
     "icon": "Loox.svg",
     "js": {
       "loox_global_hash": ""
@@ -3369,7 +3280,7 @@
     "cookies": {
       "lovable-preview-mode": ""
     },
-    "description": "Lovable is an AI-powered collaborative page builder for generating UI components, projects, and templates in real time.",
+    "description": "Lovable is an AI-based collaborative page builder for generating UI components, projects, and templates in real time.",
     "icon": "Lovable.svg",
     "js": {
       "LOV_SELECTOR_SCRIPT_VERSION": "^[\\d\\.]+$"
@@ -3421,6 +3332,21 @@
     },
     "saas": true,
     "website": "https://www.loyalis.nl"
+  },
+  "Loyalistic": {
+    "cats": [
+      32
+    ],
+    "description": "Loyalistic is a marketing automation software designed for small and medium-sized professional teams to showcase their expertise by creating content that helps people to buy.",
+    "icon": "Loyalistic.svg",
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "\\.loyalistic\\.com/",
+    "website": "https://loyalistic.com"
   },
   "LoyaltyLion": {
     "cats": [
@@ -3554,7 +3480,7 @@
     "cats": [
       10
     ],
-    "description": "Lucky Orange is a conversion optimisation tool with features including heatmaps, session recording, conversion funnels, form analytics, and chat.",
+    "description": "Lucky Orange is a conversion optimization tool with features including heatmaps, session recording, conversion funnels, form analytics, and chat.",
     "dom": "link[href*='.luckyorange.com']",
     "icon": "Lucky Orange.svg",
     "js": {
@@ -3607,22 +3533,11 @@
     "oss": true,
     "website": "https://lume.land"
   },
-  "Lumino": {
-    "cats": [
-      10
-    ],
-    "description": "Lumino is a data platform that helps Shopify brands optimize marketing, conversions, and user experience by leveraging data.",
-    "icon": "Lumino.svg",
-    "requires": "Shopify",
-    "saas": true,
-    "scripts": "api\\.getlumino\\.ai",
-    "website": "https://getlumino.ai"
-  },
   "Lumio": {
     "cats": [
       10
     ],
-    "description": "Lumio is a tool that identifies and tracks visitors to your website, providing insights into user activity and behaviour.",
+    "description": "Lumio is a tool that identifies and tracks visitors to a website, providing insights into user activity and behavior.",
     "icon": "Lumio.svg",
     "pricing": [
       "poa"
@@ -3635,7 +3550,7 @@
     "cats": [
       76
     ],
-    "description": "Lumise is a solution for personalisation stores, featuring a product designer tool compatible with Woocommerce, PHP, Magento, Opencart, and other CMS platforms.",
+    "description": "Lumise is a solution for personalization stores, featuring a product designer tool compatible with Woocommerce, PHP, Magento, Opencart, and other CMS platforms.",
     "icon": "Lumise.svg",
     "js": {
       "lumise": ""
@@ -3721,6 +3636,7 @@
     "cats": [
       7
     ],
+    "cpe": "cpe:2.3:a:lycheeorg:lychee:*:*:*:*:*:*:*:*",
     "description": "Lychee is a photo-management tool designed to operate on your server or web-space.",
     "icon": "Lychee.png",
     "js": {
@@ -3772,7 +3688,7 @@
     "cats": [
       89
     ],
-    "description": "langify translate your shop into multiple languages. langify comes with a visual configurator that allows you to add language switchers that integrate seamlessly into your existing design.",
+    "description": "langify translate your shop into multiple languages. langify comes with a visual configurator that allows you to add language switchers that integrate into your existing design.",
     "icon": "langify.svg",
     "js": {
       "Langify": "",
@@ -3816,7 +3732,8 @@
     "cats": [
       22
     ],
-    "description": "Lighttpd is an open-source web server optimised for speed-critical environment.",
+    "cpe": "cpe:2.3:a:lighttpd:lighttpd:*:*:*:*:*:*:*:*",
+    "description": "Lighttpd is an open-source web server optimized for speed-critical environment.",
     "headers": {
       "Server": "(?:L|l)ight(?:y)?(?:tpd)?(?:/([\\d\\.]+))?\\;version:\\1"
     },
@@ -3852,7 +3769,7 @@
     "cats": [
       59
     ],
-    "description": "The lite-youtube-embed technique renders the YouTube video inside the IFRAME tag only when the play button in clicked thus improving the core web vitals score of your website.",
+    "description": "The lite-youtube-embed technique renders the YouTube video inside the IFRAME tag only when the play button in clicked thus improving the core web vitals score of a website.",
     "dom": "lite-youtube",
     "implies": "YouTube",
     "oss": true,

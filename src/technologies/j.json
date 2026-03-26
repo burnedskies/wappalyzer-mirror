@@ -117,7 +117,7 @@
     "cats": [
       56
     ],
-    "description": "JSEcoin is a way to mine, receive payments for your goods or services and transfer cryptocurrency",
+    "description": "JSEcoin is a way to mine, receive payments for your goods or services and transfer cryptocurrency.",
     "icon": "JSEcoin.png",
     "js": {
       "jseMine": ""
@@ -180,7 +180,7 @@
     "cats": [
       41
     ],
-    "description": "JUST is a one-click payment solution for online business and online shoppers.",
+    "description": "JUST is an one-click payment solution for online business and online shoppers.",
     "icon": "JUST.svg",
     "pricing": [
       "payg"
@@ -193,7 +193,7 @@
     "cats": [
       14
     ],
-    "description": "JW Player is a online video player with video engagement analytics, custom video player skins, and live video streaming capability.",
+    "description": "JW Player is an online video player with video engagement analytics, custom video player skins, and live video streaming capability.",
     "dom": "div[data-video-provider*=jwplayer], div[class^='jwplayer']",
     "icon": "JW Player.svg",
     "js": {
@@ -378,6 +378,7 @@
     "cats": [
       18
     ],
+    "dom": "form[action*='/common/dispatcher.jsp']",
     "headers": {
       "X-Powered-By": "JSP(?:/([\\d.]+))?\\;version:\\1"
     },
@@ -418,7 +419,7 @@
       57
     ],
     "cpe": "cpe:2.3:a:jekyllrb:jekyll:*:*:*:*:*:*:*:*",
-    "description": "Jekyll is a blog-aware, static site generator for personal, project, or organisation sites.",
+    "description": "Jekyll is a blog-aware, static site generator for personal, project, or organization sites.",
     "icon": "Jekyll.svg",
     "implies": "Ruby",
     "js": {
@@ -439,7 +440,7 @@
     "headers": {
       "X-Jenkins": "([\\d.]+)\\;version:\\1"
     },
-    "icon": "Jenkins.png",
+    "icon": "Jenkins.svg",
     "implies": "Java",
     "js": {
       "jenkinsCIGlobal": "",
@@ -467,6 +468,7 @@
     "cats": [
       87
     ],
+    "cpe": "cpe:2.3:a:crocoblock:jetengine:*:*:*:*:*:wordpress:*:*",
     "description": "JetEngine is a content plugin for WordPress that allows users to create custom post types, taxonomies, and meta boxes, offering flexibility in building complex websites without requiring coding skills.",
     "icon": "JetEngine.svg",
     "pricing": [
@@ -517,10 +519,25 @@
     "saas": true,
     "website": "https://www.jetboost.io"
   },
+  "Jetimob": {
+    "cats": [
+      53
+    ],
+    "description": "Jetimob is a real estate management system that centralizes customer relationship management (CRM), rental management, and sales management within a single platform.",
+    "dom": "link[href*='www.jetimob.com']",
+    "icon": "Jetimob.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.jetimob.com"
+  },
   "Jetpack": {
     "cats": [
       87
     ],
+    "cpe": "cpe:2.3:a:automattic:jetpack:*:*:*:*:*:wordpress:*:*",
     "description": "Jetpack is a popular WordPress plugin created by Automattic, the people behind WordPress.com.",
     "dom": "link[href*='/wp-content/plugins/jetpack/']",
     "icon": "Jetpack.svg",
@@ -537,6 +554,7 @@
     "cats": [
       87
     ],
+    "cpe": "cpe:2.3:a:automattic:jetpack_boost:*:*:*:*:*:wordpress:*:*",
     "description": "Jetpack Boost – Website Speed, Performance and Critical CSS.",
     "dom": "style[id='jetpack-boost-critical-css']",
     "icon": "Jetpack.svg",
@@ -548,6 +566,7 @@
     "cats": [
       22
     ],
+    "cpe": "cpe:2.3:a:eclipse:jetty:*:*:*:*:*:*:*:*",
     "description": "Jetty is an open-source web server and servlet container known for its scalability and efficiency, supporting protocols like HTTP and WebSocket for various applications from development tools to cloud services.",
     "headers": {
       "Server": "Jetty(?:\\(([\\d\\.]*\\d+))?\\;version:\\1"
@@ -600,7 +619,7 @@
       100,
       98
     ],
-    "description": "Jilt App helps ecommerce store owners track and recover abandoned orders. Works seamlessly with Shopify and WooCommerce.",
+    "description": "Jilt App helps ecommerce store owners track and recover abandoned orders.",
     "icon": "Jilt.svg",
     "js": {
       "jiltStorefrontParams.platform": "^shopify$"
@@ -613,7 +632,7 @@
       87,
       98
     ],
-    "description": "Jilt plugin helps ecommerce store owners track and recover abandoned orders. Works seamlessly with Shopify and WooCommerce.",
+    "description": "Jilt plugin helps ecommerce store owners track and recover abandoned orders.",
     "icon": "Jilt.svg",
     "requires": "WordPress",
     "scriptSrc": "\\.jilt\\.com/.+/jilt\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
@@ -623,7 +642,7 @@
     "cats": [
       1
     ],
-    "description": "Jimdo is a website-builder and all-in-one hosting solution, designed to enable users to build their own websites.",
+    "description": "Jimdo is a website-builder and hosting solution, designed to enable users to build their own websites.",
     "headers": {
       "X-Jimdo-Instance": "",
       "X-Jimdo-Wid": ""
@@ -657,6 +676,7 @@
     "cats": [
       52
     ],
+    "cpe": "cpe:2.3:a:jitsi:jitsi:*:*:*:*:*:*:*:*",
     "description": "Jitsi is a free and open-source multiplatform voice (VoIP), videoconferencing and instant messaging applications for the web platform.",
     "icon": "Jitsi.svg",
     "oss": true,
@@ -667,6 +687,7 @@
     "cats": [
       19
     ],
+    "cpe": "cpe:2.3:a:jivesoftware:jive:*:*:*:*:*:*:*:*",
     "headers": {
       "X-JIVE-USER-ID": "",
       "X-JSL": "",
@@ -700,7 +721,7 @@
     "cats": [
       76
     ],
-    "description": "Jivox is a cloud-based, data-driven platform for delivering personalised digital advertising and marketing experiences at scale.",
+    "description": "Jivox is a cloud-based, data-driven platform for delivering personalized digital advertising and marketing experiences at scale.",
     "dom": "link[href*='.jivox.com']",
     "icon": "Jivox.svg",
     "pricing": [
@@ -745,6 +766,7 @@
       19,
       101
     ],
+    "cpe": "cpe:2.3:a:jobberbase:jobberbase:*:*:*:*:*:*:*:*",
     "description": "Jobberbase is an open-source job board platform that enables the creation of job sites.",
     "icon": "JobberBase.svg",
     "implies": "PHP",
@@ -795,7 +817,7 @@
     "cats": [
       101
     ],
-    "description": "Jobylon is a flexible talent acquisition platform designed to help leading employers streamline recruitment and manage hiring processes.",
+    "description": "Jobylon is a flexible talent acquisition platform designed to help employers streamline recruitment and manage hiring processes.",
     "icon": "Jobylon.svg",
     "saas": true,
     "scriptSrc": "\\.jobylon\\.com",
@@ -867,7 +889,7 @@
       1
     ],
     "cpe": "cpe:2.3:a:joomla:joomla\\!:*:*:*:*:*:*:*:*",
-    "description": "Joomla is a free and open-source content management system for publishing web content.",
+    "description": "Joomla is an open-source CMS written in PHP for publishing websites and web applications.",
     "dom": "div[id*='wrapper_r'], link[href*='feed/com_'], link[href*='components/com_'], table[class*='pill']",
     "headers": {
       "X-Content-Encoded-By": "Joomla! ([\\d.]+)\\;version:\\1"
@@ -909,7 +931,7 @@
     "cats": [
       110
     ],
-    "description": "Jotform is an online form builder that enables the creation of robust forms.",
+    "description": "Jotform is an online form builder that enables the creation of forms.",
     "icon": "Jotform.svg",
     "js": {
       "JOTFORM_ENV": "",
@@ -965,7 +987,7 @@
     "cats": [
       59
     ],
-    "description": "JsObservable is integrated with JsViews and facilitates observable data manipulations that are immediately reflected in the data-bound templates. The library is developed and maintained by Microsoft employee Boris Moore and is used in projects such as Outlook.com and Windows Azure.",
+    "description": "JsObservable is integrated with JsViews and facilitates observable data manipulations that are immediately reflected in the data-bound templates.",
     "icon": "JsObservable.svg",
     "oss": true,
     "website": "https://www.jsviews.com/#jsobservable"
@@ -985,7 +1007,7 @@
     "cats": [
       59
     ],
-    "description": "JsViews is the MVVM library which provides two-way data binding for the template. The library is developed and maintained by Microsoft employee Boris Moore and is used in projects such as Outlook.com and Windows Azure.",
+    "description": "JsViews is the MVVM library which provides two-way data binding for the template.",
     "icon": "JsViews.svg",
     "implies": [
       "JsObservable",
@@ -994,6 +1016,17 @@
     "oss": true,
     "scriptSrc": "([\\d\\.]+)?/jsviews(?:\\.min)?\\.js\\;version:\\1",
     "website": "https://www.jsviews.com/#jsviews"
+  },
+  "Jscrambler": {
+    "cats": [
+      16
+    ],
+    "description": "Jscrambler is a client-side security solution for JavaScript that protects application code through obfuscation, runtime protection, and tamper detection to reduce the risk of reverse engineering and code manipulation.",
+    "icon": "Jscrambler.svg",
+    "saas": true,
+    "scriptSrc": "\\.jscrambler\\.com",
+    "scripts": "\\.jscrambler\\.com",
+    "website": "https://jscrambler.com"
   },
   "Jubna": {
     "cats": [
@@ -1127,7 +1160,7 @@
     "cats": [
       90
     ],
-    "description": "Junip provider of a ecommerce brand review platform designed to share customers' story, send review requests and display review content.",
+    "description": "Junip provider of an ecommerce brand review platform designed to share customers' story, send review requests and display review content.",
     "icon": "Junip.svg",
     "js": {
       "junipLoaded": "\\;confidence:50",
@@ -1147,7 +1180,7 @@
     "cats": [
       74
     ],
-    "description": "Juo is a centralised experimentation platform for innovative marketing and product teams.",
+    "description": "Juo is a centralised experimentation platform for marketing and product teams.",
     "icon": "Juo.svg",
     "pricing": [
       "poa"
@@ -1197,26 +1230,12 @@
     "saas": true,
     "website": "https://www.justia.com"
   },
-  "Justo": {
-    "cats": [
-      6
-    ],
-    "description": "Justo is a subscription-based software that allows anyone to set up an online store and sell their products with delivery options.",
-    "icon": "Justo.svg",
-    "pricing": [
-      "high",
-      "recurring"
-    ],
-    "saas": true,
-    "scriptSrc": "\\.getjusto\\.com/",
-    "website": "https://www.getjusto.com"
-  },
   "Justuno": {
     "cats": [
       76,
       98
     ],
-    "description": "Justuno is a visitor conversion optimisation platform.",
+    "description": "Justuno is a visitor conversion optimization platform.",
     "icon": "Justuno.svg",
     "js": {
       "JustunoApp": ""
@@ -1236,7 +1255,7 @@
     "cats": [
       100
     ],
-    "description": "Justuno is a premium conversion marketing and analytics platform that provides retailers with powerful tools to increase conversions.",
+    "description": "Justuno is a conversion marketing and analytics platform that provides retailers with tools to increase conversions.",
     "icon": "Justuno.svg",
     "implies": "Justuno",
     "pricing": [
@@ -1284,6 +1303,7 @@
       14,
       59
     ],
+    "cpe": "cpe:2.3:a:happyworm:jplayer:*:*:*:*:*:*:*:*",
     "description": "jPlayer is a cross-browser JavaScript library developed as a jQuery plugin which facilitates the embedding of web based media, notably HTML5 audio and video in addition to Adobe Flash based media.",
     "icon": "jPlayer.svg",
     "implies": "jQuery",
@@ -1339,7 +1359,7 @@
     "cats": [
       31
     ],
-    "description": "jQuery CDN is a way to include jQuery in your website without actually downloading and keeping it your website's folder.",
+    "description": "jQuery CDN is a way to include jQuery in a website without actually downloading and keeping it a website's folder.",
     "icon": "jQuery.svg",
     "implies": "jQuery",
     "scriptSrc": "code\\.jquery\\.com/",
@@ -1381,7 +1401,7 @@
     "cats": [
       26
     ],
-    "description": "jQuery Mobile is a HTML5-based user interface system designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices.",
+    "description": "jQuery Mobile is an HTML5-based user interface system designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices.",
     "icon": "jQuery Mobile.svg",
     "implies": "jQuery",
     "js": {
@@ -1466,11 +1486,22 @@
     "scriptSrc": "jqplot.*\\.js",
     "website": "https://www.jqplot.com"
   },
+  "jrni": {
+    "cats": [
+      72
+    ],
+    "description": "jrni is a platform that supports customer revenue generation by centralizing booking, scheduling, and customer engagement processes within a single system.",
+    "icon": "jrni.svg",
+    "saas": true,
+    "scriptSrc": "\\.bookingbug\\.com/",
+    "scripts": "\\.jrni\\.com",
+    "website": "https://www.jrni.com"
+  },
   "jsDelivr": {
     "cats": [
       31
     ],
-    "description": "JSDelivr is a free public CDN for open-source projects. It can serve web files directly from the npm registry and GitHub repositories without any configuration.",
+    "description": "JSDelivr is a free public CDN for open-source projects.",
     "dom": "link[href*='cdn.jsdelivr.net']",
     "icon": "jsdelivr-icon.svg",
     "scriptSrc": "cdn\\.jsdelivr\\.net",
@@ -1481,7 +1512,7 @@
     "cats": [
       59
     ],
-    "description": "jsPDF is a HTML5 client-side solution for generating PDF documents directly within web browsers.",
+    "description": "jsPDF is an HTML5 client-side solution for generating PDF documents directly within web browsers.",
     "icon": "jsPDF.svg",
     "js": {
       "jsPDF.API": ""

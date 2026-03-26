@@ -13,6 +13,103 @@ function yieldToMain() {
   })
 }
 
+const MAX_TEXT_LENGTH = 25000
+const MAX_INLINE_SCRIPT_COUNT = 50
+const MAX_INLINE_SCRIPT_CHARS = 200000
+const MAX_DOM_TEXT_LENGTH = 1000000
+const MAX_TECH_DETECTIONS = 50
+const LANGUAGE_DETECTION_SAMPLE_LENGTH = 5000
+const LANGUAGE_DETECTION_MIN_TEXT_LENGTH = 250
+const LANGUAGE_DETECTION_MIN_ALPHA_CHARS = 120
+const LANGUAGE_DETECTION_MIN_WORDS = 20
+const LANGUAGE_DETECTION_MIN_PERCENTAGE = 85
+const LANGUAGE_DETECTION_MIN_MARGIN = 25
+
+function normalizeLanguageTag(value = '') {
+  const tokens = `${value || ''}`
+    .trim()
+    .replace(/_/g, '-')
+    .split('-')
+    .filter(Boolean)
+
+  const [language, ...subtags] = tokens
+
+  if (!/^[a-z]{2}$/i.test(language || '')) {
+    return ''
+  }
+
+  const region = subtags.find((subtag) => /^[a-z]{2}$/i.test(subtag))
+
+  return `${language.toLowerCase()}${region ? `-${region.toUpperCase()}` : ''}`
+}
+
+function getBaseLanguage(value = '') {
+  const language = normalizeLanguageTag(value)
+
+  return language ? language.split('-')[0] : ''
+}
+
+function getLanguageSampleText() {
+  // eslint-disable-next-line unicorn/prefer-text-content
+  const text = (document.body?.innerText || '').replace(/\s+/g, ' ').trim()
+
+  if (text.length < LANGUAGE_DETECTION_MIN_TEXT_LENGTH) {
+    return ''
+  }
+
+  const sample = text.slice(0, LANGUAGE_DETECTION_SAMPLE_LENGTH)
+  const alphaChars = (sample.match(/\p{L}/gu) || []).length
+  const words = sample.match(/\p{L}{2,}/gu) || []
+
+  if (
+    alphaChars < LANGUAGE_DETECTION_MIN_ALPHA_CHARS ||
+    words.length < LANGUAGE_DETECTION_MIN_WORDS
+  ) {
+    return ''
+  }
+
+  return sample
+}
+
+function detectLanguageFromVisibleText() {
+  if (!chrome.i18n.detectLanguage) {
+    return ''
+  }
+
+  const sample = getLanguageSampleText()
+
+  if (!sample) {
+    return ''
+  }
+
+  return new Promise((resolve) => {
+    chrome.i18n.detectLanguage(sample, ({ languages = [] } = {}) => {
+      const rankedLanguages = languages
+        .map(({ language, percentage }) => ({
+          language: getBaseLanguage(language),
+          percentage: parseInt(percentage, 10) || 0,
+        }))
+        .filter(({ language }) => language)
+        .sort(({ percentage: a }, { percentage: b }) => (a < b ? 1 : -1))
+
+      const [top, next] = rankedLanguages
+
+      if (
+        !top ||
+        top.percentage < LANGUAGE_DETECTION_MIN_PERCENTAGE ||
+        top.percentage - (next ? next.percentage : 0) <
+          LANGUAGE_DETECTION_MIN_MARGIN
+      ) {
+        resolve('')
+
+        return
+      }
+
+      resolve(top.language)
+    })
+  })
+}
+
 function inject(src, id, message) {
   return new Promise((resolve) => {
     // Inject a script tag into the page to access methods of the window object
@@ -79,45 +176,71 @@ async function getDom(technologies) {
 
 async function getDomDetections(_technologies) {
   const technologies = []
+  const detectionKeys = new Set()
+  const detectionCounts = new Map()
+  const selectorCache = new Map()
   let lastYield = performance.now()
+
+  const shouldYield = () => performance.now() - lastYield > 16
+  const updateYield = async () => {
+    if (shouldYield()) {
+      await yieldToMain()
+      lastYield = performance.now()
+    }
+  }
+  const getDetectionCount = (name) => detectionCounts.get(name) || 0
+  const addDetection = (name, key, detection) => {
+    if (
+      detectionKeys.has(key) ||
+      getDetectionCount(name) >= MAX_TECH_DETECTIONS
+    ) {
+      return false
+    }
+
+    detectionKeys.add(key)
+    detectionCounts.set(name, getDetectionCount(name) + 1)
+    technologies.push(detection)
+
+    return true
+  }
+
   for (const { name, dom } of _technologies) {
     const toScalar = (value) =>
       typeof value === 'string' || typeof value === 'number' ? value : !!value
 
-    if (performance.now() - lastYield > 50) {
-      await yieldToMain()
-      lastYield = performance.now()
-    }
-    Object.keys(dom).forEach((selector) => {
+    await updateYield()
+
+    for (const selector of Object.keys(dom)) {
+      if (getDetectionCount(name) >= MAX_TECH_DETECTIONS) {
+        break
+      }
+
       let nodes = []
 
-      try {
-        nodes = document.querySelectorAll(selector)
-      } catch (error) {
-        Content.driver('error', error)
+      if (selectorCache.has(selector)) {
+        nodes = selectorCache.get(selector)
+      } else {
+        try {
+          nodes = document.querySelectorAll(selector)
+        } catch (error) {
+          Content.driver('error', error)
+        }
+
+        selectorCache.set(selector, nodes)
       }
 
       if (!nodes.length) {
-        return
+        continue
       }
 
-      dom[selector].forEach(({ exists, text, properties, attributes }) => {
-        nodes.forEach((node) => {
-          if (
-            technologies.filter(({ name: _name }) => _name === name).length >=
-            50
-          ) {
-            return
+      for (const { exists, text, properties, attributes } of dom[selector]) {
+        for (const node of nodes) {
+          if (getDetectionCount(name) >= MAX_TECH_DETECTIONS) {
+            break
           }
 
-          if (
-            exists &&
-            technologies.findIndex(
-              ({ name: _name, selector: _selector, exists }) =>
-                name === _name && selector === _selector && exists === ''
-            ) === -1
-          ) {
-            technologies.push({
+          if (exists) {
+            addDetection(name, `${name}|${selector}|exists`, {
               name,
               selector,
               exists: '',
@@ -128,17 +251,11 @@ async function getDomDetections(_technologies) {
             // eslint-disable-next-line unicorn/prefer-text-content
             const value = (node.innerText ? node.innerText.trim() : '').slice(
               0,
-              1000000
+              MAX_DOM_TEXT_LENGTH
             )
 
-            if (
-              value &&
-              technologies.findIndex(
-                ({ name: _name, selector: _selector, text }) =>
-                  name === _name && selector === _selector && text === value
-              ) === -1
-            ) {
-              technologies.push({
+            if (value) {
+              addDetection(name, `${name}|${selector}|text|${value}`, {
                 name,
                 selector,
                 text: value,
@@ -147,69 +264,157 @@ async function getDomDetections(_technologies) {
           }
 
           if (properties) {
-            Object.keys(properties).forEach((property) => {
-              if (
-                Object.prototype.hasOwnProperty.call(node, property) &&
-                technologies.findIndex(
-                  ({
-                    name: _name,
-                    selector: _selector,
-                    property: _property,
-                    value,
-                  }) =>
-                    name === _name &&
-                    selector === _selector &&
-                    property === _property &&
-                    value === toScalar(value)
-                ) === -1
-              ) {
+            for (const property of Object.keys(properties)) {
+              if (Object.prototype.hasOwnProperty.call(node, property)) {
                 const value = node[property]
 
                 if (typeof value !== 'undefined') {
-                  technologies.push({
+                  addDetection(
                     name,
-                    selector,
-                    property,
-                    value: toScalar(value),
-                  })
+                    `${name}|${selector}|property|${property}|${toScalar(
+                      value
+                    )}`,
+                    {
+                      name,
+                      selector,
+                      property,
+                      value: toScalar(value),
+                    }
+                  )
                 }
               }
-            })
+            }
           }
 
           if (attributes) {
-            Object.keys(attributes).forEach((attribute) => {
-              if (
-                node.hasAttribute(attribute) &&
-                technologies.findIndex(
-                  ({
-                    name: _name,
-                    selector: _selector,
-                    attribute: _atrribute,
-                    value,
-                  }) =>
-                    name === _name &&
-                    selector === _selector &&
-                    attribute === _atrribute &&
-                    value === toScalar(value)
-                ) === -1
-              ) {
+            for (const attribute of Object.keys(attributes)) {
+              if (node.hasAttribute(attribute)) {
                 const value = node.getAttribute(attribute)
 
-                technologies.push({
+                addDetection(
                   name,
-                  selector,
-                  attribute,
-                  value: toScalar(value),
-                })
+                  `${name}|${selector}|attribute|${attribute}|${toScalar(
+                    value
+                  )}`,
+                  {
+                    name,
+                    selector,
+                    attribute,
+                    value: toScalar(value),
+                  }
+                )
               }
-            })
+            }
           }
-        })
-      })
-    })
+
+          await updateYield()
+        }
+      }
+    }
   }
+
   return technologies
+}
+
+function getCookies() {
+  const cookies = {}
+
+  if (!document.cookie) {
+    return cookies
+  }
+
+  for (const cookie of document.cookie.split('; ')) {
+    const [name, ...value] = cookie.split('=')
+
+    cookies[name] = [value.join('=')]
+  }
+
+  return cookies
+}
+
+function getScriptSources() {
+  return Array.from(document.scripts)
+    .filter(({ src }) => src && !src.startsWith('data:text/javascript;'))
+    .map(({ src }) => src)
+}
+
+function getMeta() {
+  const meta = {}
+
+  for (const node of document.querySelectorAll('meta')) {
+    const key = node.getAttribute('name') || node.getAttribute('property')
+
+    if (!key) {
+      continue
+    }
+
+    const content = node.getAttribute('content')
+    const normalizedKey = key.toLowerCase()
+
+    meta[normalizedKey] = meta[normalizedKey] || []
+    meta[normalizedKey].push(content)
+  }
+
+  return meta
+}
+
+async function getHeavySignals() {
+  await yieldToMain()
+
+  // Text
+  // eslint-disable-next-line unicorn/prefer-text-content
+  const text = document.body.innerText
+    .replace(/\s+/g, ' ')
+    .slice(0, MAX_TEXT_LENGTH)
+
+  // CSS rules
+  const css = []
+
+  try {
+    for (const sheet of Array.from(document.styleSheets)) {
+      for (const rules of Array.from(sheet.cssRules)) {
+        css.push(rules.cssText)
+
+        if (css.length >= 3000) {
+          break
+        }
+      }
+
+      if (css.length >= 3000) {
+        break
+      }
+    }
+  } catch (error) {
+    // Continue
+  }
+
+  await yieldToMain()
+
+  const scripts = []
+  let totalScriptChars = 0
+
+  for (const node of Array.from(document.scripts)) {
+    const script = node.textContent
+
+    if (!script) {
+      continue
+    }
+
+    const remainingChars = MAX_INLINE_SCRIPT_CHARS - totalScriptChars
+
+    if (remainingChars <= 0 || scripts.length >= MAX_INLINE_SCRIPT_COUNT) {
+      break
+    }
+
+    scripts.push(script.slice(0, remainingChars))
+    totalScriptChars += Math.min(script.length, remainingChars)
+  }
+
+  return {
+    text,
+    css: css.join('\n'),
+    scripts,
+  }
 }
 
 const Content = {
@@ -231,85 +436,20 @@ const Content = {
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
     try {
-      // Determine language based on the HTML lang attribute or content
-      Content.language =
+      Content.language = normalizeLanguageTag(
         document.documentElement.getAttribute('lang') ||
-        document.documentElement.getAttribute('xml:lang') ||
-        (await new Promise((resolve) => {
-          if (chrome.i18n.detectLanguage) {
-            const html = new XMLSerializer()
-              .serializeToString(document)
-              .slice(0, 5000)
-
-            chrome.i18n.detectLanguage(html, ({ languages }) =>
-              resolve(
-                languages
-                  .filter(({ percentage }) => percentage >= 75)
-                  .map(({ language: lang }) => lang)[0]
-              )
-            )
-          }
-
-          resolve()
-        }))
-
-      const cookies = document.cookie.split('; ').reduce(
-        (cookies, cookie) => ({
-          ...cookies,
-          [cookie.split('=').shift()]: [cookie.split('=').pop()],
-        }),
-        {}
+          document.documentElement.getAttribute('xml:lang')
       )
 
-      // Text
-      // eslint-disable-next-line unicorn/prefer-text-content
-      const text = document.body.innerText.replace(/\s+/g, ' ').slice(0, 25000)
-
-      // CSS rules
-      let css = []
-
-      try {
-        for (const sheet of Array.from(document.styleSheets)) {
-          for (const rules of Array.from(sheet.cssRules)) {
-            css.push(rules.cssText)
-
-            if (css.length >= 3000) {
-              break
-            }
-          }
-        }
-      } catch (error) {
-        // Continue
+      if (!Content.language) {
+        Content.language = await detectLanguageFromVisibleText()
       }
 
-      css = css.join('\n')
-
-      // Script tags
-      const scriptNodes = Array.from(document.scripts)
-
-      const scriptSrc = scriptNodes
-        .filter(({ src }) => src && !src.startsWith('data:text/javascript;'))
-        .map(({ src }) => src)
-
-      const scripts = scriptNodes
-        .map((node) => node.textContent)
-        .filter((script) => script)
-
-      // Meta tags
-      const meta = Array.from(document.querySelectorAll('meta')).reduce(
-        (metas, meta) => {
-          const key = meta.getAttribute('name') || meta.getAttribute('property')
-
-          if (key) {
-            metas[key.toLowerCase()] = metas[key.toLowerCase()] || []
-
-            metas[key.toLowerCase()].push(meta.getAttribute('content'))
-          }
-
-          return metas
-        },
-        {}
-      )
+      Content.cache = {
+        cookies: getCookies(),
+        meta: getMeta(),
+        scriptSrc: getScriptSources(),
+      }
 
       // Detect Google Ads
       if (/^(www\.)?google(\.[a-z]{2,3}){1,2}$/.test(location.hostname)) {
@@ -360,8 +500,6 @@ const Content = {
         }
       }
 
-      Content.cache = { text, css, scriptSrc, scripts, meta, cookies }
-
       await Content.driver('onContentLoad', [
         url,
         Content.cache,
@@ -371,6 +509,16 @@ const Content = {
       const technologies = await Content.driver('getTechnologies')
 
       await Content.onGetTechnologies(technologies)
+
+      Object.assign(Content.cache, await getHeavySignals())
+
+      Content.analyzedRequires = []
+
+      await Content.driver('onContentLoad', [
+        url,
+        Content.cache,
+        Content.language,
+      ])
 
       // Delayed second pass to capture async JS
       await new Promise((resolve) => setTimeout(resolve, 5000))

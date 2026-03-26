@@ -1,4 +1,14 @@
 {
+  "ZClouding": {
+    "cats": [
+      1
+    ],
+    "description": "ZClouding is a cloud-based platform that enables businesses to create, manage, and maintain their online presence through web-based tools and services.",
+    "icon": "ZClouding.svg",
+    "saas": true,
+    "scripts": "track\\.zclouding\\.com",
+    "website": "https://zclouding.com"
+  },
   "ZK": {
     "cats": [
       18
@@ -10,11 +20,30 @@
     "scriptSrc": "zkau/",
     "website": "https://zkoss.org"
   },
+  "ZOYEQ": {
+    "cats": [
+      6
+    ],
+    "description": "ZOYEQ is a cloud ecommerce platform for building and managing online stores, orders, inventory, and point-of-sale operations.",
+    "icon": "ZOYEQ.svg",
+    "js": {
+      "ZOYEQ": ""
+    },
+    "meta": {
+      "generator": "^ZOYEQ$"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.zoyeq.com"
+  },
   "ZURB Foundation": {
     "cats": [
       66
     ],
-    "description": "Zurb Foundation is used to prototype in the browser. Allows rapid creation of websites or applications while leveraging mobile and responsive technology. The front end framework is the collection of HTML, CSS, and Javascript containing design patterns.",
+    "description": "Zurb Foundation is used to prototype in the browser.",
     "dom": "link[href*='foundation'][href*='css']",
     "icon": "ZURBFoundation.svg",
     "js": {
@@ -74,7 +103,7 @@
     "cats": [
       76
     ],
-    "description": "Zakeke is a product customisation tool compatible with services and apps mostly used to manage ecommerce store.",
+    "description": "Zakeke is a product customization tool compatible with services and apps mostly used to manage ecommerce store.",
     "icon": "Zakeke.png",
     "js": {
       "zakekeBoot": "",
@@ -94,7 +123,7 @@
       87,
       76
     ],
-    "description": "Zakeke Interactive Product Designer lets customers personalise any product and visualise how they’ll look before checking out.",
+    "description": "Zakeke Interactive Product Designer allows customers to personalize any product and visualise how they’ll look before checking out.",
     "icon": "Zakeke.png",
     "implies": "Zakeke",
     "pricing": [
@@ -111,7 +140,7 @@
       100,
       76
     ],
-    "description": "Zakeke Visual Customizer is a cloud-connected visual ecommerce tool that allows brands and retailers to offer live, personalised, 2D, 3D, and augmented reality (AR) functionality for their products.",
+    "description": "Zakeke Visual Customizer is a cloud-connected visual ecommerce tool that allows brands and retailers to offer live, personalized, 2D, 3D, and augmented reality (AR) functionality for their products.",
     "icon": "Zakeke.png",
     "implies": "Zakeke",
     "pricing": [
@@ -163,16 +192,6 @@
     "saas": true,
     "scriptSrc": "\\.zalify\\.com/",
     "website": "https://www.zalify.com"
-  },
-  "Zammad": {
-    "cats": [
-      13
-    ],
-    "description": "Zammad is a web-based, open-source support and ticketing system designed for managing user inquiries and organizing customer service workflows.",
-    "dom": "script[id*='id='zammad_form_script']",
-    "icon": "Zammad.svg",
-    "saas": true,
-    "website": "https://zammad.org"
   },
   "Zammit": {
     "cats": [
@@ -239,21 +258,6 @@
     "scripts": "cdn\\.zarlasites\\.com",
     "website": "https://www.zarla.com"
   },
-  "Zaxaa": {
-    "cats": [
-      32
-    ],
-    "description": "Zaxaa is a sales funnel service designed to streamline the process of managing leads, nurturing prospects, and converting them into customers.",
-    "dom": "a[href*='.zaxaa.com'] > img[src*='www.zaxaa.com']",
-    "icon": "Zaxaa.svg",
-    "pricing": [
-      "mid",
-      "recurring",
-      "poa"
-    ],
-    "saas": true,
-    "website": "https://zaxaa.com"
-  },
   "Zeabur": {
     "cats": [
       62
@@ -268,21 +272,6 @@
       "payg"
     ],
     "website": "https://zeabur.com"
-  },
-  "Zeald": {
-    "cats": [
-      6
-    ],
-    "cookies": {
-      "ZES_BACKEND": "zeald"
-    },
-    "description": "Zeald is a full-service website design and digital marketing company.",
-    "icon": "Zeald.svg",
-    "pricing": [
-      "poa"
-    ],
-    "requires": "Cart Functionality",
-    "website": "https://www.zeald.com"
   },
   "ZeeMaps": {
     "cats": [
@@ -316,6 +305,7 @@
     "cats": [
       6
     ],
+    "cpe": "cpe:2.3:a:zen-cart:zen_cart:*:*:*:*:*:*:*:*",
     "icon": "Zen Cart.png",
     "meta": {
       "generator": "Zen Cart"
@@ -343,8 +333,11 @@
     "cats": [
       6
     ],
-    "description": "ZenBasket is an online selling platform that provides a one-stop ecommerce solution for creating, managing, and operating online stores.",
+    "description": "ZenBasket is an online selling platform that provides an one-stop ecommerce solution for creating, managing, and operating online stores.",
     "icon": "ZenBasket.svg",
+    "meta": {
+      "zenbasket-platform": ""
+    },
     "pricing": [
       "freemium",
       "low",
@@ -473,7 +466,7 @@
     "cats": [
       52
     ],
-    "description": "Zendesk Sunshine Conversations lets you share a single, continuous conversation with every team in your business. With a unified API and native connectors to popular business applications like Zendesk and Slack, everyone in your organization can get access to a single view of the customer conversation.",
+    "description": "Zendesk Sunshine Conversations lets you share a single, continuous conversation with every team in a business.",
     "icon": "Zendesk.svg",
     "implies": "Zendesk",
     "pricing": [
@@ -569,7 +562,7 @@
     "cats": [
       53
     ],
-    "description": "Zenu is an all-in-one CRM solution designed to manage real estate operations, including client interactions, property listings, and sales processes.",
+    "description": "Zenu is a CRM solution designed to manage real estate operations, including client interactions, property listings, and sales processes.",
     "icon": "Zenu.svg",
     "js": {
       "zenuDebug": "",
@@ -715,7 +708,7 @@
     "cats": [
       36
     ],
-    "description": "Zeus Technology is a media monetisation platform that levels the playing field for publishers and advertisers of all sizes.",
+    "description": "Zeus Technology is a media monetization platform that levels the playing field for publishers and advertisers of all sizes.",
     "icon": "Zeus Technology.svg",
     "js": {
       "zeus.version": "v([\\d\\.]+)\\;version:\\1",
@@ -734,7 +727,7 @@
     "cookies": {
       "zevi-_zldt": ""
     },
-    "description": "Zevi is an AI-powered site search and discovery platform designed to enhance product discovery.",
+    "description": "Zevi is an AI-based site search and discovery platform designed to enhance product discovery.",
     "icon": "Zevi.svg",
     "pricing": [
       "mid",
@@ -749,7 +742,7 @@
     "cats": [
       32
     ],
-    "description": "Zevioo is an AI-powered platform that helps ecommerce stores improve conversions, customer loyalty, and revenue through automated optimization and data-driven personalization.",
+    "description": "Zevioo is an AI-based platform that helps ecommerce stores improve conversions, customer loyalty, and revenue through automated optimization and data-driven personalization.",
     "icon": "Zevioo.svg",
     "saas": true,
     "scriptSrc": "zevioo\\.com/",
@@ -820,6 +813,17 @@
     "scriptSrc": "ar-view-zieny\\.com/",
     "website": "https://zieny.com"
   },
+  "Zigaform": {
+    "cats": [
+      110
+    ],
+    "description": "Zigaform is a custom form building service that enables the creation and management of online forms for data collection, user input, and workflow automation across websites and applications.",
+    "icon": "Zigaform.svg",
+    "requires": "WordPress",
+    "saas": true,
+    "scriptSrc": "/wp-content/plugins/zigaform-wp-estimator/",
+    "website": "https://zigaform.com"
+  },
   "Ziggy": {
     "cats": [
       59
@@ -854,7 +858,7 @@
     "cats": [
       25
     ],
-    "description": "ZingChart is a open-source and free JavaScript library for building interactive and intuitive charts.",
+    "description": "ZingChart is an open-source and free JavaScript library for building interactive and intuitive charts.",
     "icon": "ZingChart.svg",
     "js": {
       "zingchart": ""
@@ -871,7 +875,7 @@
     "cats": [
       11
     ],
-    "description": "Zimbra is a is a collaborative software suite that includes an email server and a web client.",
+    "description": "Zimbra is an is a collaborative software suite that includes an email server and a web client.",
     "icon": "Zinnia.png",
     "implies": "Django",
     "meta": {
@@ -898,7 +902,7 @@
       41,
       91
     ],
-    "description": "Zip is a payment service that lets you receive your purchase now and spread the total cost over a interest-free payment schedule.",
+    "description": "Zip is a payment service that lets you receive your purchase now and spread the total cost over an interest-free payment schedule.",
     "dom": "link[href*='widgets.quadpay.com/'], div[data-quadpay-src*='.quadpay.com/']",
     "icon": "zip_pay.svg",
     "js": {
@@ -1050,7 +1054,7 @@
     "cats": [
       6
     ],
-    "description": "Znode is a provider of enterprise .NET-based shopping cart systems for building and managing online commerce platforms.",
+    "description": "Znode is a provider of enterprise. NET-based shopping cart systems for building and managing online commerce platforms.",
     "icon": "Znode.svg",
     "js": {
       "ZnodeAjaxify": "",
@@ -1146,7 +1150,7 @@
       74,
       76
     ],
-    "description": "Zoho PageSense is a conversion optimisation platform which combines the power of web analytics, A/B testing, and personalisation.",
+    "description": "Zoho PageSense is a conversion optimization platform which combines the power of web analytics, A/B testing, and personalization.",
     "icon": "Zoho.svg",
     "implies": "Zoho",
     "js": {
@@ -1198,7 +1202,7 @@
     "cats": [
       51
     ],
-    "description": "Zoho Sites is an all-in-one platform designed to help businesses create websites.",
+    "description": "Zoho Sites is a platform designed to help businesses create websites.",
     "icon": "Zoho.svg",
     "meta": {
       "generator": "^Zoho Sites ([\\d\\.]+)\\;version:\\1"
@@ -1214,7 +1218,7 @@
     "cats": [
       52
     ],
-    "description": "Zoko is an all-in-one system that leverages the WhatsApp API to help you do business, on WhatsApp",
+    "description": "Zoko is a system that leverages the WhatsApp API to help you do business, on WhatsApp.",
     "icon": "Zoko.svg",
     "implies": [
       "WhatsApp Business Chat"
@@ -1323,16 +1327,6 @@
     "scriptSrc": "ws\\.zoominfo\\.com",
     "website": "https://www.zoominfo.com/"
   },
-  "Zoominfo Chat": {
-    "cats": [
-      52
-    ],
-    "description": "ZoomInfo chat is a live chat solution.",
-    "icon": "Zoominfo.svg",
-    "saas": true,
-    "scriptSrc": "madstreetden\\.widget\\.insent\\.ai",
-    "website": "https://www.zoominfo.com/chat"
-  },
   "Zoorate": {
     "cats": [
       90
@@ -1372,6 +1366,7 @@
     "cats": [
       22
     ],
+    "cpe": "cpe:2.3:a:zope:zope:*:*:*:*:*:*:*:*",
     "description": "Zope is an open-source web application server and content management framework that helps developers build and manage complex web applications with features like object-oriented programming and scalable architecture.",
     "headers": {
       "Server": "^Zope/"
@@ -1402,7 +1397,7 @@
       52,
       53
     ],
-    "description": "Zowie is an AI-powered customer service suite tailored for ecommerce, aimed at cost-saving and revenue generation through value-driven interactions.",
+    "description": "Zowie is an AI-based customer service suite tailored for ecommerce, aimed at cost-saving and revenue generation through value-driven interactions.",
     "dom": "div#zowieChatbotWrapper",
     "icon": "Zowie.svg",
     "js": {
@@ -1451,17 +1446,28 @@
     "cats": [
       94
     ],
-    "description": "Zuberance is a platform that transforms enthusiastic customers into a marketing force, driving recommendations and sales for leading B2B and B2C brands.",
+    "description": "Zuberance is a platform that transforms enthusiastic customers into a marketing force, driving recommendations and sales for B2B and B2C brands.",
     "dom": "link[href*='static.zuberance.com/']",
     "icon": "Zuberance.svg",
     "saas": true,
     "scriptSrc": "\\.zuberance\\.com/",
     "website": "https://zuberance.com"
   },
+  "Zucks": {
+    "cats": [
+      36
+    ],
+    "description": "Zucks is an advertising platform that connects advertisers with publishers seeking to place and manage digital advertisements across various channels.",
+    "icon": "Zucks.svg",
+    "saas": true,
+    "scripts": "\\.zucks\\.net",
+    "website": "https://zucks.co.jp"
+  },
   "Zulip": {
     "cats": [
       52
     ],
+    "cpe": "cpe:2.3:a:zulip:zulip:*:*:*:*:*:*:*:*",
     "description": "Zulip is a team chat platform that organizes conversations into topic-based threads to support asynchronous communication for distributed teams.",
     "icon": "Zulip.svg",
     "pricing": [
