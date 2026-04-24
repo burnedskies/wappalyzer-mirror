@@ -23,10 +23,10 @@
 }
 
 body {
-  background: var(--color-primary);
+  background: var(--color-background);
   color: var(--color-text);
   direction: __MSG_@@bidi_dir__;
-	font-family: Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, sans-serif;
   font-size: .9rem;
   line-height: 1.5rem;
 	margin: 0;
@@ -52,7 +52,7 @@ a, a:focus, a:hover {
 }
 
 p {
-  margin: 0 0 .5rem 0;
+  margin: 0 0 1rem 0;
 }
 
 .light-text {
@@ -81,20 +81,22 @@ p {
 }
 
 .button__link, .button__link:active, .button__link:hover {
-  color: var(--color-primary);
+  background: var(--color-primary);
+  border-radius: 4px;
+  color: white;
   cursor: pointer;
   display: inline-block;
   font-size: .85rem;
   font-weight: bold;
-  margin: -.3rem -1rem -.5rem 0;
-  padding: .4rem 1rem .3rem 1rem;
+  margin: 0;
+  padding: .4rem 1.1rem .3rem 1.1rem;
   position: relative;
   text-decoration: none;
   text-align: right;
 }
 
 .button__link:before {
-  background: var(--color-primary);
+  background: white;
   border-radius: 4px;
   content: '';
   position: absolute;
@@ -106,7 +108,7 @@ p {
 }
 
 .button__link:hover:before {
-  opacity: .1;
+  opacity: .12;
 }
 
 .button__icon {
@@ -122,6 +124,22 @@ p {
 
 .button__icon--right {
   margin: 0 -.4rem .2rem .2rem;
+}
+
+.plus-download__button .button__link {
+  background: none;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  font-weight: 500;
+  padding: .1rem .7rem .1rem .9rem
+}
+
+.plus-download__button .button__icon {
+  height: 1rem;
+  width: 1rem;
+  margin-bottom: .1rem;
+  margin-right: .1rem;
+  vertical-align: middle;
 }
 
 .label {
@@ -374,8 +392,8 @@ small {
 }
 
 .message__heading {
-  font-size: .9rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 500;
   margin: .5rem 0;
 }
 
@@ -387,7 +405,6 @@ small {
 }
 
 .message__button {
-  text-align: right;
 }
 
 .plus-configure__form {
@@ -521,7 +538,6 @@ small {
 }
 
 .footer__button {
-  text-align: right;
 }
 
 .footer--collapsed .footer__button {
@@ -575,7 +591,6 @@ small {
 
 .category__link, .category__link:active, .category__link:hover {
   color: var(--color-text);
-  font-weight: bold;
   line-height: 2rem;
   text-decoration: none;
 }
@@ -629,13 +644,12 @@ body.dynamic-icon .category__heading:hover .category__pin {
 }
 
 .technology__icon {
-	box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background-color: var(--color-secondary);
   border-radius: 50%;
   flex: 0 0 auto;
   display: inline-flex;
   height: 32px;
-  margin-right: .5rem;
+  margin-right: .3rem;
   overflow: hidden;
   width: 32px;
 }
@@ -671,12 +685,23 @@ body.dynamic-icon .category__heading:hover .category__pin {
 }
 
 .technology__link:active .technology__icon, .technology__link:hover .technology__icon {
-	box-shadow: 0px 2px 1px -3px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.technology__text {
+  align-items: center;
+  column-gap: .3rem;
+  display: inline-flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  min-width: 0;
+  row-gap: .2rem;
 }
 
 .technology__name {
   font-size: .85rem;
+  line-height: 1.35;
   letter-spacing: .5px;
+  min-width: 0;
   text-decoration: underline;
 }
 
@@ -695,10 +720,12 @@ body.dynamic-icon .category__heading:hover .category__pin {
   background: var(--color-secondary);
   color: var(--color-text);
   border-radius: 3px;
+  display: inline-flex;
   font-size: .7rem;
-  padding: .1rem .3rem;
-  margin-left: .3rem;
+  line-height: 1;
+  padding: .15rem .3rem;
   vertical-align: middle;
+  white-space: nowrap;
 }
 
 .terms {
@@ -850,7 +877,7 @@ body.dynamic-icon .category__heading:hover .category__pin {
 }
 
 .dark .button__link, .dark .button__link:active, .dark .button__link:hover {
-  color: var(--color-text-dark);
+  color: white;
 }
 
 .dark .button__link:before {

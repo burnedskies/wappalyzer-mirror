@@ -24,6 +24,15 @@ const LANGUAGE_DETECTION_MIN_ALPHA_CHARS = 120
 const LANGUAGE_DETECTION_MIN_WORDS = 20
 const LANGUAGE_DETECTION_MIN_PERCENTAGE = 85
 const LANGUAGE_DETECTION_MIN_MARGIN = 25
+const TEXT_SKIP_TAGS = new Set([
+  'script',
+  'style',
+  'noscript',
+  'template',
+  'title',
+  'desc',
+  'metadata',
+])
 
 function normalizeLanguageTag(value = '') {
   const tokens = `${value || ''}`
@@ -49,17 +58,190 @@ function getBaseLanguage(value = '') {
   return language ? language.split('-')[0] : ''
 }
 
+function getRequiredTechnologyNames(technologies = []) {
+  return [
+    ...new Set(
+      (Array.isArray(technologies) ? technologies : [])
+        .map((technology) => technology?.name)
+        .filter(Boolean)
+    ),
+  ]
+}
+
+function collectVisibleText(maxLength) {
+  const body = document.body
+
+  if (!body || maxLength <= 0) {
+    return ''
+  }
+
+  const elementStateCache = new WeakMap()
+  let text = ''
+  let pendingSpace = false
+  const stack = [{ node: body, exiting: false }]
+  const applyTextTransform = (value, textTransform) => {
+    switch (textTransform) {
+      case 'uppercase':
+        return value.toLocaleUpperCase()
+      case 'lowercase':
+        return value.toLocaleLowerCase()
+      case 'capitalize':
+        return value.replace(
+          /(^|[^\p{L}\p{N}]+)(\p{L})/gu,
+          (_, prefix, char) => `${prefix}${char.toLocaleUpperCase()}`
+        )
+      default:
+        return value
+    }
+  }
+
+  const getElementState = (element) => {
+    if (!element) {
+      return {
+        visible: true,
+        breaksText: false,
+        textTransform: 'none',
+      }
+    }
+
+    if (elementStateCache.has(element)) {
+      return elementStateCache.get(element)
+    }
+
+    const parentState = getElementState(element.parentElement)
+
+    let state
+    const tagName = element.localName
+
+    if (!parentState.visible || TEXT_SKIP_TAGS.has(tagName) || element.hidden) {
+      state = {
+        visible: false,
+        breaksText: false,
+        textTransform: 'none',
+      }
+    } else {
+      const style = getComputedStyle(element)
+      const visible =
+        style.display !== 'none' &&
+        style.visibility !== 'hidden' &&
+        style.visibility !== 'collapse'
+
+      state = {
+        visible,
+        breaksText:
+          visible &&
+          element !== body &&
+          style.display !== 'contents' &&
+          !style.display.startsWith('inline'),
+        textTransform: style.textTransform,
+      }
+    }
+
+    elementStateCache.set(element, state)
+
+    return state
+  }
+
+  while (stack.length && text.length < maxLength) {
+    const { node, exiting } = stack.pop()
+
+    if (exiting) {
+      if (node !== body && getElementState(node).breaksText && text) {
+        pendingSpace = true
+      }
+
+      continue
+    }
+
+    if (node.nodeType === Node.TEXT_NODE) {
+      const raw = node.textContent || ''
+
+      if (!raw) {
+        continue
+      }
+
+      const normalized = applyTextTransform(
+        raw.replace(/\s+/g, ' ').trim(),
+        getElementState(node.parentElement).textTransform
+      )
+
+      if (!normalized) {
+        if (text && /\s/.test(raw)) {
+          pendingSpace = true
+        }
+
+        continue
+      }
+
+      if (text && (pendingSpace || /^\s/.test(raw))) {
+        text += ' '
+
+        if (text.length >= maxLength) {
+          break
+        }
+      }
+
+      const remaining = maxLength - text.length
+
+      text += normalized.slice(0, remaining)
+      pendingSpace = /\s$/.test(raw)
+
+      continue
+    }
+
+    if (node.nodeType !== Node.ELEMENT_NODE) {
+      continue
+    }
+
+    const state = getElementState(node)
+
+    if (!state.visible) {
+      continue
+    }
+
+    if (node.localName === 'br') {
+      if (text) {
+        pendingSpace = true
+      }
+
+      continue
+    }
+
+    if (node !== body && state.breaksText && text) {
+      pendingSpace = true
+    }
+
+    stack.push({ node, exiting: true })
+
+    if (node.localName === 'details' && !node.open) {
+      const summary = Array.from(node.children).find(
+        ({ localName }) => localName === 'summary'
+      )
+
+      if (summary) {
+        stack.push({ node: summary, exiting: false })
+      }
+
+      continue
+    }
+
+    for (let child = node.lastChild; child; child = child.previousSibling) {
+      stack.push({ node: child, exiting: false })
+    }
+  }
+
+  return text.trim()
+}
+
 function getLanguageSampleText() {
-  // eslint-disable-next-line unicorn/prefer-text-content
-  const text = (document.body?.innerText || '').replace(/\s+/g, ' ').trim()
+  const text = collectVisibleText(LANGUAGE_DETECTION_SAMPLE_LENGTH)
 
   if (text.length < LANGUAGE_DETECTION_MIN_TEXT_LENGTH) {
     return ''
   }
 
-  const sample = text.slice(0, LANGUAGE_DETECTION_SAMPLE_LENGTH)
-  const alphaChars = (sample.match(/\p{L}/gu) || []).length
-  const words = sample.match(/\p{L}{2,}/gu) || []
+  const alphaChars = (text.match(/\p{L}/gu) || []).length
+  const words = text.match(/\p{L}{2,}/gu) || []
 
   if (
     alphaChars < LANGUAGE_DETECTION_MIN_ALPHA_CHARS ||
@@ -68,7 +250,7 @@ function getLanguageSampleText() {
     return ''
   }
 
-  return sample
+  return text
 }
 
 function detectLanguageFromVisibleText() {
@@ -108,6 +290,10 @@ function detectLanguageFromVisibleText() {
       resolve(top.language)
     })
   })
+}
+
+function hasHeavySignals({ text = '', css = '', scripts = [] } = {}) {
+  return !!(text || css || scripts.length)
 }
 
 function inject(src, id, message) {
@@ -362,10 +548,7 @@ async function getHeavySignals() {
   await yieldToMain()
 
   // Text
-  // eslint-disable-next-line unicorn/prefer-text-content
-  const text = document.body.innerText
-    .replace(/\s+/g, ' ')
-    .slice(0, MAX_TEXT_LENGTH)
+  const text = collectVisibleText(MAX_TEXT_LENGTH)
 
   // CSS rules
   const css = []
@@ -422,6 +605,10 @@ const Content = {
   language: '',
 
   analyzedRequires: [],
+
+  error(error) {
+    return Content.driver('error', error)
+  },
 
   /**
    * Initialise content script
@@ -510,15 +697,25 @@ const Content = {
 
       await Content.onGetTechnologies(technologies)
 
-      Object.assign(Content.cache, await getHeavySignals())
+      const heavySignals = await getHeavySignals()
+
+      Object.assign(Content.cache, heavySignals)
 
       Content.analyzedRequires = []
 
-      await Content.driver('onContentLoad', [
-        url,
-        Content.cache,
-        Content.language,
-      ])
+      if (hasHeavySignals(heavySignals)) {
+        await Content.driver('onContentLoad', [
+          url,
+          heavySignals,
+          Content.language,
+          undefined,
+          undefined,
+          {
+            includeUrl: false,
+            skipCookies: true,
+          },
+        ])
+      }
 
       // Delayed second pass to capture async JS
       await new Promise((resolve) => setTimeout(resolve, 5000))
@@ -552,7 +749,13 @@ const Content = {
 
     Promise.resolve(Content[func].call(Content[func], ...(args || [])))
       .then(callback)
-      .catch(Content.error)
+      .catch((error) => {
+        Content.error(error)
+
+        if (typeof callback === 'function') {
+          callback()
+        }
+      })
 
     return !!callback
   },
@@ -573,18 +776,23 @@ const Content = {
               : [],
         },
         (response) => {
-          chrome.runtime.lastError
-            ? func === 'error'
-              ? resolve()
-              : Content.driver(
-                  'error',
-                  new Error(
-                    `${
-                      chrome.runtime.lastError.message
-                    }: Driver.${func}(${JSON.stringify(args)})`
-                  )
-                )
-            : resolve(response)
+          if (!chrome.runtime.lastError) {
+            resolve(response)
+
+            return
+          }
+
+          if (func !== 'error') {
+            Content.error(
+              new Error(
+                `${
+                  chrome.runtime.lastError.message
+                }: Driver.${func}(${JSON.stringify(args)})`
+              )
+            )
+          }
+
+          resolve()
         }
       )
     })
@@ -592,27 +800,41 @@ const Content = {
 
   async analyzeRequires(url, requires) {
     await Promise.all(
-      requires.map(async ({ name, categoryId, technologies }) => {
-        const id = categoryId ? `category:${categoryId}` : `technology:${name}`
+      (Array.isArray(requires) ? requires : [])
+        .filter(Boolean)
+        .map(async ({ name, categoryId, technologies }) => {
+          const id = categoryId
+            ? `category:${categoryId}`
+            : `technology:${name}`
+          const requiredTechnologyNames =
+            getRequiredTechnologyNames(technologies)
 
-        if (
-          !Content.analyzedRequires.includes(id) &&
-          Object.keys(Content.cache).length
-        ) {
-          Content.analyzedRequires.push(id)
+          if (
+            !Content.analyzedRequires.includes(id) &&
+            Object.keys(Content.cache).length
+          ) {
+            Content.analyzedRequires.push(id)
 
-          await Promise.all([
-            Content.onGetTechnologies(technologies, name, categoryId),
-            Content.driver('onContentLoad', [
-              url,
-              Content.cache,
-              Content.language,
-              name,
-              categoryId,
-            ]),
-          ])
-        }
-      })
+            await Promise.all([
+              Content.onGetTechnologies(
+                technologies,
+                name,
+                categoryId,
+                requiredTechnologyNames
+              ),
+              Content.driver('onContentLoad', [
+                url,
+                Content.cache,
+                Content.language,
+                name,
+                categoryId,
+                {
+                  requiredTechnologyNames,
+                },
+              ]),
+            ])
+          }
+        })
     )
   },
 
@@ -620,15 +842,35 @@ const Content = {
    * Callback for getTechnologies
    * @param {Array} technologies
    */
-  async onGetTechnologies(technologies = [], requires, categoryRequires) {
+  async onGetTechnologies(
+    technologies = [],
+    requires,
+    categoryRequires,
+    requiredTechnologyNames
+  ) {
     const url = location.href
+    const validTechnologies = (
+      Array.isArray(technologies) ? technologies : []
+    ).filter(Boolean)
 
-    const js = await getJs(technologies)
-    const dom = await getDom(technologies)
+    const js = await getJs(validTechnologies)
+    const dom = await getDom(validTechnologies)
 
     await Promise.all([
-      Content.driver('analyzeJs', [url, js, requires, categoryRequires]),
-      Content.driver('analyzeDom', [url, dom, requires, categoryRequires]),
+      Content.driver('analyzeJs', [
+        url,
+        js,
+        requires,
+        categoryRequires,
+        requiredTechnologyNames,
+      ]),
+      Content.driver('analyzeDom', [
+        url,
+        dom,
+        requires,
+        categoryRequires,
+        requiredTechnologyNames,
+      ]),
     ])
   },
 }

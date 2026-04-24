@@ -1,21 +1,6 @@
 {
-  "github": {
-    "message": "Fork Wappalyzer trên GitHub!"
-  },
-  "twitter": {
-    "message": "Theo dõi Wappalyzer trên Twitter"
-  },
-  "website": {
-    "message": "Đi đến wappalyzer.com"
-  },
   "options": {
     "message": "Tùy chọn"
-  },
-  "optionsSave": {
-    "message": "Lưu tùy chọn"
-  },
-  "optionsSaved": {
-    "message": "Đã lưu"
   },
   "optionUpgradeMessage": {
     "message": "Thông báo về các bản nâng cấp"
@@ -25,9 +10,6 @@
   },
   "optionTracking": {
     "message": "Gửi thông tin về các công nghệ đã xác định một cách ẩn danh đến wappalyzer.com"
-  },
-  "optionThemeMode": {
-    "message": "Kích hoạt chế độ tương thích chế độ tối"
   },
   "optionBadge": {
     "message": "Hiển thị số công nghệ đã xác định trên biểu trưng"
@@ -47,14 +29,19 @@
   "clearCache": {
     "message": "Xóa các kết quả xác định trong bộ nhớ đệm"
   },
-  "nothingToDo": {
-    "message": "Không có gì để thực hiện ở đây."
-  },
   "noAppsDetected": {
     "message": "Không xác định được công nghệ nào."
   },
   "reloadPage": {
     "message": "Tải lại"
+  },
+  "confidenceSure": {
+    "message": "Độ chắc chắn $CONFIDENCE$%",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
   },
   "categoryPin": {
     "message": "Luôn hiển thị biểu trưng"
@@ -71,20 +58,14 @@
   "privacyPolicy": {
     "message": "Chính sách bảo mật"
   },
-  "createAlert": {
-    "message": "Tạo cảnh báo cho trang web này"
-  },
-  "leadLists": {
-    "message": "Công cụ tạo khách hàng tiềm năng"
-  },
   "tabTechnologies": {
     "message": "Công nghệ"
   },
   "tabPlus": {
     "message": "Thông tin thêm"
   },
-  "creditBalance": {
-    "message": "Số dư tín dụng:"
+  "exportCsv": {
+    "message": "Xuất"
   },
   "plusMessageHeading": {
     "message": "Nhận Plus với $$10/tháng"
@@ -100,6 +81,71 @@
   },
   "plusCrawl": {
     "message": "Không tìm thấy kết quả, vui lòng kiểm tra lại sau."
+  },
+  "apiKeyPendingActivation": {
+    "message": "API key mới có thể mất vài phút để kích hoạt. Vui lòng chờ một chút rồi thử lại."
+  },
+  "plusErrorGeneric": {
+    "message": "Xin lỗi, đã xảy ra lỗi. Vui lòng thử lại sau."
+  },
+  "plusErrorStatus": {
+    "message": "Xin lỗi, đã xảy ra lỗi ($STATUS$). Vui lòng thử lại sau.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "Không có quyền truy cập. Vui lòng kiểm tra API key của bạn."
+  },
+  "plusErrorTooManyRequests": {
+    "message": "Quá nhiều yêu cầu. Vui lòng thử lại sau vài giây."
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
   },
   "formSave": {
     "message": "Lưu"
@@ -145,6 +191,21 @@
   },
   "attributeTechnologySpend": {
     "message": "Chi phí công nghệ"
+  },
+  "spendVeryHigh": {
+    "message": "Rất cao"
+  },
+  "spendHigh": {
+    "message": "Cao"
+  },
+  "spendMedium": {
+    "message": "Trung bình"
+  },
+  "spendLow": {
+    "message": "Thấp"
+  },
+  "spendVeryLow": {
+    "message": "Rất thấp"
   },
   "attributeIpCountry": {
     "message": "Quốc gia IP"
@@ -238,9 +299,6 @@
   },
   "attributeCertInfo_validTo": {
     "message": "Ngày hết hạn chứng chỉ"
-  },
-  "attributeHttps": {
-    "message": "Kích hoạt SSL/TLS"
   },
   "attributeTrackerGoogleAnalytics": {
     "message": "Google Analytics"
@@ -425,9 +483,6 @@
   "categoryName39": {
     "message": "Webcam"
   },
-  "categoryName40": {
-    "message": "Máy in"
-  },
   "categoryName41": {
     "message": "Các trình xử lý thanh toán"
   },
@@ -481,9 +536,6 @@
   },
   "categoryName60": {
     "message": "Các công cụ chứa"
-  },
-  "categoryName61": {
-    "message": "SaaS"
   },
   "categoryName62": {
     "message": "PaaS"

@@ -713,7 +713,7 @@
     "description": "Tailwind CSS is a utility-first CSS framework for building custom user interfaces.",
     "dom": {
       "body [class]": {
-        "class": "\\b(?:flex|grid|text-(?:xs|sm|base|lg|xl)|bg-[a-z]+-[0-9]{3}|px-\\d+|py-\\d+|rounded(?:-[a-z]+)?|shadow(?:-[a-z]+)?)\\b\\;confidence:50"
+        "class": "\\b(?:flex|grid|text-(?:xs|sm|base|lg|xl)|bg-[a-z]+-[0-9]{3}|px-\\d+|py-\\d+|rounded(?:-[a-z]+)?|shadow(?:-[a-z]+)?|[a-z-]+-\\[[^\\]]+\\])\\b\\;confidence:50"
       },
       "link[rel='stylesheet'][href*='.css']": {
         "attributes": {
@@ -944,7 +944,11 @@
       59
     ],
     "description": "TanStack is a set of headless JavaScript libraries for building web application features such as data fetching, tables, routing, virtualization, and state management.",
-    "dom": "link[href*='@tanstack']",
+    "dom": [
+      "link[href*='@tanstack']",
+      "link[rel='modulepreload'][href*='tanstack-query-']",
+      "link[rel='modulepreload'][href*='tanstack-router-']"
+    ],
     "icon": "TanStack.svg",
     "oss": true,
     "scriptSrc": "/static/.*npm\\.tanstack.*\\.js",

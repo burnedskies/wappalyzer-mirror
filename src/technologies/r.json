@@ -4223,6 +4223,17 @@
     "saas": true,
     "website": "https://rive.app"
   },
+  "Rivo": {
+    "cats": [
+      84
+    ],
+    "description": "Rivo is a Shopify loyalty and referrals platform.",
+    "icon": "Rivo.png",
+    "requires": "Shopify",
+    "saas": true,
+    "scriptSrc": "cdn\\.shopify\\.com/extensions/[^/]+/rivo-loyalty-rewards-referrals-\\d+/assets/rivo-app-embed\\.js",
+    "website": "https://www.rivo.io"
+  },
   "Rivyo": {
     "cats": [
       100

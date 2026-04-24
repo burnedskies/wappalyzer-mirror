@@ -1,0 +1,690 @@
+{
+  "options": {
+    "message": "ตัวเลือก"
+  },
+  "optionUpgradeMessage": {
+    "message": "บอกฉันเกี่ยวกับการอัพเกรด"
+  },
+  "optionDynamicIcon": {
+    "message": "ใช้ไอคอนเทคโนโลยีแทนโลโก้ Wappalyzer"
+  },
+  "optionTracking": {
+    "message": "ส่งข้อมูลเทคโนโลยีที่ระบุตัวตนไปที่ wappalyzer.com"
+  },
+  "optionBadge": {
+    "message": "แสดงจำนวนเทคโนโลยีที่ระบุบนไอคอน"
+  },
+  "optionShowCached": {
+    "message": "รวมการตรวจจับที่แคชไว้ในผลลัพธ์"
+  },
+  "optionApiKey": {
+    "message": "คีย์ API"
+  },
+  "optionApiKeyDescription": {
+    "message": "รับคีย์ API ของคุณ"
+  },
+  "disableOnDomain": {
+    "message": "ปิดการใช้งานบนเว็บไซต์นี้"
+  },
+  "clearCache": {
+    "message": "ล้างการตรวจหาแคช"
+  },
+  "noAppsDetected": {
+    "message": "ไม่พบเทคโนโลยี"
+  },
+  "reloadPage": {
+    "message": "โหลด"
+  },
+  "confidenceSure": {
+    "message": "$CONFIDENCE$% มั่นใจ",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
+  },
+  "categoryPin": {
+    "message": "แสดงไอคอนเสมอ"
+  },
+  "termsAccept": {
+    "message": "ฉันโอเคกับ"
+  },
+  "termsDecline": {
+    "message": "ปิดการใช้งาน"
+  },
+  "termsContent": {
+    "message": "ส่วนขยายนี้ส่งข้อมูลที่ไม่ระบุตัวตนเกี่ยวกับเว็บไซต์ที่คุณเยี่ยมชม รวมถึงชื่อโดเมนและเทคโนโลยีที่ระบุไปที่ <a href='https://www.wappalyzer.com'>wappalyzer.com</a> นี้สามารถปิดการใช้งานได้ในการตั้งค่า"
+  },
+  "privacyPolicy": {
+    "message": "นโยบายความเป็นส่วนตัว"
+  },
+  "tabTechnologies": {
+    "message": "เทคโนโลยี"
+  },
+  "tabPlus": {
+    "message": "ข้อมูลเพิ่มเติม"
+  },
+  "exportCsv": {
+    "message": "ส่งออก"
+  },
+  "plusMessageHeading": {
+    "message": "รับเพิ่มในราคา $$10/mo"
+  },
+  "plusMessage": {
+    "message": "เมื่อใช้ Plus รายละเอียดบริษัทและข้อมูลติดต่อของเว็บไซต์ที่คุณเยี่ยมชมจะแสดงที่นี่"
+  },
+  "plusButton": {
+    "message": "สมัครสมาชิก"
+  },
+  "plusEmpty": {
+    "message": "ไม่พบผลลัพธ์"
+  },
+  "plusCrawl": {
+    "message": "ไม่พบผลลัพธ์ โปรดตรวจสอบอีกครั้งในภายหลัง"
+  },
+  "apiKeyPendingActivation": {
+    "message": "คีย์ API ใหม่อาจใช้เวลาสักครู่ในการเปิดใช้งาน กรุณารอสักครู่แล้วลองอีกครั้ง"
+  },
+  "plusErrorGeneric": {
+    "message": "ขออภัย มีบางอย่างผิดพลาด โปรดลองอีกครั้งในภายหลัง"
+  },
+  "plusErrorStatus": {
+    "message": "ขออภัย มีบางอย่างผิดพลาด ($STATUS$) โปรดลองอีกครั้งในภายหลัง",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "ไม่มีการเข้าถึง โปรดตรวจสอบคีย์ API ของคุณ"
+  },
+  "plusErrorTooManyRequests": {
+    "message": "มีคำขอมากเกินไป โปรดลองอีกครั้งในอีกไม่กี่วินาที"
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
+  },
+  "formSave": {
+    "message": "บันทึก"
+  },
+  "issue": {
+    "message": "มีบางอย่างผิดปกติหรือหายไป?"
+  },
+  "setCompany": {
+    "message": "ข้อมูลบริษัท"
+  },
+  "setKeywords": {
+    "message": "คีย์เวิร์ด"
+  },
+  "setEmail": {
+    "message": "ที่อยู่อีเมล"
+  },
+  "setPhone": {
+    "message": "หมายเลขโทรศัพท์"
+  },
+  "setAddress": {
+    "message": "ที่อยู่"
+  },
+  "setContact": {
+    "message": "รายละเอียดการติดต่อ"
+  },
+  "setSocial": {
+    "message": "บัญชีโซเชียลมีเดีย"
+  },
+  "setMeta": {
+    "message": "ข้อมูลเมตา"
+  },
+  "setLocale": {
+    "message": "สถานที่"
+  },
+  "setTrackers": {
+    "message": "Z ตัวติดตาม"
+  },
+  "setSecurity": {
+    "message": "ความปลอดภัย"
+  },
+  "setSignals": {
+    "message": "สัญญาณ"
+  },
+  "attributeTechnologySpend": {
+    "message": "เทคโนโลยีใช้จ่าย"
+  },
+  "spendVeryHigh": {
+    "message": "สูงมาก"
+  },
+  "spendHigh": {
+    "message": "สูง"
+  },
+  "spendMedium": {
+    "message": "กลาง"
+  },
+  "spendLow": {
+    "message": "ต่ำ"
+  },
+  "spendVeryLow": {
+    "message": "ต่ำมาก"
+  },
+  "attributeIpCountry": {
+    "message": "IP ประเทศ"
+  },
+  "attributeIpRegion": {
+    "message": "ภูมิภาค IP"
+  },
+  "attributeLanguage": {
+    "message": "ภาษา"
+  },
+  "attributeEmail": {
+    "message": "ที่อยู่อีเมล"
+  },
+  "attributeVerifiedEmail": {
+    "message": "ที่อยู่อีเมล (ยืนยันแล้ว)"
+  },
+  "attributeSafeEmail": {
+    "message": "ที่อยู่อีเมล (ปลอดภัย)"
+  },
+  "attributePhone": {
+    "message": "หมายเลขโทรศัพท์"
+  },
+  "attributeSkype": {
+    "message": "สไกป์"
+  },
+  "attributeWhatsapp": {
+    "message": "Z WhatsApp"
+  },
+  "attributeInferredCompanyName": {
+    "message": "ชื่อบริษัทที่อนุมาน"
+  },
+  "attributeTwitter": {
+    "message": "ทวิตเตอร์"
+  },
+  "attributeFacebook": {
+    "message": "Z เฟสบุค"
+  },
+  "attributeInstagram": {
+    "message": "อินสตาแกรม"
+  },
+  "attributeGithub": {
+    "message": "GitHub"
+  },
+  "attributeTiktok": {
+    "message": "ติ๊กต๊อก"
+  },
+  "attributeYoutube": {
+    "message": "ยูทูป"
+  },
+  "attributePinterest": {
+    "message": "Pinterest"
+  },
+  "attributeLinkedin": {
+    "message": "LinkedIn"
+  },
+  "attributeOwler": {
+    "message": "นกฮูก"
+  },
+  "attributeTitle": {
+    "message": "หัวข้อ"
+  },
+  "attributeDescription": {
+    "message": "คำอธิบาย"
+  },
+  "attributeCopyright": {
+    "message": "ลิขสิทธิ์"
+  },
+  "attributeCopyrightYear": {
+    "message": "ลิขสิทธิ์ปี"
+  },
+  "attributeResponsive": {
+    "message": "ตอบสนอง"
+  },
+  "attributeCertInfo_subjectOrg": {
+    "message": "องค์กรรับรอง"
+  },
+  "attributeCertInfo_subjectCountry": {
+    "message": "ประเทศใบรับรอง"
+  },
+  "attributeCertInfo_subjectState": {
+    "message": "สถานะใบรับรอง"
+  },
+  "attributeCertInfo_subjectLocality": {
+    "message": "ใบรับรองท้องที่"
+  },
+  "attributeCertInfo_issuer": {
+    "message": "ผู้ออกใบรับรอง"
+  },
+  "attributeCertInfo_protocol": {
+    "message": "โปรโตคอลใบรับรอง"
+  },
+  "attributeCertInfo_validTo": {
+    "message": "ใบรับรองหมดอายุ"
+  },
+  "attributeTrackerGoogleAnalytics": {
+    "message": "Google Analytics"
+  },
+  "attributeTrackerGoogleAdSense": {
+    "message": "Google AdSense"
+  },
+  "attributeTrackerMedianet": {
+    "message": "มีเดียเน็ต"
+  },
+  "attributeTrackerFacebook": {
+    "message": "Z เฟสบุ๊ค"
+  },
+  "attributeTrackerOptimizely": {
+    "message": "ปรับ"
+  },
+  "attributeCompanyName": {
+    "message": "ชื่อบริษัท"
+  },
+  "attributeIndustry": {
+    "message": "อุตสาหกรรม"
+  },
+  "attributeAbout": {
+    "message": "เกี่ยวกับ"
+  },
+  "attributeLocations": {
+    "message": "ที่ตั้ง"
+  },
+  "attributeCompanySize": {
+    "message": "ขนาดบริษัท"
+  },
+  "attributeCompanyType": {
+    "message": "ประเภทบริษัท"
+  },
+  "attributeCompanyFounded": {
+    "message": "ก่อตั้งบริษัท"
+  },
+  "attributeKeywords": {
+    "message": "คีย์เวิร์ด"
+  },
+  "attributeEmployees": {
+    "message": "คน"
+  },
+  "attributeDns_spf": {
+    "message": "บันทึก SPF"
+  },
+  "attributeDns_dmarc": {
+    "message": "บันทึก DMARC"
+  },
+  "attributeSchemaOrgTypes": {
+    "message": "schema.org ประเภท"
+  },
+  "attributeFundingTotalUsd": {
+    "message": "เงินทุนทั้งหมด"
+  },
+  "attributeFundingRounds": {
+    "message": "การระดมทุนรอบ"
+  },
+  "attributeStockSymbol": {
+    "message": "ชื่อย่อหุ้น"
+  },
+  "attributeSemrushGlobalRank": {
+    "message": "Semrush อันดับทั่วโลก"
+  },
+  "attributeSemrushVisits": {
+    "message": "Semrush เยี่ยมชมทุกเดือน"
+  },
+  "categoryName1": {
+    "message": "CMS"
+  },
+  "categoryName2": {
+    "message": "กระดานข้อความ"
+  },
+  "categoryName3": {
+    "message": "ผู้จัดการฐานข้อมูล"
+  },
+  "categoryName4": {
+    "message": "เครื่องมือเอกสาร"
+  },
+  "categoryName5": {
+    "message": "วิดเจ็ต"
+  },
+  "categoryName6": {
+    "message": "อีคอมเมิร์ซ"
+  },
+  "categoryName7": {
+    "message": "แกลเลอรี่ภาพ"
+  },
+  "categoryName8": {
+    "message": "วิกิ"
+  },
+  "categoryName9": {
+    "message": "แผงโฮสติ้ง"
+  },
+  "categoryName10": {
+    "message": "การวิเคราะห์"
+  },
+  "categoryName11": {
+    "message": "บล็อก"
+  },
+  "categoryName12": {
+    "message": "เฟรมเวิร์กจาวาสคริปต์"
+  },
+  "categoryName13": {
+    "message": "ตัวติดตามปัญหา"
+  },
+  "categoryName14": {
+    "message": "เครื่องเล่นวิดีโอ"
+  },
+  "categoryName15": {
+    "message": "ระบบแสดงความคิดเห็น"
+  },
+  "categoryName16": {
+    "message": "ความปลอดภัย"
+  },
+  "categoryName17": {
+    "message": "ฟอนต์สคริปต์"
+  },
+  "categoryName18": {
+    "message": "กรอบงานเว็บ"
+  },
+  "categoryName19": {
+    "message": "เบ็ดเตล็ด"
+  },
+  "categoryName20": {
+    "message": "ตัวแก้ไข"
+  },
+  "categoryName21": {
+    "message": "LMS"
+  },
+  "categoryName22": {
+    "message": "เว็บเซิร์ฟเวอร์"
+  },
+  "categoryName23": {
+    "message": "กำลังแคช"
+  },
+  "categoryName24": {
+    "message": "โปรแกรมแก้ไขข้อความแบบ Rich Text"
+  },
+  "categoryName25": {
+    "message": "กราฟิก JavaScript"
+  },
+  "categoryName26": {
+    "message": "เฟรมเวิร์กมือถือ"
+  },
+  "categoryName27": {
+    "message": "ภาษาโปรแกรม"
+  },
+  "categoryName28": {
+    "message": "ระบบปฏิบัติการ"
+  },
+  "categoryName29": {
+    "message": "เครื่องมือค้นหา"
+  },
+  "categoryName30": {
+    "message": "เว็บเมล"
+  },
+  "categoryName31": {
+    "message": "CDN"
+  },
+  "categoryName32": {
+    "message": "ระบบการตลาดอัตโนมัติ"
+  },
+  "categoryName33": {
+    "message": "ส่วนขยายเว็บเซิร์ฟเวอร์"
+  },
+  "categoryName34": {
+    "message": "ฐานข้อมูล"
+  },
+  "categoryName35": {
+    "message": "แผนที่"
+  },
+  "categoryName36": {
+    "message": "โฆษณา"
+  },
+  "categoryName37": {
+    "message": "บริการเครือข่าย"
+  },
+  "categoryName38": {
+    "message": "เซิร์ฟเวอร์สื่อ"
+  },
+  "categoryName39": {
+    "message": "เว็บแคม"
+  },
+  "categoryName41": {
+    "message": "ผู้ประมวลผลการชำระเงิน"
+  },
+  "categoryName42": {
+    "message": "ตัวจัดการแท็ก"
+  },
+  "categoryName44": {
+    "message": "Z CI"
+  },
+  "categoryName46": {
+    "message": "การเข้าถึงระยะไกล"
+  },
+  "categoryName47": {
+    "message": "การพัฒนา"
+  },
+  "categoryName48": {
+    "message": "ที่เก็บข้อมูลเครือข่าย"
+  },
+  "categoryName49": {
+    "message": "ตัวอ่านฟีด"
+  },
+  "categoryName50": {
+    "message": "DMS"
+  },
+  "categoryName51": {
+    "message": "ตัวสร้างเพจ"
+  },
+  "categoryName52": {
+    "message": "แชทสด"
+  },
+  "categoryName53": {
+    "message": "CRM"
+  },
+  "categoryName54": {
+    "message": "Z ซอ"
+  },
+  "categoryName55": {
+    "message": "การบัญชี"
+  },
+  "categoryName56": {
+    "message": "นักขุดคริปโต"
+  },
+  "categoryName57": {
+    "message": "เครื่องกำเนิดไฟฟ้าไซต์แบบคงที่"
+  },
+  "categoryName58": {
+    "message": "ผู้ใช้เริ่มต้นใช้งาน"
+  },
+  "categoryName59": {
+    "message": "ไลบรารีจาวาสคริปต์"
+  },
+  "categoryName60": {
+    "message": "ตู้คอนเทนเนอร์"
+  },
+  "categoryName62": {
+    "message": "PaaS"
+  },
+  "categoryName63": {
+    "message": "IaaS"
+  },
+  "categoryName64": {
+    "message": "พร็อกซีย้อนกลับ"
+  },
+  "categoryName65": {
+    "message": "โหลดบาลานเซอร์"
+  },
+  "categoryName66": {
+    "message": "เฟรมเวิร์ก UI"
+  },
+  "categoryName67": {
+    "message": "การปฏิบัติตามข้อกำหนดของคุกกี้"
+  },
+  "categoryName68": {
+    "message": "การเข้าถึง"
+  },
+  "categoryName69": {
+    "message": "การรับรองความถูกต้อง"
+  },
+  "categoryName70": {
+    "message": "ผู้ออกใบรับรอง SSL/TLS"
+  },
+  "categoryName71": {
+    "message": "โปรแกรมพันธมิตร"
+  },
+  "categoryName72": {
+    "message": "กำหนดการนัดหมาย"
+  },
+  "categoryName73": {
+    "message": "แบบสำรวจ"
+  },
+  "categoryName74": {
+    "message": "การทดสอบ A/B"
+  },
+  "categoryName75": {
+    "message": "อีเมล์"
+  },
+  "categoryName76": {
+    "message": "การปรับแต่งส่วนบุคคล"
+  },
+  "categoryName77": {
+    "message": "การกำหนดเป้าหมายใหม่"
+  },
+  "categoryName78": {
+    "message": "รัม"
+  },
+  "categoryName79": {
+    "message": "ตำแหน่งทางภูมิศาสตร์"
+  },
+  "categoryName80": {
+    "message": "ธีมเวิร์ดเพรส"
+  },
+  "categoryName81": {
+    "message": "ธีม Shopify"
+  },
+  "categoryName82": {
+    "message": "ธีม Drupal"
+  },
+  "categoryName83": {
+    "message": "พิมพ์ลายนิ้วมือเบราว์เซอร์"
+  },
+  "categoryName84": {
+    "message": "ความภักดีและรางวัล"
+  },
+  "categoryName85": {
+    "message": "การจัดการคุณสมบัติ"
+  },
+  "categoryName86": {
+    "message": "การแบ่งส่วน"
+  },
+  "categoryName87": {
+    "message": "ปลั๊กอิน WordPress"
+  },
+  "categoryName88": {
+    "message": "โฮสติ้ง"
+  },
+  "categoryName89": {
+    "message": "คำแปล"
+  },
+  "categoryName90": {
+    "message": "รีวิว"
+  },
+  "categoryName91": {
+    "message": "ซื้อเลย จ่ายทีหลัง"
+  },
+  "categoryName92": {
+    "message": "ประสิทธิภาพ"
+  },
+  "categoryName93": {
+    "message": "การจองและการจัดส่ง"
+  },
+  "categoryName94": {
+    "message": "การตลาดแบบอ้างอิง"
+  },
+  "categoryName95": {
+    "message": "การจัดการสินทรัพย์ดิจิทัล"
+  },
+  "categoryName96": {
+    "message": "การดูแลเนื้อหา"
+  },
+  "categoryName97": {
+    "message": "แพลตฟอร์มข้อมูลลูกค้า"
+  },
+  "categoryName98": {
+    "message": "การละทิ้งรถเข็น"
+  },
+  "categoryName99": {
+    "message": "ผู้ให้บริการจัดส่ง"
+  },
+  "categoryName100": {
+    "message": "แอป Shopify"
+  },
+  "categoryName101": {
+    "message": "การสรรหาบุคลากรและบุคลากร"
+  },
+  "categoryName102": {
+    "message": "ส่งกลับ"
+  },
+  "categoryName103": {
+    "message": "ถ่ายทอดสด"
+  },
+  "categoryName104": {
+    "message": "จองตั๋ว"
+  },
+  "categoryName105": {
+    "message": "ความเป็นจริงเสริม"
+  },
+  "categoryName106": {
+    "message": "อีคอมเมิร์ซข้ามพรมแดน"
+  },
+  "categoryName107": {
+    "message": "เติมเต็ม"
+  },
+  "categoryName108": {
+    "message": "อีคอมเมิร์ซส่วนหน้า"
+  },
+  "categoryName109": {
+    "message": "ที่จอดรถโดเมน"
+  },
+  "categoryName110": {
+    "message": "ผู้สร้างแบบฟอร์ม"
+  },
+  "categoryName111": {
+    "message": "การระดมทุนและการบริจาค"
+  }
+}

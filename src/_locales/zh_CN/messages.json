@@ -1,21 +1,6 @@
 {
-  "github": {
-    "message": "在 GitHub 上复刻 Wappalyzer！"
-  },
-  "twitter": {
-    "message": "在 Twitter 上关注 Wappalyzer"
-  },
-  "website": {
-    "message": "前往 wappalyzer.com"
-  },
   "options": {
     "message": "选项"
-  },
-  "optionsSave": {
-    "message": "保存选项"
-  },
-  "optionsSaved": {
-    "message": "已保存"
   },
   "optionUpgradeMessage": {
     "message": "告诉我更新详情"
@@ -25,9 +10,6 @@
   },
   "optionTracking": {
     "message": "匿名发送检测到的技术至 wappalyzer.com"
-  },
-  "optionThemeMode": {
-    "message": "启用深色模式兼容"
   },
   "optionBadge": {
     "message": "在图标上显示检测到技术的个数"
@@ -47,14 +29,19 @@
   "clearCache": {
     "message": "清除检测缓存"
   },
-  "nothingToDo": {
-    "message": "这里无事可做。"
-  },
   "noAppsDetected": {
     "message": "未检测到任何技术。"
   },
   "reloadPage": {
     "message": "重新加载"
+  },
+  "confidenceSure": {
+    "message": "置信度 $CONFIDENCE$%",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
   },
   "categoryPin": {
     "message": "总是显示图标"
@@ -71,20 +58,14 @@
   "privacyPolicy": {
     "message": "隐私政策"
   },
-  "createAlert": {
-    "message": "为该网站创建提醒"
-  },
-  "leadLists": {
-    "message": "潜在客户开发工具"
-  },
   "tabTechnologies": {
     "message": "技术"
   },
   "tabPlus": {
     "message": "更多信息"
   },
-  "creditBalance": {
-    "message": "积分："
+  "exportCsv": {
+    "message": "导出"
   },
   "plusMessageHeading": {
     "message": "以 $$10/月获取 Plus"
@@ -100,6 +81,71 @@
   },
   "plusCrawl": {
     "message": "未找到结果，请稍后再查看。"
+  },
+  "apiKeyPendingActivation": {
+    "message": "新 API 密钥可能需要几分钟才能激活。请稍等片刻后重试。"
+  },
+  "plusErrorGeneric": {
+    "message": "抱歉，出错了。请稍后重试。"
+  },
+  "plusErrorStatus": {
+    "message": "抱歉，出错了 ($STATUS$)。请稍后重试。",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "无法访问。请检查您的 API 密钥。"
+  },
+  "plusErrorTooManyRequests": {
+    "message": "请求过多。请几秒后重试。"
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
   },
   "formSave": {
     "message": "保存"
@@ -145,6 +191,21 @@
   },
   "attributeTechnologySpend": {
     "message": "技术支出"
+  },
+  "spendVeryHigh": {
+    "message": "非常高"
+  },
+  "spendHigh": {
+    "message": "高"
+  },
+  "spendMedium": {
+    "message": "中"
+  },
+  "spendLow": {
+    "message": "低"
+  },
+  "spendVeryLow": {
+    "message": "非常低"
   },
   "attributeIpCountry": {
     "message": "IP 国家"
@@ -238,9 +299,6 @@
   },
   "attributeCertInfo_validTo": {
     "message": "Cert expiry"
-  },
-  "attributeHttps": {
-    "message": "SSL/TLS enabled"
   },
   "attributeTrackerGoogleAnalytics": {
     "message": "Google Analytics"
@@ -425,9 +483,6 @@
   "categoryName39": {
     "message": "网络摄像头"
   },
-  "categoryName40": {
-    "message": "打印机"
-  },
   "categoryName41": {
     "message": "支付处理器"
   },
@@ -481,9 +536,6 @@
   },
   "categoryName60": {
     "message": "容器"
-  },
-  "categoryName61": {
-    "message": "软件即服务（SaaS）"
   },
   "categoryName62": {
     "message": "平台即服务（PaaS）"

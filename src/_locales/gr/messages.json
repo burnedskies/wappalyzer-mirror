@@ -1,21 +1,6 @@
 {
-  "github": {
-    "message": "Κάνε fork το Wappalyzer στο GitHub!"
-  },
-  "twitter": {
-    "message": "Ακολούθησε το Wappalyzer στο Twitter"
-  },
-  "website": {
-    "message": "Πήγαινε στο wappalyzer.com"
-  },
   "options": {
     "message": "Ρυθμίσεις"
-  },
-  "optionsSave": {
-    "message": "Ρυθμίσεις αποθήκευσης"
-  },
-  "optionsSaved": {
-    "message": "Αποθηκεύτηκε"
   },
   "optionUpgradeMessage": {
     "message": "Ενημερώστε με για αναβαθμίσεις"
@@ -25,9 +10,6 @@
   },
   "optionTracking": {
     "message": "Ανώνυμη αποστολή αναφορών για εντοπισμένες εφαρμογές στο wappalyzer.com για έρευνα"
-  },
-  "optionThemeMode": {
-    "message": "Ενεργοποίηση συμβατότητας σκοτεινό τρόπο."
   },
   "optionBadge": {
     "message": "Εμφάνιση του αριθμού των αναγνωρισμένων τεχνολογιών στο εικονίδιο"
@@ -47,14 +29,19 @@
   "clearCache": {
     "message": "Εκκαθάριση ανιχνεύσεων από την προσωρινή μνήμη"
   },
-  "nothingToDo": {
-    "message": "Καμία ενέργεια."
-  },
   "noAppsDetected": {
     "message": "Δεν ανιχνεύθηκαν εφαρμογές."
   },
   "reloadPage": {
     "message": "Επαναφόρτωση"
+  },
+  "confidenceSure": {
+    "message": "$CONFIDENCE$% βεβαιότητα",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
   },
   "categoryPin": {
     "message": "Να εμφανίζεται πάντα το εικονίδιο"
@@ -71,20 +58,14 @@
   "privacyPolicy": {
     "message": "Πολιτική απορρήτου"
   },
-  "createAlert": {
-    "message": "Δημιουργία ειδοποίησης για αυτόν τον ιστότοπο"
-  },
-  "leadLists": {
-    "message": "Εργαλεία δημιουργίας leads"
-  },
   "tabTechnologies": {
     "message": "Τεχνολογίες"
   },
   "tabPlus": {
     "message": "Περισσότερες πληροφορίες"
   },
-  "creditBalance": {
-    "message": "Πιστώσεις:"
+  "exportCsv": {
+    "message": "Εξαγωγή"
   },
   "plusMessageHeading": {
     "message": "Αποκτήστε το Plus με $$10/μήνα"
@@ -100,6 +81,71 @@
   },
   "plusCrawl": {
     "message": "Δεν βρέθηκαν αποτελέσματα, ελέγξτε ξανά αργότερα."
+  },
+  "apiKeyPendingActivation": {
+    "message": "Τα νέα κλειδιά API μπορεί να χρειαστούν λίγα λεπτά για να ενεργοποιηθούν. Περιμένετε λίγο και δοκιμάστε ξανά."
+  },
+  "plusErrorGeneric": {
+    "message": "Λυπούμαστε, κάτι πήγε στραβά. Δοκιμάστε ξανά αργότερα."
+  },
+  "plusErrorStatus": {
+    "message": "Λυπούμαστε, κάτι πήγε στραβά ($STATUS$). Δοκιμάστε ξανά αργότερα.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "Δεν υπάρχει πρόσβαση. Ελέγξτε το κλειδί API σας."
+  },
+  "plusErrorTooManyRequests": {
+    "message": "Πάρα πολλά αιτήματα. Δοκιμάστε ξανά σε λίγα δευτερόλεπτα."
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
   },
   "formSave": {
     "message": "Αποθήκευση"
@@ -145,6 +191,21 @@
   },
   "attributeTechnologySpend": {
     "message": "Δαπάνη τεχνολογίας"
+  },
+  "spendVeryHigh": {
+    "message": "Πολύ υψηλό"
+  },
+  "spendHigh": {
+    "message": "Υψηλό"
+  },
+  "spendMedium": {
+    "message": "Μεσαίο"
+  },
+  "spendLow": {
+    "message": "Χαμηλό"
+  },
+  "spendVeryLow": {
+    "message": "Πολύ χαμηλό"
   },
   "attributeIpCountry": {
     "message": "Χώρα IP"
@@ -238,9 +299,6 @@
   },
   "attributeCertInfo_validTo": {
     "message": "Cert expiry"
-  },
-  "attributeHttps": {
-    "message": "SSL/TLS enabled"
   },
   "attributeTrackerGoogleAnalytics": {
     "message": "Google Analytics"
@@ -425,9 +483,6 @@
   "categoryName39": {
     "message": "Διαδικτυακή κάμερα"
   },
-  "categoryName40": {
-    "message": "Εκτυπωτής"
-  },
   "categoryName41": {
     "message": "Σύστημα Επεξεργασίας Πληρωμών"
   },
@@ -481,9 +536,6 @@
   },
   "categoryName60": {
     "message": "Κοντέινερ"
-  },
-  "categoryName61": {
-    "message": "SaaS"
   },
   "categoryName62": {
     "message": "PaaS"

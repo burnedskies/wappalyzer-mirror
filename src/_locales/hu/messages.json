@@ -1,0 +1,690 @@
+{
+  "options": {
+    "message": "Opciók"
+  },
+  "optionUpgradeMessage": {
+    "message": "Meséljen a frissítésekről"
+  },
+  "optionDynamicIcon": {
+    "message": "Technológia ikon használata a Wappalyzer logó helyett"
+  },
+  "optionTracking": {
+    "message": "Az azonosított technológiák névtelenül küldése a wappalyzer.com címre"
+  },
+  "optionBadge": {
+    "message": "Az azonosított technológiák számának megjelenítése az ikonon"
+  },
+  "optionShowCached": {
+    "message": "Gyorsítótárazott észlelések szerepeltetése az eredmények között"
+  },
+  "optionApiKey": {
+    "message": "API kulcs"
+  },
+  "optionApiKeyDescription": {
+    "message": "szerezze be az API-kulcsot"
+  },
+  "disableOnDomain": {
+    "message": "Letiltása ezen a webhelyen"
+  },
+  "clearCache": {
+    "message": "A gyorsítótárazott észlelések törlése"
+  },
+  "noAppsDetected": {
+    "message": "Nem észlelhető technológia."
+  },
+  "reloadPage": {
+    "message": "Újratöltés"
+  },
+  "confidenceSure": {
+    "message": "$CONFIDENCE$% biztos",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
+  },
+  "categoryPin": {
+    "message": "Mindig mutasd az ikont"
+  },
+  "termsAccept": {
+    "message": "Jól vagyok ezzel a"
+  },
+  "termsDecline": {
+    "message": "-vel"
+  },
+  "termsContent": {
+    "message": "Ez a bővítmény névtelen információkat küld a felkeresett webhelyekről, beleértve a domain nevet és az azonosított technológiákat, a <a href='https://www.wappalyzer.com'>wappalyzer.com</a> címre. Ezt a beállításokban lehet letiltani."
+  },
+  "privacyPolicy": {
+    "message": "Adatvédelmi nyilatkozat"
+  },
+  "tabTechnologies": {
+    "message": "Technológiák"
+  },
+  "tabPlus": {
+    "message": "További információ"
+  },
+  "exportCsv": {
+    "message": "Exportálás"
+  },
+  "plusMessageHeading": {
+    "message": "Plusz $$10/mo"
+  },
+  "plusMessage": {
+    "message": "A Plus-szal itt jelennek meg a felkeresett webhelyek cégei és elérhetőségei."
+  },
+  "plusButton": {
+    "message": "Regisztráljon"
+  },
+  "plusEmpty": {
+    "message": "Nincs találat."
+  },
+  "plusCrawl": {
+    "message": "Nincs találat, kérjük, nézzen vissza később."
+  },
+  "apiKeyPendingActivation": {
+    "message": "Az új API-kulcsok aktiválása eltarthat néhány percig. Kérjük, várjon egy pillanatot, és próbálja újra."
+  },
+  "plusErrorGeneric": {
+    "message": "Sajnáljuk, valami hiba történt. Kérjük, próbálja újra később."
+  },
+  "plusErrorStatus": {
+    "message": "Sajnáljuk, valami hiba történt ($STATUS$). Kérjük, próbálja újra később.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "Nincs hozzáférés. Kérjük, ellenőrizze API-kulcsát."
+  },
+  "plusErrorTooManyRequests": {
+    "message": "Túl sok kérés. Kérjük, próbálja újra néhány másodperc múlva."
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
+  },
+  "formSave": {
+    "message": "Mentés"
+  },
+  "issue": {
+    "message": "Valami nincs rendben vagy hiányzik?"
+  },
+  "setCompany": {
+    "message": "Cégadatok"
+  },
+  "setKeywords": {
+    "message": "Kulcsszavak"
+  },
+  "setEmail": {
+    "message": "E-mail címek"
+  },
+  "setPhone": {
+    "message": "Telefonszámok"
+  },
+  "setAddress": {
+    "message": "Címek"
+  },
+  "setContact": {
+    "message": "Elérhetőségek"
+  },
+  "setSocial": {
+    "message": "Közösségi média fiókok"
+  },
+  "setMeta": {
+    "message": "Metaadatok"
+  },
+  "setLocale": {
+    "message": "Helyszín"
+  },
+  "setTrackers": {
+    "message": "Nyomkövetők"
+  },
+  "setSecurity": {
+    "message": "Biztonság"
+  },
+  "setSignals": {
+    "message": "Jelek"
+  },
+  "attributeTechnologySpend": {
+    "message": "Technológiai költés"
+  },
+  "spendVeryHigh": {
+    "message": "Nagyon magas"
+  },
+  "spendHigh": {
+    "message": "Magas"
+  },
+  "spendMedium": {
+    "message": "Közepes"
+  },
+  "spendLow": {
+    "message": "Alacsony"
+  },
+  "spendVeryLow": {
+    "message": "Nagyon alacsony"
+  },
+  "attributeIpCountry": {
+    "message": "IP ország"
+  },
+  "attributeIpRegion": {
+    "message": "IP-régió"
+  },
+  "attributeLanguage": {
+    "message": "Nyelv"
+  },
+  "attributeEmail": {
+    "message": "E-mail cím"
+  },
+  "attributeVerifiedEmail": {
+    "message": "E-mail cím (ellenőrzött)"
+  },
+  "attributeSafeEmail": {
+    "message": "E-mail cím (biztonságos)"
+  },
+  "attributePhone": {
+    "message": "Telefonszám"
+  },
+  "attributeSkype": {
+    "message": "Skype"
+  },
+  "attributeWhatsapp": {
+    "message": "WhatsApp"
+  },
+  "attributeInferredCompanyName": {
+    "message": "Kikövetkeztetett cégnév"
+  },
+  "attributeTwitter": {
+    "message": "Twitter"
+  },
+  "attributeFacebook": {
+    "message": "Facebook"
+  },
+  "attributeInstagram": {
+    "message": "Instagram"
+  },
+  "attributeGithub": {
+    "message": "GitHub"
+  },
+  "attributeTiktok": {
+    "message": "TikTok"
+  },
+  "attributeYoutube": {
+    "message": "YouTube"
+  },
+  "attributePinterest": {
+    "message": "Pinterest"
+  },
+  "attributeLinkedin": {
+    "message": "LinkedIn"
+  },
+  "attributeOwler": {
+    "message": "Bagoly"
+  },
+  "attributeTitle": {
+    "message": "Cím"
+  },
+  "attributeDescription": {
+    "message": "Leírás"
+  },
+  "attributeCopyright": {
+    "message": "Szerzői jog"
+  },
+  "attributeCopyrightYear": {
+    "message": "Szerzői jog év"
+  },
+  "attributeResponsive": {
+    "message": "Reszponzív"
+  },
+  "attributeCertInfo_subjectOrg": {
+    "message": "Tanúsítvány szervezet"
+  },
+  "attributeCertInfo_subjectCountry": {
+    "message": "Tanúsítvány országa"
+  },
+  "attributeCertInfo_subjectState": {
+    "message": "Tanúsítvány állapota"
+  },
+  "attributeCertInfo_subjectLocality": {
+    "message": "Tanúsítvány helye"
+  },
+  "attributeCertInfo_issuer": {
+    "message": "Tanúsítvány kibocsátója"
+  },
+  "attributeCertInfo_protocol": {
+    "message": "Tanúsítványi protokoll"
+  },
+  "attributeCertInfo_validTo": {
+    "message": "Tanúsítvány lejárata"
+  },
+  "attributeTrackerGoogleAnalytics": {
+    "message": "Google Analytics"
+  },
+  "attributeTrackerGoogleAdSense": {
+    "message": "Google AdSense"
+  },
+  "attributeTrackerMedianet": {
+    "message": "Medianet"
+  },
+  "attributeTrackerFacebook": {
+    "message": "Facebook"
+  },
+  "attributeTrackerOptimizely": {
+    "message": "Optimizely"
+  },
+  "attributeCompanyName": {
+    "message": "Cégnév"
+  },
+  "attributeIndustry": {
+    "message": "Ipar"
+  },
+  "attributeAbout": {
+    "message": "A"
+  },
+  "attributeLocations": {
+    "message": "Helyek"
+  },
+  "attributeCompanySize": {
+    "message": "Vállalat mérete"
+  },
+  "attributeCompanyType": {
+    "message": "Cégtípus"
+  },
+  "attributeCompanyFounded": {
+    "message": "A céget alapította:"
+  },
+  "attributeKeywords": {
+    "message": "Kulcsszavak"
+  },
+  "attributeEmployees": {
+    "message": "Emberek"
+  },
+  "attributeDns_spf": {
+    "message": "SPF rekord"
+  },
+  "attributeDns_dmarc": {
+    "message": "DMARC rekord"
+  },
+  "attributeSchemaOrgTypes": {
+    "message": "schema.org típusú"
+  },
+  "attributeFundingTotalUsd": {
+    "message": "Finanszírozás összesen"
+  },
+  "attributeFundingRounds": {
+    "message": "Finanszírozási körök"
+  },
+  "attributeStockSymbol": {
+    "message": "Részvényszimbólum"
+  },
+  "attributeSemrushGlobalRank": {
+    "message": "Semrush globális rangsor"
+  },
+  "attributeSemrushVisits": {
+    "message": "Semrush havi látogatások"
+  },
+  "categoryName1": {
+    "message": "CMS"
+  },
+  "categoryName2": {
+    "message": "Üzenőtáblák"
+  },
+  "categoryName3": {
+    "message": "Adatbázis-kezelők"
+  },
+  "categoryName4": {
+    "message": "Dokumentációs eszközök"
+  },
+  "categoryName5": {
+    "message": "Widgetek"
+  },
+  "categoryName6": {
+    "message": "E-kereskedelem"
+  },
+  "categoryName7": {
+    "message": "Fényképgalériák"
+  },
+  "categoryName8": {
+    "message": "Wikik"
+  },
+  "categoryName9": {
+    "message": "Tárhelypanelek"
+  },
+  "categoryName10": {
+    "message": "Analitika"
+  },
+  "categoryName11": {
+    "message": "Blogok"
+  },
+  "categoryName12": {
+    "message": "JavaScript keretrendszerek"
+  },
+  "categoryName13": {
+    "message": "Problémakövetők"
+  },
+  "categoryName14": {
+    "message": "Videólejátszók"
+  },
+  "categoryName15": {
+    "message": "Kommentárrendszerek"
+  },
+  "categoryName16": {
+    "message": "Biztonság"
+  },
+  "categoryName17": {
+    "message": "Betűszkriptek"
+  },
+  "categoryName18": {
+    "message": "Webes keretrendszerek"
+  },
+  "categoryName19": {
+    "message": "Vegyes"
+  },
+  "categoryName20": {
+    "message": "Szerkesztő"
+  },
+  "categoryName21": {
+    "message": "LMS"
+  },
+  "categoryName22": {
+    "message": "Webszerverek"
+  },
+  "categoryName23": {
+    "message": "Gyorsítótár"
+  },
+  "categoryName24": {
+    "message": "Gazdag szövegszerkesztők"
+  },
+  "categoryName25": {
+    "message": "JavaScript grafika"
+  },
+  "categoryName26": {
+    "message": "Mobil keretek"
+  },
+  "categoryName27": {
+    "message": "Programozási nyelvek"
+  },
+  "categoryName28": {
+    "message": "Operációs rendszerek"
+  },
+  "categoryName29": {
+    "message": "Keresőmotorok"
+  },
+  "categoryName30": {
+    "message": "Webes levelezés"
+  },
+  "categoryName31": {
+    "message": "CDN"
+  },
+  "categoryName32": {
+    "message": "Marketing automatizálás"
+  },
+  "categoryName33": {
+    "message": "Webszerver-bővítmények"
+  },
+  "categoryName34": {
+    "message": "Adatbázisok"
+  },
+  "categoryName35": {
+    "message": "Térképek"
+  },
+  "categoryName36": {
+    "message": "Reklám"
+  },
+  "categoryName37": {
+    "message": "Hálózati szolgáltatások"
+  },
+  "categoryName38": {
+    "message": "Médiaszerverek"
+  },
+  "categoryName39": {
+    "message": "Webkamerák"
+  },
+  "categoryName41": {
+    "message": "Fizetési processzorok"
+  },
+  "categoryName42": {
+    "message": "Címkekezelők"
+  },
+  "categoryName44": {
+    "message": "CI"
+  },
+  "categoryName46": {
+    "message": "Távhozzáférés"
+  },
+  "categoryName47": {
+    "message": "Fejlesztés"
+  },
+  "categoryName48": {
+    "message": "Hálózati tároló"
+  },
+  "categoryName49": {
+    "message": "Hírcsatorna-leolvasók"
+  },
+  "categoryName50": {
+    "message": "DMS"
+  },
+  "categoryName51": {
+    "message": "Oldalkészítő"
+  },
+  "categoryName52": {
+    "message": "Élő csevegés"
+  },
+  "categoryName53": {
+    "message": "CRM"
+  },
+  "categoryName54": {
+    "message": "SEO"
+  },
+  "categoryName55": {
+    "message": "Könyvelés"
+  },
+  "categoryName56": {
+    "message": "Kriptobányászok"
+  },
+  "categoryName57": {
+    "message": "Statikus helyszíni generátorok"
+  },
+  "categoryName58": {
+    "message": "Felhasználói beléptetés"
+  },
+  "categoryName59": {
+    "message": "JavaScript-könyvtárak"
+  },
+  "categoryName60": {
+    "message": "Konténerek"
+  },
+  "categoryName62": {
+    "message": "PaaS"
+  },
+  "categoryName63": {
+    "message": "IaaS"
+  },
+  "categoryName64": {
+    "message": "Fordított proxyk"
+  },
+  "categoryName65": {
+    "message": "Terheléselosztók"
+  },
+  "categoryName66": {
+    "message": "UI keretrendszerek"
+  },
+  "categoryName67": {
+    "message": "Cookie-megfelelőség"
+  },
+  "categoryName68": {
+    "message": "Kisegítő lehetőségek"
+  },
+  "categoryName69": {
+    "message": "Hitelesítés"
+  },
+  "categoryName70": {
+    "message": "SSL/TLS tanúsító hatóságok"
+  },
+  "categoryName71": {
+    "message": "Társprogramok"
+  },
+  "categoryName72": {
+    "message": "Időpont ütemezés"
+  },
+  "categoryName73": {
+    "message": "Felmérések"
+  },
+  "categoryName74": {
+    "message": "A/B tesztelés"
+  },
+  "categoryName75": {
+    "message": "E-mail"
+  },
+  "categoryName76": {
+    "message": "Személyre szabás"
+  },
+  "categoryName77": {
+    "message": "Újracélzás"
+  },
+  "categoryName78": {
+    "message": "RUM"
+  },
+  "categoryName79": {
+    "message": "Földrajzi helymeghatározás"
+  },
+  "categoryName80": {
+    "message": "WordPress témák"
+  },
+  "categoryName81": {
+    "message": "Shopify témák"
+  },
+  "categoryName82": {
+    "message": "Drupal témák"
+  },
+  "categoryName83": {
+    "message": "Böngésző ujjlenyomata"
+  },
+  "categoryName84": {
+    "message": "Hűség és jutalmak"
+  },
+  "categoryName85": {
+    "message": "Funkciókezelés"
+  },
+  "categoryName86": {
+    "message": "Szegmentáció"
+  },
+  "categoryName87": {
+    "message": "WordPress bővítmények"
+  },
+  "categoryName88": {
+    "message": "Tárhely"
+  },
+  "categoryName89": {
+    "message": "Fordítás"
+  },
+  "categoryName90": {
+    "message": "Vélemények"
+  },
+  "categoryName91": {
+    "message": "Vásárolja meg most, fizessen később"
+  },
+  "categoryName92": {
+    "message": "Teljesítmény"
+  },
+  "categoryName93": {
+    "message": "Foglalás és szállítás"
+  },
+  "categoryName94": {
+    "message": "Ajánló marketing"
+  },
+  "categoryName95": {
+    "message": "Digitális eszközkezelés"
+  },
+  "categoryName96": {
+    "message": "Tartalom gondozása"
+  },
+  "categoryName97": {
+    "message": "Ügyféladatok platform"
+  },
+  "categoryName98": {
+    "message": "Kosár elhagyása"
+  },
+  "categoryName99": {
+    "message": "Fuvarozók"
+  },
+  "categoryName100": {
+    "message": "Shopify alkalmazások"
+  },
+  "categoryName101": {
+    "message": "Toborzás és munkaerő-felvétel"
+  },
+  "categoryName102": {
+    "message": "Visszaküldi"
+  },
+  "categoryName103": {
+    "message": "Élő közvetítés"
+  },
+  "categoryName104": {
+    "message": "Jegyfoglalás"
+  },
+  "categoryName105": {
+    "message": "Kiterjesztett valóság"
+  },
+  "categoryName106": {
+    "message": "Határokon átnyúló e-kereskedelem"
+  },
+  "categoryName107": {
+    "message": "Teljesítés"
+  },
+  "categoryName108": {
+    "message": "E-kereskedelmi frontendek"
+  },
+  "categoryName109": {
+    "message": "Domain parkoló"
+  },
+  "categoryName110": {
+    "message": "Nyomtat készítők"
+  },
+  "categoryName111": {
+    "message": "Adománygyűjtés és adományozás"
+  }
+}

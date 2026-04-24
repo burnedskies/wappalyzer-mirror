@@ -410,7 +410,7 @@
       37
     ],
     "description": "Paessler is a network monitoring platform that provides complete visibility into IT infrastructure through a single solution, helping detect, analyze, and resolve performance issues across systems and devices.",
-    "dom": "span[class*='paesslerlogo'] > a[href*'www.paessler.com']",
+    "dom": "span[class*='paesslerlogo'] > a[href*='www.paessler.com']",
     "icon": "Paessler.svg",
     "pricing": [
       "low",
@@ -1616,6 +1616,10 @@
       "X-Powered-By": "Payload"
     },
     "icon": "PayloadCMS.svg",
+    "meta": {
+      "og:description": "Payload is a headless CMS and application framework built with TypeScript, Node\\.js, and React\\.",
+      "og:site_name": "^Payload App$"
+    },
     "oss": true,
     "pricing": [
       "freemium",
@@ -5425,9 +5429,11 @@
       "mid",
       "recurring"
     ],
-    "requiresCategory": 12,
     "saas": true,
-    "scriptSrc": "\\.prepr\\.io/",
+    "scriptSrc": [
+      "\\.prepr\\.io/",
+      "cdn\\.tracking\\.prepr\\.io/js/prepr_v2\\.min\\.js"
+    ],
     "scripts": "\\.files\\.prepr\\.io",
     "website": "https://prepr.io"
   },

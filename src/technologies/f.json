@@ -274,6 +274,17 @@
     "saas": true,
     "website": "https://www.faire.com"
   },
+  "Falakcart": {
+    "cats": [
+      6
+    ],
+    "description": "Falakcart is an ecommerce platform for creating and managing online stores with integrated storefront and checkout tooling.",
+    "headers": {
+      "set-cookie": "falakcart-session="
+    },
+    "saas": true,
+    "website": "https://falakcart.com"
+  },
   "FalguniThemes Nisarg": {
     "cats": [
       80
@@ -1459,7 +1470,8 @@
     ],
     "scripts": [
       "\\.gstatic\\.com/firebasejs/([\\d\\.]+)/\\;version:\\1",
-      "firebase(?:Config|io\\.com)"
+      "firebase(?:Config|io\\.com)",
+      "__FIREBASE_DEFAULTS__|FirebaseError"
     ],
     "website": "https://firebase.google.com",
     "xhr": "fire(?:base|store)\\.googleapis\\.com|\\.firebaseio\\.com"

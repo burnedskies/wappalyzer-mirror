@@ -106,17 +106,6 @@
     "scripts": "\\.hrhotlink\\.com",
     "website": "https://corporate.hrhotlink.com"
   },
-  "HSTS": {
-    "cats": [
-      16
-    ],
-    "description": "HTTP Strict Transport Security (HSTS) informs browsers that the site should only be accessed using HTTPS.",
-    "headers": {
-      "Strict-Transport-Security": ""
-    },
-    "url": "^https://[\\w\\d\\.\\-]+(?:\\.dev)(?:/.+||/)$",
-    "website": "https://www.rfc-editor.org/rfc/rfc6797#section-6.1"
-  },
   "HTTP/2": {
     "cats": [
       19
@@ -778,6 +767,24 @@
     "scriptSrc": "\\.helhost\\.com/",
     "website": "https://www.helhost.com"
   },
+  "Helipod": {
+    "cats": [
+      62
+    ],
+    "description": "Helipod is a platform as a service (PaaS) for deploying and running web applications.",
+    "headers": {
+      "server": "^Helipod$",
+      "x-powered-by": "^Helipod$"
+    },
+    "icon": "Helipod.svg",
+    "pricing": [
+      "low",
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://helipod.io"
+  },
   "Helix Ultimate": {
     "cats": [
       18
@@ -1132,6 +1139,18 @@
       "recurring"
     ],
     "website": "https://www.hetzner.com"
+  },
+  "Heureka Conversion Measurement": {
+    "cats": [
+      10
+    ],
+    "description": "Heureka Conversion Measurement is a conversion tracking service from the Heureka shopping-comparison network.",
+    "saas": true,
+    "scriptSrc": [
+      "ssl\\.heureka\\.cz/direct/i/gjs\\.php\\?n=wdgt",
+      "www\\.(?:heureka\\.(?:cz|sk)|arukereso\\.hu)/ocm/sdk\\.js"
+    ],
+    "website": "https://www.heureka.cz"
   },
   "Hexia": {
     "cats": [

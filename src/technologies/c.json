@@ -1742,6 +1742,28 @@
     "saas": true,
     "website": "https://casasoft.ch"
   },
+  "Casablanca": {
+    "cats": [
+      72
+    ],
+    "description": "Casablanca is a hotel booking and property management platform for accommodation businesses.",
+    "dom": {
+      "a[href*='://ibe.casablanca.at/']": {
+        "attributes": {
+          "href": "^https?://ibe\\.casablanca\\.at/(?:[a-z]{2}/)?(?:IBE/)?a_\\d+_[a-z0-9]+(?:[/?#]|$)"
+        }
+      },
+      "iframe[src*='://ibe.casablanca.at/']": {
+        "attributes": {
+          "src": "^https?://ibe\\.casablanca\\.at/(?:[a-z]{2}/)?(?:IBE/)?a_\\d+_[a-z0-9]+(?:[/?#]|$)"
+        }
+      }
+    },
+    "icon": "default.svg",
+    "saas": true,
+    "scriptSrc": "frontend\\.casablanca\\.at/",
+    "website": "https://casablanca.at"
+  },
   "Casafari": {
     "cats": [
       53
@@ -4388,6 +4410,18 @@
       "/ClientJS/(?:(\\d.*?)/)?\\;version:\\1"
     ],
     "website": "https://clientjs.org"
+  },
+  "ClientXCMS": {
+    "cats": [
+      1
+    ],
+    "description": "ClientXCMS is an open-source client portal and hosting management platform built for web-hosting providers.",
+    "dom": "header#bhNavbar.bh-navbar #dark-mode-btn[data-url$='/darkmode']",
+    "icon": "ClientXCMS.png",
+    "oss": true,
+    "saas": true,
+    "scripts": "bh-navbar__burger|\\[data-bh-reveal\\]",
+    "website": "https://clientxcms.com"
   },
   "Clientacquisition": {
     "cats": [

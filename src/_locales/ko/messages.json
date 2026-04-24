@@ -1,21 +1,6 @@
 {
-  "github": {
-    "message": "GitHub에서 Wappalyzer를 포크하세요!"
-  },
-  "twitter": {
-    "message": "Twitter에서 Wappalyzer 팔로우"
-  },
-  "website": {
-    "message": "wappalyzer.com으로 가기"
-  },
   "options": {
     "message": "설정"
-  },
-  "optionsSave": {
-    "message": "설정 저장"
-  },
-  "optionsSaved": {
-    "message": "저장됨"
   },
   "optionUpgradeMessage": {
     "message": "업그레이드에 대해 알리기"
@@ -25,9 +10,6 @@
   },
   "optionTracking": {
     "message": "익명으로 wappalyzer.com에 식별된 기술 정보 전송"
-  },
-  "optionThemeMode": {
-    "message": "다크 모드 호환 활성화"
   },
   "optionBadge": {
     "message": "아이콘에 식별된 기술 갯수 표시"
@@ -47,14 +29,19 @@
   "clearCache": {
     "message": "캐시된 식별 정보 지우기"
   },
-  "nothingToDo": {
-    "message": "여기에는 할 일이 없네요."
-  },
   "noAppsDetected": {
     "message": "식별된 기술이 없습니다."
   },
   "reloadPage": {
     "message": "새로고침"
+  },
+  "confidenceSure": {
+    "message": "$CONFIDENCE$% 확실",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
   },
   "categoryPin": {
     "message": "항상 아이콘 보이기"
@@ -71,20 +58,14 @@
   "privacyPolicy": {
     "message": "개인정보처리방침"
   },
-  "createAlert": {
-    "message": "이 웹 사이트에 대한 알림 받기"
-  },
-  "leadLists": {
-    "message": "잠재 고객 발굴 툴"
-  },
   "tabTechnologies": {
     "message": "기술"
   },
   "tabPlus": {
     "message": "추가 정보"
   },
-  "creditBalance": {
-    "message": "크레딧:"
+  "exportCsv": {
+    "message": "내보내기"
   },
   "plusMessageHeading": {
     "message": "월 $$10에 Plus 이용"
@@ -100,6 +81,71 @@
   },
   "plusCrawl": {
     "message": "결과를 찾을 수 없습니다. 나중에 다시 확인하세요."
+  },
+  "apiKeyPendingActivation": {
+    "message": "새 API 키는 활성화되기까지 몇 분 정도 걸릴 수 있습니다. 잠시 후 다시 시도해 주세요."
+  },
+  "plusErrorGeneric": {
+    "message": "죄송합니다. 문제가 발생했습니다. 나중에 다시 시도해 주세요."
+  },
+  "plusErrorStatus": {
+    "message": "죄송합니다. 문제가 발생했습니다 ($STATUS$). 나중에 다시 시도해 주세요.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "접근할 수 없습니다. API 키를 확인해 주세요."
+  },
+  "plusErrorTooManyRequests": {
+    "message": "요청이 너무 많습니다. 몇 초 후 다시 시도해 주세요."
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
   },
   "formSave": {
     "message": "저장"
@@ -145,6 +191,21 @@
   },
   "attributeTechnologySpend": {
     "message": "기술 지출"
+  },
+  "spendVeryHigh": {
+    "message": "매우 높음"
+  },
+  "spendHigh": {
+    "message": "높음"
+  },
+  "spendMedium": {
+    "message": "보통"
+  },
+  "spendLow": {
+    "message": "낮음"
+  },
+  "spendVeryLow": {
+    "message": "매우 낮음"
   },
   "attributeIpCountry": {
     "message": "IP 나라"
@@ -238,9 +299,6 @@
   },
   "attributeCertInfo_validTo": {
     "message": "인증서 만료"
-  },
-  "attributeHttps": {
-    "message": "SSL/TLS 활성화됨"
   },
   "attributeTrackerGoogleAnalytics": {
     "message": "Google Analytics"
@@ -425,9 +483,6 @@
   "categoryName39": {
     "message": "웹캠"
   },
-  "categoryName40": {
-    "message": "프린터"
-  },
   "categoryName41": {
     "message": "결제 처리"
   },
@@ -481,9 +536,6 @@
   },
   "categoryName60": {
     "message": "컨테이너"
-  },
-  "categoryName61": {
-    "message": "SaaS"
   },
   "categoryName62": {
     "message": "PaaS"

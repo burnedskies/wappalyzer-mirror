@@ -1,21 +1,6 @@
 {
-  "github": {
-    "message": "在 GitHub 上 fork Wappalyzer！"
-  },
-  "twitter": {
-    "message": "在 Twitter 上追隨 Wappalyzer"
-  },
-  "website": {
-    "message": "前往 wappalyzer.com"
-  },
   "options": {
     "message": "選項"
-  },
-  "optionsSave": {
-    "message": "保存選項"
-  },
-  "optionsSaved": {
-    "message": "選項已保存"
   },
   "optionUpgradeMessage": {
     "message": "通知我更新內容"
@@ -25,9 +10,6 @@
   },
   "optionTracking": {
     "message": "匿名傳送已識別的技術至 wappalyzer.com"
-  },
-  "optionThemeMode": {
-    "message": "啟用深色模式相容性。"
   },
   "optionBadge": {
     "message": "在圖示上顯示已識別的技術數量"
@@ -47,14 +29,19 @@
   "clearCache": {
     "message": "清除已快取的識別內容"
   },
-  "nothingToDo": {
-    "message": "這裡什麼也沒有。"
-  },
   "noAppsDetected": {
     "message": "未識別到技術。"
   },
   "reloadPage": {
     "message": "重新載入"
+  },
+  "confidenceSure": {
+    "message": "置信度 $CONFIDENCE$%",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
   },
   "categoryPin": {
     "message": "永遠顯示圖示"
@@ -71,20 +58,14 @@
   "privacyPolicy": {
     "message": "隱私權政策"
   },
-  "createAlert": {
-    "message": "為此網站建立通知"
-  },
-  "leadLists": {
-    "message": "潛在客戶開發工具"
-  },
   "tabTechnologies": {
     "message": "技術"
   },
   "tabPlus": {
     "message": "更多資訊"
   },
-  "creditBalance": {
-    "message": "額度："
+  "exportCsv": {
+    "message": "匯出"
   },
   "plusMessageHeading": {
     "message": "以每個月 $$10 美元取得 Plus 版"
@@ -100,6 +81,71 @@
   },
   "plusCrawl": {
     "message": "沒有結果，請稍候再試。"
+  },
+  "apiKeyPendingActivation": {
+    "message": "新的 API 金鑰可能需要幾分鐘才能啟用。請稍候再試。"
+  },
+  "plusErrorGeneric": {
+    "message": "抱歉，發生錯誤。請稍後再試。"
+  },
+  "plusErrorStatus": {
+    "message": "抱歉，發生錯誤 ($STATUS$)。請稍後再試。",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "無法存取。請檢查您的 API 金鑰。"
+  },
+  "plusErrorTooManyRequests": {
+    "message": "要求過多。請幾秒後再試。"
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
   },
   "formSave": {
     "message": "保存"
@@ -145,6 +191,21 @@
   },
   "attributeTechnologySpend": {
     "message": "技術預算"
+  },
+  "spendVeryHigh": {
+    "message": "非常高"
+  },
+  "spendHigh": {
+    "message": "高"
+  },
+  "spendMedium": {
+    "message": "中"
+  },
+  "spendLow": {
+    "message": "低"
+  },
+  "spendVeryLow": {
+    "message": "非常低"
   },
   "attributeIpCountry": {
     "message": "IP 國家"
@@ -238,9 +299,6 @@
   },
   "attributeCertInfo_validTo": {
     "message": "憑證到期日"
-  },
-  "attributeHttps": {
-    "message": "啓用 SSL/TLS"
   },
   "attributeTrackerGoogleAnalytics": {
     "message": "Google Analytics"
@@ -425,9 +483,6 @@
   "categoryName39": {
     "message": "網路攝影機"
   },
-  "categoryName40": {
-    "message": "印表機"
-  },
   "categoryName41": {
     "message": "付款處理"
   },
@@ -481,9 +536,6 @@
   },
   "categoryName60": {
     "message": "容器"
-  },
-  "categoryName61": {
-    "message": "軟體即服務（SaaS）"
   },
   "categoryName62": {
     "message": "平台即服務（PaaS）"

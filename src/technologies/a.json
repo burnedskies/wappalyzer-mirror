@@ -2882,7 +2882,6 @@
       "ahrefs-site-verification": ""
     },
     "pricing": [
-      "low",
       "mid"
     ],
     "website": "https://ahrefs.com"
@@ -6934,6 +6933,7 @@
       "generator": "^Astro(?:\\sv([\\d\\.]+))?$\\;version:\\1"
     },
     "oss": true,
+    "scriptSrc": "/_astro/.+\\.js",
     "website": "https://astro.build"
   },
   "Astute Solutions": {

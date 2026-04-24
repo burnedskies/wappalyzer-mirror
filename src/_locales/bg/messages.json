@@ -1,0 +1,690 @@
+{
+  "options": {
+    "message": "Опции"
+  },
+  "optionUpgradeMessage": {
+    "message": "Кажете ми за надстройките"
+  },
+  "optionDynamicIcon": {
+    "message": "Използвайте технологична икона вместо логото на Wappalyzer"
+  },
+  "optionTracking": {
+    "message": "Изпратете анонимно идентифицирани технологии на wappalyzer.com"
+  },
+  "optionBadge": {
+    "message": "Покажете броя на идентифицираните технологии върху иконата"
+  },
+  "optionShowCached": {
+    "message": "Включване на кеширани откривания в резултатите"
+  },
+  "optionApiKey": {
+    "message": "API ключ"
+  },
+  "optionApiKeyDescription": {
+    "message": "вземете вашия API ключ"
+  },
+  "disableOnDomain": {
+    "message": "Деактивирайте на този уебсайт"
+  },
+  "clearCache": {
+    "message": "Изчистване на кеширани откривания"
+  },
+  "noAppsDetected": {
+    "message": "Не са открити технологии."
+  },
+  "reloadPage": {
+    "message": "Презареди"
+  },
+  "confidenceSure": {
+    "message": "$CONFIDENCE$% сигурен",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
+  },
+  "categoryPin": {
+    "message": "Винаги показвай иконата"
+  },
+  "termsAccept": {
+    "message": "Добре съм с това"
+  },
+  "termsDecline": {
+    "message": "Деактивирайте"
+  },
+  "termsContent": {
+    "message": "Това разширение изпраща анонимна информация за уебсайтовете, които посещавате, включително име на домейн и идентифицирани технологии, до <a href='https://www.wappalyzer.com'>wappalyzer.com</a>. Това може да бъде деактивирано в настройките."
+  },
+  "privacyPolicy": {
+    "message": "Политика за поверителност"
+  },
+  "tabTechnologies": {
+    "message": "Технологии"
+  },
+  "tabPlus": {
+    "message": "Повече информация"
+  },
+  "exportCsv": {
+    "message": "Експорт"
+  },
+  "plusMessageHeading": {
+    "message": "Вземете Плюс за $$10/mo"
+  },
+  "plusMessage": {
+    "message": "С Plus тук се показват фирмени данни и данни за контакт на уебсайтовете, които посещавате."
+  },
+  "plusButton": {
+    "message": "Регистрирайте се"
+  },
+  "plusEmpty": {
+    "message": "Няма намерени резултати."
+  },
+  "plusCrawl": {
+    "message": "Няма намерени резултати, моля, проверете отново по-късно."
+  },
+  "apiKeyPendingActivation": {
+    "message": "Активирането на новите API ключове може да отнеме няколко минути. Please wait a moment and try again."
+  },
+  "plusErrorGeneric": {
+    "message": "Съжаляваме, нещо се обърка. Моля, опитайте отново по-късно."
+  },
+  "plusErrorStatus": {
+    "message": "Съжаляваме, нещо се обърка ($STATUS$). Моля, опитайте отново по-късно.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "Няма достъп. Please check your API key."
+  },
+  "plusErrorTooManyRequests": {
+    "message": "Твърде много заявки. Моля, опитайте отново след няколко секунди."
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
+  },
+  "formSave": {
+    "message": "Запазване на"
+  },
+  "issue": {
+    "message": "Нещо не е наред или липсва?"
+  },
+  "setCompany": {
+    "message": "Информация за фирмата"
+  },
+  "setKeywords": {
+    "message": "Ключови думи"
+  },
+  "setEmail": {
+    "message": "Имейл адреси"
+  },
+  "setPhone": {
+    "message": "Телефонни номера"
+  },
+  "setAddress": {
+    "message": "Адреси"
+  },
+  "setContact": {
+    "message": "Данни за контакт"
+  },
+  "setSocial": {
+    "message": "Акаунти в социалните медии"
+  },
+  "setMeta": {
+    "message": "Метаданни"
+  },
+  "setLocale": {
+    "message": "Локал"
+  },
+  "setTrackers": {
+    "message": "Тракери"
+  },
+  "setSecurity": {
+    "message": "Сигурност"
+  },
+  "setSignals": {
+    "message": "Сигнали"
+  },
+  "attributeTechnologySpend": {
+    "message": "Технологични разходи"
+  },
+  "spendVeryHigh": {
+    "message": "Много високо"
+  },
+  "spendHigh": {
+    "message": "Високо"
+  },
+  "spendMedium": {
+    "message": "Среден"
+  },
+  "spendLow": {
+    "message": "Нисък"
+  },
+  "spendVeryLow": {
+    "message": "Много ниско"
+  },
+  "attributeIpCountry": {
+    "message": "IP държава"
+  },
+  "attributeIpRegion": {
+    "message": "IP регион"
+  },
+  "attributeLanguage": {
+    "message": "Език"
+  },
+  "attributeEmail": {
+    "message": "Имейл адрес"
+  },
+  "attributeVerifiedEmail": {
+    "message": "Имейл адрес (потвърден)"
+  },
+  "attributeSafeEmail": {
+    "message": "Имейл адрес (безопасен)"
+  },
+  "attributePhone": {
+    "message": "Телефонен номер"
+  },
+  "attributeSkype": {
+    "message": "Skype"
+  },
+  "attributeWhatsapp": {
+    "message": "WhatsApp"
+  },
+  "attributeInferredCompanyName": {
+    "message": "Предполагаемо име на фирма"
+  },
+  "attributeTwitter": {
+    "message": "Twitter"
+  },
+  "attributeFacebook": {
+    "message": "Facebook"
+  },
+  "attributeInstagram": {
+    "message": "Instagram"
+  },
+  "attributeGithub": {
+    "message": "GitHub"
+  },
+  "attributeTiktok": {
+    "message": "TikTok"
+  },
+  "attributeYoutube": {
+    "message": "YouTube"
+  },
+  "attributePinterest": {
+    "message": "Pinterest"
+  },
+  "attributeLinkedin": {
+    "message": "LinkedIn"
+  },
+  "attributeOwler": {
+    "message": "Бухал"
+  },
+  "attributeTitle": {
+    "message": "Заглавие"
+  },
+  "attributeDescription": {
+    "message": "Описание"
+  },
+  "attributeCopyright": {
+    "message": "Авторско право"
+  },
+  "attributeCopyrightYear": {
+    "message": "Copyright година"
+  },
+  "attributeResponsive": {
+    "message": "Отзивчив"
+  },
+  "attributeCertInfo_subjectOrg": {
+    "message": "Сертифицирана организация"
+  },
+  "attributeCertInfo_subjectCountry": {
+    "message": "Сертифицирана държава"
+  },
+  "attributeCertInfo_subjectState": {
+    "message": "Състояние на сертификата"
+  },
+  "attributeCertInfo_subjectLocality": {
+    "message": "Местоположение на сертификата"
+  },
+  "attributeCertInfo_issuer": {
+    "message": "Издател на сертификат"
+  },
+  "attributeCertInfo_protocol": {
+    "message": "Сертификационен протокол"
+  },
+  "attributeCertInfo_validTo": {
+    "message": "Изтичане на сертификата"
+  },
+  "attributeTrackerGoogleAnalytics": {
+    "message": "Google Анализ"
+  },
+  "attributeTrackerGoogleAdSense": {
+    "message": "Google AdSense"
+  },
+  "attributeTrackerMedianet": {
+    "message": "Medianet"
+  },
+  "attributeTrackerFacebook": {
+    "message": "Facebook"
+  },
+  "attributeTrackerOptimizely": {
+    "message": "Оптимизирано"
+  },
+  "attributeCompanyName": {
+    "message": "Име на фирмата"
+  },
+  "attributeIndustry": {
+    "message": "Индустрия"
+  },
+  "attributeAbout": {
+    "message": "Относно"
+  },
+  "attributeLocations": {
+    "message": "Местоположения"
+  },
+  "attributeCompanySize": {
+    "message": "Фирмен размер"
+  },
+  "attributeCompanyType": {
+    "message": "Фирмен тип"
+  },
+  "attributeCompanyFounded": {
+    "message": "Основана компания"
+  },
+  "attributeKeywords": {
+    "message": "Ключови думи"
+  },
+  "attributeEmployees": {
+    "message": "Хората"
+  },
+  "attributeDns_spf": {
+    "message": "SPF запис"
+  },
+  "attributeDns_dmarc": {
+    "message": "DMARC запис"
+  },
+  "attributeSchemaOrgTypes": {
+    "message": "schema.org типове"
+  },
+  "attributeFundingTotalUsd": {
+    "message": "Общо финансиране"
+  },
+  "attributeFundingRounds": {
+    "message": "Кръгове на финансиране"
+  },
+  "attributeStockSymbol": {
+    "message": "Символ на борсата"
+  },
+  "attributeSemrushGlobalRank": {
+    "message": "Semrush глобален ранг"
+  },
+  "attributeSemrushVisits": {
+    "message": "Semrush месечно посещава"
+  },
+  "categoryName1": {
+    "message": "CMS"
+  },
+  "categoryName2": {
+    "message": "Табла за съобщения"
+  },
+  "categoryName3": {
+    "message": "Мениджъри на бази данни"
+  },
+  "categoryName4": {
+    "message": "Инструменти за документиране"
+  },
+  "categoryName5": {
+    "message": "Джаджи"
+  },
+  "categoryName6": {
+    "message": "Електронна търговия"
+  },
+  "categoryName7": {
+    "message": "Фото галерии"
+  },
+  "categoryName8": {
+    "message": "Уикита"
+  },
+  "categoryName9": {
+    "message": "Хостинг панели"
+  },
+  "categoryName10": {
+    "message": "Анализ"
+  },
+  "categoryName11": {
+    "message": "Блогове"
+  },
+  "categoryName12": {
+    "message": "JavaScript рамки"
+  },
+  "categoryName13": {
+    "message": "Проследяващи проблеми"
+  },
+  "categoryName14": {
+    "message": "Видео плейъри"
+  },
+  "categoryName15": {
+    "message": "Коментарни системи"
+  },
+  "categoryName16": {
+    "message": "Сигурност"
+  },
+  "categoryName17": {
+    "message": "Скриптове за шрифт"
+  },
+  "categoryName18": {
+    "message": "Уеб рамки"
+  },
+  "categoryName19": {
+    "message": "Разни"
+  },
+  "categoryName20": {
+    "message": "Редактор"
+  },
+  "categoryName21": {
+    "message": "LMS"
+  },
+  "categoryName22": {
+    "message": "Уеб сървъри"
+  },
+  "categoryName23": {
+    "message": "Кеширане"
+  },
+  "categoryName24": {
+    "message": "Редактори с богат текст"
+  },
+  "categoryName25": {
+    "message": "JavaScript графики"
+  },
+  "categoryName26": {
+    "message": "Мобилни рамки"
+  },
+  "categoryName27": {
+    "message": "Езици за програмиране"
+  },
+  "categoryName28": {
+    "message": "Операционни системи"
+  },
+  "categoryName29": {
+    "message": "Търсачки"
+  },
+  "categoryName30": {
+    "message": "Уеб поща"
+  },
+  "categoryName31": {
+    "message": "CDN"
+  },
+  "categoryName32": {
+    "message": "Автоматизация на маркетинга"
+  },
+  "categoryName33": {
+    "message": "Разширения за уеб сървър"
+  },
+  "categoryName34": {
+    "message": "Бази данни"
+  },
+  "categoryName35": {
+    "message": "Карти"
+  },
+  "categoryName36": {
+    "message": "Реклама"
+  },
+  "categoryName37": {
+    "message": "Мрежови услуги"
+  },
+  "categoryName38": {
+    "message": "Медийни сървъри"
+  },
+  "categoryName39": {
+    "message": "Уеб камери"
+  },
+  "categoryName41": {
+    "message": "Платежни процесори"
+  },
+  "categoryName42": {
+    "message": "Мениджъри на етикети"
+  },
+  "categoryName44": {
+    "message": "CI"
+  },
+  "categoryName46": {
+    "message": "Отдалечен достъп"
+  },
+  "categoryName47": {
+    "message": "Разработка"
+  },
+  "categoryName48": {
+    "message": "Мрежово съхранение"
+  },
+  "categoryName49": {
+    "message": "Четци на емисии"
+  },
+  "categoryName50": {
+    "message": "DMS"
+  },
+  "categoryName51": {
+    "message": "Конструктор на страници"
+  },
+  "categoryName52": {
+    "message": "Чат на живо"
+  },
+  "categoryName53": {
+    "message": "CRM"
+  },
+  "categoryName54": {
+    "message": "SEO"
+  },
+  "categoryName55": {
+    "message": "Счетоводство"
+  },
+  "categoryName56": {
+    "message": "Криптоминьори"
+  },
+  "categoryName57": {
+    "message": "Генератори на статични сайтове"
+  },
+  "categoryName58": {
+    "message": "Включване на потребител"
+  },
+  "categoryName59": {
+    "message": "JavaScript библиотеки"
+  },
+  "categoryName60": {
+    "message": "Контейнери"
+  },
+  "categoryName62": {
+    "message": "PaaS"
+  },
+  "categoryName63": {
+    "message": "IaaS"
+  },
+  "categoryName64": {
+    "message": "Обратни прокси"
+  },
+  "categoryName65": {
+    "message": "Товароразпределители"
+  },
+  "categoryName66": {
+    "message": "UI рамки"
+  },
+  "categoryName67": {
+    "message": "Съответствие с бисквитките"
+  },
+  "categoryName68": {
+    "message": "Достъпност"
+  },
+  "categoryName69": {
+    "message": "Удостоверяване"
+  },
+  "categoryName70": {
+    "message": "SSL/TLS сертифициращи органи"
+  },
+  "categoryName71": {
+    "message": "Партньорски програми"
+  },
+  "categoryName72": {
+    "message": "Насрочване на срещи"
+  },
+  "categoryName73": {
+    "message": "Проучвания"
+  },
+  "categoryName74": {
+    "message": "A/B тестване"
+  },
+  "categoryName75": {
+    "message": "Имейл"
+  },
+  "categoryName76": {
+    "message": "Персонализация"
+  },
+  "categoryName77": {
+    "message": "Пренасочване на"
+  },
+  "categoryName78": {
+    "message": "РУМ"
+  },
+  "categoryName79": {
+    "message": "Геолокация"
+  },
+  "categoryName80": {
+    "message": "WordPress теми"
+  },
+  "categoryName81": {
+    "message": "Теми на Shopify"
+  },
+  "categoryName82": {
+    "message": "Drupal теми"
+  },
+  "categoryName83": {
+    "message": "Браузър пръстови отпечатъци"
+  },
+  "categoryName84": {
+    "message": "Лоялност и награди"
+  },
+  "categoryName85": {
+    "message": "Управление на функции"
+  },
+  "categoryName86": {
+    "message": "Сегментация"
+  },
+  "categoryName87": {
+    "message": "WordPress добавки"
+  },
+  "categoryName88": {
+    "message": "Хостинг"
+  },
+  "categoryName89": {
+    "message": "Превод"
+  },
+  "categoryName90": {
+    "message": "Отзиви"
+  },
+  "categoryName91": {
+    "message": "Купете сега, платете по-късно"
+  },
+  "categoryName92": {
+    "message": "Изпълнение"
+  },
+  "categoryName93": {
+    "message": "Резервации и доставка"
+  },
+  "categoryName94": {
+    "message": "Препоръчан маркетинг"
+  },
+  "categoryName95": {
+    "message": "Управление на цифрови активи"
+  },
+  "categoryName96": {
+    "message": "Куриране на съдържанието"
+  },
+  "categoryName97": {
+    "message": "Платформа за данни на клиенти"
+  },
+  "categoryName98": {
+    "message": "Изоставяне на количката"
+  },
+  "categoryName99": {
+    "message": "Превозвачи"
+  },
+  "categoryName100": {
+    "message": "Shopify приложения"
+  },
+  "categoryName101": {
+    "message": "Набиране и персонал"
+  },
+  "categoryName102": {
+    "message": "Връща"
+  },
+  "categoryName103": {
+    "message": "Излъчване на живо"
+  },
+  "categoryName104": {
+    "message": "Резервация на билети"
+  },
+  "categoryName105": {
+    "message": "Добавена реалност"
+  },
+  "categoryName106": {
+    "message": "Трансгранична електронна търговия"
+  },
+  "categoryName107": {
+    "message": "Изпълнение"
+  },
+  "categoryName108": {
+    "message": "Предни части за електронна търговия"
+  },
+  "categoryName109": {
+    "message": "Паркиране на домейн"
+  },
+  "categoryName110": {
+    "message": "Конструктори за форми"
+  },
+  "categoryName111": {
+    "message": "Набиране на средства и дарения"
+  }
+}

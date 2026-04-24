@@ -937,7 +937,6 @@
     "pricing": [
       "freemium",
       "payg",
-      "low",
       "mid",
       "recurring"
     ],
@@ -1122,6 +1121,7 @@
       "__NEXT_DATA__": "",
       "next.version": "^(.+)$\\;version:\\1"
     },
+    "scriptSrc": "/_next/static/",
     "website": "https://nextjs.org"
   },
   "NextAuth.js": {

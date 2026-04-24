@@ -1,21 +1,6 @@
 {
-  "github": {
-    "message": "GitHubでWappalyzerをフォーク!"
-  },
-  "twitter": {
-    "message": "TwitterでWappalyzerをフォロー"
-  },
-  "website": {
-    "message": "wappalyzer.comへアクセス"
-  },
   "options": {
     "message": "オプション"
-  },
-  "optionsSave": {
-    "message": "保存"
-  },
-  "optionsSaved": {
-    "message": "保存しました"
   },
   "optionUpgradeMessage": {
     "message": "アップデート内容を通知する"
@@ -25,9 +10,6 @@
   },
   "optionTracking": {
     "message": "特定した技術を匿名でwappalyzer.comに送信する"
-  },
-  "optionThemeMode": {
-    "message": "ダークモードを有効にする"
   },
   "optionBadge": {
     "message": "特定した技術の数をアイコンで表示"
@@ -47,14 +29,19 @@
   "clearCache": {
     "message": "キャッシュされた検出値のクリア"
   },
-  "nothingToDo": {
-    "message": "ここでは特定出来ません。"
-  },
   "noAppsDetected": {
     "message": "技術は検出されませんでした。"
   },
   "reloadPage": {
     "message": "再読み込み"
+  },
+  "confidenceSure": {
+    "message": "確度 $CONFIDENCE$%",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
   },
   "categoryPin": {
     "message": "常にアイコンを表示"
@@ -71,20 +58,14 @@
   "privacyPolicy": {
     "message": "プライバシーポリシー"
   },
-  "createAlert": {
-    "message": "このサイトのアラートを作成する"
-  },
-  "leadLists": {
-    "message": "リードジェネレーションツール"
-  },
   "tabTechnologies": {
     "message": "テクノロジー"
   },
   "tabPlus": {
     "message": "詳細情報"
   },
-  "creditBalance": {
-    "message": "クレジット:"
+  "exportCsv": {
+    "message": "エクスポート"
   },
   "plusMessageHeading": {
     "message": "Plusを月額$$10で利用"
@@ -100,6 +81,71 @@
   },
   "plusCrawl": {
     "message": "結果が見つかりません。後でもう一度確認してください。"
+  },
+  "apiKeyPendingActivation": {
+    "message": "新しい API キーが有効になるまで数分かかる場合があります。少し待ってからもう一度お試しください。"
+  },
+  "plusErrorGeneric": {
+    "message": "申し訳ありません。問題が発生しました。後でもう一度お試しください。"
+  },
+  "plusErrorStatus": {
+    "message": "申し訳ありません。問題が発生しました ($STATUS$)。後でもう一度お試しください。",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "アクセスできません。API キーを確認してください。"
+  },
+  "plusErrorTooManyRequests": {
+    "message": "リクエストが多すぎます。数秒後にもう一度お試しください。"
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
   },
   "formSave": {
     "message": "保存する"
@@ -145,6 +191,21 @@
   },
   "attributeTechnologySpend": {
     "message": "技術支出"
+  },
+  "spendVeryHigh": {
+    "message": "非常に高い"
+  },
+  "spendHigh": {
+    "message": "高い"
+  },
+  "spendMedium": {
+    "message": "中程度"
+  },
+  "spendLow": {
+    "message": "低い"
+  },
+  "spendVeryLow": {
+    "message": "非常に低い"
   },
   "attributeIpCountry": {
     "message": "IPの国"
@@ -238,9 +299,6 @@
   },
   "attributeCertInfo_validTo": {
     "message": "証明書有効期限"
-  },
-  "attributeHttps": {
-    "message": "SSL/TLSが有効"
   },
   "attributeTrackerGoogleAnalytics": {
     "message": "Google Analytics"
@@ -425,9 +483,6 @@
   "categoryName39": {
     "message": "Webカメラ"
   },
-  "categoryName40": {
-    "message": "プリンター"
-  },
   "categoryName41": {
     "message": "支払い処理"
   },
@@ -481,9 +536,6 @@
   },
   "categoryName60": {
     "message": "コンテナ"
-  },
-  "categoryName61": {
-    "message": "SaaS"
   },
   "categoryName62": {
     "message": "PaaS"

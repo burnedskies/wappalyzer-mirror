@@ -744,6 +744,20 @@
     "scripts": "base-ui\\.com",
     "website": "https://base-ui.com/react/overview/quick-start"
   },
+  "Base44": {
+    "cats": [
+      18
+    ],
+    "description": "Base44 is an AI app builder platform for creating and deploying web applications from natural language prompts.",
+    "dom": "link[href*='supabase.co/storage/v1/object/public/base44-prod/public/'], meta[property='og:image'][content*='supabase.co/storage/v1/render/image/public/base44-prod/public/']",
+    "icon": "default.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://base44.com"
+  },
   "BaseKit": {
     "cats": [
       51
@@ -758,6 +772,24 @@
     },
     "saas": true,
     "website": "https://www.basekit.com/"
+  },
+  "Baseet": {
+    "cats": [
+      6
+    ],
+    "cookies": {
+      "_baseet_landing_page": ""
+    },
+    "description": "Baseet is an ecommerce platform for building and managing online stores.",
+    "icon": "Baseet.svg",
+    "pricing": [
+      "freemium",
+      "payg",
+      "recurring"
+    ],
+    "saas": true,
+    "url": "^https?://[^/]+\\.baseet\\.cc",
+    "website": "https://www.baseet.cc"
   },
   "Basic": {
     "cats": [
@@ -3611,6 +3643,17 @@
     "saas": true,
     "scripts": "widget\\.bookteq\\.com",
     "website": "https://www.bookteq.com"
+  },
+  "Booljs": {
+    "cats": [
+      12
+    ],
+    "description": "Booljs is a JavaScript framework for building web applications on the Bun runtime.",
+    "headers": {
+      "x-powered-by": "^Bool Typescript$"
+    },
+    "oss": true,
+    "website": "https://booljs.com"
   },
   "Boomerang": {
     "cats": [

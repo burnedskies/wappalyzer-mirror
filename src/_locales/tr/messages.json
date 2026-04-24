@@ -1,21 +1,6 @@
 {
-  "github": {
-    "message": "GitHub'da Wappalyzer'ı Forkla!"
-  },
-  "twitter": {
-    "message": "Wappalyzer'ı Twitter'da takip et"
-  },
-  "website": {
-    "message": "Wappalyzer.com'a git"
-  },
   "options": {
     "message": "Ayarlar"
-  },
-  "optionsSave": {
-    "message": "Ayarları kaydet"
-  },
-  "optionsSaved": {
-    "message": "Kaydedildi"
   },
   "optionUpgradeMessage": {
     "message": "Güncellemeleri göster"
@@ -25,9 +10,6 @@
   },
   "optionTracking": {
     "message": "Anonim olarak tespit edilen uygulamalar hakkında wappalyzer.com'a araştırma raporları gönderin"
-  },
-  "optionThemeMode": {
-    "message": "Karanlık modu uyumluluğu etkinleştirin."
   },
   "optionBadge": {
     "message": "Simge üzerinde tanımlanan teknoloji sayısını göster"
@@ -47,14 +29,19 @@
   "clearCache": {
     "message": "Önbelleğe alınmış tespitleri temizle"
   },
-  "nothingToDo": {
-    "message": "Burada yapacak birşey yok."
-  },
   "noAppsDetected": {
     "message": "Uygulamalar tespit edilemedi."
   },
   "reloadPage": {
     "message": "Yeniden yükle"
+  },
+  "confidenceSure": {
+    "message": "$CONFIDENCE$% emin",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
   },
   "categoryPin": {
     "message": "Her zaman bu kategorinin ikonunu kullan"
@@ -71,20 +58,14 @@
   "privacyPolicy": {
     "message": "Gizlilik politikası"
   },
-  "createAlert": {
-    "message": "Bu web sitesi için bir uyarı oluştur"
-  },
-  "leadLists": {
-    "message": "Potansiyel müşteri oluşturma araçları"
-  },
   "tabTechnologies": {
     "message": "Teknolojiler"
   },
   "tabPlus": {
     "message": "Daha fazla bilgi"
   },
-  "creditBalance": {
-    "message": "Krediler:"
+  "exportCsv": {
+    "message": "Dışa aktar"
   },
   "plusMessageHeading": {
     "message": "Plus'ı $$10/ay karşılığında edinin"
@@ -100,6 +81,71 @@
   },
   "plusCrawl": {
     "message": "Sonuç bulunamadı, lütfen daha sonra tekrar kontrol edin."
+  },
+  "apiKeyPendingActivation": {
+    "message": "Yeni API anahtarlarının etkinleşmesi birkaç dakika sürebilir. Lütfen biraz bekleyip tekrar deneyin."
+  },
+  "plusErrorGeneric": {
+    "message": "Üzgünüz, bir şeyler yanlış gitti. Lütfen daha sonra tekrar deneyin."
+  },
+  "plusErrorStatus": {
+    "message": "Üzgünüz, bir şeyler yanlış gitti ($STATUS$). Lütfen daha sonra tekrar deneyin.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "Erişim yok. Lütfen API anahtarınızı kontrol edin."
+  },
+  "plusErrorTooManyRequests": {
+    "message": "Çok fazla istek gönderildi. Lütfen birkaç saniye sonra tekrar deneyin."
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
   },
   "formSave": {
     "message": "Kaydet"
@@ -145,6 +191,21 @@
   },
   "attributeTechnologySpend": {
     "message": "Teknoloji harcaması"
+  },
+  "spendVeryHigh": {
+    "message": "Çok yüksek"
+  },
+  "spendHigh": {
+    "message": "Yüksek"
+  },
+  "spendMedium": {
+    "message": "Orta"
+  },
+  "spendLow": {
+    "message": "Düşük"
+  },
+  "spendVeryLow": {
+    "message": "Çok düşük"
   },
   "attributeIpCountry": {
     "message": "IP ülkesi"
@@ -238,9 +299,6 @@
   },
   "attributeCertInfo_validTo": {
     "message": "Cert expiry"
-  },
-  "attributeHttps": {
-    "message": "SSL/TLS enabled"
   },
   "attributeTrackerGoogleAnalytics": {
     "message": "Google Analytics"
@@ -425,9 +483,6 @@
   "categoryName39": {
     "message": "Bilgisayar Kamerası"
   },
-  "categoryName40": {
-    "message": "Yazıcı"
-  },
   "categoryName41": {
     "message": "Ödeme İşlemcisi"
   },
@@ -481,9 +536,6 @@
   },
   "categoryName60": {
     "message": "Konteyner"
-  },
-  "categoryName61": {
-    "message": "SaaS"
   },
   "categoryName62": {
     "message": "PaaS"

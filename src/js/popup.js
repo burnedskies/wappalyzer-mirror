@@ -7,41 +7,41 @@ const { agent, open, i18n, getOption, setOption, promisify, sendMessage } =
 
 const baseUrl = 'https://www.wappalyzer.com'
 const utm = '?utm_source=popup&utm_medium=extension&utm_campaign=wappalyzer'
+const leadGenerationUrl = `${baseUrl}/lead-generation/${utm}`
+const dataEnrichmentUrl = `${baseUrl}/data-enrichment/${utm}`
 const apiKeyRetryDelays = [3000, 5000, 10000, 15000, 30000]
 const apiKeyActivationWindow = 1000 * 60 * 5
-const apiKeyActivationMessage =
-  'New API keys can take a few minutes to activate. Please wait a moment and try again.'
 
 const footers = [
   {
-    heading: 'Need more than the extension?',
-    body: 'Wappalyzer also helps teams build lead lists, enrich CRM records, analyze websites in bulk, and automate prospecting workflows.',
-    buttonText: 'See plans',
-    buttonLink: `${baseUrl}/pricing/${utm}`,
+    heading: 'footerCtaNeedMoreHeading',
+    body: 'footerCtaNeedMoreBody',
+    buttonText: 'footerCtaNeedMoreButton',
+    buttonLink: leadGenerationUrl,
   },
   {
-    heading: 'Find better prospects',
-    body: 'Build lead lists by technology or keyword, with company details, contacts, and social profiles for faster qualification.',
-    buttonText: 'Build lead lists',
-    buttonLink: `${baseUrl}/lists/${utm}`,
+    heading: 'footerCtaProspectsHeading',
+    body: 'footerCtaProspectsBody',
+    buttonText: 'footerCtaProspectsButton',
+    buttonLink: leadGenerationUrl,
   },
   {
-    heading: 'Enrich your CRM automatically',
-    body: 'Bring technographics into HubSpot, Salesforce, Pipedrive, and more so your team can qualify accounts faster.',
-    buttonText: 'See apps',
-    buttonLink: `${baseUrl}/apps/${utm}`,
+    heading: 'footerCtaCrmHeading',
+    body: 'footerCtaCrmBody',
+    buttonText: 'footerCtaCrmButton',
+    buttonLink: dataEnrichmentUrl,
   },
   {
-    heading: 'Build targeted prospect lists',
-    body: 'Find companies by technology or keyword and export account lists with the context your team needs to prioritize outreach.',
-    buttonText: 'See lead lists',
-    buttonLink: `${baseUrl}/lists/${utm}`,
+    heading: 'footerCtaListsHeading',
+    body: 'footerCtaListsBody',
+    buttonText: 'footerCtaListsButton',
+    buttonLink: leadGenerationUrl,
   },
   {
-    heading: 'Bring website intelligence into your workflow',
-    body: 'Use Wappalyzer with HubSpot, Salesforce, Pipedrive, Zapier, Make, and more to enrich records and trigger follow-up automatically.',
-    buttonText: 'See apps',
-    buttonLink: `${baseUrl}/apps/${utm}`,
+    heading: 'footerCtaWorkflowHeading',
+    body: 'footerCtaWorkflowBody',
+    buttonText: 'footerCtaWorkflowButton',
+    buttonLink: dataEnrichmentUrl,
   },
 ]
 
@@ -76,7 +76,6 @@ const attributeKeys = [
   'certInfo.validTo',
   'dns.spf',
   'dns.dmarc',
-  'https',
   'trackerGoogleAnalytics',
   'trackerGoogleAdSense',
   'trackerMedianet',
@@ -108,19 +107,18 @@ function setDisabledDomain(enabled) {
   }
 }
 
+function getMessage(name, substitutions) {
+  return chrome.i18n.getMessage(name, substitutions)
+}
+
 function getCsv() {
   let hostname = ''
   let www = false
-  let https = false
 
   try {
-    let protocol = ''
-
-    ;({ hostname, protocol } = new URL(Popup.cache.url))
+    ;({ hostname } = new URL(Popup.cache.url))
 
     www = hostname.startsWith('www')
-
-    https = protocol === 'https:'
 
     hostname = hostname.replace(/^www\./, '')
   } catch (error) {
@@ -147,7 +145,7 @@ function getCsv() {
     hostname ? `_${hostname.replace('.', '-')}` : ''
   }.csv`
 
-  const row = [`http${https ? 's' : ''}://${www ? 'www.' : ''}${hostname}`]
+  const row = [`https://${www ? 'www.' : ''}${hostname}`]
 
   row.push(
     ...Popup.cache.categories.reduce((categories, { id }) => {
@@ -221,14 +219,14 @@ function getTechnologySpend(technologies) {
   totals.xhigh = Math.floor(totals.high / 3)
 
   const spend = totals.xhigh
-    ? 'Very high'
+    ? getMessage('spendVeryHigh')
     : totals.high
-    ? 'High'
+    ? getMessage('spendHigh')
     : totals.mid
-    ? 'Medium'
+    ? getMessage('spendMedium')
     : totals.low
-    ? 'Low'
-    : 'Very low'
+    ? getMessage('spendLow')
+    : getMessage('spendVeryLow')
 
   return spend
 }
@@ -278,6 +276,7 @@ const Popup = {
    */
   async init() {
     Popup.cache = {
+      tabId: null,
       url: '',
       categories: [],
       detections: [],
@@ -321,6 +320,8 @@ const Popup = {
       tabs: document.querySelectorAll('.tab'),
       templates: document.querySelectorAll('[data-template]'),
     }
+
+    Popup.elements = el
 
     // Templates
     Popup.templates = Array.from(el.templates).reduce((templates, template) => {
@@ -414,7 +415,7 @@ const Popup = {
     })
 
     if (tabs && tabs.length) {
-      ;[{ url }] = tabs
+      ;[{ id: Popup.cache.tabId, url }] = tabs
 
       if (url.startsWith('http')) {
         Popup.cache.url = url
@@ -512,9 +513,9 @@ const Popup = {
     // Footer
     const item = footers[Math.floor(Math.random() * footers.length)]
 
-    el.footerHeadingText.textContent = item.heading
-    el.footerContentBody.textContent = item.body
-    el.footerButtonText.textContent = item.buttonText
+    el.footerHeadingText.textContent = getMessage(item.heading)
+    el.footerContentBody.textContent = getMessage(item.body)
+    el.footerButtonText.textContent = getMessage(item.buttonText)
     el.footerButtonLink.href = item.buttonLink
 
     const collapseFooter = await getOption('collapseFooter', false)
@@ -696,7 +697,10 @@ const Popup = {
           el.name.textContent = name
 
           if (confidence < 100) {
-            el.confidence.textContent = `${confidence}% sure`
+            el.confidence.textContent = getMessage(
+              'confidenceSure',
+              String(confidence)
+            )
           } else {
             el.confidence.remove()
           }
@@ -998,23 +1002,22 @@ const Popup = {
       // eslint-disable-next-line
       console.log(error)
 
-      el.errorMessage.textContent = `Sorry, something went wrong${
-        error.response ? ` (${error.response.status})` : ''
-      }. Please try again later.`
+      el.errorMessage.textContent = error.response
+        ? getMessage('plusErrorStatus', String(error.response.status))
+        : getMessage('plusErrorGeneric')
 
       if (error.response) {
         if (error.apiKeyPendingActivation) {
-          el.errorMessage.textContent = apiKeyActivationMessage
+          el.errorMessage.textContent = getMessage('apiKeyPendingActivation')
         } else if (error.response.status === 403) {
           el.errorMessage.textContent =
             typeof error.data === 'string'
               ? error.data
-              : 'No access. Please check your API key.'
+              : getMessage('plusErrorNoAccess')
 
           el.configure.classList.remove('plus-configure--hidden')
         } else if (error.response.status === 429) {
-          el.errorMessage.textContent =
-            'Too many requests. Please try again in a few seconds.'
+          el.errorMessage.textContent = getMessage('plusErrorTooManyRequests')
         } else if (
           error.response.status === 400 &&
           typeof error.data === 'string'

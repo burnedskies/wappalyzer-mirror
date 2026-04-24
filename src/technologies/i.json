@@ -1991,6 +1991,20 @@
     "scriptSrc": "tools\\.inticeinc\\.com",
     "website": "https://intice.com"
   },
+  "Intlayer": {
+    "cats": [
+      59
+    ],
+    "description": "Intlayer is an internationalization framework and content management platform for JavaScript applications.",
+    "icon": "Intlayer.svg",
+    "js": {
+      "intlayer.enabled": ""
+    },
+    "oss": true,
+    "saas": true,
+    "scriptSrc": "IntlayerProvider-[\\w-]+\\.js",
+    "website": "https://intlayer.org"
+  },
   "Invenio": {
     "cats": [
       50

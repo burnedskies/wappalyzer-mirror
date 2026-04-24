@@ -2226,6 +2226,20 @@
     "scripts": "\\.maxxton\\.net",
     "website": "https://maxxton.com"
   },
+  "Mayson": {
+    "cats": [
+      51
+    ],
+    "description": "Mayson is an AI-powered website and app builder platform.",
+    "dom": "link[href*='app.mayson.dev/icons/brand-logo-192x192.png']",
+    "icon": "Mayson.png",
+    "js": {
+      "__MAYSON": ""
+    },
+    "saas": true,
+    "scriptSrc": "\\.mayson\\.app/assets/index-[A-Za-z0-9]+\\.js",
+    "website": "https://mayson.dev"
+  },
   "Mazeed+": {
     "cats": [
       76
@@ -3785,13 +3799,16 @@
     "js": {
       "__NEXT_DATA__.props.pageProps.favicons.browserconfig": "mintlify\\..+\\.amazonaws\\.com"
     },
+    "meta": {
+      "generator": "^Mintlify$"
+    },
     "pricing": [
       "freemium",
       "mid",
       "recurring"
     ],
     "saas": true,
-    "scripts": "\\.mintlify\\.app",
+    "scripts": "\\.mintlify\\.app|/mintlify-assets/_next/static/",
     "website": "https://mintlify.com"
   },
   "Mintox": {

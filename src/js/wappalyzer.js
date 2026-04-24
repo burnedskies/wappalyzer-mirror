@@ -19,6 +19,8 @@ function hasValues(value) {
 const benchmarkEnabled =
   typeof process !== 'undefined' ? !!process.env.WAPPALYZER_BENCHMARK : false
 
+const versionPattern = /^[A-Za-z0-9._-]+$/
+
 let benchmarks = []
 
 function benchmark(duration, pattern, value = '', technology) {
@@ -80,6 +82,12 @@ function benchmarkSummary() {
 }
 
 const Wappalyzer = {
+  normalizeVersion(version = '') {
+    version = String(version || '').trim()
+
+    return version && versionPattern.test(version) ? version : ''
+  },
+
   technologies: [],
   technologiesByType: {},
   categories: [],
@@ -96,13 +104,16 @@ const Wappalyzer = {
   getTechnology: (name) =>
     [
       ...Wappalyzer.technologies,
-      ...Wappalyzer.requires.map(({ technologies }) => technologies).flat(),
-      ...Wappalyzer.categoryRequires
-        .map(({ technologies }) => technologies)
+      ...Wappalyzer.requires
+        .map((requirement) => requirement?.technologies || [])
         .flat(),
-    ].find(({ name: _name }) => name === _name),
+      ...Wappalyzer.categoryRequires
+        .map((requirement) => requirement?.technologies || [])
+        .flat(),
+    ].find((technology) => technology?.name === name),
 
-  getCategory: (id) => Wappalyzer.categories.find(({ id: _id }) => id === _id),
+  getCategory: (id) =>
+    Wappalyzer.categories.find((category) => category?.id === id),
 
   getTechnologiesByTypes(types = []) {
     const seen = new Set()
@@ -118,7 +129,7 @@ const Wappalyzer = {
       const matches = Wappalyzer.technologiesByType[type]
 
       for (const technology of matches) {
-        if (seen.has(technology.name)) {
+        if (!technology?.name || seen.has(technology.name)) {
           continue
         }
 
@@ -135,51 +146,58 @@ const Wappalyzer = {
    * @param {Array} detections
    */
   resolve(detections = []) {
-    const resolved = detections.reduce((resolved, { technology, lastUrl }) => {
-      if (
-        resolved.findIndex(
-          ({ technology: { name } }) => name === technology?.name
-        ) === -1
-      ) {
-        let version = ''
-        let confidence = 0
-        let rootPath
+    const validDetections = detections.filter(
+      ({ technology }) => technology?.name
+    )
+    const resolved = validDetections.reduce(
+      (resolved, { technology, lastUrl }) => {
+        if (
+          resolved.findIndex(
+            (detection) => detection?.technology?.name === technology?.name
+          ) === -1
+        ) {
+          let version = ''
+          let confidence = 0
+          let rootPath
 
-        detections
-          .filter(
-            ({ technology: _technology }) =>
-              _technology && _technology.name === technology.name
-          )
-          .forEach(
-            ({
-              technology: { name },
-              pattern,
-              version: _version = '',
-              rootPath: _rootPath,
-            }) => {
-              confidence = Math.min(100, confidence + pattern.confidence)
-              version =
-                _version.length > version.length &&
-                _version.length <= 15 &&
-                (parseInt(_version, 10) || 0) < 10000 // Ignore long numeric strings like timestamps
-                  ? _version
-                  : version
-              rootPath = rootPath || _rootPath || undefined
-            }
-          )
+          validDetections
+            .filter(
+              (detection) => detection?.technology?.name === technology.name
+            )
+            .forEach(
+              ({
+                technology: { name },
+                pattern,
+                version: _version = '',
+                rootPath: _rootPath,
+              }) => {
+                const normalizedVersion = Wappalyzer.normalizeVersion(_version)
 
-        resolved.push({ technology, confidence, version, rootPath, lastUrl })
-      }
+                confidence = Math.min(100, confidence + pattern.confidence)
+                version =
+                  normalizedVersion.length > version.length &&
+                  normalizedVersion.length <= 15 &&
+                  (parseInt(normalizedVersion, 10) || 0) < 10000 // Ignore long numeric strings like timestamps
+                    ? normalizedVersion
+                    : version
+                rootPath = rootPath || _rootPath || undefined
+              }
+            )
 
-      return resolved
-    }, [])
+          resolved.push({ technology, confidence, version, rootPath, lastUrl })
+        }
+
+        return resolved
+      },
+      []
+    )
 
     Wappalyzer.resolveExcludes(resolved)
     Wappalyzer.resolveImplies(resolved)
 
-    const priority = ({ technology: { categories } }) =>
+    const priority = ({ technology: { categories = [] } }) =>
       categories.reduce(
-        (max, id) => Math.max(max, Wappalyzer.getCategory(id).priority),
+        (max, id) => Math.max(max, Wappalyzer.getCategory(id)?.priority || 0),
         0
       )
 
@@ -205,7 +223,9 @@ const Wappalyzer = {
           name,
           description,
           slug,
-          categories: categories.map((id) => Wappalyzer.getCategory(id)),
+          categories: categories
+            .map((id) => Wappalyzer.getCategory(id))
+            .filter(Boolean),
           confidence,
           version,
           icon,
@@ -258,7 +278,7 @@ const Wappalyzer = {
       }
     }
 
-    return resolved
+    return Wappalyzer.normalizeVersion(resolved)
   },
 
   /**
@@ -278,7 +298,7 @@ const Wappalyzer = {
 
         do {
           index = resolved.findIndex(
-            ({ technology: { name } }) => name === excluded.name
+            (detection) => detection?.technology?.name === excluded.name
           )
 
           if (index !== -1) {
@@ -310,7 +330,7 @@ const Wappalyzer = {
 
             if (
               resolved.findIndex(
-                ({ technology: { name } }) => name === implied.name
+                (detection) => detection?.technology?.name === implied.name
               ) === -1
             ) {
               resolved.push({

@@ -1,0 +1,690 @@
+{
+  "options": {
+    "message": "Lisävarusteet"
+  },
+  "optionUpgradeMessage": {
+    "message": "Kerro minulle päivityksistä"
+  },
+  "optionDynamicIcon": {
+    "message": "Käytä tekniikkakuvaketta Wappalyzer-logon sijaan"
+  },
+  "optionTracking": {
+    "message": "Lähetä tunnistetut teknologiat nimettömästi osoitteeseen wappalyzer.com"
+  },
+  "optionBadge": {
+    "message": "Näytä tunnistettujen teknologioiden lukumäärä kuvakkeessa"
+  },
+  "optionShowCached": {
+    "message": "Sisällytä välimuistissa olevat havainnot tuloksiin"
+  },
+  "optionApiKey": {
+    "message": "API-avain"
+  },
+  "optionApiKeyDescription": {
+    "message": "Hanki API-avaimesi"
+  },
+  "disableOnDomain": {
+    "message": "Poista käytöstä tällä sivustolla"
+  },
+  "clearCache": {
+    "message": "Tyhjennä välimuistissa olevat havainnot"
+  },
+  "noAppsDetected": {
+    "message": "Teknologioita ei havaittu."
+  },
+  "reloadPage": {
+    "message": "Lataa uudelleen"
+  },
+  "confidenceSure": {
+    "message": "$CONFIDENCE$% varma",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
+  },
+  "categoryPin": {
+    "message": "Näytä aina kuvake"
+  },
+  "termsAccept": {
+    "message": "Olen okei tuon"
+  },
+  "termsDecline": {
+    "message": "Poista  käytöstä"
+  },
+  "termsContent": {
+    "message": "Tämä laajennus lähettää osoitteeseen <a href='https://www.wappalyzer.com'>wappalyzer.com</a> nimettömiä tietoja vierailemistasi verkkosivustoista, mukaan lukien verkkotunnuksen nimi ja tunnistetut tekniikat. Tämän voi poistaa asetuksista."
+  },
+  "privacyPolicy": {
+    "message": "Tietosuojakäytäntö"
+  },
+  "tabTechnologies": {
+    "message": "-tekniikat"
+  },
+  "tabPlus": {
+    "message": "Lisätietoja"
+  },
+  "exportCsv": {
+    "message": "Vie"
+  },
+  "plusMessageHeading": {
+    "message": "Hanki Plus hintaan $$10/mo"
+  },
+  "plusMessage": {
+    "message": "Plussalla vierailemiesi verkkosivustojen yritys- ja yhteystiedot näkyvät tässä."
+  },
+  "plusButton": {
+    "message": "Rekisteröidy"
+  },
+  "plusEmpty": {
+    "message": "Ei tuloksia."
+  },
+  "plusCrawl": {
+    "message": "Ei tuloksia, tarkista myöhemmin uudelleen."
+  },
+  "apiKeyPendingActivation": {
+    "message": "Uusien API-avainten aktivoituminen voi kestää muutaman minuutin. Odota hetki ja yritä uudelleen."
+  },
+  "plusErrorGeneric": {
+    "message": "Anteeksi, jotain meni pieleen. Yritä myöhemmin uudelleen."
+  },
+  "plusErrorStatus": {
+    "message": "Anteeksi, jotain meni pieleen ($STATUS$). Yritä myöhemmin uudelleen.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "Ei pääsyä. Tarkista API-avaimesi."
+  },
+  "plusErrorTooManyRequests": {
+    "message": "Liikaa pyyntöjä. Yritä uudelleen muutaman sekunnin kuluttua."
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
+  },
+  "formSave": {
+    "message": "Tallenna"
+  },
+  "issue": {
+    "message": "Jotain vialla tai puuttuu?"
+  },
+  "setCompany": {
+    "message": "Yritystiedot"
+  },
+  "setKeywords": {
+    "message": "Avainsanat"
+  },
+  "setEmail": {
+    "message": "Sähköpostiosoitteet"
+  },
+  "setPhone": {
+    "message": "Puhelinnumerot"
+  },
+  "setAddress": {
+    "message": "Osoitteet"
+  },
+  "setContact": {
+    "message": "Yhteystiedot"
+  },
+  "setSocial": {
+    "message": "Sosiaalisen median tilit"
+  },
+  "setMeta": {
+    "message": "Metatiedot"
+  },
+  "setLocale": {
+    "message": "Alue"
+  },
+  "setTrackers": {
+    "message": "Seurannat"
+  },
+  "setSecurity": {
+    "message": "Turvallisuus"
+  },
+  "setSignals": {
+    "message": "Signaalit"
+  },
+  "attributeTechnologySpend": {
+    "message": "Tekniikka kuluttaa"
+  },
+  "spendVeryHigh": {
+    "message": "Erittäin korkea"
+  },
+  "spendHigh": {
+    "message": "Korkea"
+  },
+  "spendMedium": {
+    "message": "Keskikokoinen"
+  },
+  "spendLow": {
+    "message": "Matala"
+  },
+  "spendVeryLow": {
+    "message": "Erittäin alhainen"
+  },
+  "attributeIpCountry": {
+    "message": "IP-maa"
+  },
+  "attributeIpRegion": {
+    "message": "IP-alue"
+  },
+  "attributeLanguage": {
+    "message": "Kieli"
+  },
+  "attributeEmail": {
+    "message": "Sähköpostiosoite"
+  },
+  "attributeVerifiedEmail": {
+    "message": "Sähköpostiosoite (vahvistettu)"
+  },
+  "attributeSafeEmail": {
+    "message": "Sähköpostiosoite (turvallinen)"
+  },
+  "attributePhone": {
+    "message": "Puhelinnumero"
+  },
+  "attributeSkype": {
+    "message": "Skype"
+  },
+  "attributeWhatsapp": {
+    "message": "WhatsApp"
+  },
+  "attributeInferredCompanyName": {
+    "message": "Päätelty yrityksen nimi"
+  },
+  "attributeTwitter": {
+    "message": "Twitter"
+  },
+  "attributeFacebook": {
+    "message": "Facebook"
+  },
+  "attributeInstagram": {
+    "message": "Instagram"
+  },
+  "attributeGithub": {
+    "message": "GitHub"
+  },
+  "attributeTiktok": {
+    "message": "TikTok"
+  },
+  "attributeYoutube": {
+    "message": "YouTube"
+  },
+  "attributePinterest": {
+    "message": "Pinterest"
+  },
+  "attributeLinkedin": {
+    "message": "LinkedIn"
+  },
+  "attributeOwler": {
+    "message": "Pöllö"
+  },
+  "attributeTitle": {
+    "message": "Otsikko"
+  },
+  "attributeDescription": {
+    "message": "Kuvaus"
+  },
+  "attributeCopyright": {
+    "message": "Tekijänoikeus"
+  },
+  "attributeCopyrightYear": {
+    "message": "Tekijänoikeusvuosi"
+  },
+  "attributeResponsive": {
+    "message": "Responsiivinen"
+  },
+  "attributeCertInfo_subjectOrg": {
+    "message": "Sertifioitu organisaatio"
+  },
+  "attributeCertInfo_subjectCountry": {
+    "message": "Todistusmaa"
+  },
+  "attributeCertInfo_subjectState": {
+    "message": "Todistustila"
+  },
+  "attributeCertInfo_subjectLocality": {
+    "message": "Todistuspaikka"
+  },
+  "attributeCertInfo_issuer": {
+    "message": "Varmenteen myöntäjä"
+  },
+  "attributeCertInfo_protocol": {
+    "message": "Sertifikaattiprotokolla"
+  },
+  "attributeCertInfo_validTo": {
+    "message": "Todistuksen voimassaolo päättyy"
+  },
+  "attributeTrackerGoogleAnalytics": {
+    "message": "Google Analytics"
+  },
+  "attributeTrackerGoogleAdSense": {
+    "message": "Google AdSense"
+  },
+  "attributeTrackerMedianet": {
+    "message": "Medianet"
+  },
+  "attributeTrackerFacebook": {
+    "message": "Facebook"
+  },
+  "attributeTrackerOptimizely": {
+    "message": "Optimize"
+  },
+  "attributeCompanyName": {
+    "message": "Yrityksen nimi"
+  },
+  "attributeIndustry": {
+    "message": "Teollisuus"
+  },
+  "attributeAbout": {
+    "message": "Tietoja"
+  },
+  "attributeLocations": {
+    "message": "Toimipaikat"
+  },
+  "attributeCompanySize": {
+    "message": "Yrityksen koko"
+  },
+  "attributeCompanyType": {
+    "message": "Yrityksen tyyppi"
+  },
+  "attributeCompanyFounded": {
+    "message": "Yritys perustettiin"
+  },
+  "attributeKeywords": {
+    "message": "Avainsanat"
+  },
+  "attributeEmployees": {
+    "message": "Ihmiset"
+  },
+  "attributeDns_spf": {
+    "message": "SPF-tietue"
+  },
+  "attributeDns_dmarc": {
+    "message": "DMARC-tietue"
+  },
+  "attributeSchemaOrgTypes": {
+    "message": "schema.org-tyypit"
+  },
+  "attributeFundingTotalUsd": {
+    "message": "Rahoitus yhteensä"
+  },
+  "attributeFundingRounds": {
+    "message": "Rahoituskierrokset"
+  },
+  "attributeStockSymbol": {
+    "message": "Osakkeen tunnus"
+  },
+  "attributeSemrushGlobalRank": {
+    "message": "Semrushin maailmanlaajuinen sijoitus"
+  },
+  "attributeSemrushVisits": {
+    "message": "Semrush käy kuukausittain"
+  },
+  "categoryName1": {
+    "message": "CMS"
+  },
+  "categoryName2": {
+    "message": "Viestitaulut"
+  },
+  "categoryName3": {
+    "message": "Tietokannan ylläpitäjät"
+  },
+  "categoryName4": {
+    "message": "Dokumentaatiotyökalut"
+  },
+  "categoryName5": {
+    "message": "Widgetit"
+  },
+  "categoryName6": {
+    "message": "Verkkokauppa"
+  },
+  "categoryName7": {
+    "message": "Kuvagalleriat"
+  },
+  "categoryName8": {
+    "message": "Wikit"
+  },
+  "categoryName9": {
+    "message": "Isännöintipaneelit"
+  },
+  "categoryName10": {
+    "message": "Analytiikka"
+  },
+  "categoryName11": {
+    "message": "Blogit"
+  },
+  "categoryName12": {
+    "message": "JavaScript-kehykset"
+  },
+  "categoryName13": {
+    "message": "Vianseurantalaitteet"
+  },
+  "categoryName14": {
+    "message": "Videosoittimet"
+  },
+  "categoryName15": {
+    "message": "Kommenttijärjestelmät"
+  },
+  "categoryName16": {
+    "message": "Turvallisuus"
+  },
+  "categoryName17": {
+    "message": "Fonttiskriptit"
+  },
+  "categoryName18": {
+    "message": "Verkkokehykset"
+  },
+  "categoryName19": {
+    "message": "Muut"
+  },
+  "categoryName20": {
+    "message": "Toimittaja"
+  },
+  "categoryName21": {
+    "message": "LMS"
+  },
+  "categoryName22": {
+    "message": "Web-palvelimet"
+  },
+  "categoryName23": {
+    "message": "Välimuisti"
+  },
+  "categoryName24": {
+    "message": "Rikastekstin editorit"
+  },
+  "categoryName25": {
+    "message": "JavaScript-grafiikka"
+  },
+  "categoryName26": {
+    "message": "Mobiilikehykset"
+  },
+  "categoryName27": {
+    "message": "Ohjelmointikielet"
+  },
+  "categoryName28": {
+    "message": "Käyttöjärjestelmät"
+  },
+  "categoryName29": {
+    "message": "Hakukoneet"
+  },
+  "categoryName30": {
+    "message": "Verkkoposti"
+  },
+  "categoryName31": {
+    "message": "CDN"
+  },
+  "categoryName32": {
+    "message": "Markkinoinnin automaatio"
+  },
+  "categoryName33": {
+    "message": "Verkkopalvelinlaajennukset"
+  },
+  "categoryName34": {
+    "message": "Tietokannat"
+  },
+  "categoryName35": {
+    "message": "Kartat"
+  },
+  "categoryName36": {
+    "message": "Mainonta"
+  },
+  "categoryName37": {
+    "message": "Verkkopalvelut"
+  },
+  "categoryName38": {
+    "message": "Mediapalvelimet"
+  },
+  "categoryName39": {
+    "message": "Webbikamerat"
+  },
+  "categoryName41": {
+    "message": "Maksuprosessorit"
+  },
+  "categoryName42": {
+    "message": "Tunnisteen hallinta"
+  },
+  "categoryName44": {
+    "message": "CI"
+  },
+  "categoryName46": {
+    "message": "Kaukosäädin"
+  },
+  "categoryName47": {
+    "message": "Kehitys"
+  },
+  "categoryName48": {
+    "message": "Verkkotallennus"
+  },
+  "categoryName49": {
+    "message": "Syötteenlukijat"
+  },
+  "categoryName50": {
+    "message": "DMS"
+  },
+  "categoryName51": {
+    "message": "Sivun rakentaja"
+  },
+  "categoryName52": {
+    "message": "Live-chat"
+  },
+  "categoryName53": {
+    "message": "CRM"
+  },
+  "categoryName54": {
+    "message": "SEO"
+  },
+  "categoryName55": {
+    "message": "Kirjanpito"
+  },
+  "categoryName56": {
+    "message": "Kryptolouhijat"
+  },
+  "categoryName57": {
+    "message": "Staattiset työmaageneraattorit"
+  },
+  "categoryName58": {
+    "message": "Käyttäjän käyttöönotto"
+  },
+  "categoryName59": {
+    "message": "JavaScript-kirjastot"
+  },
+  "categoryName60": {
+    "message": "Kontit"
+  },
+  "categoryName62": {
+    "message": "PaaS"
+  },
+  "categoryName63": {
+    "message": "IaaS"
+  },
+  "categoryName64": {
+    "message": "Käänteiset välityspalvelimet"
+  },
+  "categoryName65": {
+    "message": "Kuormantasauslaitteet"
+  },
+  "categoryName66": {
+    "message": "Käyttöliittymäkehykset"
+  },
+  "categoryName67": {
+    "message": "Evästeiden yhteensopivuus"
+  },
+  "categoryName68": {
+    "message": "Esteettömyys"
+  },
+  "categoryName69": {
+    "message": "Todennus"
+  },
+  "categoryName70": {
+    "message": "SSL/TLS-varmenneviranomaiset"
+  },
+  "categoryName71": {
+    "message": "Kumppanuusohjelmat"
+  },
+  "categoryName72": {
+    "message": "Ajanvaraus"
+  },
+  "categoryName73": {
+    "message": "Kyselyt"
+  },
+  "categoryName74": {
+    "message": "A/B-testaus"
+  },
+  "categoryName75": {
+    "message": "Sähköposti"
+  },
+  "categoryName76": {
+    "message": "Personointi"
+  },
+  "categoryName77": {
+    "message": "Uudelleenkohdistaminen"
+  },
+  "categoryName78": {
+    "message": "RUM"
+  },
+  "categoryName79": {
+    "message": "Maantieteellinen sijainti"
+  },
+  "categoryName80": {
+    "message": "WordPress-teemat"
+  },
+  "categoryName81": {
+    "message": "Shopify-teemat"
+  },
+  "categoryName82": {
+    "message": "Drupal-teemat"
+  },
+  "categoryName83": {
+    "message": "Selaimen sormenjälki"
+  },
+  "categoryName84": {
+    "message": "Uskollisuus ja palkinnot"
+  },
+  "categoryName85": {
+    "message": "Ominaisuuden hallinta"
+  },
+  "categoryName86": {
+    "message": "Segmentointi"
+  },
+  "categoryName87": {
+    "message": "WordPress-laajennukset"
+  },
+  "categoryName88": {
+    "message": "Isännöi"
+  },
+  "categoryName89": {
+    "message": "Käännös"
+  },
+  "categoryName90": {
+    "message": "Arvostelut"
+  },
+  "categoryName91": {
+    "message": "Osta nyt maksa myöhemmin"
+  },
+  "categoryName92": {
+    "message": "Suorituskyky"
+  },
+  "categoryName93": {
+    "message": "Varaukset ja toimitus"
+  },
+  "categoryName94": {
+    "message": "Viittausmarkkinointi"
+  },
+  "categoryName95": {
+    "message": "Digitaalinen omaisuudenhallinta"
+  },
+  "categoryName96": {
+    "message": "Sisällön kuratointi"
+  },
+  "categoryName97": {
+    "message": "Asiakastietoalusta"
+  },
+  "categoryName98": {
+    "message": "Ostoskorin hylkääminen"
+  },
+  "categoryName99": {
+    "message": "Kuljettajat"
+  },
+  "categoryName100": {
+    "message": "Shopify-sovellukset"
+  },
+  "categoryName101": {
+    "message": "Rekrytointi ja henkilöstö"
+  },
+  "categoryName102": {
+    "message": "Palauttaa"
+  },
+  "categoryName103": {
+    "message": "Suoratoisto"
+  },
+  "categoryName104": {
+    "message": "Lippujen varaus"
+  },
+  "categoryName105": {
+    "message": "Lisätty todellisuus"
+  },
+  "categoryName106": {
+    "message": "Rajat ylittävä verkkokauppa"
+  },
+  "categoryName107": {
+    "message": "Toteutus"
+  },
+  "categoryName108": {
+    "message": "Verkkokaupan käyttöliittymät"
+  },
+  "categoryName109": {
+    "message": "Verkkotunnuksen pysäköinti"
+  },
+  "categoryName110": {
+    "message": "Lomakkeiden rakentajat"
+  },
+  "categoryName111": {
+    "message": "Varainkeruu ja lahjoitukset"
+  }
+}

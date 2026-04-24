@@ -1,21 +1,6 @@
 {
-  "github": {
-    "message": "Fork-uiește Wappalyzer pe GitHub!"
-  },
-  "twitter": {
-    "message": "Urmărește Wappalyzer pe Twitter"
-  },
-  "website": {
-    "message": "Mergi la wappalyzer.com"
-  },
   "options": {
     "message": "Opțiuni"
-  },
-  "optionsSave": {
-    "message": "Salvează opțiuni"
-  },
-  "optionsSaved": {
-    "message": "Salvat"
   },
   "optionUpgradeMessage": {
     "message": "Anunță-mă dacă sunt actualizări"
@@ -25,9 +10,6 @@
   },
   "optionTracking": {
     "message": "Trimite rapoarte anonime despre aplicațiile detectate către wappalyzer.com pentru cercetare"
-  },
-  "optionThemeMode": {
-    "message": "Activează modul de compatibilitate întuneric."
   },
   "optionBadge": {
     "message": "Afișează numărul tehnologiilor identificate pe iconiță"
@@ -47,14 +29,19 @@
   "clearCache": {
     "message": "Șterge detecțiile din cache"
   },
-  "nothingToDo": {
-    "message": "Nimic de făcut pe pagina curentă."
-  },
   "noAppsDetected": {
     "message": "Nici o aplicație detectată."
   },
   "reloadPage": {
     "message": "Reîncarcă"
+  },
+  "confidenceSure": {
+    "message": "$CONFIDENCE$% sigur",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
   },
   "categoryPin": {
     "message": "Afișează icon tot timpul"
@@ -71,20 +58,14 @@
   "privacyPolicy": {
     "message": "Politica de confidențialitate"
   },
-  "createAlert": {
-    "message": "Creează o alertă pentru acest site web"
-  },
-  "leadLists": {
-    "message": "Instrumente de generare de leaduri"
-  },
   "tabTechnologies": {
     "message": "Tehnologii"
   },
   "tabPlus": {
     "message": "Mai multe informații"
   },
-  "creditBalance": {
-    "message": "Credite:"
+  "exportCsv": {
+    "message": "Exportă"
   },
   "plusMessageHeading": {
     "message": "Obține Plus pentru $$10/lună"
@@ -100,6 +81,71 @@
   },
   "plusCrawl": {
     "message": "Nu au fost găsite rezultate, revino mai târziu."
+  },
+  "apiKeyPendingActivation": {
+    "message": "Noile chei API pot avea nevoie de câteva minute pentru a se activa. Așteaptă puțin și încearcă din nou."
+  },
+  "plusErrorGeneric": {
+    "message": "Ne pare rău, ceva nu a mers bine. Încearcă din nou mai târziu."
+  },
+  "plusErrorStatus": {
+    "message": "Ne pare rău, ceva nu a mers bine ($STATUS$). Încearcă din nou mai târziu.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "Nu ai acces. Verifică cheia ta API."
+  },
+  "plusErrorTooManyRequests": {
+    "message": "Prea multe cereri. Încearcă din nou în câteva secunde."
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
   },
   "formSave": {
     "message": "Salvează"
@@ -145,6 +191,21 @@
   },
   "attributeTechnologySpend": {
     "message": "Cheltuieli pentru tehnologie"
+  },
+  "spendVeryHigh": {
+    "message": "Foarte ridicat"
+  },
+  "spendHigh": {
+    "message": "Ridicat"
+  },
+  "spendMedium": {
+    "message": "Mediu"
+  },
+  "spendLow": {
+    "message": "Scăzut"
+  },
+  "spendVeryLow": {
+    "message": "Foarte scăzut"
   },
   "attributeIpCountry": {
     "message": "Țara IP-ului"
@@ -238,9 +299,6 @@
   },
   "attributeCertInfo_validTo": {
     "message": "Cert expiry"
-  },
-  "attributeHttps": {
-    "message": "SSL/TLS enabled"
   },
   "attributeTrackerGoogleAnalytics": {
     "message": "Google Analytics"
@@ -425,9 +483,6 @@
   "categoryName39": {
     "message": "Webcam"
   },
-  "categoryName40": {
-    "message": "Imprimantă"
-  },
   "categoryName41": {
     "message": "Sistem de plată"
   },
@@ -481,9 +536,6 @@
   },
   "categoryName60": {
     "message": "Containere"
-  },
-  "categoryName61": {
-    "message": "SaaS"
   },
   "categoryName62": {
     "message": "PaaS"

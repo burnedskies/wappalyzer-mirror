@@ -1,0 +1,690 @@
+{
+  "options": {
+    "message": "Opcije"
+  },
+  "optionUpgradeMessage": {
+    "message": "Reci mi o nadogradnjama"
+  },
+  "optionDynamicIcon": {
+    "message": "Koristite ikonu tehnologije umjesto logotipa Wappalyzera"
+  },
+  "optionTracking": {
+    "message": "Anonimno pošaljite identificirane tehnologije na wappalyzer.com"
+  },
+  "optionBadge": {
+    "message": "Prikaži broj identificiranih tehnologija na ikoni"
+  },
+  "optionShowCached": {
+    "message": "Uključi detekcije iz predmemorije u rezultate"
+  },
+  "optionApiKey": {
+    "message": "API ključ"
+  },
+  "optionApiKeyDescription": {
+    "message": "nabavite svoj API ključ"
+  },
+  "disableOnDomain": {
+    "message": "Onemogući na ovoj web stranici"
+  },
+  "clearCache": {
+    "message": "Obriši predmemorirane detekcije"
+  },
+  "noAppsDetected": {
+    "message": "Tehnologije nisu otkrivene."
+  },
+  "reloadPage": {
+    "message": "Ponovno učitaj"
+  },
+  "confidenceSure": {
+    "message": "$CONFIDENCE$% sigurno",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
+  },
+  "categoryPin": {
+    "message": "Uvijek prikaži ikonu"
+  },
+  "termsAccept": {
+    "message": "Slažem se s tim"
+  },
+  "termsDecline": {
+    "message": "Onemogući"
+  },
+  "termsContent": {
+    "message": "Ovo proširenje šalje anonimne informacije o web stranicama koje posjećujete, uključujući naziv domene i identificirane tehnologije, na <a href='https://www.wappalyzer.com'>wappalyzer.com</a>. To se može onemogućiti u postavkama."
+  },
+  "privacyPolicy": {
+    "message": "Politika privatnosti"
+  },
+  "tabTechnologies": {
+    "message": "Tehnologije"
+  },
+  "tabPlus": {
+    "message": "Više informacija"
+  },
+  "exportCsv": {
+    "message": "Izvoz"
+  },
+  "plusMessageHeading": {
+    "message": "Dobijte Plus za $$10/mo"
+  },
+  "plusMessage": {
+    "message": "Uz Plus, ovdje se prikazuju podaci o tvrtki i kontaktu web stranica koje posjećujete."
+  },
+  "plusButton": {
+    "message": "Prijavite se"
+  },
+  "plusEmpty": {
+    "message": "Nema pronađenih rezultata."
+  },
+  "plusCrawl": {
+    "message": "Nema pronađenih rezultata, provjerite kasnije."
+  },
+  "apiKeyPendingActivation": {
+    "message": "Aktivacija novih API ključeva može potrajati nekoliko minuta. Pričekajte trenutak i pokušajte ponovo."
+  },
+  "plusErrorGeneric": {
+    "message": "Žao nam je, nešto nije u redu. Pokušajte ponovno kasnije."
+  },
+  "plusErrorStatus": {
+    "message": "Nažalost, nešto nije u redu ($STATUS$). Pokušajte ponovno kasnije.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "Nema pristupa. Provjerite svoj API ključ."
+  },
+  "plusErrorTooManyRequests": {
+    "message": "Previše zahtjeva. Pokušajte ponovno za nekoliko sekundi."
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
+  },
+  "formSave": {
+    "message": "Spremi"
+  },
+  "issue": {
+    "message": "Nešto nije u redu ili nedostaje?"
+  },
+  "setCompany": {
+    "message": "Informacije o tvrtki"
+  },
+  "setKeywords": {
+    "message": "Ključne riječi"
+  },
+  "setEmail": {
+    "message": "E-adrese"
+  },
+  "setPhone": {
+    "message": "Brojevi telefona"
+  },
+  "setAddress": {
+    "message": "Adrese"
+  },
+  "setContact": {
+    "message": "Podaci za kontakt"
+  },
+  "setSocial": {
+    "message": "Računi društvenih medija"
+  },
+  "setMeta": {
+    "message": "Metapodaci"
+  },
+  "setLocale": {
+    "message": "Lokalizacija"
+  },
+  "setTrackers": {
+    "message": "Tragači"
+  },
+  "setSecurity": {
+    "message": "Sigurnost"
+  },
+  "setSignals": {
+    "message": "Signali"
+  },
+  "attributeTechnologySpend": {
+    "message": "Tehnološka potrošnja"
+  },
+  "spendVeryHigh": {
+    "message": "Vrlo visoko"
+  },
+  "spendHigh": {
+    "message": "Visoko"
+  },
+  "spendMedium": {
+    "message": "Srednji"
+  },
+  "spendLow": {
+    "message": "Nisko"
+  },
+  "spendVeryLow": {
+    "message": "Vrlo nisko"
+  },
+  "attributeIpCountry": {
+    "message": "IP država"
+  },
+  "attributeIpRegion": {
+    "message": "IP regija"
+  },
+  "attributeLanguage": {
+    "message": "Jezik"
+  },
+  "attributeEmail": {
+    "message": "Adresa e-pošte"
+  },
+  "attributeVerifiedEmail": {
+    "message": "Adresa e-pošte (potvrđena)"
+  },
+  "attributeSafeEmail": {
+    "message": "Adresa e-pošte (sigurno)"
+  },
+  "attributePhone": {
+    "message": "Broj telefona"
+  },
+  "attributeSkype": {
+    "message": "Skype"
+  },
+  "attributeWhatsapp": {
+    "message": "WhatsApp"
+  },
+  "attributeInferredCompanyName": {
+    "message": "Pretpostavljeni naziv tvrtke"
+  },
+  "attributeTwitter": {
+    "message": "Twitter"
+  },
+  "attributeFacebook": {
+    "message": "Facebook"
+  },
+  "attributeInstagram": {
+    "message": "Instagram"
+  },
+  "attributeGithub": {
+    "message": "GitHub"
+  },
+  "attributeTiktok": {
+    "message": "TikTok"
+  },
+  "attributeYoutube": {
+    "message": "YouTube"
+  },
+  "attributePinterest": {
+    "message": "Pinterest"
+  },
+  "attributeLinkedin": {
+    "message": "LinkedIn"
+  },
+  "attributeOwler": {
+    "message": "Sova"
+  },
+  "attributeTitle": {
+    "message": "Naslov"
+  },
+  "attributeDescription": {
+    "message": "Opis"
+  },
+  "attributeCopyright": {
+    "message": "Autorska prava"
+  },
+  "attributeCopyrightYear": {
+    "message": "Copyright godina"
+  },
+  "attributeResponsive": {
+    "message": "Odgovarajući"
+  },
+  "attributeCertInfo_subjectOrg": {
+    "message": "Certificirana organizacija"
+  },
+  "attributeCertInfo_subjectCountry": {
+    "message": "Cert država"
+  },
+  "attributeCertInfo_subjectState": {
+    "message": "Stanje certifikata"
+  },
+  "attributeCertInfo_subjectLocality": {
+    "message": "Cert locality"
+  },
+  "attributeCertInfo_issuer": {
+    "message": "Izdavatelj certifikata"
+  },
+  "attributeCertInfo_protocol": {
+    "message": "Cert protokol"
+  },
+  "attributeCertInfo_validTo": {
+    "message": "Istek certifikata"
+  },
+  "attributeTrackerGoogleAnalytics": {
+    "message": "Google Analytics"
+  },
+  "attributeTrackerGoogleAdSense": {
+    "message": "Google AdSense"
+  },
+  "attributeTrackerMedianet": {
+    "message": "Medianet"
+  },
+  "attributeTrackerFacebook": {
+    "message": "Facebook"
+  },
+  "attributeTrackerOptimizely": {
+    "message": "Optimizirano"
+  },
+  "attributeCompanyName": {
+    "message": "Naziv tvrtke"
+  },
+  "attributeIndustry": {
+    "message": "Industrija"
+  },
+  "attributeAbout": {
+    "message": "O"
+  },
+  "attributeLocations": {
+    "message": "Lokacije"
+  },
+  "attributeCompanySize": {
+    "message": "Veličina tvrtke"
+  },
+  "attributeCompanyType": {
+    "message": "Vrsta poduzeća"
+  },
+  "attributeCompanyFounded": {
+    "message": "Osnovana tvrtka"
+  },
+  "attributeKeywords": {
+    "message": "Ključne riječi"
+  },
+  "attributeEmployees": {
+    "message": "Ljudi"
+  },
+  "attributeDns_spf": {
+    "message": "SPF zapis"
+  },
+  "attributeDns_dmarc": {
+    "message": "DMARC zapis"
+  },
+  "attributeSchemaOrgTypes": {
+    "message": "schema.org tipovi"
+  },
+  "attributeFundingTotalUsd": {
+    "message": "Ukupno financiranje"
+  },
+  "attributeFundingRounds": {
+    "message": "Krugovi financiranja"
+  },
+  "attributeStockSymbol": {
+    "message": "Simbol dionice"
+  },
+  "attributeSemrushGlobalRank": {
+    "message": "Semrush globalni rang"
+  },
+  "attributeSemrushVisits": {
+    "message": "Semrush mjesečno posjećuje"
+  },
+  "categoryName1": {
+    "message": "CMS"
+  },
+  "categoryName2": {
+    "message": "Oglasne ploče"
+  },
+  "categoryName3": {
+    "message": "Upravitelji baza podataka"
+  },
+  "categoryName4": {
+    "message": "Alati za dokumentaciju"
+  },
+  "categoryName5": {
+    "message": "Widgeti"
+  },
+  "categoryName6": {
+    "message": "E-trgovina"
+  },
+  "categoryName7": {
+    "message": "Galerije fotografija"
+  },
+  "categoryName8": {
+    "message": "Wikiji"
+  },
+  "categoryName9": {
+    "message": "Hosting paneli"
+  },
+  "categoryName10": {
+    "message": "Analitika"
+  },
+  "categoryName11": {
+    "message": "Blogovi"
+  },
+  "categoryName12": {
+    "message": "JavaScript okviri"
+  },
+  "categoryName13": {
+    "message": "Praćenje problema"
+  },
+  "categoryName14": {
+    "message": "Video playeri"
+  },
+  "categoryName15": {
+    "message": "Sustavi komentara"
+  },
+  "categoryName16": {
+    "message": "Sigurnost"
+  },
+  "categoryName17": {
+    "message": "Skripte fontova"
+  },
+  "categoryName18": {
+    "message": "Web okviri"
+  },
+  "categoryName19": {
+    "message": "Razno"
+  },
+  "categoryName20": {
+    "message": "Urednik"
+  },
+  "categoryName21": {
+    "message": "LMS"
+  },
+  "categoryName22": {
+    "message": "Web poslužitelji"
+  },
+  "categoryName23": {
+    "message": "Predmemoriranje"
+  },
+  "categoryName24": {
+    "message": "Uređivači obogaćenog teksta"
+  },
+  "categoryName25": {
+    "message": "JavaScript grafika"
+  },
+  "categoryName26": {
+    "message": "Mobilni okviri"
+  },
+  "categoryName27": {
+    "message": "Programski jezici"
+  },
+  "categoryName28": {
+    "message": "Operativni sustavi"
+  },
+  "categoryName29": {
+    "message": "Tražilice"
+  },
+  "categoryName30": {
+    "message": "Web pošta"
+  },
+  "categoryName31": {
+    "message": "CDN"
+  },
+  "categoryName32": {
+    "message": "Automatizacija marketinga"
+  },
+  "categoryName33": {
+    "message": "Ekstenzije web poslužitelja"
+  },
+  "categoryName34": {
+    "message": "Baze podataka"
+  },
+  "categoryName35": {
+    "message": "Karte"
+  },
+  "categoryName36": {
+    "message": "Oglašavanje"
+  },
+  "categoryName37": {
+    "message": "Mrežne usluge"
+  },
+  "categoryName38": {
+    "message": "Medijski poslužitelji"
+  },
+  "categoryName39": {
+    "message": "Web kamere"
+  },
+  "categoryName41": {
+    "message": "Procesori plaćanja"
+  },
+  "categoryName42": {
+    "message": "Upravljači oznakama"
+  },
+  "categoryName44": {
+    "message": "CI"
+  },
+  "categoryName46": {
+    "message": "Daljinski pristup"
+  },
+  "categoryName47": {
+    "message": "Razvoj"
+  },
+  "categoryName48": {
+    "message": "Mrežna pohrana"
+  },
+  "categoryName49": {
+    "message": "Čitači feedova"
+  },
+  "categoryName50": {
+    "message": "DMS"
+  },
+  "categoryName51": {
+    "message": "Izrada stranica"
+  },
+  "categoryName52": {
+    "message": "Razgovor uživo"
+  },
+  "categoryName53": {
+    "message": "CRM"
+  },
+  "categoryName54": {
+    "message": "SEO"
+  },
+  "categoryName55": {
+    "message": "Računovodstvo"
+  },
+  "categoryName56": {
+    "message": "Kriptokopači"
+  },
+  "categoryName57": {
+    "message": "Generatori statičkih stranica"
+  },
+  "categoryName58": {
+    "message": "Uključivanje korisnika"
+  },
+  "categoryName59": {
+    "message": "JavaScript biblioteke"
+  },
+  "categoryName60": {
+    "message": "Spremnici"
+  },
+  "categoryName62": {
+    "message": "PaaS"
+  },
+  "categoryName63": {
+    "message": "IaaS"
+  },
+  "categoryName64": {
+    "message": "Obrnuti proxyji"
+  },
+  "categoryName65": {
+    "message": "Balanseri opterećenja"
+  },
+  "categoryName66": {
+    "message": "UI okviri"
+  },
+  "categoryName67": {
+    "message": "Usklađenost s kolačićima"
+  },
+  "categoryName68": {
+    "message": "Pristupačnost"
+  },
+  "categoryName69": {
+    "message": "Autentifikacija"
+  },
+  "categoryName70": {
+    "message": "Tijela za izdavanje SSL/TLS certifikata"
+  },
+  "categoryName71": {
+    "message": "Partnerski programi"
+  },
+  "categoryName72": {
+    "message": "Zakazivanje termina"
+  },
+  "categoryName73": {
+    "message": "Ankete"
+  },
+  "categoryName74": {
+    "message": "A/B testiranje"
+  },
+  "categoryName75": {
+    "message": "Pošaljite e-poštu"
+  },
+  "categoryName76": {
+    "message": "Personalizacija"
+  },
+  "categoryName77": {
+    "message": "Ponovno ciljanje"
+  },
+  "categoryName78": {
+    "message": "RUM"
+  },
+  "categoryName79": {
+    "message": "Geolokacija"
+  },
+  "categoryName80": {
+    "message": "WordPress teme"
+  },
+  "categoryName81": {
+    "message": "Shopify teme"
+  },
+  "categoryName82": {
+    "message": "Drupal teme"
+  },
+  "categoryName83": {
+    "message": "Otisak prsta preglednika"
+  },
+  "categoryName84": {
+    "message": "Vjernost i nagrade"
+  },
+  "categoryName85": {
+    "message": "Upravljanje značajkama"
+  },
+  "categoryName86": {
+    "message": "Segmentacija"
+  },
+  "categoryName87": {
+    "message": "WordPress dodaci"
+  },
+  "categoryName88": {
+    "message": "Hosting usluge"
+  },
+  "categoryName89": {
+    "message": "Prijevod"
+  },
+  "categoryName90": {
+    "message": "Recenzije"
+  },
+  "categoryName91": {
+    "message": "Kupite sada platite kasnije"
+  },
+  "categoryName92": {
+    "message": "Izvedba"
+  },
+  "categoryName93": {
+    "message": "Rezervacije i dostava"
+  },
+  "categoryName94": {
+    "message": "Preporučeni marketing"
+  },
+  "categoryName95": {
+    "message": "Upravljanje digitalnom imovinom"
+  },
+  "categoryName96": {
+    "message": "Kuriranje sadržaja"
+  },
+  "categoryName97": {
+    "message": "Platforma podataka o kupcima"
+  },
+  "categoryName98": {
+    "message": "Napuštanje košarice"
+  },
+  "categoryName99": {
+    "message": "Prijevoznici"
+  },
+  "categoryName100": {
+    "message": "Shopify aplikacije"
+  },
+  "categoryName101": {
+    "message": "Zapošljavanje i zapošljavanje"
+  },
+  "categoryName102": {
+    "message": "Vraća"
+  },
+  "categoryName103": {
+    "message": "Prijenos uživo"
+  },
+  "categoryName104": {
+    "message": "Rezervacija karata"
+  },
+  "categoryName105": {
+    "message": "Proširena stvarnost"
+  },
+  "categoryName106": {
+    "message": "Prekogranična e-trgovina"
+  },
+  "categoryName107": {
+    "message": "Ispunjenje"
+  },
+  "categoryName108": {
+    "message": "Sučelja e-trgovine"
+  },
+  "categoryName109": {
+    "message": "Parkiranje domene"
+  },
+  "categoryName110": {
+    "message": "Graditelji oblika"
+  },
+  "categoryName111": {
+    "message": "Prikupljanje sredstava i donacije"
+  }
+}

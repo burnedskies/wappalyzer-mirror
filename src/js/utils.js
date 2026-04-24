@@ -2,6 +2,32 @@
 /* eslint-env browser */
 /* globals chrome */
 
+function getErrorMessage(error) {
+  if (error instanceof Error) {
+    return error.message || error.toString()
+  }
+
+  if (error && typeof error.message === 'string' && error.message) {
+    return error.message
+  }
+
+  if (typeof error === 'string') {
+    return error
+  }
+
+  try {
+    const serialized = JSON.stringify(error)
+
+    if (serialized && serialized !== '{}') {
+      return serialized
+    }
+  } catch {
+    // Continue.
+  }
+
+  return String(error)
+}
+
 // Manifest v2 polyfill
 if (chrome.runtime.getManifest().manifest_version === 2) {
   chrome.action = chrome.browserAction
@@ -25,7 +51,7 @@ const Utils = {
     return new Promise((resolve, reject) => {
       context[method](...args, (...args) => {
         if (chrome.runtime.lastError) {
-          return reject(chrome.runtime.lastError)
+          return reject(Utils.normalizeError(chrome.runtime.lastError))
         }
 
         resolve(...args)
@@ -46,7 +72,28 @@ const Utils = {
    * Close current browser tab
    */
   close(tabId) {
-    chrome.tabs.remove(tabId, () => {})
+    chrome.tabs.remove(tabId, () => {
+      if (
+        chrome.runtime.lastError &&
+        !Utils.isMissingTabError(chrome.runtime.lastError)
+      ) {
+        // eslint-disable-next-line no-console
+        console.error(
+          'wappalyzer | utils |',
+          Utils.normalizeError(chrome.runtime.lastError)
+        )
+      }
+    })
+  },
+
+  getErrorMessage,
+
+  normalizeError(error) {
+    return error instanceof Error ? error : new Error(getErrorMessage(error))
+  },
+
+  isMissingTabError(error) {
+    return /\bNo tab with id\b/i.test(getErrorMessage(error))
   },
 
   /**
@@ -79,7 +126,7 @@ const Utils = {
       }
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.error('wappalyzer | utils |', error)
+      console.error('wappalyzer | utils |', Utils.normalizeError(error))
     }
 
     return defaultValue
@@ -97,7 +144,7 @@ const Utils = {
       })
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.error('wappalyzer | utils |', error)
+      console.error('wappalyzer | utils |', Utils.normalizeError(error))
     }
   },
 
@@ -120,7 +167,7 @@ const Utils = {
         },
         (response) => {
           chrome.runtime.lastError
-            ? reject(chrome.runtime.lastError)
+            ? reject(Utils.normalizeError(chrome.runtime.lastError))
             : resolve(response)
         }
       )

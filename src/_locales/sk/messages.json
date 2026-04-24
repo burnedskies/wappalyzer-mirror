@@ -1,21 +1,6 @@
 {
-  "github": {
-    "message": "Forknite Wappalyzer na GitHube!"
-  },
-  "twitter": {
-    "message": "Sledujte Wappalyzer na Twitteri"
-  },
-  "website": {
-    "message": "Prejdite na adresu wappalyzer.com"
-  },
   "options": {
     "message": "Možnosti"
-  },
-  "optionsSave": {
-    "message": "Uložiť možnosti"
-  },
-  "optionsSaved": {
-    "message": "Uložené"
   },
   "optionUpgradeMessage": {
     "message": "Povedzte mi o upgradoch"
@@ -25,9 +10,6 @@
   },
   "optionTracking": {
     "message": "Anonymne posielať správy o zistených aplikáciách na wappalyzer.com pre výskum"
-  },
-  "optionThemeMode": {
-    "message": "Povoliť kompatibilitu tmavú režim."
   },
   "optionBadge": {
     "message": "Zobraziť počet identifikovaných technológií na ikone"
@@ -47,14 +29,19 @@
   "clearCache": {
     "message": "Vymazať zistenia z vyrovnávacej pamäte"
   },
-  "nothingToDo": {
-    "message": "Nie je tu čo robiť."
-  },
   "noAppsDetected": {
     "message": "Žiadne aplikácie neboli zistené."
   },
   "reloadPage": {
     "message": "Znova načítať"
+  },
+  "confidenceSure": {
+    "message": "$CONFIDENCE$% istota",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
   },
   "categoryPin": {
     "message": "Vždy zobrazovať ikonu"
@@ -71,20 +58,14 @@
   "privacyPolicy": {
     "message": "Zásady ochrany osobných údajov"
   },
-  "createAlert": {
-    "message": "Vytvoriť upozornenie pre túto webovú stránku"
-  },
-  "leadLists": {
-    "message": "Nástroje na generovanie leadov"
-  },
   "tabTechnologies": {
     "message": "Technológie"
   },
   "tabPlus": {
     "message": "Viac informácií"
   },
-  "creditBalance": {
-    "message": "Kredity:"
+  "exportCsv": {
+    "message": "Exportovať"
   },
   "plusMessageHeading": {
     "message": "Získajte Plus za $$10/mesiac"
@@ -100,6 +81,71 @@
   },
   "plusCrawl": {
     "message": "Nenašli sa žiadne výsledky, skontrolujte znova neskôr."
+  },
+  "apiKeyPendingActivation": {
+    "message": "Aktivácia nových API kľúčov môže trvať niekoľko minút. Počkajte chvíľu a skúste to znova."
+  },
+  "plusErrorGeneric": {
+    "message": "Prepáčte, niečo sa pokazilo. Skúste to znova neskôr."
+  },
+  "plusErrorStatus": {
+    "message": "Prepáčte, niečo sa pokazilo ($STATUS$). Skúste to znova neskôr.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "Prístup nie je povolený. Skontrolujte svoj API kľúč."
+  },
+  "plusErrorTooManyRequests": {
+    "message": "Príliš veľa požiadaviek. Skúste to znova o pár sekúnd."
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
   },
   "formSave": {
     "message": "Uložiť"
@@ -145,6 +191,21 @@
   },
   "attributeTechnologySpend": {
     "message": "Výdavky na technológie"
+  },
+  "spendVeryHigh": {
+    "message": "Veľmi vysoký"
+  },
+  "spendHigh": {
+    "message": "Vysoký"
+  },
+  "spendMedium": {
+    "message": "Stredný"
+  },
+  "spendLow": {
+    "message": "Nízky"
+  },
+  "spendVeryLow": {
+    "message": "Veľmi nízky"
   },
   "attributeIpCountry": {
     "message": "Krajina IP"
@@ -238,9 +299,6 @@
   },
   "attributeCertInfo_validTo": {
     "message": "Cert expiry"
-  },
-  "attributeHttps": {
-    "message": "SSL/TLS enabled"
   },
   "attributeTrackerGoogleAnalytics": {
     "message": "Google Analytics"
@@ -425,9 +483,6 @@
   "categoryName39": {
     "message": "Webkamera"
   },
-  "categoryName40": {
-    "message": "Tlačiareň"
-  },
   "categoryName41": {
     "message": "Platobný procesor"
   },
@@ -481,9 +536,6 @@
   },
   "categoryName60": {
     "message": "Kontajnery"
-  },
-  "categoryName61": {
-    "message": "SaaS"
   },
   "categoryName62": {
     "message": "PaaS"

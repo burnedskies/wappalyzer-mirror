@@ -1,21 +1,17 @@
 {
-  "github": {
-    "message": "Fork Wappalyzer no GitHub!"
-  },
-  "twitter": {
-    "message": "Seguir Wappalyzer no Twitter"
-  },
-  "website": {
-    "message": "Ir para wappalyzer.com"
-  },
   "noAppsDetected": {
     "message": "Não foi detectada nenhuma tecnologia."
   },
   "reloadPage": {
     "message": "Recarregar"
   },
-  "nothingToDo": {
-    "message": "Nada a fazer aqui."
+  "confidenceSure": {
+    "message": "$CONFIDENCE$% de certeza",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
   },
   "optionDynamicIcon": {
     "message": "Utilizar o ícone da tecnologia em vez do logótipo do Wappalyzer"
@@ -23,20 +19,11 @@
   "optionTracking": {
     "message": "Envie anonimamente tecnologias identificadas para wappalyzer.com"
   },
-  "optionThemeMode": {
-    "message": "Permitir a compatibilidade modo escuro."
-  },
   "optionUpgradeMessage": {
     "message": "Fale-me sobre actualizações"
   },
   "options": {
     "message": "Opções"
-  },
-  "optionsSave": {
-    "message": "Opções de Guardar"
-  },
-  "optionsSaved": {
-    "message": "Guardado"
   },
   "optionBadge": {
     "message": "Mostrar o número de tecnologias identificadas no ícone"
@@ -71,20 +58,14 @@
   "privacyPolicy": {
     "message": "Políticas de Privacidade"
   },
-  "createAlert": {
-    "message": "Criar um alerta para este website"
-  },
-  "leadLists": {
-    "message": "Ferramentas de geração de leads"
-  },
   "tabTechnologies": {
     "message": "Tecnologias"
   },
   "tabPlus": {
     "message": "Mais informação"
   },
-  "creditBalance": {
-    "message": "Créditos:"
+  "exportCsv": {
+    "message": "Exportar"
   },
   "plusMessageHeading": {
     "message": "Obtém Plus por $$10/mês"
@@ -100,6 +81,71 @@
   },
   "plusCrawl": {
     "message": "Não foram encontrados resultados; volta a verificar mais tarde."
+  },
+  "apiKeyPendingActivation": {
+    "message": "As novas chaves de API podem demorar alguns minutos a ficar ativas. Aguarde um momento e tente novamente."
+  },
+  "plusErrorGeneric": {
+    "message": "Lamentamos, ocorreu um erro. Tente novamente mais tarde."
+  },
+  "plusErrorStatus": {
+    "message": "Lamentamos, ocorreu um erro ($STATUS$). Tente novamente mais tarde.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "Sem acesso. Verifique a sua chave de API."
+  },
+  "plusErrorTooManyRequests": {
+    "message": "Demasiados pedidos. Tente novamente dentro de alguns segundos."
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
   },
   "formSave": {
     "message": "Guardar"
@@ -145,6 +191,21 @@
   },
   "attributeTechnologySpend": {
     "message": "Despesa em tecnologia"
+  },
+  "spendVeryHigh": {
+    "message": "Muito alto"
+  },
+  "spendHigh": {
+    "message": "Alto"
+  },
+  "spendMedium": {
+    "message": "Médio"
+  },
+  "spendLow": {
+    "message": "Baixo"
+  },
+  "spendVeryLow": {
+    "message": "Muito baixo"
   },
   "attributeIpCountry": {
     "message": "País do IP"
@@ -238,9 +299,6 @@
   },
   "attributeCertInfo_validTo": {
     "message": "Cert expiry"
-  },
-  "attributeHttps": {
-    "message": "SSL/TLS enabled"
   },
   "attributeTrackerGoogleAnalytics": {
     "message": "Google Analytics"
@@ -425,9 +483,6 @@
   "categoryName39": {
     "message": "Webcam"
   },
-  "categoryName40": {
-    "message": "Impressão"
-  },
   "categoryName41": {
     "message": "Processador de Pagamento"
   },
@@ -481,9 +536,6 @@
   },
   "categoryName60": {
     "message": "Contentores"
-  },
-  "categoryName61": {
-    "message": "SaaS"
   },
   "categoryName62": {
     "message": "PaaS"

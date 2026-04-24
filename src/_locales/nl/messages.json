@@ -1,27 +1,20 @@
 {
-  "github": {
-    "message": "Fork Wappalyzer op GitHub!"
-  },
-  "twitter": {
-    "message": "Volg Wappalyzer op Twitter"
-  },
-  "website": {
-    "message": "Ga naar wappalyzer.com"
-  },
   "noAppsDetected": {
     "message": "Geen toepassingen gedetecteerd"
   },
   "reloadPage": {
     "message": "Opnieuw laden"
   },
-  "nothingToDo": {
-    "message": "Hier is niets te doen"
+  "confidenceSure": {
+    "message": "$CONFIDENCE$% zeker",
+    "placeholders": {
+      "confidence": {
+        "content": "$1"
+      }
+    }
   },
   "optionTracking": {
     "message": "Stuur anoniem geïdentificeerd technologieën naar wappalyzer.com"
-  },
-  "optionThemeMode": {
-    "message": "Donkere modus compatibiliteit inschakelen"
   },
   "optionUpgradeMessage": {
     "message": "Vertel me over upgrades"
@@ -31,12 +24,6 @@
   },
   "options": {
     "message": "Instellingen"
-  },
-  "optionsSave": {
-    "message": "Instellingen opslaan"
-  },
-  "optionsSaved": {
-    "message": "Opgeslagen instellingen"
   },
   "optionBadge": {
     "message": "Toon het aantal technologieën aangegeven op het pictogram"
@@ -71,20 +58,14 @@
   "privacyPolicy": {
     "message": "Privacybeleid"
   },
-  "createAlert": {
-    "message": "Maak een waarschuwing voor deze website"
-  },
-  "leadLists": {
-    "message": "Tools voor leadgeneratie"
-  },
   "tabTechnologies": {
     "message": "Technologieën"
   },
   "tabPlus": {
     "message": "Meer info"
   },
-  "creditBalance": {
-    "message": "Credits:"
+  "exportCsv": {
+    "message": "Exporteren"
   },
   "plusMessageHeading": {
     "message": "Krijg Plus voor $$10/maand"
@@ -100,6 +81,71 @@
   },
   "plusCrawl": {
     "message": "Geen resultaten gevonden, kom later terug."
+  },
+  "apiKeyPendingActivation": {
+    "message": "Nieuwe API-sleutels kunnen een paar minuten nodig hebben om te worden geactiveerd. Wacht even en probeer het opnieuw."
+  },
+  "plusErrorGeneric": {
+    "message": "Er is iets misgegaan. Probeer het later opnieuw."
+  },
+  "plusErrorStatus": {
+    "message": "Er is iets misgegaan ($STATUS$). Probeer het later opnieuw.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "plusErrorNoAccess": {
+    "message": "Geen toegang. Controleer je API-sleutel."
+  },
+  "plusErrorTooManyRequests": {
+    "message": "Te veel verzoeken. Probeer het over een paar seconden opnieuw."
+  },
+  "footerCtaNeedMoreHeading": {
+    "message": "See a site's stack. Find more like it."
+  },
+  "footerCtaNeedMoreBody": {
+    "message": "If the extension helps you research a website's technologies, Wappalyzer can help your team find more companies using the same tools and build lead lists at scale."
+  },
+  "footerCtaNeedMoreButton": {
+    "message": "Find similar companies"
+  },
+  "footerCtaProspectsHeading": {
+    "message": "Find companies using the tools you target"
+  },
+  "footerCtaProspectsBody": {
+    "message": "Search by the tools companies use to build prospect lists with the company details and context your team needs to qualify faster."
+  },
+  "footerCtaProspectsButton": {
+    "message": "Find matching accounts"
+  },
+  "footerCtaCrmHeading": {
+    "message": "See website technologies in your CRM"
+  },
+  "footerCtaCrmBody": {
+    "message": "Add website technology data to HubSpot, Salesforce, or Pipedrive so your team can prioritize accounts and personalize outreach faster."
+  },
+  "footerCtaCrmButton": {
+    "message": "Enrich CRM records"
+  },
+  "footerCtaListsHeading": {
+    "message": "Turn quick research into ready-to-use lists"
+  },
+  "footerCtaListsBody": {
+    "message": "Go beyond one-off lookups with prospect lists your team can sort, export, and use to prioritize the right accounts."
+  },
+  "footerCtaListsButton": {
+    "message": "Build prospect lists"
+  },
+  "footerCtaWorkflowHeading": {
+    "message": "Bring website technologies into your workflow"
+  },
+  "footerCtaWorkflowBody": {
+    "message": "Keep records updated automatically so sales and marketing can prioritize the right accounts and send more relevant outreach."
+  },
+  "footerCtaWorkflowButton": {
+    "message": "Automate enrichment"
   },
   "formSave": {
     "message": "Opslaan"
@@ -129,13 +175,13 @@
     "message": "Social media-accounts "
   },
   "setMeta": {
-    "message": "Metadata"
+    "message": "Metagegevens"
   },
   "setLocale": {
     "message": "Landinstelling"
   },
   "setTrackers": {
-    "message": "Trackers"
+    "message": "Trackingscripts"
   },
   "setSecurity": {
     "message": "Beveiliging"
@@ -145,6 +191,21 @@
   },
   "attributeTechnologySpend": {
     "message": "Technologie-uitgaven"
+  },
+  "spendVeryHigh": {
+    "message": "Zeer hoog"
+  },
+  "spendHigh": {
+    "message": "Hoog"
+  },
+  "spendMedium": {
+    "message": "Gemiddeld"
+  },
+  "spendLow": {
+    "message": "Laag"
+  },
+  "spendVeryLow": {
+    "message": "Zeer laag"
   },
   "attributeIpCountry": {
     "message": "Land van het IP"
@@ -238,9 +299,6 @@
   },
   "attributeCertInfo_validTo": {
     "message": "Verval van het certificaat"
-  },
-  "attributeHttps": {
-    "message": "SSL/TLS geactiveerd"
   },
   "attributeTrackerGoogleAnalytics": {
     "message": "Google Analytics"
@@ -425,9 +483,6 @@
   "categoryName39": {
     "message": "Webcam's"
   },
-  "categoryName40": {
-    "message": "Printer"
-  },
   "categoryName41": {
     "message": "Betaalservice"
   },
@@ -481,9 +536,6 @@
   },
   "categoryName60": {
     "message": "Containertechnologie"
-  },
-  "categoryName61": {
-    "message": "SaaS"
   },
   "categoryName62": {
     "message": "PaaS"

@@ -4203,6 +4203,7 @@
       "low"
     ],
     "saas": true,
+    "scriptSrc": "/application/assets/storefront/shoper",
     "website": "https://www.shoper.pl"
   },
   "Shopfa": {
@@ -7319,6 +7320,20 @@
     "saas": true,
     "scriptSrc": "\\.smartsuppchat\\.com",
     "website": "https://www.smartsupp.com"
+  },
+  "Smartypilot": {
+    "cats": [
+      29
+    ],
+    "description": "Smartypilot is an ecommerce AI suite that provides semantic search, chatbot assistance, and product question answering.",
+    "icon": "Smartypilot.png",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "hub\\.smartypilot\\.ai/smartypilot-(chatbot-)?lib/",
+    "website": "https://smartypilot.ai"
   },
   "Smash Balloon Instagram Feed": {
     "cats": [
@@ -10515,7 +10530,10 @@
       "Stimulus.Application": "",
       "stimulus_application": ""
     },
-    "scripts": "/stimulus-bundle/controllers\\.js",
+    "scripts": [
+      "/stimulus-bundle/controllers\\.js",
+      "@hotwired/stimulus(?:-loading)?"
+    ],
     "website": "https://stimulusjs.org/"
   },
   "StimulusReflex": {
