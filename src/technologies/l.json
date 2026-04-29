@@ -918,6 +918,7 @@
       35
     ],
     "description": "Leaflet is the open-source JavaScript library for mobile-friendly interactive maps.",
+    "dom": "link[href*='leaflet.css'], link[href*='leaflet.js'], script[src*='leaflet.js']",
     "icon": "Leaflet.svg",
     "js": {
       "L.DistanceGrid": "",

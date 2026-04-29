@@ -952,7 +952,10 @@
     "icon": "TanStack.svg",
     "oss": true,
     "scriptSrc": "/static/.*npm\\.tanstack.*\\.js",
-    "scripts": "(?:https?:)?\\/\\/(?:www\\.)?tanstack\\.com(?:\\/[^\"'>]*)?",
+    "scripts": [
+      "(?:https?:)?\\/\\/(?:www\\.)?tanstack\\.com(?:\\/[^\"'>]*)?",
+      "\\$_TSR\\.router="
+    ],
     "website": "https://tanstack.com"
   },
   "Tangiblee": {

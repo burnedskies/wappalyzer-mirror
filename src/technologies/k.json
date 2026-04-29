@@ -1121,7 +1121,8 @@
       "poa"
     ],
     "saas": true,
-    "scripts": "\\.kimonix\\.com",
+    "scriptSrc": "(?:api\\.)?kimonix\\.com/",
+    "scripts": "(?:api\\.)?kimonix\\.com",
     "website": "https://www.kimonix.com"
   },
   "Kindful": {

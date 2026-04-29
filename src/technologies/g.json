@@ -1667,9 +1667,6 @@
     ],
     "description": "Gleam is a marketing app that aids in expanding business email lists, ecommerce stores, SaaS businesses, and Facebook audiences.",
     "icon": "Gleam.svg",
-    "js": {
-      "Gleam": ""
-    },
     "pricing": [
       "low",
       "recurring"

@@ -4950,6 +4950,7 @@
     "description": "Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.",
     "icon": "Rust.svg",
     "oss": true,
+    "scripts": "TrunkApplicationStarted\\;confidence:100",
     "website": "https://www.rust-lang.org"
   },
   "Ruttl": {

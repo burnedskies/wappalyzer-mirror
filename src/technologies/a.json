@@ -259,6 +259,26 @@
     "requires": "WordPress",
     "website": "https://amp-wp.org"
   },
+  "ANDCommerce": {
+    "cats": [
+      6
+    ],
+    "description": "ANDCommerce is an ecommerce platform for building and operating online stores.",
+    "icon": "ANDCommerce.svg",
+    "meta": {
+      "generator": "^ANDCommerce$"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": [
+      "/extension_andcommerce/",
+      "/andcommerce(?:scriptcontent|scriptlayout)_"
+    ],
+    "website": "https://www.andcommerce.com.br/"
+  },
   "ANS": {
     "cats": [
       88,
@@ -6700,7 +6720,7 @@
     "cats": [
       52
     ],
-    "description": "AskSpot is an AI chatbot platform tailored for marketing, digital, and web development agencies.",
+    "description": "AskSpot is an AI customer support platform for ecommerce websites.",
     "icon": "AskSpot.svg",
     "js": {
       "askspot.Chatbot": ""
@@ -6710,8 +6730,12 @@
       "recurring"
     ],
     "saas": true,
-    "scripts": "app\\.askspot\\.ai",
-    "website": "https://askspot.ai"
+    "scriptSrc": [
+      "app\\.askspot\\.ai",
+      "chat\\.askspot\\.io/api/v1/integration/"
+    ],
+    "scripts": "chat\\.askspot\\.io/api/v1/chat-widget/",
+    "website": "https://askspot.io"
   },
   "Askas": {
     "cats": [

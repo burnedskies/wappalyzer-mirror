@@ -3452,6 +3452,26 @@
     "scriptSrc": "pixel\\.forsant\\.io",
     "website": "https://forsant.io"
   },
+  "Forsid": {
+    "cats": [
+      6
+    ],
+    "description": "Forsid is an ecommerce platform for creating and managing online stores.",
+    "headers": {
+      "X-Powered-By": "(?:^|,\\s*)Forsid(?:\\s*,|$)"
+    },
+    "js": {
+      "ForsidMiniCart": "",
+      "__forsid": "",
+      "forsidAnalytics": "",
+      "forsidDL": ""
+    },
+    "meta": {
+      "generator": "^Forsid$"
+    },
+    "saas": true,
+    "website": "https://forsid.com"
+  },
   "Forte": {
     "cats": [
       41

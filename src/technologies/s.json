@@ -4303,7 +4303,11 @@
       "sdks\\.shopifycdn\\.com",
       "cdn\\.shopify\\.com"
     ],
-    "scripts": "shopifyTag|cdn\\.shopify\\.com",
+    "scripts": [
+      "shopify\\.content_for_header\\;confidence:50",
+      "cdn\\.shopify\\.com\\;confidence:50",
+      "shopifyTag\\;confidence:50"
+    ],
     "url": "^https?//.+\\.myshopify\\.com",
     "website": "https://shopify.com",
     "xhr": "\\.myshopify\\.com"
@@ -7126,6 +7130,18 @@
     "saas": true,
     "scriptSrc": "sdk\\.smartdx\\.co/",
     "website": "https://smartdx.co"
+  },
+  "SmartEditor2": {
+    "cats": [
+      24
+    ],
+    "description": "SmartEditor2 is an open-source JavaScript WYSIWYG HTML editor from NAVER.",
+    "js": {
+      "nhn.husky.EZCreator": ""
+    },
+    "oss": true,
+    "scriptSrc": "/(?:smarteditor2|se2)/.*HuskyEZCreator\\.js",
+    "website": "https://github.com/naver/smarteditor2"
   },
   "SmartEmailing": {
     "cats": [

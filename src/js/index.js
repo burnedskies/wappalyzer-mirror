@@ -38,7 +38,7 @@ const tabAwareMethods = new Set([
 ])
 
 const hostnameIgnoreList =
-  /\b((local|dev(elop(ment)?)?|sandbox|stag(e|ing)?|preprod|production|preview|internal|test(ing)?|[^a-z]demo(shop)?|cache)[.-]|dev\d|localhost|((wappalyzer|google|bing|baidu|microsoft|duckduckgo|facebook|adobe|instagram|twitter|x|reddit|yahoo|wikipedia|amazon|amazonaws|youtube|stackoverflow|github|stackexchange|w3schools|twitch)\.)|(live|office|herokuapp|shopifypreview)\.com|bit\.ly|business\.site|linktr\.ee|\.local|\.test|\.netlify\.app|ngrok|web\.archive\.org|zoom\.us|^([0-9.]+|[\d.]+)$|^([a-f0-9:]+:+)+[a-f0-9]+$)/
+  /\b((local|dev(elop(ment)?)?|sandbox|stag(e|ing)?|preprod|production|preview|internal|test(ing)?|[^a-z]demo(shop)?|cache)[.-]|dev\d|localhost|((wappalyzer|google|bing|baidu|microsoft|duckduckgo|facebook|adobe|alibaba|aliexpress|instagram|twitter|x|reddit|yahoo|wikipedia|amazon|amazonaws|youtube|stackoverflow|github|stackexchange|w3schools|twitch)\.)|(brave|live|office|herokuapp|shopifyapps|shopifypreview)\.com|bit\.ly|business\.site|linktr\.ee|\.local|\.test|\.netlify\.app|ngrok|web\.archive\.org|zoom\.us|^([0-9.]+|[\d.]+)$|^([a-f0-9:]+:+)+[a-f0-9]+$)/
 const transientHostnameIgnoreList =
   /\b((local|dev(elop(ment)?)?|sandbox|stag(e|ing)?|preprod|production|preview|internal|test(ing)?|[^a-z]demo(shop)?|cache)[.-]|dev\d|localhost|(herokuapp|shopifypreview)\.com|\.local|\.test|\.netlify\.app|ngrok|^([0-9.]+|[\d.]+)$|^([a-f0-9:]+:+)+[a-f0-9]+$)/
 
@@ -725,7 +725,8 @@ const Driver = {
     })
 
     if (removedIgnoredHostnames) {
-      await setCachedOption('hostnames', Driver.cache.hostnames)
+      // Persist the storage-safe cache shape, not the live in-memory objects.
+      await setCachedOption('hostnames', hostnames)
     }
 
     const { version } = chrome.runtime.getManifest()
