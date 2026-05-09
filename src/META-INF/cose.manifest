@@ -2,13 +2,13 @@ Manifest-Version: 1.0
 
 Name: manifest.json
 Digest-Algorithms: SHA1 SHA256
-SHA1-Digest: 5/2JVr92k4jKb4bb2IsJe0HXTlU=
-SHA256-Digest: /1KpMFDyFBV9tcpWpfxLtMJ9006z9YToGOTWilIIvdk=
+SHA1-Digest: /IemZVBvKuNGFVrV44Wm+5nazVY=
+SHA256-Digest: PGov4BVM+LxrTBT6rCF+1XGATnHJ0UqZN0hOaxKcOMo=
 
 Name: .DS_Store
 Digest-Algorithms: SHA1 SHA256
-SHA1-Digest: ZWof+AGnGdbNa9B+e3Bi+K7QdBo=
-SHA256-Digest: e8C3VgiWRoB0rNrEnme3as3VQwZKJCr9vStsnfy7BvI=
+SHA1-Digest: jw8kGSbu8zQTC9eoL+5sPxyUFts=
+SHA256-Digest: ceh2FhkodrvLqkdAnNuwkb13jIXrKhVIZOJ6o4Zb0Tg=
 
 Name: categories.json
 Digest-Algorithms: SHA1 SHA256
@@ -377,8 +377,8 @@ SHA256-Digest: 6P11nPsWBtoaCsY4Z/P0W6O2k1o35HMUXoc8dX0arQo=
 
 Name: images/.DS_Store
 Digest-Algorithms: SHA1 SHA256
-SHA1-Digest: x5sHIWC9Jsn9SqbeUTd4x07pSB0=
-SHA256-Digest: tPVRi5Oj9RJbj0b6uEN7mLjv0ikEu8WmtKQYeBKavms=
+SHA1-Digest: Yn5qSXtANc9S0UB2pthPBZZMjEQ=
+SHA256-Digest: zLncGe8vRvgi5sF4D+w7M/yq9sKIHXSmnQiXJejzC+M=
 
 Name: images/icon_32.png
 Digest-Algorithms: SHA1 SHA256
@@ -9947,8 +9947,8 @@ SHA256-Digest: pyOOb0+bt/6OBm5u8v+WTa3H7TP0I/UwsXx071hA21o=
 
 Name: images/icons/.DS_Store
 Digest-Algorithms: SHA1 SHA256
-SHA1-Digest: V5/B9lRe75gtrbRKJGay+GY0j54=
-SHA256-Digest: dkEBGFI10GDCmU3hNYrWt2GVhGrNF05Xe5GD8YRq4Yk=
+SHA1-Digest: 5aPbdIjrisyKKMJNVDg6B0HSYAY=
+SHA256-Digest: DDBVPS1aP572/BVy3dUKPHidLWjQZ7Nfh4fw8mrDJAs=
 
 Name: images/icons/CommerceVision.svg
 Digest-Algorithms: SHA1 SHA256
@@ -65672,8 +65672,8 @@ SHA256-Digest: HMQelVl/P91bBEToQJcHLMjPg+vDCRBMQyoXVmnFU9Y=
 
 Name: js/index.js
 Digest-Algorithms: SHA1 SHA256
-SHA1-Digest: YJVQRGAFYam3eX3Dp5lesmijMhw=
-SHA256-Digest: 3dRkCksjJBW4M6Zdwe4koUcA2F3DoCtxmHyDxA6i5hk=
+SHA1-Digest: uQsmP2kyOhRUJv9xCN2SPEw3eWU=
+SHA256-Digest: S6dZgSmF8cc595YcHXlQ2ApD4WN7uqrerX9oZGNPc6I=
 
 Name: js/content.js
 Digest-Algorithms: SHA1 SHA256

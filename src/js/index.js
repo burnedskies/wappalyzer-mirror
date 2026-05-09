@@ -294,6 +294,12 @@ function setCachedOption(name, value) {
   return setOption(name, value)
 }
 
+function removeCachedOption(name) {
+  optionCache.delete(name)
+
+  return promisify(chrome.storage.local, 'remove', name)
+}
+
 function getDefaultActionIconPath() {
   const manifest = chrome.runtime.getManifest()
   const defaultIcon =
@@ -440,26 +446,74 @@ async function removeSessionOption(name) {
   }
 }
 
+async function getCachedHostnames() {
+  const sessionHostnames = await getSessionOption('hostnames', null)
+
+  if (sessionHostnames && typeof sessionHostnames === 'object') {
+    return sessionHostnames
+  }
+
+  const localHostnames = await getCachedOption('hostnames', null)
+
+  if (localHostnames && typeof localHostnames === 'object') {
+    await setSessionOption('hostnames', localHostnames)
+  }
+
+  if (localHostnames !== null) {
+    await removeCachedOption('hostnames').catch(() => {})
+  }
+
+  return localHostnames || {}
+}
+
+function setCachedHostnames(hostnames) {
+  return setSessionOption('hostnames', hostnames)
+}
+
+async function removeCachedHostnames() {
+  await Promise.all([
+    removeSessionOption('hostnames'),
+    removeCachedOption('hostnames').catch(() => {}),
+  ])
+}
+
+function deserializeRegex(regex) {
+  const source = regex?.source || (typeof regex === 'string' ? regex : '')
+
+  try {
+    return new RegExp(source, 'i')
+  } catch {
+    return new RegExp('', 'i')
+  }
+}
+
 function deserializeDetections(detections = []) {
-  return detections.map(
-    ({
-      technology: name,
-      pattern: { regex, confidence, value } = {},
-      version,
-      rootPath,
-      lastUrl,
-    }) => ({
-      technology: getTechnology(name, true),
-      pattern: {
-        regex: new RegExp(regex || '', 'i'),
-        confidence,
-        ...(typeof value !== 'undefined' ? { value } : {}),
-      },
-      version,
-      rootPath,
-      lastUrl,
-    })
-  )
+  return detections
+    .map(
+      ({
+        technology,
+        pattern: { regex, confidence, value } = {},
+        version,
+        rootPath,
+        lastUrl,
+      }) => {
+        const name =
+          typeof technology === 'string' ? technology : technology?.name
+
+        return {
+          technology: getTechnology(name, true),
+          pattern: {
+            regex: deserializeRegex(regex),
+            confidence,
+            ...(typeof value !== 'undefined' ? { value } : {}),
+          },
+          version,
+          rootPath,
+          lastUrl,
+        }
+      }
+    )
+    .filter(({ technology }) => technology)
 }
 
 function serializeDetections(detections = []) {
@@ -484,6 +538,23 @@ function serializeDetections(detections = []) {
         lastUrl,
       })
     )
+}
+
+function serializeHostnamesCache(hostnameCache = {}) {
+  const hostnames = {}
+
+  for (const hostname of Object.keys(hostnameCache)) {
+    const cache = { ...hostnameCache[hostname] }
+
+    delete cache.https
+
+    hostnames[hostname] = {
+      ...cache,
+      detections: serializeDetections(cache.detections),
+    }
+  }
+
+  return hostnames
 }
 
 function mergeDetections(existingDetections = [], detections = [], url) {
@@ -658,7 +729,7 @@ const Driver = {
     await Driver.loadTechnologies()
 
     const runtimeCache = createDriverCache(Driver.cache)
-    const hostnameCache = await getCachedOption('hostnames', {})
+    const hostnameCache = await getCachedHostnames()
     const hostnames = {}
     const robots = await getCachedOption('robots', {})
     const transientTabResults = await getSessionOption('tabResults', {})
@@ -725,8 +796,7 @@ const Driver = {
     })
 
     if (removedIgnoredHostnames) {
-      // Persist the storage-safe cache shape, not the live in-memory objects.
-      await setCachedOption('hostnames', hostnames)
+      await setCachedHostnames(serializeHostnamesCache(hostnames))
     }
 
     const { version } = chrome.runtime.getManifest()
@@ -1007,20 +1077,7 @@ const Driver = {
   async persistHostnames() {
     Driver.pruneHostnamesCache()
 
-    const hostnames = {}
-
-    for (const hostname of Object.keys(Driver.cache.hostnames)) {
-      const cache = { ...Driver.cache.hostnames[hostname] }
-
-      delete cache.https
-
-      hostnames[hostname] = {
-        ...cache,
-        detections: serializeDetections(cache.detections),
-      }
-    }
-
-    await setCachedOption('hostnames', hostnames)
+    await setCachedHostnames(serializeHostnamesCache(Driver.cache.hostnames))
   },
 
   scheduleCachePersist() {
@@ -2017,7 +2074,7 @@ const Driver = {
 
     xhrAnalyzed = {}
 
-    await setCachedOption('hostnames', {})
+    await removeCachedHostnames()
     await removeSessionOption('tabResults')
     await removeSessionOption('tabRequests')
   },
