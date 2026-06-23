@@ -361,6 +361,21 @@
     "implies": "Ruby",
     "website": "https://github.com/rtomayko/rack-cache"
   },
+  "Rackspace": {
+    "cats": [
+      88
+    ],
+    "description": "Rackspace is a cloud computing and managed hosting provider.",
+    "dns": {
+      "NS": "\\.rackspace\\.com"
+    },
+    "icon": "Rackspace.png",
+    "pricing": [
+      "recurring",
+      "poa"
+    ],
+    "website": "https://www.rackspace.com"
+  },
   "Ractive.js": {
     "cats": [
       59
@@ -489,7 +504,8 @@
     ],
     "description": "Railway is a cloud platform that simplifies building, deploying, and managing applications with easy setup and scalable infrastructure.",
     "headers": {
-      "Server": "^railway$"
+      "Server": "^railway(?:-edge)?$",
+      "x-railway-edge": "^railway/"
     },
     "icon": "Railway.svg",
     "pricing": [
@@ -1198,7 +1214,11 @@
       "/([\\d\\.]+)/react(?:\\.min)?\\.js\\;version:\\1",
       "^react\\b.*\\.js"
     ],
-    "scripts": "react\\.js",
+    "scripts": [
+      "react\\.js",
+      "@license React\\s.{0,80}react(?:\\.production(?:\\.min)?|\\.development)?\\.js",
+      "https://react\\.dev/errors/.{0,250}Minified React error #"
+    ],
     "website": "https://reactjs.org"
   },
   "React Bricks": {
@@ -2768,6 +2788,24 @@
     "saas": true,
     "scriptSrc": "cdn\\.getreplybox\\.com",
     "website": "https://getreplybox.com"
+  },
+  "ReplySuite": {
+    "cats": [
+      52
+    ],
+    "description": "ReplySuite is an AI-powered customer engagement platform for automated website chat and response management.",
+    "icon": "ReplySuite.png",
+    "js": {
+      "ReplySuite": ""
+    },
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "replysuite\\.app/embed\\.js",
+    "website": "https://replysuite.app"
   },
   "Replyco": {
     "cats": [

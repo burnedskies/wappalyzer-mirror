@@ -475,7 +475,6 @@
     ],
     "cookies": {
       "X-Magento-Vary": "",
-      "frontend": "\\;confidence:50",
       "mage-cache-storage": "",
       "mage-cache-storage-section-invalidation": "",
       "mage-translation-file-version": "",
@@ -1847,6 +1846,21 @@
     },
     "website": "https://masterking32.com"
   },
+  "Masthead CMS": {
+    "cats": [
+      1
+    ],
+    "description": "Masthead CMS is a content management system for local news publishers and editorial teams.",
+    "meta": {
+      "generator": "^Masthead CMS$"
+    },
+    "pricing": [
+      "poa",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://mastheadcms.com"
+  },
   "Mastodon": {
     "cats": [
       2
@@ -2426,6 +2440,7 @@
       6
     ],
     "cookies": {
+      "_medusa_cache_id": "^[\\da-f-]{36}$",
       "medusa.sid": ""
     },
     "description": "Medusa is an open-source ecommerce platform that enables users to create online stores.",
@@ -2531,6 +2546,27 @@
     "scriptSrc": "static\\.meiqia\\.com",
     "scripts": "static\\.meiqia\\.com",
     "website": "https://www.meiqia.com"
+  },
+  "Meku": {
+    "cats": [
+      51
+    ],
+    "description": "Meku is an AI website and web app builder for creating and deploying full-stack sites.",
+    "icon": "Meku.svg",
+    "meta": {
+      "generator": "^Meku$"
+    },
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": [
+      "assets\\.meku\\.app/public/(?:meku-analytics-v1|badge-v2)\\.js",
+      "cdn\\.meku\\.dev/meku/templates/"
+    ],
+    "website": "https://meku.dev"
   },
   "Melibo": {
     "cats": [

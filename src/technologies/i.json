@@ -217,6 +217,29 @@
     "requires": "Microsoft ASP.NET",
     "website": "https://www.icisleri.gov.tr/internet-sayfalari-yonetimi-isay"
   },
+  "ISO100": {
+    "cats": [
+      7
+    ],
+    "description": "ISO100 is a platform for publishing image-led photography portfolios.",
+    "headers": {
+      "content-security-policy": "api\\.iso100\\.app"
+    },
+    "icon": "ISO100.svg",
+    "meta": {
+      "generator": "^ISO100 \\(https://iso100\\.app\\)$"
+    },
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "api\\.iso100\\.app/v1/public/portfolios/[^/]+/(?:events|%65vents)",
+    "url": "\\.iso100\\.photos(?:/|$)",
+    "website": "https://iso100.app",
+    "xhr": "api\\.iso100\\.app"
+  },
   "Iamport": {
     "cats": [
       41
@@ -1130,6 +1153,7 @@
     ],
     "description": "Influx CMS is a medical marketing platform specializing in custom web design and marketing for doctors, surgeons, and medical spas.",
     "dom": "a[href*='www.influxmarketing.com'] > svg[class*='influx-footer-logo'",
+    "excludes": "Growthstack",
     "icon": "InfluxCMS.svg",
     "meta": {
       "generator": "^Influx CMS$"

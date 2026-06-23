@@ -574,6 +574,21 @@
     "scriptSrc": "cdn\\.blog\\.st-hatena\\.com/",
     "website": "https://hatenablog.com"
   },
+  "HatenaCMS": {
+    "cats": [
+      1
+    ],
+    "description": "HatenaCMS is a no-code content management system from Hatena for building and managing business websites and owned media sites.",
+    "dom": "link[href*='cms.hatena.ne.jp/_next/static/']",
+    "icon": "Hatena.svg",
+    "pricing": [
+      "poa",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cms\\.hatena\\.ne\\.jp/_next/static/",
+    "website": "https://www.hatena.ne.jp/cms/"
+  },
   "HawkSearch": {
     "cats": [
       29
@@ -1034,14 +1049,22 @@
       66
     ],
     "css": "--nextui-(?:colors-accents1|colors-text|space-0|fonts-sans|fonts-mono)",
-    "description": "HeroUI allows you to make beautiful, modern, and fast websites/applications regardless of your design experience, created with React.js and Stitches, based on React Aria and inspired by Vuesax.",
-    "dom": "link[href*='nextui.org'][rel='canonical']",
+    "description": "HeroUI is an open-source React UI library with accessible components built on React Aria and Tailwind CSS.",
+    "dom": [
+      "link[href*='nextui.org'][rel='canonical']",
+      "link[href*='heroui.com'][rel='canonical']"
+    ],
     "icon": "HeroUI.svg",
     "implies": [
       "React"
     ],
+    "meta": {
+      "author": "^HeroUI$",
+      "creator": "^heroui-inc$",
+      "keywords": "(?:^|,)HeroUI(?:,|$)"
+    },
     "oss": true,
-    "website": "https://nextui.org/"
+    "website": "https://www.heroui.com"
   },
   "Heroku": {
     "cats": [

@@ -2490,6 +2490,23 @@
     "scriptSrc": "\\.advin\\.cz/",
     "website": "https://www.advin.cz"
   },
+  "Adwos CMS": {
+    "cats": [
+      1
+    ],
+    "description": "Adwos CMS is a content management system for classified ads, marketplaces, and rental services.",
+    "icon": "Adwos CMS.svg",
+    "meta": {
+      "adwos:powered-by": "^Adwos CMS$",
+      "application-name": "^Adwos CMS$",
+      "generator": "^Adwos CMS$"
+    },
+    "pricing": [
+      "low",
+      "onetime"
+    ],
+    "website": "https://adwos.org"
+  },
   "Adyen": {
     "cats": [
       41
@@ -5019,7 +5036,7 @@
       66
     ],
     "description": "Ant Design is an UI library that can be used with data flow solutions and application frameworks in any React ecosystem.",
-    "dom": "div[class*='ant-collapse'], link[href*='antd'], div[class*='ant-spin-container']",
+    "dom": "div[class*='ant-collapse'], link[href*='antd'], div[class*='ant-spin-container'], form.ant-form .ant-form-item .ant-input",
     "icon": "Ant Design.svg",
     "js": {
       "__ANTD_STYLE_CACHE_MANAGER_FOR_SSR__": "",
@@ -5147,6 +5164,7 @@
       "techaro.lol-anubis-cookie-verification": ""
     },
     "description": "Anubis is a system that evaluates the characteristics of incoming HTTP requests to determine their legitimacy and enhance website protection.",
+    "dom": "script#anubis_version[type='application/json'], script#anubis_challenge[type='application/json']",
     "icon": "Anubis.svg",
     "oss": true,
     "website": "https://anubis.techaro.lol"
@@ -6730,10 +6748,7 @@
       "recurring"
     ],
     "saas": true,
-    "scriptSrc": [
-      "app\\.askspot\\.ai",
-      "chat\\.askspot\\.io/api/v1/integration/"
-    ],
+    "scriptSrc": "chat\\.askspot\\.io/api/v1/integration/",
     "scripts": "chat\\.askspot\\.io/api/v1/chat-widget/",
     "website": "https://askspot.io"
   },

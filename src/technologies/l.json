@@ -352,6 +352,19 @@
     "saas": true,
     "website": "https://launchlms.com.br"
   },
+  "LaunchMyStore": {
+    "cats": [
+      6
+    ],
+    "description": "LaunchMyStore is an ecommerce platform for creating and managing online stores, including themes, payments, inventory, and storefront tools.",
+    "headers": {
+      "link": "(?:assets|cdn)\\.launchmystore\\.io"
+    },
+    "icon": "LaunchMyStore.png",
+    "saas": true,
+    "scriptSrc": "assets\\.launchmystore\\.io/themes/[\\w-]+/assets/",
+    "website": "https://launchmystore.io"
+  },
   "LaunchNotes": {
     "cats": [
       85

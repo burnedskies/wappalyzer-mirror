@@ -448,6 +448,20 @@
     "scripts": "embed\\.sendtonews\\.com/",
     "website": "https://www.stnvideo.com"
   },
+  "STRIGHT": {
+    "cats": [
+      67
+    ],
+    "description": "STRIGHT is a consent management platform for cookie consent, privacy disclosures, and privacy regulation support.",
+    "icon": "STRIGHT.svg",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn01\\.stright\\.bizris\\.com/js/(?:[\\d.]+/)?cookie_consent_(?:block|setting)\\.js",
+    "website": "https://www.iij.ad.jp/biz/stright/"
+  },
   "STUDIO": {
     "cats": [
       51
@@ -1006,6 +1020,21 @@
     "saas": true,
     "scriptSrc": "/demandware\\.static/",
     "website": "https://demandware.com"
+  },
+  "Salesforce Data 360": {
+    "cats": [
+      97
+    ],
+    "description": "Salesforce Data 360 is a customer data platform for unifying customer data and activating audience and analytics workflows.",
+    "icon": "Salesforce.svg",
+    "implies": "Salesforce",
+    "pricing": [
+      "poa",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.c360a\\.salesforce\\.com/beacon/c360a/[\\w-]+/scripts/c360a\\.min\\.js",
+    "website": "https://www.salesforce.com/data/"
   },
   "Salesforce Experience Cloud": {
     "cats": [
@@ -2358,6 +2387,24 @@
     "saas": true,
     "website": "https://sekolahku.web.id"
   },
+  "Seldit": {
+    "cats": [
+      1
+    ],
+    "description": "Seldit is a CMS platform for building and managing websites and ecommerce stores.",
+    "js": {
+      "Seldit.cms": "^true$"
+    },
+    "meta": {
+      "generator": "^Seldit$"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://seldit.com/"
+  },
   "Select2": {
     "cats": [
       59
@@ -2463,6 +2510,21 @@
     ],
     "saas": true,
     "website": "https://www.sellacious.com"
+  },
+  "Sellauth": {
+    "cats": [
+      6
+    ],
+    "description": "Sellauth is an ecommerce platform for creating storefronts and selling digital products, subscriptions, and services.",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "a\\.sellauth\\.com/script\\.js",
+    "url": "\\.mysellauth\\.com",
+    "website": "https://www.sellauth.com",
+    "xhr": "api-internal-\\d+\\.sellauth\\.com"
   },
   "Sellbrite": {
     "cats": [
@@ -2925,6 +2987,24 @@
     "saas": true,
     "scriptSrc": "\\.sensaimetrics\\.io/",
     "website": "https://sensaimetrics.io"
+  },
+  "Sensei LMS": {
+    "cats": [
+      21,
+      87
+    ],
+    "description": "Sensei LMS is a WordPress plugin for creating and selling online courses, lessons, quizzes, and learning content.",
+    "dom": ".wp-block-sensei-lms-ui, .sensei-lms-course-navigation, .sensei-course-theme, link[href*='/wp-content/plugins/sensei-lms/'], link[href*='/wp-content/plugins/woothemes-sensei/plugins/sensei-lms/'], script[src*='/wp-content/plugins/sensei-lms/'], script[src*='/wp-content/plugins/woothemes-sensei/plugins/sensei-lms/']",
+    "icon": "Sensei LMS.png",
+    "oss": true,
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "requires": "WordPress",
+    "scriptSrc": "/wp-content/plugins/(?:woothemes-sensei/plugins/)?sensei-lms/",
+    "website": "https://senseilms.com/"
   },
   "Sensor Tower": {
     "cats": [
@@ -6828,6 +6908,28 @@
     "scriptSrc": "slate-technolutions-net\\.cdn\\.technolutions\\.net/",
     "website": "https://technolutions.com"
   },
+  "Sleak.chat": {
+    "cats": [
+      52
+    ],
+    "cookies": {
+      "sleakChatId_.*": "",
+      "sleakVisitorId_.*": ""
+    },
+    "description": "Sleak.chat is a live chat platform for adding automated support widgets to websites.",
+    "icon": "Sleak.chat.svg",
+    "js": {
+      "injectSleakWidget": "",
+      "sleakScriptInjected": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.sleak\\.chat/fetchsleakbot\\.js",
+    "website": "https://sleak.chat"
+  },
   "Sleeknote": {
     "cats": [
       32
@@ -10238,7 +10340,7 @@
     "cpe": "cpe:2.3:a:statamic:statamic:*:*:*:*:*:laravel:*:*",
     "description": "Statamic is an open-source and self-hosted content management system based on the PHP programming language.",
     "headers": {
-      "x-powered-by": "^Statamic$"
+      "x-powered-by": "(?:^|\\r?\\n)Statamic$"
     },
     "icon": "Statamic.svg",
     "implies": [
@@ -10898,7 +11000,7 @@
       1
     ],
     "description": "Storyblok is a headless CMS with a visual editor for developers, marketers and content editors.",
-    "dom": "img[src*='//a.storyblok.com/'], img[srcset*='a.storyblok.com']",
+    "dom": "img[src*='.storyblok.com/f/'], img[srcset*='.storyblok.com/f/']",
     "headers": {
       "content-security-policy": "app\\.storyblok\\.com",
       "x-frame-options": "app\\.storyblok\\.com"
@@ -10913,6 +11015,7 @@
       "mid"
     ],
     "saas": true,
+    "scripts": "StoryblokBridge|api(?:-[a-z]+)?\\.storyblok\\.com",
     "website": "https://www.storyblok.com"
   },
   "Storybook": {
@@ -11664,7 +11767,10 @@
       47
     ],
     "description": "Supabase is an open-source platform that offers a Postgres database, Authentication, APIs, Edge Functions, Realtime subscriptions, Storage, and Vector embeddings for project development.",
-    "dom": "a[href*='supabase.com'] > img[src*='/supabase-logo-wordmark--dark.png']",
+    "dom": [
+      "a[href*='supabase.com'] > img[src*='/supabase-logo-wordmark--dark.png']",
+      "link[href*='vendor-supabase-']"
+    ],
     "icon": "Supabase.svg",
     "implies": "PostgreSQL",
     "js": {
@@ -11680,7 +11786,10 @@
       "recurring"
     ],
     "saas": true,
-    "scripts": "\\.supabase\\.co/",
+    "scripts": [
+      "\\.supabase\\.co/",
+      "X-Client-Info\":\"(?:supabase-js|storage-js)/"
+    ],
     "website": "https://supabase.com"
   },
   "Supademo": {
@@ -11924,6 +12033,31 @@
     "saas": true,
     "scriptSrc": "chat\\.supportbox\\.cz/",
     "website": "https://supportbox.cz"
+  },
+  "Supportly": {
+    "cats": [
+      52
+    ],
+    "description": "Supportly is an AI-powered live chat and customer support widget for websites.",
+    "icon": "Supportly.svg",
+    "js": {
+      "SupportlyAI.product": "^Supportly AI$",
+      "SupportlyAI.widget": "^live-chat$"
+    },
+    "meta": {
+      "generator": "^Supportly AI$",
+      "supportly-ai": "^enabled$",
+      "supportly-widget": "^live-chat$"
+    },
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "supportly-chat-widget\\.js",
+    "website": "https://supportly.com.tr"
   },
   "Supsystic": {
     "cats": [
@@ -12654,7 +12788,7 @@
       "systeme_affiliate": ""
     },
     "description": "Systeme.io is a marketing platform that helps businesses create and launch sales funnels, affiliate programs, email marketing campaigns, online courses, blogs, and websites.",
-    "dom": "from[action*='//systeme.io/'], a[href*='//systeme.io/']",
+    "dom": "form[action*='//systeme.io/']",
     "icon": "Systeme.io.svg",
     "pricing": [
       "freemium",
@@ -12662,8 +12796,11 @@
       "recurring"
     ],
     "saas": true,
-    "scriptSrc": "//systeme\\.io/",
-    "scripts": "\\.systeme\\.io",
+    "scriptSrc": [
+      "d3fit27i5nzkqh\\.cloudfront\\.net/default/(?:runtime|page|vendors)\\.",
+      "//systeme\\.io/"
+    ],
+    "url": "^https?://(?:[^/]+\\.)?systeme\\.io/",
     "website": "https://systeme.io"
   },
   "Systems Accel": {

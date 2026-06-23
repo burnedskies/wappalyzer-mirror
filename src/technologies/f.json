@@ -4384,6 +4384,29 @@
     "scripts": "\\.firstgiving\\.com",
     "website": "https://www.frontstream.com"
   },
+  "Froomle": {
+    "cats": [
+      76
+    ],
+    "description": "Froomle is an AI personalization platform for product and content recommendations across websites and digital channels.",
+    "dom": "[data-froomle-config], [data-froomle-reco], [data-froomle-request-id], [data-component='froomle/recommendations']",
+    "icon": "Froomle.png",
+    "js": {
+      "FroomleFrontendSdk": "",
+      "FroomleFrontendSdkRuntime": ""
+    },
+    "pricing": [
+      "poa",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": [
+      "@froomle/frontend-sdk",
+      "(?:^|/)froomle(?:\\.global|\\.min)?(?:-[\\d.]+)?\\.js"
+    ],
+    "website": "https://www.froomle.ai",
+    "xhr": "\\.froomle\\.com/api/[^/]+/(?:events|recommendations/requests)"
+  },
   "Froonze": {
     "cats": [
       100

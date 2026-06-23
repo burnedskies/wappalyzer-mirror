@@ -91,6 +91,17 @@
     },
     "website": "https://www.oxid-esales.com"
   },
+  "Oat UI": {
+    "cats": [
+      66
+    ],
+    "description": "Oat UI is a lightweight, semantic HTML, CSS, and JavaScript UI component library.",
+    "dom": "ot-accordion, ot-dropdown, ot-tabs, ot-toast",
+    "icon": "Oat UI.svg",
+    "oss": true,
+    "scriptSrc": "(?:^|/)oat(?:\\.min)?\\.js(?:\\?|$)\\;confidence:50",
+    "website": "https://oat.ink"
+  },
   "Oat++": {
     "cats": [
       18

@@ -1669,7 +1669,8 @@ const Driver = {
     requires,
     categoryRequires,
     options,
-    tabId
+    tabId,
+    frameId
   ) {
     try {
       if (!options?.skipCookies) {
@@ -1707,7 +1708,8 @@ const Driver = {
         analyze(analysisItems, technologies),
         language,
         true,
-        tabId
+        tabId,
+        frameId
       )
     } catch (error) {
       Driver.error(error)
@@ -2201,6 +2203,14 @@ chrome.tabs.onUpdated.addListener(async (id, { status, url }) => {
 
     if (!url || !/^https?:/i.test(url)) {
       return
+    }
+
+    if (status === 'complete') {
+      await Driver.content(url, 'refreshMetadata').catch((error) => {
+        if (!isMissingTabError(error)) {
+          Driver.error(error)
+        }
+      })
     }
 
     const resolved = await Driver.getDetectionsForTab({ id, url })

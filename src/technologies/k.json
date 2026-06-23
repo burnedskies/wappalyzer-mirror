@@ -83,6 +83,18 @@
     "saas": true,
     "website": "https://www.kmk.net.tr"
   },
+  "KOMERO": {
+    "cats": [
+      6
+    ],
+    "description": "KOMERO is an ecommerce platform and website builder for creating online stores.",
+    "icon": "KOMERO.png",
+    "meta": {
+      "generator": "^KOMERO$"
+    },
+    "saas": true,
+    "website": "https://www.komero.ge"
+  },
   "KPA": {
     "cats": [
       67

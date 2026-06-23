@@ -93,7 +93,9 @@ const Utils = {
   },
 
   isMissingTabError(error) {
-    return /\bNo tab with id\b/i.test(getErrorMessage(error))
+    return /\b(No tab with id|Receiving end does not exist)\b/i.test(
+      getErrorMessage(error)
+    )
   },
 
   /**

@@ -1511,7 +1511,8 @@
     ],
     "saas": true,
     "scriptSrc": "//(?:uptime\\.)?(?:betteruptime|betterstack)\\.com/",
-    "website": "https://betterstack.com/uptime"
+    "website": "https://betterstack.com/uptime",
+    "xhr": "\\.betterstackdata\\.com/"
   },
   "BetterBot": {
     "cats": [
@@ -2089,11 +2090,18 @@
       53
     ],
     "description": "Bitrix24 is a set of tools for the organization and management of business processes.",
+    "headers": {
+      "server": "^Bitrix24\\.Sites$",
+      "x-powered-cms": "^Bitrix24\\.Sites$"
+    },
     "icon": "Bitrix24.svg",
     "js": {
       "Bitrix24FormLoader": "",
       "Bitrix24FormObject": "",
       "b24Tracker": ""
+    },
+    "meta": {
+      "bitrix24sitetype": ""
     },
     "pricing": [
       "freemium",
@@ -2103,6 +2111,7 @@
     "saas": true,
     "scriptSrc": [
       "cdn\\.bitrix24\\.com",
+      "cdn-[a-z]+\\.bitrix24\\.[a-z.]+/",
       "\\.bitrix24\\..+/bitrix/js/crm/form_loader\\.js"
     ],
     "website": "https://www.bitrix24.com"
@@ -3656,6 +3665,7 @@
     "headers": {
       "x-powered-by": "^Bool Typescript$"
     },
+    "icon": "Booljs.svg",
     "oss": true,
     "website": "https://booljs.com"
   },

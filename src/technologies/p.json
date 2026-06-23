@@ -86,6 +86,7 @@
     "dom": "form[action*='login_process.php'], form[action*='assets/mail.php']",
     "headers": {
       "Server": "php/?([\\d.]+)?\\;version:\\1",
+      "Set-Cookie": "PHPSESSID=",
       "X-Powered-By": "^PHP/?([\\d.]+)\\;version:\\1"
     },
     "icon": "PHP.svg",
@@ -6538,6 +6539,7 @@
         "protonmail-verification="
       ]
     },
+    "dom": "link[rel='canonical'][href='https://mail.proton.me/'], meta[name='application-name'][content='Proton Mail'], meta[name='apple-mobile-web-app-title'][content='Proton Mail']",
     "icon": "Proton Mail.svg",
     "saas": true,
     "website": "https://proton.me/mail"

@@ -838,6 +838,27 @@ const Content = {
     )
   },
 
+  async refreshMetadata() {
+    const url = location.href
+
+    Content.cache = {
+      ...Content.cache,
+      cookies: getCookies(),
+      meta: getMeta(),
+      scriptSrc: getScriptSources(),
+    }
+
+    await Content.driver('onContentLoad', [
+      url,
+      {
+        cookies: Content.cache.cookies,
+        meta: Content.cache.meta,
+        scriptSrc: Content.cache.scriptSrc,
+      },
+      Content.language,
+    ])
+  },
+
   /**
    * Callback for getTechnologies
    * @param {Array} technologies
