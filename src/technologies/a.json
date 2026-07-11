@@ -5186,6 +5186,20 @@
     "scriptSrc": "script\\.anura\\.io/",
     "website": "https://www.anura.io"
   },
+  "Anviara EU Widerrufsbutton": {
+    "cats": [
+      100
+    ],
+    "description": "Anviara EU Widerrufsbutton is a Shopify app that adds a compliant EU withdrawal button and form to online stores.",
+    "dom": ".anv-withdrawal-form, .anv-withdrawal-button",
+    "requires": "Shopify",
+    "saas": true,
+    "scriptSrc": [
+      "customerorderediting\\.com/assets/altcha-[\\da-f]+\\.js",
+      "cdn\\.shopify\\.com/extensions/.+/self-serve-order-edit-.+/assets/withdrawal-link-locale\\.js"
+    ],
+    "website": "https://anviara.com"
+  },
   "AnyChat": {
     "cats": [
       52

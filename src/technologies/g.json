@@ -3012,6 +3012,10 @@
     },
     "saas": true,
     "scriptSrc": "\\.googletagmanager\\.com/(gtm\\.js)?",
+    "scripts": [
+      "googletagmanager\\.com/gtm\\.js\\?id=GTM-[A-Z0-9-]+",
+      "googletagmanager\\.com/gtm\\.js\\?id=['\"]?\\s*\\+\\s*i[\\s\\S]{0,250}GTM-[A-Z0-9-]+"
+    ],
     "website": "https://www.google.com/tagmanager"
   },
   "Google Tag Manager for WordPress": {
@@ -3085,6 +3089,22 @@
     },
     "icon": "Google.svg",
     "website": "https://workspace.google.com/"
+  },
+  "Google for WooCommerce": {
+    "cats": [
+      87
+    ],
+    "description": "Google for WooCommerce is a WordPress plugin for connecting WooCommerce stores with Google Merchant Center and Google Ads.",
+    "icon": "Google.svg",
+    "implies": "Google Ads",
+    "oss": true,
+    "requires": [
+      "WordPress",
+      "WooCommerce"
+    ],
+    "scriptSrc": "/wp-content/plugins/google-listings-and-ads/js/build/gtag-events\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1",
+    "scripts": "developer_id\\.dOGY3NW",
+    "website": "https://wordpress.org/plugins/google-listings-and-ads/"
   },
   "Goope": {
     "cats": [

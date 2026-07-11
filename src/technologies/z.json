@@ -307,6 +307,28 @@
     "saas": true,
     "website": "https://www.zeemaps.com"
   },
+  "Zeeg": {
+    "cats": [
+      72
+    ],
+    "description": "Zeeg is an appointment scheduling platform with online booking pages, calendar integrations, reminders, and CRM automation.",
+    "headers": {
+      "x-powered-by": "\\bZeeg\\b"
+    },
+    "icon": "Zeeg.svg",
+    "meta": {
+      "og:image": "^https://og\\.zeeg\\.me/",
+      "og:site_name": "^Zeeg$",
+      "twitter:site": "^@zeeg_me$"
+    },
+    "pricing": [
+      "low",
+      "recurring",
+      "freemium"
+    ],
+    "saas": true,
+    "website": "https://zeeg.me"
+  },
   "Zeleris": {
     "cats": [
       99
@@ -1543,6 +1565,32 @@
     "saas": true,
     "scriptSrc": "/zwayam\\.min\\.js",
     "website": "https://www.zwayam.com"
+  },
+  "Zyncro": {
+    "cats": [
+      72
+    ],
+    "description": "Zyncro is an online booking platform for scheduling paid appointments, collecting payments, and sending reminders.",
+    "dom": {
+      "[data-zyncro-url]": {
+        "attributes": {
+          "data-zyncro-url": "^(?:https?://)?zyncro\\.in/[^/?#]+/[^?#]+"
+        }
+      },
+      "a[href*='zyncro.in/']": {
+        "attributes": {
+          "href": "^https?://zyncro\\.in/[^/?#]+/[^?#]+"
+        }
+      }
+    },
+    "icon": "Zyncro.png",
+    "pricing": [
+      "low",
+      "freemium"
+    ],
+    "saas": true,
+    "scriptSrc": "zyncro\\.in/embed\\.js",
+    "website": "https://zyncro.in"
   },
   "Zyratalk": {
     "cats": [

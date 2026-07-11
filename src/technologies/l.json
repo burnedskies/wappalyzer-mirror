@@ -76,6 +76,18 @@
     "website": "https://wiki.lkqd.com",
     "xhr": "\\.lkqd\\.net"
   },
+  "LLK Analytics": {
+    "cats": [
+      10
+    ],
+    "description": "LLK Analytics is a privacy-friendly analytics platform for websites, apps, and digital publications with realtime traffic statistics and AI-generated reports.",
+    "dom": "script[src*='js.llk.hk'][data-site-id]",
+    "icon": "LLK Analytics.svg",
+    "saas": true,
+    "scriptSrc": "js\\.llk\\.hk",
+    "website": "https://llk.hk/",
+    "xhr": "api\\.llk\\.hk"
+  },
   "LPQV": {
     "cats": [
       6
@@ -242,6 +254,7 @@
       18
     ],
     "cookies": {
+      "laravel-session": "",
       "laravel_session": ""
     },
     "cpe": "cpe:2.3:a:laravel:laravel:*:*:*:*:*:*:*:*",

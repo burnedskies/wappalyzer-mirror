@@ -2091,6 +2091,21 @@
     "scriptSrc": "\\.dimml\\.io/",
     "website": "https://www.dimml.io"
   },
+  "Dioxus": {
+    "cats": [
+      66
+    ],
+    "description": "Dioxus is a Rust framework for building fullstack web, desktop, and mobile apps.",
+    "icon": "Dioxus.png",
+    "implies": "Rust",
+    "js": {
+      "dx_hydrate": "",
+      "initial_dioxus_hydration_data": ""
+    },
+    "oss": true,
+    "scripts": "window\\.(?:initial_dioxus_hydration_data|dx_hydrate)",
+    "website": "https://dioxuslabs.com"
+  },
   "DirectAdmin": {
     "cats": [
       9

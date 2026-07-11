@@ -52,6 +52,7 @@
     ],
     "cpe": "cpe:2.3:a:sap:netweaver_application_server:*:*:*:*:*:*:*:*",
     "headers": {
+      "Sap-Server": "^true$",
       "Server": "SAP NetWeaver Application Server"
     },
     "icon": "SAP.svg",
@@ -7492,6 +7493,7 @@
       100
     ],
     "description": "Smile App offers a loyalty program for Shopify stores.",
+    "dom": "script[src*='/assets/smile-loader.js']",
     "icon": "Smile.svg",
     "implies": "Smile",
     "pricing": [
@@ -7501,7 +7503,10 @@
     ],
     "requires": "Shopify",
     "saas": true,
-    "scriptSrc": "js\\.smile\\.io/.+smile-shopify\\.js",
+    "scriptSrc": [
+      "js\\.smile\\.io/.+smile-shopify\\.js",
+      "cdn\\.shopify\\.com/extensions/.+/assets/smile-loader\\.js"
+    ],
     "website": "https://apps.shopify.com/smile-io"
   },
   "Smile Virtual": {
@@ -12367,6 +12372,36 @@
       "limonte-sweetalert2/([\\d.]+)/sweetalert2(?:\\.all)(?:\\.min)\\.js"
     ],
     "website": "https://sweetalert2.github.io/"
+  },
+  "SweetCode Pixel Manager for WooCommerce": {
+    "cats": [
+      87
+    ],
+    "description": "SweetCode Pixel Manager for WooCommerce is a WordPress plugin for tracking ecommerce conversions across Google Ads, GA4, Meta, TikTok, Pinterest, and Microsoft Ads.",
+    "icon": "SweetCode Pixel Manager for WooCommerce.png",
+    "implies": "WooCommerce",
+    "js": {
+      "pmwDataLayer.version.number": "^(.+)$\\;version:\\1",
+      "wpmDataLayer.version.number": "^(.+)$\\;version:\\1"
+    },
+    "meta": {
+      "pm-datalayer-meta": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "scriptSrc": [
+      "/wp-content/plugins/woocommerce-google-adwords-conversion-tracking-tag/js/public/(?:free/)?pmw-public\\.p1\\.min\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1",
+      "/wp-content/plugins/woocommerce-google-adwords-conversion-tracking-tag/js/public/(?:free/)?[a-z-]+\\.[a-f0-9]+\\.chunk\\.min\\.js",
+      "/wp-content/plugins/woocommerce-google-adwords-conversion-tracking-tag/js/public/wooptpm\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1"
+    ],
+    "scripts": [
+      "window\\.pmwDataLayer[\\s\\S]*woocommerce-google-adwords-conversion-tracking-tag",
+      "window\\.wpmDataLayer[\\s\\S]*woocommerce-google-adwords-conversion-tracking-tag"
+    ],
+    "website": "https://sweetcode.com/plugins/pmw/"
   },
   "SweetHelp": {
     "cats": [

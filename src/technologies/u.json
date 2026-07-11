@@ -1334,6 +1334,25 @@
     "saas": true,
     "website": "https://uscreen.tv/"
   },
+  "UseClick": {
+    "cats": [
+      10
+    ],
+    "description": "UseClick is a privacy-focused analytics and link management platform for tracking website traffic, short links, and bio pages.",
+    "icon": "UseClick.svg",
+    "js": {
+      "useclick.version": "(.+)\\;version:\\1"
+    },
+    "pricing": [
+      "low",
+      "recurring",
+      "freemium"
+    ],
+    "saas": true,
+    "scriptSrc": "useclick\\.io/analytics\\.js",
+    "website": "https://useclick.io",
+    "xhr": "useclick\\.io/api/analytics/collect"
+  },
   "UseResponse": {
     "cats": [
       52

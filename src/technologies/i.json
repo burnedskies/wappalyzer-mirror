@@ -1307,6 +1307,29 @@
     "scriptSrc": "cdn\\.inksoft\\.com/",
     "website": "https://www.inksoft.com"
   },
+  "Inkybay": {
+    "cats": [
+      100,
+      76
+    ],
+    "description": "Inkybay is a Shopify product personalization app for configurable product options, live previews, and print-ready custom orders.",
+    "icon": "Inkybay.svg",
+    "implies": "Shopify",
+    "js": {
+      "EFOLI_INKYBAY_SCRIPTTAG_JS_INIT": "",
+      "runInkybayApp": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": [
+      "\\.inkybay\\.com/shopify/js/inkybay\\.js",
+      "/inkybay-product-personalizer-\\d+/assets/app\\.js"
+    ],
+    "website": "https://inkybay.com"
+  },
   "Innervate": {
     "cats": [
       36
@@ -1923,6 +1946,9 @@
     ],
     "description": "Intershop is an ecommerce platform, tailored to the needs of complex business processes and major organizations.",
     "icon": "Intershop.svg",
+    "meta": {
+      "intershop": "^Powered by INTERSHOP(?: \\d+)?$"
+    },
     "pricing": [
       "onetime",
       "high"

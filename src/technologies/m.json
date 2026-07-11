@@ -1075,6 +1075,9 @@
       "Content-Security-Policy": "app\\.makeswift\\.com"
     },
     "icon": "Makeswift.svg",
+    "meta": {
+      "makeswift-preview-info": "isPreview"
+    },
     "pricing": [
       "freemium",
       "mid",
@@ -1082,7 +1085,11 @@
       "poa"
     ],
     "saas": true,
-    "scripts": "app\\.makeswift\\.com",
+    "scripts": [
+      "app\\.makeswift\\.com",
+      "@@makeswift/type",
+      "Makeswift(?:Provider|Component)"
+    ],
     "website": "https://www.makeswift.com"
   },
   "Malomo": {
@@ -1808,7 +1815,7 @@
       41
     ],
     "description": "MasterCard facilitates electronic funds transfers throughout the world, most commonly through branded credit cards, debit cards and prepaid cards.",
-    "dom": "[aria-labelledby='pi-mastercard'], [aria-labelledby='pi-master']",
+    "dom": "[aria-labelledby='pi-mastercard'], [aria-labelledby='pi-master'], img[alt='master'][src*='/checkout-web/assets/'][src*='/assets/master.'][src$='.svg']",
     "icon": "Mastercard.svg",
     "website": "https://www.mastercard.com"
   },
@@ -2447,6 +2454,11 @@
     "dom": "div.content-container > a[href*='www.medusajs.com'], a[href*='mailto:hello@medusajs.com']",
     "icon": "MedusaJs.svg",
     "oss": true,
+    "scripts": [
+      "Initiating Medusa client with default headers",
+      "x-publishable-api-key",
+      "medusajs\\.app[^\\n]+publishableKey"
+    ],
     "website": "https://medusajs.com"
   },
   "Meebo": {
@@ -3927,6 +3939,25 @@
     "saas": true,
     "scripts": "mirakl\\.track",
     "website": "https://www.mirakl.com"
+  },
+  "Mirra": {
+    "cats": [
+      6
+    ],
+    "description": "Mirra is a try-before-you-buy and post-purchase ecommerce platform for fashion, apparel, and beauty brands.",
+    "dom": "#try-with-mirra-product-container, .try-with-mirra-extension, a[href*='trywithmirra.com/terms-and-conditions']",
+    "icon": "Mirra.svg",
+    "js": {
+      "TryWithMirra": ""
+    },
+    "pricing": [
+      "recurring",
+      "poa"
+    ],
+    "requires": "Shopify",
+    "saas": true,
+    "scriptSrc": "cdn\\.shopify\\.com/extensions/[^/]+/mirra-[^/]+/assets/mirra-product-page\\.js",
+    "website": "https://trywithmirra.com"
   },
   "Mirus": {
     "cats": [

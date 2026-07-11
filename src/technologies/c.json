@@ -8570,6 +8570,28 @@
     "saas": true,
     "website": "https://www.curaytor.com"
   },
+  "CusRev": {
+    "cats": [
+      90
+    ],
+    "description": "CusRev is a WooCommerce review platform and WordPress plugin for collecting, verifying, and displaying customer reviews.",
+    "dom": [
+      "link[href*='/wp-content/plugins/customer-reviews-woocommerce/']",
+      "a[href*='cusrev.com/'][href*='/reviews/']"
+    ],
+    "icon": "CusRev.png",
+    "implies": "WooCommerce",
+    "oss": true,
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "requires": "WordPress",
+    "saas": true,
+    "scriptSrc": "/wp-content/plugins/customer-reviews-woocommerce/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
+    "website": "https://www.cusrev.com"
+  },
   "Custobar": {
     "cats": [
       97

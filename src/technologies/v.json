@@ -1753,7 +1753,7 @@
     "cats": [
       41
     ],
-    "dom": "[aria-labelledby='pi-visa']",
+    "dom": "[aria-labelledby='pi-visa'], img[alt='visa'][src*='/checkout-web/assets/'][src*='/assets/visa.'][src$='.svg']",
     "icon": "Visa.svg",
     "js": {
       "visaApi": "",

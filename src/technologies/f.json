@@ -3202,6 +3202,24 @@
     "scripts": "format\\.com",
     "website": "https://www.format.com"
   },
+  "Formbricks": {
+    "cats": [
+      73
+    ],
+    "description": "Formbricks is an open-source survey and experience management platform for collecting website, app, email, and link-based feedback.",
+    "js": {
+      "formbricks": ""
+    },
+    "oss": true,
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "/js/formbricks\\.umd\\.cjs",
+    "website": "https://formbricks.com"
+  },
   "Formcake": {
     "cats": [
       110

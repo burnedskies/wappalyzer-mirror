@@ -1372,7 +1372,7 @@
       41
     ],
     "description": "PayFast is a payments processing service for South Africans & South African websites.",
-    "dom": "[aria-labelledby='pi-payfast_instant_eft']",
+    "dom": "[aria-labelledby='pi-payfast_instant_eft'], img[alt='payfast instant eft'][src*='/checkout-web/assets/'][src*='/assets/payfast_instant_eft.'][src$='.svg']",
     "icon": "Payfast.svg",
     "website": "https://www.payfast.co.za/"
   },
@@ -3904,14 +3904,19 @@
     ],
     "cpe": "cpe:2.3:a:plone:plone:*:*:*:*:*:*:*:*",
     "description": "Plone is a free and open source content management system (CMS) built on top of the Zope application server.",
-    "dom": "link[href^='/++resource++']",
+    "dom": "link[href^='/++resource++'], link[href*='resourceplone.']",
     "icon": "Plone.svg",
     "implies": "Python",
+    "js": {
+      "ploneDnDReorder": "",
+      "ploneFormTabbing": "",
+      "registerPloneFunction": ""
+    },
     "meta": {
-      "generator": "Plone"
+      "generator": "^Plone(?:\\b|\\s+-)"
     },
     "oss": true,
-    "scriptSrc": "^/\\+\\+resource\\+\\+",
+    "scriptSrc": "(?:^/\\+\\+resource\\+\\+|/portal_javascripts/[^?#]*resourceplone\\.)",
     "website": "https://plone.org/"
   },
   "Plotly": {
@@ -6683,16 +6688,24 @@
       60
     ],
     "description": "Proxmox VE is an open-source virtualisation and containerisation platform that provides a web-based management interface to manage virtual machines, containers, storage, and networking.",
+    "dom": "img[src*='pwt/images/proxmox_logo.svg'][alt='Proxmox']",
     "headers": {
       "Server": "pve-api-daemon/[\\d\\.]+"
     },
     "icon": "Proxmox.svg",
+    "js": {
+      "Proxmox.Setup.auth_cookie_name": "^PVEAuthCookie$"
+    },
     "oss": true,
     "pricing": [
       "low",
       "recurring"
     ],
     "saas": true,
+    "scriptSrc": [
+      "/pve2/js/pvemanagerlib\\.js\\?ver=([\\d.]+)\\;version:\\1",
+      "/proxmoxlib\\.js"
+    ],
     "website": "https://proxmox.com/en/proxmox-ve"
   },
   "Psyma": {

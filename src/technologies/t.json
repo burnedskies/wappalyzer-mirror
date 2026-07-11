@@ -741,7 +741,7 @@
     "dom": {
       "body [class]": {
         "attributes": {
-          "class": "\\b(?:flex|grid|text-(?:xs|sm|base|lg|xl)|bg-[a-z]+-[0-9]{3}|px-\\d+|py-\\d+|rounded(?:-[a-z]+)?|shadow(?:-[a-z]+)?|[a-z-]+-\\[[^\\]]+\\])\\b\\;confidence:50"
+          "class": "(?:^|\\s)(?:(?:sm|md|lg|xl|2xl|hover|focus|active|visited|disabled|enabled|first|last|odd|even|required|valid|invalid|checked|empty|target|open|default|indeterminate|placeholder-shown|autofill|read-only|before|after|first-letter|first-line|marker|selection|file|backdrop|placeholder|dark|motion-safe|motion-reduce|portrait|landscape|print|contrast-more|contrast-less|focus-within|focus-visible|group-hover|group-focus|peer-hover|peer-focus):)*(?:text-(?:xs|sm|base|lg|xl)|(?:bg|from|via|to|text|border|ring)-[a-z]+-[0-9]{3}|rounded-(?:md|xl|2xl|3xl|full)|shadow-(?:md|xl|2xl|inner)|[a-z-]+-\\[[^\\]]+\\])(?:\\s|$)\\;confidence:50"
         }
       },
       "link[rel='stylesheet'][href*='.css']": {

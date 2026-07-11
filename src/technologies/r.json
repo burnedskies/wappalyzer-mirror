@@ -2707,6 +2707,29 @@
     "scriptSrc": "\\.rentcafe\\.com/",
     "website": "https://www.rentcafe.com"
   },
+  "Rentware": {
+    "cats": [
+      93
+    ],
+    "description": "Rentware is rental management software with booking widgets for inventory, reservation, and online payment workflows.",
+    "dom": "rtr-widget-config, rentware-checkout, rtr-search, rentware-search",
+    "icon": "Rentware.svg",
+    "js": {
+      "RENTWARE_BASE_API_URL": "",
+      "RENTWARE_LANGUAGE": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": [
+      "w-cdn\\.rentware\\.io/dist/rentware-widgets\\.esm\\.js",
+      "cdn\\.rtr-io\\.com/widgets(?:_sol_v2)?\\.js"
+    ],
+    "website": "https://rentware.com",
+    "xhr": "widget\\.rtr-io\\.com/booking/system"
+  },
   "Rep.co": {
     "cats": [
       90
