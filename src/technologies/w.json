@@ -453,6 +453,28 @@
     "saas": true,
     "website": "https://wpstratos.com"
   },
+  "WP ULike": {
+    "cats": [
+      87
+    ],
+    "description": "WP ULike is a WordPress plugin for adding like, dislike, and reaction controls to website content.",
+    "icon": "WP ULike.svg",
+    "js": {
+      "WordpressUlike": ""
+    },
+    "oss": true,
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "requires": "WordPress",
+    "scriptSrc": [
+      "/wp-content/plugins/wp-ulike/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
+      "/wp-content/plugins/wp-ulike-pro/.+\\.js"
+    ],
+    "website": "https://wpulike.com"
+  },
   "WP-Optimize": {
     "cats": [
       87,
@@ -1538,6 +1560,20 @@
     "icon": "WebSocket.svg",
     "oss": true,
     "website": "https://en.wikipedia.org/wiki/WebSocket"
+  },
+  "WebToffee EU Order Withdrawal Button for WooCommerce": {
+    "cats": [
+      87
+    ],
+    "description": "WebToffee EU Order Withdrawal Button for WooCommerce is an open-source plugin for submitting and managing online order withdrawal requests.",
+    "icon": "WebToffee EU Order Withdrawal Button.png",
+    "implies": [
+      "WordPress",
+      "WooCommerce"
+    ],
+    "oss": true,
+    "scriptSrc": "/wp-content/plugins/wt-eu-withdrawal-button/assets/js/wbte-ewb-frontend(?:\\.min)?\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1",
+    "website": "https://wordpress.org/plugins/wt-eu-withdrawal-button/"
   },
   "WebToffee Stripe Payment Plugin for WooCommerce": {
     "cats": [
@@ -3784,6 +3820,7 @@
     },
     "meta": {
       "generator": "^WordPress(?: ([\\d.]+))?\\;version:\\1",
+      "og:image": "/wp-content/uploads/",
       "shareaholic:wp_version": ""
     },
     "oss": true,

@@ -882,6 +882,25 @@
     "scriptSrc": "us-content\\.vergic\\.com/",
     "website": "https://www.vergic.com"
   },
+  "Verificado": {
+    "cats": [
+      90
+    ],
+    "description": "Verificado is a customer feedback platform for collecting, moderating, analyzing, and displaying ecommerce reviews, NPS, and CSAT.",
+    "icon": "Verificado.svg",
+    "js": {
+      "VerificadoAI": ""
+    },
+    "pricing": [
+      "mid",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn-[\\w-]+\\.verificado\\.ai/(?:js/)?widget/main\\.js",
+    "scripts": "verificadoAIUriBaseCdn\\s*=\\s*['\"]https://cdn-[\\w-]+\\.verificado\\.ai",
+    "website": "https://verificado.ai"
+  },
   "Verifone 2Checkout": {
     "cats": [
       41
@@ -2515,7 +2534,16 @@
     ],
     "css": "\\.vue-notification-group",
     "description": "Vue.js is an open-source JavaScript framework for building user interfaces and single-page applications.",
-    "dom": ".vue-app, link[href*='docsify/themes/vue.css'], meta[data-vue-meta], div[class*='vue-scroll-picker-group'] > div[class*='vue-scroll-picker'], div[class*='Vue-Toastification__container']",
+    "dom": {
+      "#app, #__nuxt, .app, #root, .root, body, body > *, body > * > *, body > * > * > *": {
+        "properties": {
+          "__vue__": ""
+        }
+      },
+      ".vue-app, link[href*='docsify/themes/vue.css'], meta[data-vue-meta], div[class*='vue-scroll-picker-group'] > div[class*='vue-scroll-picker'], div[class*='Vue-Toastification__container']": {
+        "exists": ""
+      }
+    },
     "icon": "vue.svg",
     "js": {
       "Vue": "",

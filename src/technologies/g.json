@@ -3134,6 +3134,7 @@
       "mid"
     ],
     "saas": true,
+    "scriptSrc": "assets\\.gorgias\\.help/",
     "website": "https://www.gorgias.com/"
   },
   "Gorilla Dash": {

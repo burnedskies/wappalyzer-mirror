@@ -1,4 +1,23 @@
 {
+  "OCEA": {
+    "cats": [
+      6
+    ],
+    "description": "OCEA is a hosted ecommerce platform for creating online stores and selling through social channels.",
+    "headers": {
+      "x-ocea-version": "^([0-9.]+)$\\;version:\\1"
+    },
+    "icon": "OCEA.png",
+    "js": {
+      "oceaConfig.generator": "^ocea$",
+      "oceaConfig.version": "^([0-9.]+)$\\;version:\\1"
+    },
+    "meta": {
+      "generator": "^ocea$"
+    },
+    "saas": true,
+    "website": "https://ocea.app"
+  },
   "ONiAD": {
     "cats": [
       36
@@ -1589,6 +1608,28 @@
     "oss": true,
     "scriptSrc": "opencms",
     "website": "https://www.opencms.org"
+  },
+  "OpenDXP": {
+    "cats": [
+      1,
+      6
+    ],
+    "description": "OpenDXP is an open-source digital experience platform for PIM, DAM, headless CMS, and composable commerce.",
+    "dom": "a[id^='opendxp-navigation-renderer-menu-']",
+    "headers": {
+      "X-OpenDXP-Cache-Date": "",
+      "X-OpenDXP-Output-Cache-Disable-Reason": "",
+      "X-OpenDXP-Output-Cache-Tag": "",
+      "X-Powered-By": "(?:^|\\n)opendxp(?:\\n|$)"
+    },
+    "icon": "OpenDXP.svg",
+    "implies": "PHP",
+    "oss": true,
+    "probe": {
+      "/admin/login": "OpenDXP"
+    },
+    "scripts": "opendxp_toolbox\\.",
+    "website": "https://opendxp.io"
   },
   "OpenElement": {
     "cats": [

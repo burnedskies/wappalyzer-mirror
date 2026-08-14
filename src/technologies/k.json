@@ -664,6 +664,28 @@
     "scriptSrc": "\\.kauz\\.ai",
     "website": "https://kauz.ai"
   },
+  "KePixel": {
+    "cats": [
+      42
+    ],
+    "description": "KePixel is a no-code server-side tracking and Conversion API platform for ecommerce stores and agencies.",
+    "icon": "KePixel.png",
+    "js": {
+      "__kepixelSallaLoaderInstalled": "",
+      "kepixel": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": [
+      "kepixel-tag\\.web\\.app/kpx-salla-runtime\\.js",
+      "tag\\.kepixel\\.online/kpx-salla-collect\\.js"
+    ],
+    "website": "https://kepixel.online/"
+  },
   "KeaBuilder": {
     "cats": [
       32
@@ -1077,6 +1099,7 @@
       "payg"
     ],
     "saas": true,
+    "scriptSrc": "cdn\\.shopify\\.com/extensions/[\\da-f-]+/kickflip-\\d+/assets/customizer\\.js",
     "scripts": "gokickflip\\.com",
     "website": "https://gokickflip.com"
   },
@@ -1237,11 +1260,18 @@
     },
     "cpe": "cpe:2.3:a:getkirby:kirby:*:*:*:*:*:*:*:*",
     "description": "Kirby is a file-based content management system (CMS) that simplifies website and web application development by using text files for content management instead of a traditional database.",
+    "dom": {
+      "[content*='/media/pages/'], [href*='/media/pages/'], [src*='/media/pages/'], [srcset*='/media/pages/']": {
+        "attributes": {
+          "content": "/media/pages/.+/[a-f\\d]{10}-\\d+/",
+          "href": "/media/pages/.+/[a-f\\d]{10}-\\d+/",
+          "src": "/media/pages/.+/[a-f\\d]{10}-\\d+/",
+          "srcset": "/media/pages/.+/[a-f\\d]{10}-\\d+/"
+        }
+      }
+    },
     "icon": "Kirby.svg",
-    "implies": [
-      "PHP",
-      "Vue.js"
-    ],
+    "implies": "PHP",
     "pricing": [
       "onetime"
     ],
@@ -2585,6 +2615,23 @@
     ],
     "saas": true,
     "website": "https://www.k-ecommerce.com"
+  },
+  "kDrive": {
+    "cats": [
+      95
+    ],
+    "description": "kDrive is a cloud storage and file-sharing service from Infomaniak.",
+    "meta": {
+      "og:site_name": "^kDrive$"
+    },
+    "pricing": [
+      "low",
+      "recurring",
+      "freemium"
+    ],
+    "saas": true,
+    "url": "^https?://kdrive\\.infomaniak\\.com/app/share/",
+    "website": "https://www.infomaniak.com/en/ksuite/kdrive"
   },
   "keep. archeevo": {
     "cats": [

@@ -1107,6 +1107,19 @@
     "scripts": "\\.needle\\.com/",
     "website": "https://capacity.com"
   },
+  "Capital Turbine": {
+    "cats": [
+      32
+    ],
+    "description": "Capital Turbine is a marketing automation platform for financial advisors and wealth management firms.",
+    "dom": "a[href^='https://capitalturbine.com']",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://capitalturbine.com"
+  },
   "Capsule CRM": {
     "cats": [
       53
@@ -2887,11 +2900,15 @@
     "cats": [
       52
     ],
+    "cookies": {
+      "_chatwoot_session": ""
+    },
     "cpe": "cpe:2.3:a:chatwoot:chatwoot:*:*:*:*:*:*:*:*",
     "description": "Chatwoot is a customer support tool for instant messaging channels.",
     "icon": "Chatwoot.svg",
     "js": {
       "$chatwoot": "",
+      "chatwootConfig": "",
       "chatwootSDK": ""
     },
     "pricing": [
@@ -5177,6 +5194,7 @@
       19
     ],
     "description": "Cocos2d is a mature open source cross-platform game development framework.",
+    "dom": "#Cocos2dGameContainer",
     "icon": "Cocos2d.svg",
     "js": {
       "CocosEngine": "([\\d\\.]{2,})\\;version:\\1"
@@ -5921,6 +5939,23 @@
     "saas": true,
     "scriptSrc": "static\\.common-ground\\.io/",
     "website": "https://common-ground.io"
+  },
+  "Commrz": {
+    "cats": [
+      6
+    ],
+    "description": "Commrz is a hosted website builder for creating ecommerce and portfolio websites.",
+    "icon": "Commrz.png",
+    "implies": "OpenCart",
+    "meta": {
+      "generator": "^Commrz$"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.commrz.com"
   },
   "Comms": {
     "cats": [

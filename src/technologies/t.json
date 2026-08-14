@@ -979,6 +979,9 @@
       "link[rel='modulepreload'][href*='tanstack-router-']"
     ],
     "icon": "TanStack.svg",
+    "js": {
+      "__TSS_START_OPTIONS__": ""
+    },
     "oss": true,
     "scriptSrc": "/static/.*npm\\.tanstack.*\\.js",
     "scripts": [
@@ -1607,6 +1610,15 @@
     "saas": true,
     "website": "https://teleporthq.io"
   },
+  "Telerik UI for ASP.NET AJAX": {
+    "cats": [
+      66
+    ],
+    "description": "Telerik UI for ASP.NET AJAX is a suite of user interface components for ASP.NET Web Forms applications.",
+    "implies": "Microsoft ASP.NET",
+    "scriptSrc": "Telerik\\.Web\\.UI\\.WebResource\\.axd",
+    "website": "https://www.telerik.com/products/aspnet-ajax"
+  },
   "Telescope": {
     "cats": [
       1
@@ -2057,6 +2069,23 @@
     "saas": true,
     "scriptSrc": "\\.themoneytizer\\.com/",
     "website": "https://www.themoneytizer.com"
+  },
+  "The Newsletter Plugin": {
+    "cats": [
+      87
+    ],
+    "description": "The Newsletter Plugin is a WordPress plugin for managing subscribers and creating, sending, and tracking email campaigns.",
+    "dom": "link#newsletter-css[href*='/wp-content/plugins/newsletter/style.css']",
+    "icon": "The Newsletter Plugin.svg",
+    "implies": "WordPress",
+    "oss": true,
+    "pricing": [
+      "freemium",
+      "low",
+      "onetime"
+    ],
+    "scriptSrc": "/wp-content/plugins/newsletter/(?:main|subscription/validate)\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1",
+    "website": "https://www.thenewsletterplugin.com"
   },
   "The Rave": {
     "cats": [
@@ -4656,6 +4685,24 @@
     "scripts": "isTreatwellBrandedWidget",
     "url": "^https?://(?:www\\.)?treatwell\\.(?:at|be|ch|co\\.uk|com|de|es|fr|gr|ie|it|lt|nl|pt)(?:[/?#]|$)",
     "website": "https://www.treatwell.com"
+  },
+  "Trello": {
+    "cats": [
+      13
+    ],
+    "description": "Trello is a web-based collaboration and project management application that organizes work into boards, lists, and cards.",
+    "icon": "Trello.svg",
+    "js": {
+      "trelloVersion": ""
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "p\\.trellocdn\\.com/(?:card|embed)\\.min\\.js",
+    "website": "https://trello.com"
   },
   "Tremor": {
     "cats": [

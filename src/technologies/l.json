@@ -176,6 +176,22 @@
     "oss": true,
     "website": "https://lagoon.sh/"
   },
+  "Laioutr": {
+    "cats": [
+      1
+    ],
+    "description": "Laioutr is a frontend management platform for building, managing, and delivering composable ecommerce storefronts.",
+    "headers": {
+      "X-Powered-By": "^Laioutr(?: \\(@laioutr-core/frontend-core@[\\d.]+\\))?$"
+    },
+    "icon": "Laioutr.png",
+    "pricing": [
+      "poa",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.laioutr.com"
+  },
   "Landbot": {
     "cats": [
       52
@@ -624,6 +640,28 @@
     "saas": true,
     "scripts": "api\\.leadprosper\\.io",
     "website": "https://leadprosper.io"
+  },
+  "Lead Recorder": {
+    "cats": [
+      10
+    ],
+    "description": "Lead Recorder is an analytics platform that attributes website calls, form submissions, and bookings to their marketing sources.",
+    "dom": {
+      "script[src*='leadrecorder.com/api/script/']": {
+        "attributes": {
+          "src": "leadrecorder\\.com/api/script/[a-f\\d]{32}"
+        }
+      }
+    },
+    "icon": "Lead Recorder.png",
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "www\\.leadrecorder\\.com/api/script/[a-f\\d]{32}",
+    "website": "https://www.leadrecorder.com"
   },
   "LeadBoxer": {
     "cats": [
@@ -2378,6 +2416,21 @@
     "scriptSrc": "cdn\\.livechatinc\\.com/.*tracking\\.js",
     "website": "https://www.livechat.com/"
   },
+  "LiveChatAI": {
+    "cats": [
+      52
+    ],
+    "description": "LiveChatAI is a customer support platform for building AI chatbots trained on company content and handing conversations to human agents.",
+    "icon": "LiveChatAI.png",
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "^https://app\\.livechatai\\.com/embed\\.js",
+    "website": "https://livechatai.com"
+  },
   "LiveEdit": {
     "cats": [
       51,
@@ -3134,23 +3187,6 @@
     "saas": true,
     "website": "https://www.loopreturns.com"
   },
-  "Loop Web": {
-    "cats": [
-      47
-    ],
-    "description": "Loop Web is a provider in web, internet, network, and design services.",
-    "dom": "link[href*='.loopweb.net']",
-    "icon": "Loop Web.svg",
-    "meta": {
-      "id": "LoopWeb",
-      "loopweb": ""
-    },
-    "pricing": [
-      "low",
-      "recurring"
-    ],
-    "website": "https://www.loopweb.net"
-  },
   "Loop54": {
     "cats": [
       29,
@@ -3170,6 +3206,35 @@
     ],
     "saas": true,
     "website": "https://www.loop54.com"
+  },
+  "LoopWeb": {
+    "cats": [
+      47
+    ],
+    "description": "LoopWeb develops custom software, web applications, CMS, LMS, APIs, cloud solutions, plugins, and digital platforms.",
+    "dom": "link[href*='.loopweb.net'], meta[id='LoopWeb'], meta[name='LoopWeb']",
+    "headers": {
+      "X-LoopWeb": "^true$",
+      "x-loopweb": "^true$"
+    },
+    "icon": "Loop Web.svg",
+    "js": {
+      "LoopWeb": "^true$"
+    },
+    "meta": {
+      "developer": "^LoopWeb$",
+      "generator": "^LoopWeb$",
+      "id": "LoopWeb",
+      "loopweb": ""
+    },
+    "pricing": [
+      "freemium",
+      "onetime",
+      "payg",
+      "poa",
+      "recurring"
+    ],
+    "website": "https://www.loopweb.net"
   },
   "LoopedIn": {
     "cats": [
@@ -3308,6 +3373,7 @@
       "lovable-preview-mode": ""
     },
     "description": "Lovable is an AI-based collaborative page builder for generating UI components, projects, and templates in real time.",
+    "dom": "aside#lovable-badge a[href^='https://lovable.dev/projects/'][href*='utm_source=lovable-badge']",
     "icon": "Lovable.svg",
     "js": {
       "LOV_SELECTOR_SCRIPT_VERSION": "^[\\d\\.]+$"

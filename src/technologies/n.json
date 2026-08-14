@@ -1310,9 +1310,13 @@
     "description": "Nginx is a web server that also works as a reverse proxy, load balancer, and HTTP cache.",
     "headers": {
       "Server": "nginx(?:/([\\d.]+))?\\;version:\\1",
-      "X-Fastcgi-Cache": ""
+      "X-Fastcgi-Cache": "",
+      "X-Nginx-Version": "^([\\d.]+)$\\;version:\\1"
     },
     "icon": "Nginx.svg",
+    "meta": {
+      "generator": "^nginx(?: ([\\d.]+))?(?: on .+)?$\\;version:\\1"
+    },
     "website": "https://nginx.org/en"
   },
   "Niagahoster": {

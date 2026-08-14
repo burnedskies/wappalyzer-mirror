@@ -153,6 +153,9 @@
     ],
     "cpe": "cpe:2.3:a:halo:halo:*:*:*:*:*:*:*:*",
     "description": "Halo is an open-source website building tool that supports dynamic themes, real-time editing, and multilingual setups.",
+    "headers": {
+      "X-Halo-Cache-At": ""
+    },
     "icon": "Halo.svg",
     "implies": "Java",
     "meta": {
@@ -641,18 +644,7 @@
       66
     ],
     "description": "Headless UI is a unstyled component library for either React.js or Vue.js from the same people that created Tailwind CSS.",
-    "dom": {
-      "button": {
-        "attributes": {
-          "id": "headlessui-"
-        }
-      },
-      "div": {
-        "attributes": {
-          "id": "headlessui-"
-        }
-      }
-    },
+    "dom": "[data-headlessui-state]",
     "icon": "Headless UI.svg",
     "oss": true,
     "website": "https://headlessui.dev"

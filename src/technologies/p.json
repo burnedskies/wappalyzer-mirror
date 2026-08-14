@@ -492,10 +492,15 @@
     },
     "icon": "pagefly.svg",
     "js": {
+      "__pageflyProducts": "",
+      "__pagefly_heatmap_config__": "",
       "__pagefly_setting__": ""
     },
     "saas": true,
-    "scriptSrc": "cdn\\.pagefly\\.io",
+    "scriptSrc": [
+      "cdn\\.pagefly\\.io",
+      "cdn\\.shopify\\.com/extensions/[^/]+/pagefly-page-builder-\\d+/assets/pagefly-[\\w.-]+\\.js"
+    ],
     "website": "https://pagefly.io"
   },
   "PageLines": {
@@ -1754,6 +1759,25 @@
     "saas": true,
     "scriptSrc": "checkout-sdk\\.payva\\.com",
     "website": "https://www.payva.com"
+  },
+  "Payzito": {
+    "cats": [
+      41
+    ],
+    "description": "Payzito is a payment platform and plugin for WordPress and Joomla that provides payment links, forms, wallets, routing, and multiple gateways.",
+    "dom": "link[href*='/wp-content/plugins/payzito/'], link[href*='/wp-content/payzito_config/'], script[src*='/wp-content/plugins/payzito/'], script[src*='/wp-content/payzito_config/']",
+    "icon": "Payzito.png",
+    "pricing": [
+      "low",
+      "freemium",
+      "onetime",
+      "recurring"
+    ],
+    "scriptSrc": [
+      "/wp-content/(?:plugins/payzito/|payzito_config/).+\\.js\\?v=([\\d.]+)\\;version:\\1",
+      "/wp-content/(?:plugins/payzito/|payzito_config/)"
+    ],
+    "website": "https://payzito.net"
   },
   "Peachie": {
     "cats": [
@@ -4799,6 +4823,25 @@
     "scriptSrc": "metashop\\.dolphinsuite\\.com",
     "scripts": "metashop\\.dolphinsuite\\.com",
     "website": "https://metashop.dolphinsuite.com"
+  },
+  "PostFinance Checkout": {
+    "cats": [
+      41
+    ],
+    "cookies": {
+      "wc_postfinancecheckout_device_id": ""
+    },
+    "description": "PostFinance Checkout is a payment service provider for online shops with hosted checkout, ecommerce plugins, and APIs.",
+    "dom": "script[src^='https://checkout.postfinance.ch/s/'][src*='/payment/device.js']",
+    "icon": "PostFinance Checkout.png",
+    "pricing": [
+      "low",
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "scriptSrc": "checkout\\.postfinance\\.ch/s/\\d+/payment/device\\.js",
+    "website": "https://www.postfinance.ch/en/business/products/payment-collection/online-shop.html"
   },
   "PostHog": {
     "cats": [

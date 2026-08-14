@@ -221,7 +221,7 @@
     "cats": [
       7
     ],
-    "description": "ISO100 is a platform for publishing image-led photography portfolios.",
+    "description": "ISO100 is a free photography portfolio website builder. Photographers can upload selected work, arrange it into galleries, choose a layout, and publish a clean, image-led portfolio with shareable gallery links and an optional custom domain.",
     "headers": {
       "content-security-policy": "api\\.iso100\\.app"
     },

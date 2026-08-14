@@ -2027,6 +2027,22 @@
     ],
     "website": "https://birdeye.com"
   },
+  "Bisup": {
+    "cats": [
+      88
+    ],
+    "description": "Bisup is a web hosting and cloud infrastructure provider offering shared hosting, reseller hosting, managed VPS, cloud servers, and dedicated servers.",
+    "headers": {
+      "X-Bisup-Hosting": "^Bisup$"
+    },
+    "icon": "Bisup.png",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.bisup.com"
+  },
   "BitPay": {
     "cats": [
       41
@@ -2223,6 +2239,23 @@
     "oss": true,
     "scriptSrc": "/js/blankshield/blankshield\\.min\\.js",
     "website": "https://danielstjules.github.io/blankshield"
+  },
+  "Blanxer": {
+    "cats": [
+      6
+    ],
+    "description": "Blanxer is an ecommerce and point-of-sale platform for creating and managing online stores.",
+    "meta": {
+      "keywords": "\\bblanxer\\b\\;confidence:50",
+      "og:image": "^https://cdn2\\.blanxer\\.com/\\;confidence:50"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.blanxer.com",
+    "xhr": "api\\.blanxer\\.com"
   },
   "Blazor": {
     "cats": [
@@ -5058,6 +5091,23 @@
     "scriptSrc": "/wp-content/plugins/buddypress/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1",
     "website": "https://buddypress.org"
   },
+  "BudgetGuard": {
+    "cats": [
+      16
+    ],
+    "description": "BudgetGuard is a SaaS platform that detects invalid advertising traffic, click fraud, and campaign anomalies to help protect advertising budgets.",
+    "icon": "BudgetGuard.svg",
+    "js": {
+      "BudgetGuardTracking": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://budgetguard.lu",
+    "xhr": "checker\\.budgetguard\\.lu/api/tracking/"
+  },
   "BugHerd": {
     "cats": [
       13
@@ -5567,6 +5617,26 @@
     "saas": true,
     "scriptSrc": "api\\.byscuit\\.com/",
     "website": "https://www.byscuit.com"
+  },
+  "b10cks": {
+    "cats": [
+      1
+    ],
+    "description": "b10cks is an open-source headless content management system with block-based content modeling, localization, versioning, and image processing.",
+    "dom": "[src*='api.b10cks.com/ilum/'], meta[content*='api.b10cks.com/ilum/']",
+    "headers": {
+      "content-security-policy": "(?:api|app)\\.b10cks\\.com"
+    },
+    "icon": "b10cks.svg",
+    "oss": true,
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scripts": "b10cks:\\{accessToken:\"blx_[^\"]+\",apiUrl:\"https://api\\.b10cks\\.com/api\"",
+    "website": "https://www.b10cks.com"
   },
   "bSecure": {
     "cats": [

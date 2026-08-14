@@ -658,6 +658,24 @@
     "scriptSrc": "\\.zeotap\\.com",
     "website": "https://zeotap.com"
   },
+  "Zephyr Cloud": {
+    "cats": [
+      62
+    ],
+    "description": "Zephyr Cloud is a deployment platform for micro-frontends and Module Federation applications.",
+    "headers": {
+      "x-server": "^zephyr-cloud$"
+    },
+    "icon": "Zephyr Cloud.svg",
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://zephyr-cloud.io/"
+  },
   "Zepio": {
     "cats": [
       6

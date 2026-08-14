@@ -469,7 +469,7 @@
     ],
     "description": "STUDIO is a Japan-based company and SaaS application for designing and hosting websites.",
     "dom": ".StudioCanvas, .publish-studio-style",
-    "icon": "STUDIO.svg",
+    "icon": "STUDIO.png",
     "implies": [
       "Vue.js",
       "Nuxt.js",
@@ -478,7 +478,7 @@
       "Google Tag Manager"
     ],
     "meta": {
-      "generator": "^STUDIO$"
+      "generator": "^(?:STUDIO|Studio\\.Design\\.HRC)$"
     },
     "pricing": [
       "low",
@@ -1007,6 +1007,7 @@
       "dwsid": ""
     },
     "description": "Salesforce Commerce Cloud is a cloud-based software-as-a-service (SaaS) ecommerce solution.",
+    "dom": "[href*='/on/demandware.static/'], [src*='/on/demandware.static/']",
     "headers": {
       "Server": "Demandware eCommerce Server"
     },
@@ -1142,6 +1143,25 @@
     "scriptSrc": "service\\.force\\.com",
     "website": "https://www.salesforce.com/au/products/service-cloud/"
   },
+  "Salesgear": {
+    "cats": [
+      32
+    ],
+    "description": "Salesgear is a sales engagement platform for prospect research, contact data, and multichannel outreach across email, LinkedIn, and calls.",
+    "dom": [
+      "script[src^='https://cdn.salesgear.io/js/script.js']",
+      "script[src^='https://cdn.salesgear.io/js/websiteScript.js']"
+    ],
+    "icon": "Salesgear.png",
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.salesgear\\.io/js/(?:script|websiteScript)\\.js",
+    "website": "https://www.salesgear.io"
+  },
   "Salesloft": {
     "cats": [
       32
@@ -1226,6 +1246,21 @@
     ],
     "saas": true,
     "website": "https://salonist.io"
+  },
+  "Salonkee": {
+    "cats": [
+      72
+    ],
+    "description": "Salonkee is a salon management and appointment scheduling platform for hair, beauty, and wellness businesses.",
+    "dom": "iframe[src*='salonkee.'][src*='/salon/'][src*='/widget']",
+    "icon": "Salonkee.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "cdn\\.wbuilder\\.salonkee\\.com/",
+    "website": "https://salonkee.com"
   },
   "Salsify": {
     "cats": [
@@ -2392,7 +2427,8 @@
     "cats": [
       1
     ],
-    "description": "Seldit is a CMS platform for building and managing websites and ecommerce stores.",
+    "description": "Seldit is a hosted platform for creating and managing ecommerce and service-based websites. It includes features for website management, online sales, payments, and customer management.",
+    "icon": "Seldit.png",
     "js": {
       "Seldit.cms": "^true$"
     },
@@ -3380,6 +3416,20 @@
     },
     "oss": true,
     "website": "https://github.com/shaka-project/shaka-player"
+  },
+  "Shakebug": {
+    "cats": [
+      13
+    ],
+    "description": "Shakebug is a bug and crash reporting platform with session monitoring and product analytics for mobile and web applications.",
+    "dom": "#shakebug-root.sb-ignore",
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.shakebug.com"
   },
   "Shanon": {
     "cats": [
@@ -4912,7 +4962,7 @@
     ],
     "cpe": "cpe:2.3:a:shopware:shopware:*:*:*:*:*:*:*:*",
     "description": "Shopware is an enterprise-level ecommerce platform.",
-    "dom": "input[name*='shopware_'], script[data-plugin-version^='Shopware']",
+    "dom": "#icons-default-shopware, input[name*='shopware_'], script[data-plugin-version^='Shopware']",
     "headers": {
       "sw-context-token": "^[\\w]{32}$\\;version:6",
       "sw-invalidation-states": "\\;version:6",
@@ -6368,6 +6418,25 @@
       "poa"
     ],
     "website": "https://www.sitepark.com/mittelstand/content-management-system/index.php"
+  },
+  "Sitepins": {
+    "cats": [
+      1
+    ],
+    "description": "Sitepins is a Git-based headless content management system for websites built with static site generators.",
+    "icon": "Sitepins.svg",
+    "oss": true,
+    "pricing": [
+      "low",
+      "freemium",
+      "onetime",
+      "recurring"
+    ],
+    "probe": {
+      "/.well-known/sitepins.json": "\"cms\"\\s*:\\s*\"Sitepins\""
+    },
+    "saas": true,
+    "website": "https://sitepins.com"
   },
   "Siter": {
     "cats": [
@@ -11168,6 +11237,16 @@
     "scripts": "www\\.strava\\.com",
     "website": "https://www.strava.com"
   },
+  "Streak.js": {
+    "cats": [
+      57,
+      18
+    ],
+    "description": "Streak.js is a React-based static site generator that pre-renders pages at build time and supports widget-based progressive enhancement.",
+    "dom": "style#critical-css ~ script#w-m[type='text/json']",
+    "icon": "Streak.js.png",
+    "website": "https://www.streakjs.com"
+  },
   "Streamlit": {
     "cats": [
       18
@@ -12930,10 +13009,9 @@
       66
     ],
     "description": "Shadcn-svelte is an adaptation of shadcn/ui for Svelte, offering accessible and customizable components.",
-    "dom": "link[href*='shadcn-svelte']",
+    "dom": "body[data-sveltekit-preload-data] [data-slot='button'][class*='focus-visible:ring-ring/50'], body[data-sveltekit-preload-data] [data-slot='dropdown-menu-trigger'][id^='bits-']",
     "icon": "ShadCnSvelte.svg",
     "oss": true,
-    "requires": "Svelte",
     "website": "https://www.shadcn-svelte.com"
   },
   "shadcn/ui": {

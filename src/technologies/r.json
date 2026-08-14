@@ -504,8 +504,9 @@
     ],
     "description": "Railway is a cloud platform that simplifies building, deploying, and managing applications with easy setup and scalable infrastructure.",
     "headers": {
-      "Server": "^railway(?:-edge)?$",
-      "x-railway-edge": "^railway/"
+      "Server": "^railway(?:-(?:edge|hikari))?$",
+      "x-railway-edge": "^.+$",
+      "x-railway-request-id": "^.+$"
     },
     "icon": "Railway.svg",
     "pricing": [

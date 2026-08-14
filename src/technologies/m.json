@@ -2636,6 +2636,22 @@
     "saas": true,
     "website": "https://www.meltwater.com"
   },
+  "MemberPress": {
+    "cats": [
+      87,
+      21
+    ],
+    "description": "MemberPress is a WordPress plugin for creating membership sites, selling subscriptions and courses, and restricting access to content.",
+    "dom": "link[href*='/wp-content/plugins/memberpress'], script[src*='/wp-content/plugins/memberpress'], [class^='mepr-'], [class*=' mepr-'], [id^='mepr-'], [id^='mepr_']",
+    "icon": "MemberPress.svg",
+    "implies": "WordPress",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "scriptSrc": "/wp-content/plugins/memberpress(?:[-/])",
+    "website": "https://memberpress.com"
+  },
   "MemberSpace": {
     "cats": [
       19,
@@ -3327,14 +3343,14 @@
     ],
     "description": "Microsoft's Clarity is an analytics tool which provides website usage statistics, session recording, and heatmaps.",
     "icon": "Microsoft Clarity.svg",
-    "js": {
-      "clarity": ""
-    },
     "pricing": [
       "freemium"
     ],
     "saas": true,
-    "scriptSrc": "www\\.clarity\\.ms/.+/([\\d.]+)/clarity\\.js\\;version:\\1",
+    "scriptSrc": [
+      "(?:www|scripts)\\.clarity\\.ms/(?:s/)?([\\d.]+)/clarity\\.js\\;version:\\1",
+      "www\\.clarity\\.ms/tag/"
+    ],
     "website": "https://clarity.microsoft.com"
   },
   "Microsoft Dynamics 365 Commerce": {
@@ -4391,8 +4407,10 @@
       51
     ],
     "description": "Modulify is a platform that enables the creation and deployment of scalable websites.",
-    "dom": "[mdlfy-content]",
     "icon": "Modulify.svg",
+    "meta": {
+      "generator": "^Modulify$"
+    },
     "saas": true,
     "website": "https://modulify.ai"
   },
@@ -6114,6 +6132,18 @@
       "poa"
     ],
     "website": "https://www.minical.io"
+  },
+  "miniOrange SAML SSO": {
+    "cats": [
+      69
+    ],
+    "description": "miniOrange SAML SSO is a WordPress plugin that enables SAML 2.0 single sign-on through external identity providers.",
+    "dom": "link[href*='/wp-content/plugins/miniorange-saml-20-single-sign-on/']",
+    "icon": "miniOrange SAML SSO.png",
+    "oss": true,
+    "requires": "WordPress",
+    "scriptSrc": "/wp-content/plugins/miniorange-saml-20-single-sign-on/",
+    "website": "https://wordpress.org/plugins/miniorange-saml-20-single-sign-on/"
   },
   "mini_httpd": {
     "cats": [

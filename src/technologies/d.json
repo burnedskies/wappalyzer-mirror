@@ -1048,6 +1048,9 @@
       "X-Powered-By": "(?:Debian|dotdeb|(potato|woody|sarge|etch|lenny|squeeze|wheezy|jessie|stretch|buster|sid))\\;version:\\1"
     },
     "icon": "Debian.svg",
+    "meta": {
+      "generator": "^nginx [\\d.]+ on Debian(?: ([\\d.]+))?(?: \\([^)]+\\))?$\\;version:\\1"
+    },
     "website": "https://debian.org"
   },
   "Decap CMS": {
@@ -1154,6 +1157,24 @@
     "saas": true,
     "scriptSrc": "portal\\.deepmarkit\\.com",
     "website": "https://www.deepmarkit.com"
+  },
+  "Dehasoft E-Ticaret": {
+    "cats": [
+      6
+    ],
+    "cookies": {
+      "deha-session": ""
+    },
+    "description": "Dehasoft E-Ticaret is an ecommerce platform for managing products, orders, payments, shipping, and ERP integrations.",
+    "icon": "Dehasoft E-Ticaret.png",
+    "meta": {
+      "publisher": "^Dehasoft$"
+    },
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://www.dehasofteticaret.com"
   },
   "Deko": {
     "cats": [

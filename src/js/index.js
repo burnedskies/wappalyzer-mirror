@@ -1620,10 +1620,12 @@ const Driver = {
 
     let hostname
     let originHostname
+    const originUrl =
+      request.originUrl || request.initiator || request.documentUrl
 
     try {
       ;({ hostname } = new URL(request.url))
-      ;({ hostname: originHostname } = new URL(request.originUrl))
+      ;({ hostname: originHostname } = new URL(originUrl))
     } catch (error) {
       return
     }
@@ -1644,7 +1646,7 @@ const Driver = {
           }
 
           Driver.onDetect(
-            request.originUrl || request.initiator,
+            originUrl,
             analyze({ xhr: hostname }, getTechnologiesByTypes(['xhr'])),
             undefined,
             false,

@@ -552,23 +552,35 @@ async function getHeavySignals() {
 
   // CSS rules
   const css = []
+  const ruleLists = []
 
-  try {
-    for (const sheet of Array.from(document.styleSheets)) {
-      for (const rules of Array.from(sheet.cssRules)) {
-        css.push(rules.cssText)
+  for (const sheet of Array.from(document.styleSheets)) {
+    try {
+      ruleLists.push(Array.from(sheet.cssRules))
+    } catch (error) {
+      // Continue with the next stylesheet
+    }
+  }
 
-        if (css.length >= 3000) {
-          break
-        }
+  for (let ruleIndex = 0; css.length < 3000; ruleIndex += 1) {
+    let foundRule = false
+
+    for (const rules of ruleLists) {
+      if (ruleIndex >= rules.length) {
+        continue
       }
+
+      css.push(rules[ruleIndex].cssText)
+      foundRule = true
 
       if (css.length >= 3000) {
         break
       }
     }
-  } catch (error) {
-    // Continue
+
+    if (!foundRule) {
+      break
+    }
   }
 
   await yieldToMain()

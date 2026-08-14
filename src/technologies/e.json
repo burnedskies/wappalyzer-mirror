@@ -742,6 +742,18 @@
     "scripts": "\\.ecal\\.com",
     "website": "https://ecal.com"
   },
+  "Ecer": {
+    "cats": [
+      6
+    ],
+    "description": "Ecer is a B2B ecommerce marketplace and website platform for manufacturers, suppliers, and exporters.",
+    "icon": "Ecer.png",
+    "js": {
+      "watchECERIM": ""
+    },
+    "saas": true,
+    "website": "https://www.ecer.com"
+  },
   "Ecom": {
     "cats": [
       6
@@ -1346,7 +1358,7 @@
       "elementor_pro_login": ""
     },
     "description": "Elementor is a website builder platform for professionals on WordPress.",
-    "dom": "link[href*='/wp-content/plugins/elementor/']",
+    "dom": "link[href*='/wp-content/plugins/elementor/'], link[id^='elementor-'][href*='/wp-content/uploads/elementor/']",
     "icon": "Elementor.svg",
     "js": {
       "ElementorProFrontendConfig": "",
@@ -3920,6 +3932,24 @@
       "generator": "^eSyndiCat "
     },
     "website": "https://esyndicat.com"
+  },
+  "eTermin": {
+    "cats": [
+      72
+    ],
+    "description": "eTermin is an online appointment scheduling platform with calendar, customer management, payment, and workflow automation features.",
+    "icon": "eTermin.svg",
+    "js": {
+      "etermin_session_id": ""
+    },
+    "pricing": [
+      "low",
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "url": "^https?://(?:www\\.)?etermin\\.net/",
+    "website": "https://www.etermin.net"
   },
   "eTrigue": {
     "cats": [

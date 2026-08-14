@@ -274,13 +274,17 @@
     "saas": true,
     "website": "https://www.faire.com"
   },
-  "Falakcart": {
+  "FalakCart": {
     "cats": [
       6
     ],
-    "description": "Falakcart is an ecommerce platform for creating and managing online stores with integrated storefront and checkout tooling.",
+    "description": "FalakCart is an ecommerce platform for creating and managing online stores with integrated storefront and checkout tooling.",
+    "dom": "img[src*='falakcart.blr1.digitaloceanspaces.com'], img[srcset*='falakcart.blr1.digitaloceanspaces.com'], link[imagesrcset*='falakcart.blr1.digitaloceanspaces.com']",
     "headers": {
-      "set-cookie": "falakcart-session="
+      "set-cookie": "falakcart-session=",
+      "x-store-custom-domain": "^[a-z0-9.-]+$\\;confidence:34",
+      "x-store-status": "^active$\\;confidence:33",
+      "x-store-subdomain": "^[a-z0-9]{3,32}$\\;confidence:33"
     },
     "saas": true,
     "website": "https://falakcart.com"
@@ -467,7 +471,6 @@
     ],
     "description": "Fast Bundle gives you the ability to create product bundle offers with discounts.",
     "icon": "Fast Bundle.svg",
-    "implies": "Shopify",
     "js": {
       "FastBundleConf.bundleBox": "",
       "FastBundleConf.cartInfo.app_version": "v([\\d\\.]+)\\;version:\\1"
@@ -477,6 +480,7 @@
       "recurring",
       "low"
     ],
+    "requires": "Shopify",
     "saas": true,
     "scriptSrc": "api\\.fastbundle\\.co/",
     "website": "https://fastbundle.co"
@@ -1128,6 +1132,7 @@
     ],
     "description": "Filamentphp is a set of full-stack components designed to serve as a foundational starting point for developing applications.",
     "icon": "Filament.svg",
+    "implies": "Livewire",
     "js": {
       "FilamentNotification": "",
       "filamentData": "",
@@ -1381,7 +1386,8 @@
       "Fingerprint": "(\\d)?$\\;version:\\1",
       "Fingerprint2": "",
       "Fingerprint2.VERSION": "^(.+)$\\;version:\\1",
-      "FingerprintJS": ""
+      "FingerprintJS": "",
+      "__fpjs_pvid": ""
     },
     "oss": true,
     "pricing": [
@@ -1391,6 +1397,10 @@
     "scriptSrc": [
       "fingerprint(?:/fp)?(\\d)?(?:\\.min)?\\.js\\;version:\\1",
       "fingerprintjs(?:\\-pro|2)?(?:@|/)(\\d.*?)?/\\;version:\\1"
+    ],
+    "scripts": [
+      "FingerprintProvider.{0,100}apiKey",
+      "FingerprintProvider client cannot be used in SSR"
     ],
     "website": "https://fingerprintjs.com"
   },
@@ -1522,12 +1532,12 @@
     "description": "Firepush is an omnichannel marketing app that helps Shopify stores to drive sales with automated web push, email and SMS campaigns.",
     "dom": "link[href*='cdn.firepush.net']",
     "icon": "Firepush.svg",
-    "implies": "Shopify",
     "pricing": [
       "low",
       "freemium",
       "recurring"
     ],
+    "requires": "Shopify",
     "saas": true,
     "scriptSrc": [
       "cdn\\.firepush\\.\\w+",
@@ -1780,6 +1790,24 @@
     "saas": true,
     "scriptSrc": "widget\\.flamp\\.ru",
     "website": "https://flamp.ru"
+  },
+  "Flare": {
+    "cats": [
+      100
+    ],
+    "description": "Flare is a Shopify app for configuring delivery dates, shipping rates, and checkout rules by location, product, method, lead time, cutoff, and capacity.",
+    "dom": "link[href*='/extensions/'][href*='/flare-'][href*='/assets/flare_'], script[src*='/extensions/'][src*='/flare-'][src*='/assets/flare_']",
+    "icon": "Flare.png",
+    "js": {
+      "__flareCartCheckoutGuardReady": ""
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "requires": "Shopify",
+    "saas": true,
+    "website": "https://www.getflare.co.uk"
   },
   "FlareLane": {
     "cats": [
@@ -2142,7 +2170,6 @@
     ],
     "description": "Flits is a customer account pages that get all your shopper data in one place.",
     "icon": "Flits.svg",
-    "implies": "Shopify",
     "js": {
       "flitsObjects.accountPage": ""
     },
@@ -2150,6 +2177,7 @@
       "low",
       "recurring"
     ],
+    "requires": "Shopify",
     "saas": true,
     "website": "https://getflits.com"
   },
