@@ -21,6 +21,7 @@ const {
   globEscape,
   normalizeError,
   isMissingTabError,
+  withMessageSenderContext,
 } = Utils
 
 const expiry = 1000 * 60 * 60 * 48
@@ -30,13 +31,6 @@ const maxPingUrls = 25
 const maxPingTechnologies = 25
 const maxExternalScriptChars = 100000
 const persistDebounce = 1000
-const tabAwareMethods = new Set([
-  'analyzeDom',
-  'analyzeJs',
-  'detectTechnology',
-  'onContentLoad',
-])
-
 const hostnameIgnoreList =
   /\b((local|dev(elop(ment)?)?|sandbox|stag(e|ing)?|preprod|production|preview|internal|test(ing)?|[^a-z]demo(shop)?|cache)[.-]|dev\d|localhost|((wappalyzer|google|bing|baidu|microsoft|duckduckgo|facebook|adobe|alibaba|aliexpress|instagram|twitter|x|reddit|yahoo|wikipedia|amazon|amazonaws|youtube|stackoverflow|github|stackexchange|w3schools|twitch)\.)|(brave|live|office|herokuapp|shopifyapps|shopifypreview)\.com|bit\.ly|business\.site|linktr\.ee|\.local|\.test|\.netlify\.app|ngrok|web\.archive\.org|zoom\.us|^([0-9.]+|[\d.]+)$|^([a-f0-9:]+:+)+[a-f0-9]+$)/
 const transientHostnameIgnoreList =
@@ -52,26 +46,43 @@ const initPromise = new Promise((resolve) => {
   initDone = resolve
 })
 
+function isRecord(value) {
+  return !!value && typeof value === 'object' && !Array.isArray(value)
+}
+
+function getRecord(value) {
+  return isRecord(value) ? value : {}
+}
+
 function createDriverCache(cache = {}) {
+  cache = getRecord(cache)
+
   return {
-    hostnames: cache.hostnames || {},
-    robots: cache.robots || {},
-    tabResults: cache.tabResults || {},
-    tabRequests: cache.tabRequests || {},
-    tabScripts: cache.tabScripts || Object.create(null),
-    tabActions: cache.tabActions || Object.create(null),
+    hostnames: getRecord(cache.hostnames),
+    robots: getRecord(cache.robots),
+    tabResults: getRecord(cache.tabResults),
+    tabRequests: getRecord(cache.tabRequests),
+    tabScripts: isRecord(cache.tabScripts)
+      ? cache.tabScripts
+      : Object.create(null),
+    tabActions: isRecord(cache.tabActions)
+      ? cache.tabActions
+      : Object.create(null),
   }
 }
 
 function mergeCacheEntries(baseEntries = {}, runtimeEntries = {}) {
+  baseEntries = getRecord(baseEntries)
+  runtimeEntries = getRecord(runtimeEntries)
+
   return Object.fromEntries(
     Array.from(
       new Set([...Object.keys(baseEntries), ...Object.keys(runtimeEntries)])
     ).map((key) => [
       key,
       {
-        ...(baseEntries[key] || {}),
-        ...(runtimeEntries[key] || {}),
+        ...getRecord(baseEntries[key]),
+        ...getRecord(runtimeEntries[key]),
       },
     ])
   )
@@ -449,13 +460,17 @@ async function removeSessionOption(name) {
 async function getCachedHostnames() {
   const sessionHostnames = await getSessionOption('hostnames', null)
 
-  if (sessionHostnames && typeof sessionHostnames === 'object') {
+  if (isRecord(sessionHostnames)) {
     return sessionHostnames
+  }
+
+  if (sessionHostnames !== null) {
+    await removeSessionOption('hostnames')
   }
 
   const localHostnames = await getCachedOption('hostnames', null)
 
-  if (localHostnames && typeof localHostnames === 'object') {
+  if (isRecord(localHostnames)) {
     await setSessionOption('hostnames', localHostnames)
   }
 
@@ -463,7 +478,7 @@ async function getCachedHostnames() {
     await removeCachedOption('hostnames').catch(() => {})
   }
 
-  return localHostnames || {}
+  return getRecord(localHostnames)
 }
 
 function setCachedHostnames(hostnames) {
@@ -488,46 +503,49 @@ function deserializeRegex(regex) {
 }
 
 function deserializeDetections(detections = []) {
-  return detections
-    .map(
-      ({
-        technology,
-        pattern: { regex, confidence, value } = {},
+  return (Array.isArray(detections) ? detections : [])
+    .map((detection) => {
+      if (!isRecord(detection)) {
+        return null
+      }
+
+      const { technology, version, rootPath, lastUrl } = detection
+      const { regex, confidence, value } = getRecord(detection.pattern)
+      const name =
+        typeof technology === 'string' ? technology : technology?.name
+      const resolvedTechnology = getTechnology(name, true)
+
+      if (!resolvedTechnology) {
+        return null
+      }
+
+      return {
+        technology: resolvedTechnology,
+        pattern: {
+          regex: deserializeRegex(regex),
+          confidence,
+          ...(typeof value !== 'undefined' ? { value } : {}),
+        },
         version,
         rootPath,
         lastUrl,
-      }) => {
-        const name =
-          typeof technology === 'string' ? technology : technology?.name
-
-        return {
-          technology: getTechnology(name, true),
-          pattern: {
-            regex: deserializeRegex(regex),
-            confidence,
-            ...(typeof value !== 'undefined' ? { value } : {}),
-          },
-          version,
-          rootPath,
-          lastUrl,
-        }
       }
-    )
-    .filter(({ technology }) => technology)
+    })
+    .filter(Boolean)
 }
 
 function serializeDetections(detections = []) {
-  return detections
-    .filter(({ technology }) => technology)
-    .map(
-      ({
-        technology: { name: technology },
-        pattern: { regex, confidence, value } = {},
-        version,
-        rootPath,
-        lastUrl,
-      }) => ({
-        technology,
+  return (Array.isArray(detections) ? detections : [])
+    .map((detection) => {
+      if (!isRecord(detection) || !detection.technology?.name) {
+        return null
+      }
+
+      const { technology, version, rootPath, lastUrl } = detection
+      const { regex, confidence, value } = getRecord(detection.pattern)
+
+      return {
+        technology: technology.name,
         pattern: {
           regex: regex?.source || '',
           confidence,
@@ -536,15 +554,22 @@ function serializeDetections(detections = []) {
         version,
         rootPath,
         lastUrl,
-      })
-    )
+      }
+    })
+    .filter(Boolean)
 }
 
 function serializeHostnamesCache(hostnameCache = {}) {
   const hostnames = {}
 
-  for (const hostname of Object.keys(hostnameCache)) {
-    const cache = { ...hostnameCache[hostname] }
+  for (const [hostname, hostnameEntry] of Object.entries(
+    getRecord(hostnameCache)
+  )) {
+    if (!isRecord(hostnameEntry)) {
+      continue
+    }
+
+    const cache = { ...hostnameEntry }
 
     delete cache.https
 
@@ -661,6 +686,39 @@ function incrementTechnologyHits(
   return nextTechnologyHits
 }
 
+function drainTechnologyHits(
+  technologyHits = Object.create(null),
+  sentTechnologyHits = Object.create(null),
+  detections = [],
+  fallbackHits = 0
+) {
+  const remainingTechnologyHits = normalizeTechnologyHits(
+    technologyHits,
+    detections,
+    fallbackHits
+  )
+
+  Object.entries(sentTechnologyHits || {}).forEach(([name, value]) => {
+    const remainingHits =
+      (remainingTechnologyHits[name] || 0) - (parseInt(value, 10) || 0)
+
+    if (remainingHits > 0) {
+      remainingTechnologyHits[name] = remainingHits
+    } else {
+      delete remainingTechnologyHits[name]
+    }
+  })
+
+  return remainingTechnologyHits
+}
+
+function getMaximumTechnologyHits(technologyHits = Object.create(null)) {
+  return Object.values(technologyHits).reduce(
+    (maximum, value) => Math.max(maximum, parseInt(value, 10) || 0),
+    0
+  )
+}
+
 function sortTechnologyEntriesByHits(
   [nameA, technologyA],
   [nameB, technologyB]
@@ -726,110 +784,151 @@ const Driver = {
    * Initialise driver
    */
   async init() {
-    await Driver.loadTechnologies()
+    try {
+      await Driver.loadTechnologies()
 
-    const runtimeCache = createDriverCache(Driver.cache)
-    const hostnameCache = await getCachedHostnames()
-    const hostnames = {}
-    const robots = await getCachedOption('robots', {})
-    const transientTabResults = await getSessionOption('tabResults', {})
-    const transientTabRequests = await getSessionOption('tabRequests', {})
-    let removedIgnoredHostnames = false
+      const runtimeCache = createDriverCache(Driver.cache)
+      const hostnameCache = await getCachedHostnames()
+      const hostnames = {}
+      const robots = getRecord(await getCachedOption('robots', {}))
+      const transientTabResults = getRecord(
+        await getSessionOption('tabResults', {})
+      )
+      const transientTabRequests = getRecord(
+        await getSessionOption('tabRequests', {})
+      )
+      let removedInvalidHostnames = false
 
-    for (const hostname of Object.keys(hostnameCache)) {
-      if (transientHostnameIgnoreList.test(hostname)) {
-        removedIgnoredHostnames = true
+      for (const hostname of Object.keys(hostnameCache)) {
+        if (transientHostnameIgnoreList.test(hostname)) {
+          removedInvalidHostnames = true
 
-        continue
-      }
+          continue
+        }
 
-      const cache = { ...hostnameCache[hostname] }
-      const detections = deserializeDetections(cache.detections)
+        if (!isRecord(hostnameCache[hostname])) {
+          removedInvalidHostnames = true
 
-      delete cache.https
+          continue
+        }
 
-      hostnames[hostname] = {
-        ...cache,
-        detections,
-        technologyHits: normalizeTechnologyHits(
-          cache.technologyHits,
+        const cache = { ...hostnameCache[hostname] }
+        const detections = deserializeDetections(cache.detections)
+
+        if (
+          !Array.isArray(cache.detections) ||
+          detections.length !== cache.detections.length
+        ) {
+          removedInvalidHostnames = true
+        }
+
+        delete cache.https
+
+        hostnames[hostname] = {
+          ...cache,
           detections,
-          cache.hits
-        ),
-      }
-    }
-
-    Driver.cache = createDriverCache({
-      hostnames: mergeCacheEntries(hostnames, runtimeCache.hostnames),
-      robots: {
-        ...robots,
-        ...runtimeCache.robots,
-      },
-      tabResults: mergeCacheEntries(
-        Object.fromEntries(
-          Object.entries(transientTabResults).map(([tabId, result]) => [
-            tabId,
-            {
-              ...result,
-              detections: deserializeDetections(result.detections),
-            },
-          ])
-        ),
-        runtimeCache.tabResults
-      ),
-      tabRequests: mergeCacheEntries(
-        Object.fromEntries(
-          Object.entries(transientTabRequests).map(([tabId, request]) => [
-            tabId,
-            {
-              ...request,
-              ip: normalizeIpAddress(request.ip),
-              statusCode: normalizeStatusCode(request.statusCode),
-              isPrivateIp: !!request.isPrivateIp,
-            },
-          ])
-        ),
-        runtimeCache.tabRequests
-      ),
-      tabScripts: runtimeCache.tabScripts,
-      tabActions: runtimeCache.tabActions,
-    })
-
-    if (removedIgnoredHostnames) {
-      await setCachedHostnames(serializeHostnamesCache(hostnames))
-    }
-
-    const { version } = chrome.runtime.getManifest()
-    const previous = await getCachedOption('version')
-    const upgradeMessage = await getCachedOption('upgradeMessage', true)
-
-    await setCachedOption('version', version)
-
-    const current = await getCachedOption('version')
-
-    if (!previous) {
-      await Driver.clearCache()
-
-      if (current) {
-        open(
-          'https://www.wappalyzer.com/installed/?utm_source=installed&utm_medium=extension&utm_campaign=wappalyzer'
-        )
-
-        const termsAccepted =
-          agent === 'chrome' || (await getCachedOption('termsAccepted', false))
-
-        if (!termsAccepted) {
-          open(chrome.runtime.getURL('html/terms.html'))
+          technologyHits: normalizeTechnologyHits(
+            cache.technologyHits,
+            detections,
+            cache.hits
+          ),
         }
       }
-    } else if (current && current !== previous && upgradeMessage) {
-      open(
-        `https://www.wappalyzer.com/upgraded/?utm_source=upgraded&utm_medium=extension&utm_campaign=wappalyzer`,
-        false
-      )
-    }
 
-    initDone()
+      Driver.cache = createDriverCache({
+        hostnames: mergeCacheEntries(hostnames, runtimeCache.hostnames),
+        robots: {
+          ...robots,
+          ...runtimeCache.robots,
+        },
+        tabResults: mergeCacheEntries(
+          Object.fromEntries(
+            Object.entries(transientTabResults).flatMap(([tabId, result]) =>
+              isRecord(result)
+                ? [
+                    [
+                      tabId,
+                      {
+                        ...result,
+                        detections: deserializeDetections(result.detections),
+                      },
+                    ],
+                  ]
+                : []
+            )
+          ),
+          runtimeCache.tabResults
+        ),
+        tabRequests: mergeCacheEntries(
+          Object.fromEntries(
+            Object.entries(transientTabRequests).flatMap(([tabId, request]) =>
+              isRecord(request)
+                ? [
+                    [
+                      tabId,
+                      {
+                        ...request,
+                        ip: normalizeIpAddress(request.ip),
+                        statusCode: normalizeStatusCode(request.statusCode),
+                        isPrivateIp: !!request.isPrivateIp,
+                      },
+                    ],
+                  ]
+                : []
+            )
+          ),
+          runtimeCache.tabRequests
+        ),
+        tabScripts: runtimeCache.tabScripts,
+        tabActions: runtimeCache.tabActions,
+      })
+
+      if (removedInvalidHostnames) {
+        await setCachedHostnames(serializeHostnamesCache(hostnames))
+      }
+
+      const { version } = chrome.runtime.getManifest()
+      const previous = await getCachedOption('version')
+      const upgradeMessage = await getCachedOption('upgradeMessage', true)
+
+      await setCachedOption('version', version)
+
+      const current = await getCachedOption('version')
+
+      if (!previous) {
+        await Driver.clearCache()
+
+        if (current) {
+          open(
+            'https://www.wappalyzer.com/installed/?utm_source=installed&utm_medium=extension&utm_campaign=wappalyzer'
+          )
+
+          const termsAccepted =
+            agent === 'chrome' ||
+            (await getCachedOption('termsAccepted', false))
+
+          if (!termsAccepted) {
+            open(chrome.runtime.getURL('html/terms.html'))
+          }
+        }
+      } else if (current && current !== previous && upgradeMessage) {
+        open(
+          `https://www.wappalyzer.com/upgraded/?utm_source=upgraded&utm_medium=extension&utm_campaign=wappalyzer`,
+          false
+        )
+      }
+    } catch (error) {
+      Driver.error(error)
+      Driver.cache = createDriverCache(Driver.cache)
+
+      await Promise.all([
+        removeCachedHostnames(),
+        removeSessionOption('tabResults'),
+        removeSessionOption('tabRequests'),
+      ])
+    } finally {
+      initDone()
+    }
   },
 
   closeCurrentTab(tabId) {
@@ -1155,7 +1254,17 @@ const Driver = {
           language,
         },
       }
-      sentHostnames.push({ hostname })
+      sentHostnames.push({
+        hostname,
+        technologyHits: Object.entries(technologies).reduce(
+          (hits, [name, technology]) => {
+            hits[name] = parseInt(technology.hits, 10) || 0
+
+            return hits
+          },
+          Object.create(null)
+        ),
+      })
     })
 
     return {
@@ -1397,9 +1506,7 @@ const Driver = {
       return
     }
 
-    if (tabAwareMethods.has(func) && sender?.tab?.id) {
-      args = [...(args || []), sender.tab.id, sender.frameId]
-    }
+    args = withMessageSenderContext(func, args, sender)
 
     // eslint-disable-next-line no-async-promise-executor
     new Promise(async (resolve) => {
@@ -2115,14 +2222,19 @@ const Driver = {
         return
       }
 
-      sentHostnames.forEach(({ hostname }) => {
+      sentHostnames.forEach(({ hostname, technologyHits }) => {
         if (!Driver.cache.hostnames[hostname]) {
           return
         }
 
         const cache = Driver.cache.hostnames[hostname]
-        cache.technologyHits = Object.create(null)
-        cache.hits = 0
+        cache.technologyHits = drainTechnologyHits(
+          cache.technologyHits,
+          technologyHits,
+          cache.detections,
+          cache.hits
+        )
+        cache.hits = getMaximumTechnologyHits(cache.technologyHits)
       })
 
       // Prefer dropping already-selected hits over resending them if the
@@ -2234,4 +2346,4 @@ chrome.tabs.onRemoved.addListener((tabId) => {
 // Enable messaging between scripts
 chrome.runtime.onMessage.addListener(Driver.onMessage)
 
-Driver.init()
+Driver.init().catch(Driver.error)

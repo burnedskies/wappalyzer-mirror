@@ -35,6 +35,13 @@ if (chrome.runtime.getManifest().manifest_version === 2) {
 
 // eslint-disable-next-line no-unused-vars
 const Utils = {
+  tabAwareMethodArgumentCounts: Object.freeze({
+    analyzeDom: 5,
+    analyzeJs: 5,
+    detectTechnology: 2,
+    onContentLoad: 6,
+  }),
+
   agent: chrome.runtime.getURL('/').startsWith('moz-')
     ? 'firefox'
     : chrome.runtime.getURL('/').startsWith('safari-')
@@ -96,6 +103,23 @@ const Utils = {
     return /\b(No tab with id|Receiving end does not exist)\b/i.test(
       getErrorMessage(error)
     )
+  },
+
+  withMessageSenderContext(func, args, sender) {
+    const argumentCount = Utils.tabAwareMethodArgumentCounts[func]
+    const tabId = sender?.tab?.id
+
+    if (typeof argumentCount !== 'number' || typeof tabId !== 'number') {
+      return args
+    }
+
+    const contextArgs = Array.isArray(args) ? [...args] : []
+
+    while (contextArgs.length < argumentCount) {
+      contextArgs.push(undefined)
+    }
+
+    return [...contextArgs, tabId, sender.frameId]
   },
 
   /**
