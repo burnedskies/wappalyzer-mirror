@@ -3087,6 +3087,21 @@
     "scriptSrc": "wapi\\.wiremo\\.co/",
     "website": "https://wiremo.co"
   },
+  "Wirsindhandwerk": {
+    "cats": [
+      90
+    ],
+    "description": "Wirsindhandwerk is a customer review platform for trades businesses with embeddable rating widgets.",
+    "icon": "Wirsindhandwerk.svg",
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "^https?://w\\.(?:wsh|wirsindhandwerk)\\.de/(?:[a-f0-9]{32}|[a-z0-9]{40})\\.js(?:[?#]|$)",
+    "website": "https://www.wirsindhandwerk.de"
+  },
   "Wise Agent": {
     "cats": [
       53
@@ -3809,8 +3824,7 @@
     "js": {
       "wp.ajax": "",
       "wp.receiveEmbedMessage": "",
-      "wp_username": "",
-      "wpb_prepare_tab_content": ""
+      "wp_username": ""
     },
     "meta": {
       "generator": "^WordPress(?: ([\\d.]+))?\\;version:\\1",
@@ -4413,5 +4427,21 @@
     "requires": "WordPress",
     "url": "^https?://[^/]+\\.wpcache\\.co",
     "website": "https://wpcache.co"
+  },
+  "wpForo": {
+    "cats": [
+      87
+    ],
+    "description": "wpForo is a WordPress plugin for building discussion forums and online communities.",
+    "dom": "link[href*='/wp-content/plugins/wpforo/'], script[src*='/wp-content/plugins/wpforo/']",
+    "icon": "wpForo.png",
+    "implies": "WordPress",
+    "oss": true,
+    "pricing": [
+      "low",
+      "freemium",
+      "onetime"
+    ],
+    "website": "https://wpforo.com"
   }
 }

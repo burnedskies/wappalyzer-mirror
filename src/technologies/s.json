@@ -630,6 +630,21 @@
     },
     "website": "https://saber.land/"
   },
+  "Sadrhub": {
+    "cats": [
+      6
+    ],
+    "description": "Sadrhub is a cloud-based ecommerce platform for creating and managing online stores.",
+    "icon": "Sadrhub.png",
+    "meta": {
+      "generator": "^sadrhub\\.com$"
+    },
+    "pricing": [
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://sadrhub.com"
+  },
   "SafeBase": {
     "cats": [
       16
@@ -2493,7 +2508,8 @@
     "cats": [
       6
     ],
-    "description": "Selify is an ecommerce platform for launching and managing online stores with integrated checkout and storefront tooling.",
+    "description": "Selify is an ecommerce SaaS platform for social media sales automation, enabling merchants to launch and manage online stores with integrated checkout tools.",
+    "icon": "Selify.svg",
     "meta": {
       "application-name": "^Selify$",
       "generator": "^Selify$"
@@ -3158,6 +3174,22 @@
     "saas": true,
     "scriptSrc": "cdn\\.seon\\.io/",
     "website": "https://seon.io"
+  },
+  "Sepid": {
+    "cats": [
+      21
+    ],
+    "css": "--sepid-primary-main",
+    "description": "Sepid is a learning management system for creating and selling online courses.",
+    "dom": "a[href='https://sepid.org/'] img[src='/sepid-logo-dark.svg'][alt='سپید']",
+    "icon": "Sepid.svg",
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://sepid.org"
   },
   "Seravo": {
     "cats": [
@@ -7204,6 +7236,19 @@
     ],
     "website": "https://www.sliderrevolution.com"
   },
+  "Slim Framework": {
+    "cats": [
+      18
+    ],
+    "cookies": {
+      "slim_session": ""
+    },
+    "description": "Slim is an open-source PHP microframework for building web applications and APIs.",
+    "icon": "Slim Framework.png",
+    "implies": "PHP",
+    "oss": true,
+    "website": "https://www.slimframework.com"
+  },
   "Slim Select": {
     "cats": [
       59
@@ -7245,6 +7290,21 @@
     "saas": true,
     "scriptSrc": "app\\.getslingshot\\.com/",
     "website": "https://getslingshot.com"
+  },
+  "Slotted": {
+    "cats": [
+      72
+    ],
+    "description": "Slotted is a booking and business management platform for time-based businesses.",
+    "dom": "iframe[title='Slotted booking'][src*='.slotted.so'][src*='embed=1']",
+    "icon": "Slotted.png",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "url": "\\.slotted\\.so(?:/|$)",
+    "website": "https://www.slotted.so"
   },
   "Slotti": {
     "cats": [
@@ -8404,7 +8464,8 @@
     ],
     "icon": "SolidJS.svg",
     "js": {
-      "Solid$$": ""
+      "Solid$$": "",
+      "_$HY.fe": ""
     },
     "oss": true,
     "scriptSrc": "www\\.solidjs\\.com",
@@ -10469,7 +10530,7 @@
     "cpe": "cpe:2.3:a:statamic:statamic:*:*:*:*:*:laravel:*:*",
     "description": "Statamic is an open-source and self-hosted content management system based on the PHP programming language.",
     "headers": {
-      "x-powered-by": "(?:^|\\r?\\n)Statamic$"
+      "x-powered-by": "(?:^|[,\\r\\n]\\s*)Statamic(?:\\s*[,\\r\\n]|$)"
     },
     "icon": "Statamic.svg",
     "implies": [
@@ -11792,9 +11853,17 @@
   },
   "SumUp": {
     "cats": [
+      6,
       41
     ],
-    "description": "SumUp is a provider of payment acceptance solutions.",
+    "description": "SumUp provides payment acceptance, point-of-sale, and online-store services.",
+    "dom": {
+      "a[aria-label='SumUp Online Store']": {
+        "attributes": {
+          "href": "^https://www\\.sumup\\.com/[a-z]{2}-[a-z]{2}/online-store/$"
+        }
+      }
+    },
     "icon": "SumUp.svg",
     "js": {
       "SumUpCard.debug": "",

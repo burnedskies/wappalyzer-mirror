@@ -372,21 +372,19 @@
     "cats": [
       6
     ],
-    "description": "Easy Orders is an ecommerce platform that offers a pricing plan where users can create their online store and pay a fee of 0.5 EGP per order.",
-    "dom": "img[src*='easyorders.fra1.digitaloceanspaces.com/'], link[href*='easyorders.fra1.digitaloceanspaces.com/']",
+    "description": "Easy Orders is a hosted ecommerce platform for creating online stores and managing products and orders.",
     "icon": "Easy Orders.svg",
-    "implies": [
-      "PostgreSQL",
-      "Go",
-      "Node.js"
-    ],
+    "js": {
+      "__NEXT_DATA__.assetPrefix": "^https://cdn\\.easyorders\\.shop/?$"
+    },
     "pricing": [
+      "mid",
+      "recurring",
       "payg"
     ],
-    "requires": "Next.js",
     "saas": true,
-    "website": "https://www.easy-orders.net",
-    "xhr": "api\\.easy-orders\\.net/"
+    "website": "https://www.easyorders.eg",
+    "xhr": "^api\\.easy-orders\\.net$"
   },
   "Easy Redirects": {
     "cats": [
@@ -1447,6 +1445,26 @@
     "saas": true,
     "scripts": "app\\.elenore\\.io",
     "website": "https://elenore.io"
+  },
+  "Elephantfy": {
+    "cats": [
+      6
+    ],
+    "description": "Elephantfy is a Brazilian ecommerce platform for creating and managing online stores.",
+    "headers": {
+      "x-powered-by": "^Elephantfy(?:/[\\d.]+)?$"
+    },
+    "icon": "Elephantfy.png",
+    "meta": {
+      "generator": "^Elephantfy$"
+    },
+    "pricing": [
+      "freemium",
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://elephantfy.com.br"
   },
   "Elevar": {
     "cats": [

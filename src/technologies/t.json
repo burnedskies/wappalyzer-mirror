@@ -1966,6 +1966,20 @@
     "scriptSrc": "\\.thanx\\.com/",
     "website": "https://www.thanx.com"
   },
+  "That Open Engine": {
+    "cats": [
+      25
+    ],
+    "description": "That Open Engine is an open-source collection of JavaScript libraries for building browser-based BIM applications.",
+    "icon": "That Open Engine.svg",
+    "implies": "Three.js",
+    "oss": true,
+    "scripts": [
+      "@thatopen/(?:components(?:-front)?|fragments|ui(?:-obc)?|web-ifc)",
+      "FragmentsManager"
+    ],
+    "website": "https://docs.thatopen.com"
+  },
   "Thawte": {
     "cats": [
       70
@@ -2669,6 +2683,27 @@
     "scriptSrc": "/wp-content/themes/iconic-one(?:-[\\w]+)?/",
     "website": "https://themonic.com/iconic-one"
   },
+  "TheraPsy Bookings": {
+    "cats": [
+      72
+    ],
+    "description": "TheraPsy Bookings is an online appointment scheduling service for therapists with hosted booking pages and embeddable calendars.",
+    "dom": {
+      "iframe[src*=\"bookings.therapsy.at\"]": {
+        "attributes": {
+          "src": "^https?://bookings\\.therapsy\\.at/\\?(?:[^#]*&)?id=[a-f0-9]{32}(?:[&#]|$)"
+        }
+      }
+    },
+    "icon": "TheraPsy Bookings.svg",
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "saas": true,
+    "url": "^https?://bookings\\.therapsy\\.at/\\?(?:[^#]*&)?id=[a-f0-9]{32}(?:[&#]|$)",
+    "website": "https://www.therapsy.at/funktionen/bookings"
+  },
   "Thesis": {
     "cats": [
       10
@@ -3297,6 +3332,29 @@
     ],
     "scriptSrc": "(?://|\\.)tiiny\\.(?:host|site)/",
     "website": "https://tiiny.host"
+  },
+  "Tijara Plus": {
+    "cats": [
+      6
+    ],
+    "description": "Tijara Plus is a hosted ecommerce platform for creating online stores and managing products, payments, and shipping.",
+    "headers": {
+      "X-Tijara-Plus": "^store$"
+    },
+    "icon": "Tijara Plus.png",
+    "js": {
+      "TijaraPlus.platform": "^Tijara Plus$"
+    },
+    "meta": {
+      "generator": "^Tijara Plus$"
+    },
+    "pricing": [
+      "low",
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://tijaraplus.com"
   },
   "TikShop": {
     "cats": [

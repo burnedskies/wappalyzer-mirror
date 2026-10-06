@@ -26,6 +26,24 @@
     "scriptSrc": "/d3(?:\\. v\\d+)?(?:\\.min)?\\.js",
     "website": "https://d3js.org"
   },
+  "D4 Core": {
+    "cats": [
+      18
+    ],
+    "cookies": {
+      "CSRF_D4": ""
+    },
+    "description": "D4 Core is a PHP web application framework.",
+    "headers": {
+      "X-Powered-By": "(?:^|,\\s*)D4 Core(?:\\s+([\\d.]+))?(?:\\s*,|$)\\;version:\\1"
+    },
+    "icon": "D4 Core.png",
+    "implies": "PHP",
+    "meta": {
+      "generator": "^(?:D4 Core(?: v?([\\d.]+))?|D4 - Web Application Framework)$\\;version:\\1"
+    },
+    "website": "https://d4.si"
+  },
   "DCKAP Commerce": {
     "cats": [
       6
@@ -2630,6 +2648,21 @@
     "saas": true,
     "website": "https://www.docusign.com",
     "xhr": "docusign\\.net"
+  },
+  "Docus": {
+    "cats": [
+      4
+    ],
+    "css": "\\.docus-sub-header\\s*\\{[^}]*--ui-header-height:\\s*112px",
+    "description": "Docus is an open-source documentation framework built with Nuxt and Markdown.",
+    "icon": "Docus.svg",
+    "implies": "Nuxt.js",
+    "js": {
+      "__NUXT__.config.public.docus": ""
+    },
+    "oss": true,
+    "scripts": "apiPath:\"/__docus__/assistant\"",
+    "website": "https://docus.dev"
   },
   "Docusaurus": {
     "cats": [

@@ -1298,6 +1298,25 @@
     "scriptSrc": "\\.vidazoo\\.com",
     "website": "https://www.vidazoo.com"
   },
+  "VideoAsk": {
+    "cats": [
+      110
+    ],
+    "description": "VideoAsk is a platform for creating interactive video forms and embedding conversational video widgets on websites.",
+    "icon": "VideoAsk.svg",
+    "js": {
+      "videoask.loadEmbed": ""
+    },
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "^https?://(?:www\\.|static\\.)?videoask\\.com/embed/embed\\.js(?:[?#]|$)",
+    "url": "^https?://(?:www\\.)?videoask\\.com/f[a-z0-9]{8}(?:[/?#]|$)",
+    "website": "https://www.videoask.com"
+  },
   "VideoJS": {
     "cats": [
       14

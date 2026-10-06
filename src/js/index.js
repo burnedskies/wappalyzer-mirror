@@ -576,6 +576,12 @@ function serializeHostnamesCache(hostnameCache = {}) {
     hostnames[hostname] = {
       ...cache,
       detections: serializeDetections(cache.detections),
+      popupDetections: resolve(
+        (Array.isArray(cache.detections) ? cache.detections : []).filter(
+          (detection) => detection?.technology?.name
+        )
+      ),
+      popupVersion: chrome.runtime.getManifest().version,
     }
   }
 
@@ -1507,13 +1513,8 @@ const Driver = {
     }
 
     args = withMessageSenderContext(func, args, sender)
-
-    // eslint-disable-next-line no-async-promise-executor
-    new Promise(async (resolve) => {
-      await initPromise
-
-      resolve(Driver[func].call(Driver[func], ...(args || [])))
-    })
+    ;(func === 'getPopupCache' ? Promise.resolve() : initPromise)
+      .then(() => Driver[func].call(Driver[func], ...(args || [])))
       .then(callback)
       .catch((error) => {
         Driver.error(error)
@@ -1534,7 +1535,7 @@ const Driver = {
     }
 
     if (tab.status !== 'complete') {
-      throw new Error(`Tab ${tab.id} not ready for sendMessage: ${tab.status}`)
+      return
     }
 
     return new Promise((resolve, reject) => {
@@ -1552,7 +1553,7 @@ const Driver = {
             return
           }
 
-          if (isMissingTabError(chrome.runtime.lastError)) {
+          if (Utils.isMessageChannelClosedError(chrome.runtime.lastError)) {
             resolve()
 
             return
@@ -1560,11 +1561,7 @@ const Driver = {
 
           if (func !== 'error') {
             Driver.error(
-              new Error(
-                `${
-                  chrome.runtime.lastError.message
-                }: Driver.${func}(${JSON.stringify(args)})`
-              )
+              new Error(`${chrome.runtime.lastError.message}: Driver.${func}`)
             )
           }
 
@@ -1784,13 +1781,52 @@ const Driver = {
     try {
       if (!options?.skipCookies) {
         items.cookies = items.cookies || {}
-        ;(
-          await promisify(chrome.cookies, 'getAll', {
-            url,
+        try {
+          const details = { url }
+
+          if (agent === 'firefox') {
+            // Never substitute the background page's store for a container tab.
+            const tab = await promisify(chrome.tabs, 'get', tabId)
+
+            details.storeId = tab.cookieStoreId
+            // Required with first-party isolation; filter other sites below.
+            details.firstPartyDomain = null
+          } else if (Number.isInteger(tabId) && tabId >= 0) {
+            const stores = await promisify(chrome.cookies, 'getAllCookieStores')
+            const store = stores.find(({ tabIds }) => tabIds.includes(tabId))
+
+            if (!store) {
+              const error = new Error('Cookie store unavailable for tab')
+              error.code = 'TAB_COOKIE_STORE_UNAVAILABLE'
+              throw error
+            }
+
+            // Spanning extensions otherwise read normal cookies for private tabs.
+            details.storeId = store.id
+          }
+
+          const { hostname } = new URL(url)
+          const cookies = await promisify(chrome.cookies, 'getAll', details)
+
+          cookies.forEach(({ name, value, firstPartyDomain }) => {
+            if (
+              !firstPartyDomain ||
+              hostname === firstPartyDomain ||
+              hostname.endsWith(`.${firstPartyDomain}`)
+            ) {
+              items.cookies[name.toLowerCase()] = [value]
+            }
           })
-        ).forEach(
-          ({ name, value }) => (items.cookies[name.toLowerCase()] = [value])
-        )
+        } catch (error) {
+          // A closing tab can disappear from the cookie-store snapshot first.
+          // Keep page signals without ever falling back to another store.
+          if (
+            error.code !== 'TAB_COOKIE_STORE_UNAVAILABLE' &&
+            !isMissingTabError(error)
+          ) {
+            Driver.error(error)
+          }
+        }
 
         // Change Google Analytics 4 cookie from _ga_XXXXXXXXXX to _ga_*
         Object.keys(items.cookies).forEach((name) => {
@@ -1879,6 +1915,7 @@ const Driver = {
       const existingTabResult = Driver.getTabResult(tabId, url, true)
 
       Driver.cache.tabResults[tabId] = {
+        ...existingTabResult,
         url,
         detections: mergeDetections(
           existingTabResult?.detections,
@@ -2048,10 +2085,79 @@ const Driver = {
     )
   },
 
+  // Read display-ready session data without waiting for detection definitions.
+  async getPopupCache() {
+    const [tab] = await promisify(chrome.tabs, 'query', {
+      active: true,
+      currentWindow: true,
+    })
+    const url = tab?.url
+
+    if (
+      !url ||
+      !/^https?:/i.test(url) ||
+      Driver.isTransientHostname(url) ||
+      !(await getCachedOption('showCached', true)) ||
+      (await Driver.isDisabledDomain(url))
+    ) {
+      return null
+    }
+
+    const requests = await getSessionOption('tabRequests', {})
+    const request =
+      Driver.getTabRequest(tab.id, url, true) || requests?.[tab.id]
+
+    if (
+      request &&
+      isSameOriginUrl(url, request.url) &&
+      (request.isPrivateIp || isErrorStatusCode(request.statusCode))
+    ) {
+      return null
+    }
+
+    const hostnames = await getSessionOption('hostnames', {})
+    const cache = hostnames?.[new URL(url).hostname]
+
+    return cache?.popupVersion === chrome.runtime.getManifest().version &&
+      cache.dateTime > Date.now() - expiry &&
+      Array.isArray(cache.popupDetections)
+      ? cache.popupDetections.filter(
+          (detection) => detection?.name && Array.isArray(detection.categories)
+        )
+      : null
+  },
+
   /**
-   * Get the detected technologies for the current tab
+   * Record completion even when the first page scan found no technologies.
    */
-  async getDetections() {
+  async onInitialScanComplete(url, tabId, frameId) {
+    if (typeof tabId !== 'number' || !isTopFrameId(frameId)) {
+      return
+    }
+    let tab
+    try {
+      tab = await promisify(chrome.tabs, 'get', tabId)
+    } catch (error) {
+      if (isMissingTabError(error)) {
+        return
+      }
+      throw error
+    }
+    if (!isSimilarUrl(tab.url, url)) {
+      return
+    }
+    const result = Driver.getTabResult(tabId, url, true)
+    Driver.cache.tabResults[tabId] = {
+      ...result,
+      url,
+      detections: result?.detections || [],
+      transient: Driver.isTransientUrl(url, tabId, true),
+      initialScanComplete: true,
+    }
+    await Driver.persistTabResults()
+  },
+
+  async getDetections(withState = false) {
     const [tab] = await promisify(chrome.tabs, 'query', {
       active: true,
       currentWindow: true,
@@ -2060,7 +2166,7 @@ const Driver = {
     if (!tab) {
       Driver.error(new Error('getDetections: no active tab found'))
 
-      return
+      return withState ? { detections: [], scanComplete: true } : []
     }
 
     const { url } = tab
@@ -2068,14 +2174,21 @@ const Driver = {
     if (await Driver.isDisabledDomain(url)) {
       await Driver.setIcon(url, [], tab.id)
 
-      return
+      return withState ? { detections: [], scanComplete: true } : []
     }
 
     const resolved = await Driver.getDetectionsForTab(tab)
 
     await Driver.setIcon(url, resolved, tab.id)
 
-    return resolved
+    return withState
+      ? {
+          detections: resolved,
+          scanComplete:
+            !/^https?:/i.test(url || '') ||
+            !!Driver.getTabResult(tab.id, url, true)?.initialScanComplete,
+        }
+      : resolved
   },
 
   /**
@@ -2086,6 +2199,7 @@ const Driver = {
   async getRobots(hostname, secure = false) {
     if (
       !(await getCachedOption('tracking', true)) ||
+      !(await Utils.hasDataPermissions(Utils.trackingDataPermissions)) ||
       hostnameIgnoreList.test(hostname)
     ) {
       return []
@@ -2204,7 +2318,10 @@ const Driver = {
       const termsAccepted =
         agent === 'chrome' || (await getCachedOption('termsAccepted', false))
 
-      if (!(tracking && termsAccepted)) {
+      if (
+        !(tracking && termsAccepted) ||
+        !(await Utils.hasDataPermissions(Utils.trackingDataPermissions))
+      ) {
         return
       }
 
@@ -2260,7 +2377,11 @@ const Driver = {
   },
 }
 
-chrome.action.setBadgeBackgroundColor({ color: '#6B39BD' }, () => {})
+chrome.action.setBadgeBackgroundColor({ color: '#6B39BD' }, () => {
+  if (chrome.runtime.lastError) {
+    Driver.error(normalizeError(chrome.runtime.lastError))
+  }
+})
 
 chrome.webRequest.onResponseStarted.addListener(
   (request) => {

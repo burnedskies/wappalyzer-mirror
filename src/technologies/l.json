@@ -2898,6 +2898,21 @@
     "scriptSrc": "cdn\\.(?:lr-ingest|logrocket)\\.(?:com|io)",
     "website": "https://logrocket.com"
   },
+  "LogaTech": {
+    "cats": [
+      1
+    ],
+    "description": "LogaTech is a modular multi-tenant platform for building and managing content, ecommerce, CRM, learning, and community websites.",
+    "headers": {
+      "X-Powered-By": "^LogaTech$"
+    },
+    "icon": "LogaTech.png",
+    "meta": {
+      "generator": "^LogaTech$"
+    },
+    "saas": true,
+    "website": "https://logatech.net"
+  },
   "Logaholic": {
     "cats": [
       10

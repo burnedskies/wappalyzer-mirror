@@ -9,6 +9,8 @@ const Options = {
    * Initialise options
    */
   async init() {
+    await Utils.initDataConsent()
+
     const termsAccepted =
       agent === 'chrome' || (await getOption('termsAccepted', false))
 
@@ -31,9 +33,16 @@ const Options = {
       if (el.type === 'checkbox') {
         el.checked =
           !!(await getOption(option, defaultValue)) &&
-          (option !== 'tracking' || termsAccepted)
+          (option !== 'tracking' ||
+            (termsAccepted &&
+              (await Utils.hasDataPermissions(Utils.trackingDataPermissions))))
 
         el.addEventListener('click', async () => {
+          if (option === 'tracking' && el.checked) {
+            el.checked = await Utils.requestDataPermissions(
+              Utils.trackingDataPermissions
+            )
+          }
           await setOption(option, !!el.checked)
         })
       } else if (el.type === 'password') {

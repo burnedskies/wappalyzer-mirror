@@ -2172,6 +2172,18 @@
     ],
     "website": "https://www.bitrix24.com"
   },
+  "Bits UI": {
+    "cats": [
+      66
+    ],
+    "css": "--bits-(?:accordion|popover|select|tooltip)-",
+    "description": "Bits UI is an open-source headless component library for building accessible Svelte interfaces.",
+    "dom": "[id^='bits-'][data-accordion-root], [id^='bits-'][data-checkbox-root], [id^='bits-'][data-dialog-trigger], [id^='bits-'][data-dropdown-menu-trigger], [id^='bits-'][data-popover-trigger], [id^='bits-'][data-select-trigger], [id^='bits-'][data-tabs-root], [id^='bits-'][data-tooltip-trigger]",
+    "icon": "Bits UI.svg",
+    "implies": "Svelte",
+    "oss": true,
+    "website": "https://bits-ui.com"
+  },
   "BittAds": {
     "cats": [
       36

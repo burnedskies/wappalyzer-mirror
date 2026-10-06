@@ -355,8 +355,11 @@
     "cats": [
       6
     ],
-    "description": "Ideasoft is a Turkish software company providing web-based software solutions, software design, ecommerce solutions, and other services.",
-    "icon": "Ideasoft.svg",
+    "description": "Ideasoft is a hosted ecommerce platform for creating and managing online stores.",
+    "icon": "Ideasoft.png",
+    "meta": {
+      "copyright": "IdeaSoft Akıllı E-Ticaret"
+    },
     "pricing": [
       "mid",
       "recurring"
@@ -364,7 +367,8 @@
     "saas": true,
     "scriptSrc": [
       "\\.myideasoft\\.com/([\\d.]+)\\;version:\\1",
-      "\\.ideasoft\\.dev/"
+      "\\.ideasoft\\.dev/",
+      "/(?:idea|shop)/[a-z]{2}/\\d+/themes/selftpl_[a-f\\d]+/renders/javascript/"
     ],
     "website": "https://www.ideasoft.com.tr"
   },

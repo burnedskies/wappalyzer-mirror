@@ -3005,6 +3005,26 @@
     "scriptSrc": "/wp-content/plugins/ml-slider(?:-pro)?/",
     "website": "https://www.metaslider.com"
   },
+  "Metabase": {
+    "cats": [
+      10
+    ],
+    "cpe": "cpe:2.3:a:metabase:metabase:*:*:*:*:*:*:*:*",
+    "description": "Metabase is an open-source business intelligence tool for querying databases and building dashboards and reports.",
+    "dom": "script#_metabaseBootstrap[type='application/json']",
+    "icon": "Metabase.svg",
+    "js": {
+      "MetabaseBootstrap.version.tag": "^v?(\\d+(?:\\.\\d+)+)$\\;version:\\1"
+    },
+    "oss": true,
+    "pricing": [
+      "mid",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.metabase.com"
+  },
   "Meteor": {
     "cats": [
       12,
@@ -3804,6 +3824,22 @@
     "saas": true,
     "scriptSrc": "api\\.minerstat\\.com",
     "website": "https://minerstat.com"
+  },
+  "MingCute": {
+    "cats": [
+      17
+    ],
+    "description": "MingCute is an open-source icon library for web and mobile interfaces.",
+    "dom": {
+      "[class*='i-mingcute-']": {
+        "attributes": {
+          "class": "(?:^|\\s)i-mingcute-[a-z0-9-]+-(?:line|fill)(?:\\s|$)"
+        }
+      }
+    },
+    "icon": "MingCute.svg",
+    "oss": true,
+    "website": "https://www.mingcute.com"
   },
   "MiniBC": {
     "cats": [
@@ -4617,6 +4653,20 @@
     "icon": "Mollom.png",
     "scriptSrc": "mollom(?:\\.min)?\\.js",
     "website": "https://mollom.com"
+  },
+  "Momants": {
+    "cats": [
+      52
+    ],
+    "description": "Momants is an AI customer support and ticketing platform for events, festivals, and visitor attractions.",
+    "dom": "[data-agent][data-src='https://api-widget.momants.ai/widget.js']",
+    "icon": "Momants.svg",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "^https?://api-widget\\.momants\\.ai/widget\\.js(?:\\?|$)",
+    "website": "https://www.momants.ai"
   },
   "Momence": {
     "cats": [
@@ -5572,9 +5622,15 @@
   },
   "Mux": {
     "cats": [
+      14,
       10
     ],
-    "description": "Mux is a platform offering integration to monitor video streaming performance using minimal lines of code.",
+    "description": "Mux is a video platform that provides streaming infrastructure, playback, and video analytics.",
+    "dom": [
+      "iframe[src*='player.mux.com/']",
+      "mux-player",
+      "mux-video"
+    ],
     "icon": "Mux.svg",
     "js": {
       "MuxVideoElement": "",

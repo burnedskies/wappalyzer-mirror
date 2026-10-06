@@ -66,20 +66,36 @@
 
       <div class="tab-items">
         <div class="tab-item">
+          <div class="detection-region">
+          <div class="detection-skeleton" role="status" aria-label="Loading detections">
+            <div class="detection-skeleton__group" aria-hidden="true">
+              <span class="detection-skeleton__heading"></span>
+              <span class="detection-skeleton__row"><span class="detection-skeleton__icon"></span><span class="detection-skeleton__text"></span></span>
+              <span class="detection-skeleton__row"><span class="detection-skeleton__icon"></span><span class="detection-skeleton__text"></span></span>
+              <span class="detection-skeleton__row"><span class="detection-skeleton__icon"></span><span class="detection-skeleton__text"></span></span>
+            </div>
+            <div class="detection-skeleton__group" aria-hidden="true">
+              <span class="detection-skeleton__heading"></span>
+              <span class="detection-skeleton__row"><span class="detection-skeleton__icon"></span><span class="detection-skeleton__text"></span></span>
+              <span class="detection-skeleton__row"><span class="detection-skeleton__icon"></span><span class="detection-skeleton__text"></span></span>
+            </div>
+          </div>
+          <div class="detection-status" role="status" aria-live="polite" hidden></div>
           <div class="empty empty--hidden">
             <div class="empty__text">
-              <span data-i18n="noAppsDetected">&nbsp;</span>
+              <span class="empty__message" data-i18n="noAppsDetected">&nbsp;</span>
 
-              <a class="empty__reload" href="#" data-i18n="reloadPage">&nbsp;</a>
+              <button class="empty__reload" type="button" data-i18n="reloadPage">&nbsp;</button>
             </div>
           </div>
 
-          <div class="detections"></div>
+          <div class="detections detections--hidden"></div>
 
-          <div class="issue">
+          <div class="issue issue--hidden">
             <a href="https://www.wappalyzer.com/technologies/report-an-issue/?utm_source=popup&utm_medium=extension&utm_campaign=wappalyzer&url=__URL__&version=__VERSION__" data-i18n="issue"></a>
           </div>
 
+          </div>
           <div class="terms terms--hidden">
             <div class="terms__content" data-i18n="termsContent"></div>
 
@@ -130,9 +146,12 @@
 
         <div class="tab-item tab-item--hidden">
           <div class="plus-error plus-error--hidden">
+            <strong class="plus-error__heading" data-i18n="plusConnectionProblem"></strong>
             <div class="plus-error__message">
             </div>
           </div>
+
+          <p class="plus-key-status" role="status" aria-live="polite"></p>
 
           <div class="loading">
             <svg class="progress" viewBox="20 20 40 40">
@@ -146,47 +165,59 @@
           <div class="plus-configure plus-configure--hidden">
             <div class="message">
               <div class="message__heading">
-                <span data-i18n="plusMessageHeading">&nbsp;</span>
+                <span data-i18n="plusIntroHeading">&nbsp;</span>
               </div>
 
               <p>
-              <span data-i18n="plusMessage">&nbsp;</span>
+              <span data-i18n="plusIntroBody">&nbsp;</span>
               </p>
 
-              <div class="message__button button">
+              <div class="message__button button plus-offer-actions">
                 <a class="button__link" href="https://www.wappalyzer.com/plus/?utm_source=popup&utm_medium=extension&utm_campaign=wappalyzer">
-                  <span class="button__text" data-i18n="plusButton">&nbsp;</span>
+                  <span class="button__text" data-i18n="plusExplore">&nbsp;</span>
 
                   <svg class="button__icon button__icon--right" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
                   </svg>
                 </a>
+                <span class="plus-price" data-i18n="plusMonthlyPrice"></span>
               </div>
             </div>
 
-            <form class="plus-configure__form">
-              <div class="control">
-                <span class="label">
-                  <span data-i18n="optionApiKey">&nbsp;</span>
+            <details class="plus-connect">
+              <summary>
+                <span data-i18n="plusConnectPrompt"></span>
+                <svg class="plus-connect__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                </svg>
+              </summary>
+              <form class="plus-configure__form">
+                <div class="control">
+                  <label class="label" for="plus-api-key">
+                    <span data-i18n="optionApiKey">&nbsp;</span>
 
-                  <small class="label__description">
-                    (<a href="https://www.wappalyzer.com/plus/?intent=apikey&utm_source=popup&utm_medium=extension&utm_campaign=wappalyzer" data-i18n="optionApiKeyDescription"></a>)
-                  </small>
-                </span>
+                    <small class="label__description">
+                      (<a href="https://www.wappalyzer.com/plus/?intent=apikey&utm_source=popup&utm_medium=extension&utm_campaign=wappalyzer" data-i18n="optionApiKeyDescription"></a>)
+                    </small>
+                  </label>
 
-                <input type="password" class="plus-configure__apikey input" />
-              </div>
+                  <p id="plus-api-key-help" class="plus-key-help" data-i18n="plusConnectHelp"></p>
+                  <input id="plus-api-key" type="password" class="plus-configure__apikey input" aria-describedby="plus-api-key-help" autocomplete="off" spellcheck="false" />
+                </div>
 
-              <div class="message__button button">
-                <span class="plus-configure__save button__link">
-                  <svg class="button__icon button__icon--left" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" /></svg>
-                  </svg>
+                <div class="message__button button">
+                  <button type="submit" class="plus-configure__save button__link">
+                    <svg class="button__icon button__icon--left" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" /></svg>
 
-                  <span class="button__text" data-i18n="formSave">&nbsp;</span>
-                </span>
-              </div>
-            </form>
+                    <span class="button__text" data-i18n="plusConnectButton">&nbsp;</span>
+                  </button>
+                </div>
+              </form>
+            </details>
+            <p class="plus-free-note">
+              <span data-i18n="plusFreeDetection"></span>
+            </p>
           </div>
 
           <div class="plus-empty plus-empty--hidden" data-i18n="plusEmpty"></div>

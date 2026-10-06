@@ -2954,7 +2954,16 @@
       41
     ],
     "description": "Google Pay is a digital wallet platform and online payment system developed by Google to power in-app and tap-to-pay purchases on mobile devices, enabling users to make payments with Android phones, tablets or watches.",
-    "dom": "[aria-labelledby='pi-google_pay'], ul[data-shopify-buttoncontainer] li",
+    "dom": {
+      "#express-checkout-wallets-wrapper iframe#GOOGLE_PAY-iframe": {
+        "attributes": {
+          "src": "^https://checkout\\.shopify\\.com/[0-9]+/sandboxes/wallets\\?(?:[^#]*&)?wallet=GOOGLE_PAY(?:&|$)"
+        }
+      },
+      "[aria-labelledby='pi-google_pay'], ul[data-shopify-buttoncontainer] li": {
+        "exists": ""
+      }
+    },
     "icon": "Google.svg",
     "scriptSrc": [
       "pay\\.google\\.com/([a-z/]+)/pay\\.js"
@@ -3230,6 +3239,19 @@
     "saas": true,
     "scriptSrc": "\\.grade\\.us",
     "website": "https://www.grade.us"
+  },
+  "Gradual": {
+    "cats": [
+      2
+    ],
+    "description": "Gradual is a community platform for hosting events, publishing content and courses, and connecting members.",
+    "icon": "Gradual.png",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scripts": "GradualPublicLayout",
+    "website": "https://www.gradual.com"
   },
   "Grafana": {
     "cats": [

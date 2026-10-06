@@ -978,6 +978,22 @@
     "saas": true,
     "website": "https://keybase.io/"
   },
+  "Keycloak": {
+    "cats": [
+      69
+    ],
+    "cookies": {
+      "KC_RESTART": ""
+    },
+    "cpe": "cpe:2.3:a:redhat:keycloak:*:*:*:*:*:*:*:*",
+    "description": "Keycloak is an open-source identity and access management system.",
+    "dom": "#kc-form-login[action*='/realms/'][action*='/login-actions/authenticate']",
+    "icon": "Keycloak.svg",
+    "implies": "Java",
+    "oss": true,
+    "url": "^https?://[^/]+/(?:auth/)?realms/[^/?#]+/protocol/openid-connect/auth(?:[/?#]|$)",
+    "website": "https://www.keycloak.org/"
+  },
   "Keymailer": {
     "cats": [
       32
@@ -1260,10 +1276,9 @@
     "cpe": "cpe:2.3:a:getkirby:kirby:*:*:*:*:*:*:*:*",
     "description": "Kirby is a file-based content management system (CMS) that simplifies website and web application development by using text files for content management instead of a traditional database.",
     "dom": {
-      "[content*='/media/pages/'], [href*='/media/pages/'], [src*='/media/pages/'], [srcset*='/media/pages/']": {
+      "[content*='/media/pages/'], [src*='/media/pages/'], [srcset*='/media/pages/']": {
         "attributes": {
           "content": "/media/pages/.+/[a-f\\d]{10}-\\d+/",
-          "href": "/media/pages/.+/[a-f\\d]{10}-\\d+/",
           "src": "/media/pages/.+/[a-f\\d]{10}-\\d+/",
           "srcset": "/media/pages/.+/[a-f\\d]{10}-\\d+/"
         }

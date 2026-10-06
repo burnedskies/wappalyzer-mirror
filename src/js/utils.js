@@ -40,6 +40,7 @@ const Utils = {
     analyzeJs: 5,
     detectTechnology: 2,
     onContentLoad: 6,
+    onInitialScanComplete: 1,
   }),
 
   agent: chrome.runtime.getURL('/').startsWith('moz-')
@@ -102,6 +103,15 @@ const Utils = {
   isMissingTabError(error) {
     return /\b(No tab with id|Receiving end does not exist)\b/i.test(
       getErrorMessage(error)
+    )
+  },
+
+  isMessageChannelClosedError(error) {
+    return (
+      Utils.isMissingTabError(error) ||
+      /(?:message (?:port|channel) closed|message channel is closed|Extension context invalidated)/i.test(
+        getErrorMessage(error)
+      )
     )
   },
 
@@ -174,13 +184,86 @@ const Utils = {
     }
   },
 
+  trackingDataPermissions: [
+    'browsingActivity',
+    'websiteContent',
+    'technicalAndInteraction',
+  ],
+  plusDataPermissions: ['browsingActivity', 'authenticationInfo'],
+  dataConsentSupported: null,
+
+  async initDataConsent() {
+    if (Utils.agent !== 'firefox') {
+      return
+    }
+
+    try {
+      const permissions = await chrome.permissions.getAll()
+      Utils.dataConsentSupported = Array.isArray(permissions.data_collection)
+    } catch {
+      // Keep local detection usable, but never treat a failed lookup as consent.
+      Utils.dataConsentSupported = null
+    }
+  },
+
+  async hasDataPermissions(types) {
+    if (Utils.agent !== 'firefox') {
+      return true
+    }
+
+    try {
+      const permissions = await chrome.permissions.getAll()
+
+      // Older Firefox retains the existing in-extension consent flow.
+      return (
+        !Array.isArray(permissions.data_collection) ||
+        types.every((type) => permissions.data_collection.includes(type))
+      )
+    } catch {
+      return false
+    }
+  },
+
+  requestDataPermissions(types) {
+    // Call directly from the click handler, before storage or other awaits,
+    // so Firefox retains the user activation required by permissions.request.
+    if (Utils.agent !== 'firefox' || Utils.dataConsentSupported === false) {
+      return Promise.resolve(true)
+    }
+
+    return chrome.permissions
+      .request({ data_collection: types })
+      .catch(() => false)
+  },
+
   /**
    * Apply internationalization
    */
   i18n() {
-    Array.from(document.querySelectorAll('[data-i18n]')).forEach(
-      (node) => (node.innerHTML = chrome.i18n.getMessage(node.dataset.i18n))
-    )
+    document.querySelectorAll('[data-i18n]').forEach((node) => {
+      const message = chrome.i18n.getMessage(node.dataset.i18n)
+      const link =
+        node.dataset.i18n === 'termsContent' &&
+        /<a href=['"]https:\/\/(?:www\.)?wappalyzer\.com['"]>([^<]*)<\/a>/.exec(
+          message
+        )
+
+      node.textContent = ''
+
+      if (!link) {
+        node.textContent = message
+        return
+      }
+
+      const anchor = document.createElement('a')
+      anchor.href = 'https://www.wappalyzer.com'
+      anchor.textContent = link[1]
+      node.append(
+        message.slice(0, link.index),
+        anchor,
+        message.slice(link.index + link[0].length)
+      )
+    })
   },
 
   sendMessage(source, func, args) {

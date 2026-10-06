@@ -526,6 +526,27 @@
     "scriptSrc": "(?:^|/)awstats_misc_tracker\\.js(?:\\?|$)",
     "website": "https://awstats.sourceforge.net"
   },
+  "AXENTRA OS": {
+    "cats": [
+      84,
+      100
+    ],
+    "description": "AXENTRA OS is a Shopify app for customer accounts, loyalty, order management, returns, subscriptions, reviews, and other post-purchase features.",
+    "icon": "AXENTRA OS.png",
+    "implies": "Shopify",
+    "js": {
+      "axentraFetchCached": "",
+      "axentraLoadScript": ""
+    },
+    "pricing": [
+      "freemium",
+      "mid",
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://axentraos.com"
+  },
   "Aacio": {
     "cats": [
       6
@@ -3703,7 +3724,8 @@
       "payg"
     ],
     "saas": true,
-    "website": "https://www.algolia.com"
+    "website": "https://www.algolia.com",
+    "xhr": "\\.algolia\\.net$"
   },
   "Algolia DocSearch": {
     "cats": [
@@ -7476,6 +7498,20 @@
     ],
     "website": "https://auspost.com.au"
   },
+  "Autegro": {
+    "cats": [
+      6
+    ],
+    "description": "Autegro is a vehicle inventory and sales platform that integrates vehicle listings, detail pages, and lead forms into dealership websites.",
+    "dom": "script[data-ac24-widget][data-ac24-app-url='https://app.autegro.de']",
+    "icon": "Autegro.svg",
+    "pricing": [
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "^https?://app\\.autegro\\.de/widget\\.js(?:\\?|$)",
+    "website": "https://www.autegro.de"
+  },
   "Auth0": {
     "cats": [
       69
@@ -8397,6 +8433,23 @@
     },
     "saas": true,
     "website": "https://adcaptcha.com"
+  },
+  "alugha": {
+    "cats": [
+      14
+    ],
+    "description": "alugha is a video hosting and localization platform with a multilingual player, subtitles, audio tracks, translation, and dubbing tools.",
+    "dom": "iframe[src^='https://alugha.com/embed/web-player'], iframe[src^='http://alugha.com/embed/web-player'], iframe[src^='//alugha.com/embed/web-player']",
+    "icon": "alugha.png",
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring",
+      "payg",
+      "poa"
+    ],
+    "saas": true,
+    "website": "https://alugha.com"
   },
   "amCharts": {
     "cats": [

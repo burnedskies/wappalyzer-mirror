@@ -5760,6 +5760,20 @@
     "saas": true,
     "website": "https://www.comm100.com"
   },
+  "CommBox": {
+    "cats": [
+      52
+    ],
+    "description": "CommBox is a customer communication platform with live chat, AI agents, and automation across messaging, voice, and web channels.",
+    "dom": "#commbox_splash > svg.cb_svg",
+    "icon": "CommBox.png",
+    "pricing": [
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "^https?://apps\\.commbox\\.io/+Scripts/connect\\.js(?:\\?|$)",
+    "website": "https://www.commbox.io"
+  },
   "Commanders Act TagCommander": {
     "cats": [
       42

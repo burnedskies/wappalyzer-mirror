@@ -1451,6 +1451,11 @@
     "cpe": "cpe:2.3:a:paypal:paypal:*:*:*:*:*:*:*:*",
     "description": "PayPal is an online payments system that supports online money transfers and serves as an electronic alternative to traditional paper methods like checks and money orders.",
     "dom": {
+      "#express-checkout-wallets-wrapper iframe#PAYPAL_EXPRESS-iframe": {
+        "attributes": {
+          "src": "^https://checkout\\.shopify\\.com/[0-9]+/sandboxes/wallets\\?(?:[^#]*&)?wallet=PAYPAL_EXPRESS(?:&|$)"
+        }
+      },
       "button": {
         "text": "PayPal"
       },

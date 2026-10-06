@@ -1535,6 +1535,23 @@
     "saas": true,
     "website": "https://www.open-xchange.com/"
   },
+  "OpenAI Ads Measurement Pixel": {
+    "cats": [
+      36
+    ],
+    "description": "OpenAI Ads Measurement Pixel is a browser SDK for measuring website events that can be attributed to ads in ChatGPT.",
+    "dom": {
+      "script[data-bc-cookie-consent][type='text/plain']": {
+        "text": "bzrcdn\\.openai\\.com/sdk/oaiq\\.min\\.js"
+      }
+    },
+    "icon": "OpenAI Ads Measurement Pixel.svg",
+    "js": {
+      "oaiq": ""
+    },
+    "scriptSrc": "^https://bzrcdn\\.openai\\.com/sdk/oaiq\\.min\\.js(?:[?#]|$)",
+    "website": "https://developers.openai.com/ads/measurement-pixel"
+  },
   "OpenBSD httpd": {
     "cats": [
       22
@@ -1707,7 +1724,7 @@
       10
     ],
     "cpe": "cpe:2.3:a:openpanel:openpanel:*:*:*:*:*:*:*:*",
-    "description": "OpenPanel is an open-source analytics library that enables developers to track and analyze user behavior, providing real-time insights and data visualization for improved decision-making across various platforms.",
+    "description": "OpenPanel is an open-source web and product analytics platform.",
     "icon": "OpenPanel.svg",
     "js": {
       "openpanel.api": ""
@@ -1719,7 +1736,8 @@
     ],
     "saas": true,
     "scriptSrc": "//openpanel\\.dev/",
-    "website": "https://openpanel.dev"
+    "website": "https://openpanel.dev",
+    "xhr": "api\\.openpanel\\.dev"
   },
   "OpenPay": {
     "cats": [

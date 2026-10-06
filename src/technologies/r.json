@@ -1222,6 +1222,30 @@
     ],
     "website": "https://reactjs.org"
   },
+  "React Aria": {
+    "cats": [
+      59
+    ],
+    "description": "React Aria is an open-source library of unstyled React components and hooks for building accessible user interfaces.",
+    "dom": {
+      "[class^='react-aria-'], [class*=' react-aria-']": {
+        "exists": ""
+      },
+      "[data-rac]": {
+        "exists": ""
+      },
+      "[data-react-aria-pressable='true']": {
+        "exists": ""
+      },
+      "[id^='react-aria-']": {
+        "exists": ""
+      }
+    },
+    "icon": "React Aria.svg",
+    "implies": "React",
+    "oss": true,
+    "website": "https://react-aria.adobe.com"
+  },
   "React Bricks": {
     "cats": [
       1

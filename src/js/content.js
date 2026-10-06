@@ -297,26 +297,34 @@ function inject(src, id, message) {
   return new Promise((resolve) => {
     // Inject a script tag into the page to access methods of the window object
     const script = document.createElement('script')
+    let settled = false
 
-    script.onload = () => {
-      const onMessage = ({ data }) => {
-        if (!data.wappalyzer || !data.wappalyzer[id]) {
-          return
-        }
-
-        window.removeEventListener('message', onMessage)
-
-        resolve(data.wappalyzer[id])
-
-        script.remove()
+    const settle = (value = []) => {
+      if (settled) {
+        return
       }
 
-      window.addEventListener('message', onMessage)
-
-      window.postMessage({
-        wappalyzer: message,
-      })
+      settled = true
+      script.removeEventListener('wappalyzer:response', onResponse)
+      script.remove()
+      resolve(value)
     }
+
+    const onResponse = () => {
+      try {
+        const response = JSON.parse(script.dataset.wappalyzerResult || '{}')
+
+        settle(Array.isArray(response[id]) ? response[id] : [])
+      } catch (error) {
+        Content.error(error)
+        settle()
+      }
+    }
+
+    script.addEventListener('wappalyzer:response', onResponse)
+    script.onload = () => settle()
+    script.onerror = () => settle()
+    script.dataset.wappalyzer = JSON.stringify(message)
 
     script.setAttribute('src', chrome.runtime.getURL(src))
 
@@ -726,6 +734,8 @@ const Content = {
         ])
       }
 
+      await Content.driver('onInitialScanComplete', [location.href])
+
       // Delayed second pass to capture async JS
       await new Promise((resolve) => setTimeout(resolve, 5000))
 
@@ -756,7 +766,8 @@ const Content = {
       return
     }
 
-    Promise.resolve(Content[func].call(Content[func], ...(args || [])))
+    Promise.resolve()
+      .then(() => Content[func].call(Content[func], ...(args || [])))
       .then(callback)
       .catch((error) => {
         Content.error(error)
@@ -791,13 +802,14 @@ const Content = {
             return
           }
 
-          if (func !== 'error') {
+          if (
+            func !== 'error' &&
+            !/(?:Receiving end does not exist|message (?:port|channel) closed|Extension context invalidated)/i.test(
+              chrome.runtime.lastError.message
+            )
+          ) {
             Content.error(
-              new Error(
-                `${
-                  chrome.runtime.lastError.message
-                }: Driver.${func}(${JSON.stringify(args)})`
-              )
+              new Error(`${chrome.runtime.lastError.message}: Driver.${func}`)
             )
           }
 

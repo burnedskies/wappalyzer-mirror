@@ -93,6 +93,7 @@ const attributeKeys = [
 ]
 
 function setDisabledDomain(enabled) {
+  Popup.domainDisabled = enabled
   const el = {
     headerSwitchEnabled: document.querySelector('.header__switch--enabled'),
     headerSwitchDisabled: document.querySelector('.header__switch--disabled'),
@@ -258,6 +259,15 @@ function isLocalDevelopmentUrl(url) {
 
 const Popup = {
   async openSettings() {
+    if (
+      agent === 'firefox' &&
+      (await chrome.runtime.getPlatformInfo()).os === 'android'
+    ) {
+      // Android's embedded extension view does not navigate on openOptionsPage.
+      window.location.assign(chrome.runtime.getURL('html/options.html'))
+      return
+    }
+
     try {
       if (typeof chrome.runtime.openOptionsPage === 'function') {
         await chrome.runtime.openOptionsPage()
@@ -275,6 +285,15 @@ const Popup = {
    * Initialise popup
    */
   async init() {
+    if (
+      agent === 'firefox' &&
+      (await chrome.runtime.getPlatformInfo()).os === 'android'
+    ) {
+      document.body.classList.add('body__popup--android')
+    }
+
+    await Utils.initDataConsent()
+
     Popup.cache = {
       tabId: null,
       url: '',
@@ -285,6 +304,7 @@ const Popup = {
 
     const el = {
       body: document.body,
+      popup: document.querySelector('.popup'),
       detections: document.querySelector('.detections'),
       empty: document.querySelector('.empty'),
       emptyReload: document.querySelector('.empty__reload'),
@@ -372,10 +392,11 @@ const Popup = {
 
     if (termsAccepted) {
       el.terms.classList.add('terms--hidden')
-
-      Popup.driver('getDetections').then(Popup.onGetDetections.bind(this))
     } else {
       el.terms.classList.remove('terms--hidden')
+      Popup.setDetectionStatus()
+      Popup.setDetectionLoading(false)
+      document.querySelector('.detection-region').hidden = true
       el.empty.classList.add('empty--hidden')
       el.detections.classList.add('detections--hidden')
       el.issue.classList.add('issue--hidden')
@@ -383,15 +404,18 @@ const Popup = {
       syncPlusTabState()
 
       el.termsButtonAccept.addEventListener('click', async () => {
+        const granted = await Utils.requestDataPermissions(
+          Utils.trackingDataPermissions
+        )
         await setOption('termsAccepted', true)
-        await setOption('tracking', true)
+        await setOption('tracking', granted)
         termsAccepted = true
 
         el.terms.classList.add('terms--hidden')
         el.footer.classList.remove('footer--hidden')
         syncPlusTabState()
 
-        Popup.driver('getDetections').then(Popup.onGetDetections.bind(this))
+        Popup.startDetections()
       })
 
       el.termsButtonDecline.addEventListener('click', async () => {
@@ -403,7 +427,7 @@ const Popup = {
         el.footer.classList.remove('footer--hidden')
         syncPlusTabState()
 
-        Popup.driver('getDetections').then(Popup.onGetDetections.bind(this))
+        Popup.startDetections()
       })
     }
 
@@ -436,7 +460,7 @@ const Popup = {
 
           setDisabledDomain(false)
 
-          Popup.driver('getDetections').then(Popup.onGetDetections.bind(this))
+          Popup.startDetections()
         })
 
         el.headerSwitchEnabled.addEventListener('click', async () => {
@@ -446,7 +470,7 @@ const Popup = {
 
           setDisabledDomain(true)
 
-          Popup.driver('getDetections').then(Popup.onGetDetections.bind(this))
+          Popup.startDetections()
         })
       } else {
         for (const headerSwitch of el.headerSwitches) {
@@ -458,15 +482,59 @@ const Popup = {
       }
     }
 
+    if (termsAccepted) {
+      Popup.startDetections()
+    }
+
     // Plus configuration
     el.plusConfigureApiKey.value = await getOption('apiKey', '')
+    document.querySelector('.plus-connect').open =
+      !!el.plusConfigureApiKey.value
+    document
+      .querySelector('.plus-connect')
+      .addEventListener('toggle', (event) => {
+        if (event.target.open) {
+          document
+            .querySelector('.plus-configure__form')
+            .scrollIntoView({ block: 'nearest' })
+        }
+      })
 
-    el.plusConfigureSave.addEventListener('click', async (event) => {
-      await setOption('apiKey', el.plusConfigureApiKey.value)
-      await setOption('apiKeyUpdatedAt', Date.now())
-
-      await Popup.getPlus(url)
-    })
+    document
+      .querySelector('.plus-configure__form')
+      .addEventListener('submit', async (event) => {
+        event.preventDefault()
+        const status = document.querySelector('.plus-key-status')
+        const apiKey = el.plusConfigureApiKey.value.trim()
+        if (!apiKey) {
+          status.textContent = getMessage('plusKeyEmpty')
+          el.plusConfigureApiKey.focus()
+          return
+        }
+        if (el.plusConfigureSave.disabled) {
+          return
+        }
+        el.plusConfigureSave.disabled = true
+        status.textContent = getMessage('plusConnectSaving')
+        try {
+          if (
+            !(await Utils.requestDataPermissions(Utils.plusDataPermissions))
+          ) {
+            status.textContent = getMessage('plusDataPermissionRequired')
+            return
+          }
+          await promisify(chrome.storage.local, 'set', {
+            apiKey,
+            apiKeyUpdatedAt: Date.now(),
+          })
+          status.textContent = getMessage('plusConnectSaved')
+          await Popup.getPlus(url)
+        } catch {
+          status.textContent = getMessage('plusConnectSaveFailed')
+        } finally {
+          el.plusConfigureSave.disabled = false
+        }
+      })
 
     // Header
     el.headerSettings.addEventListener('click', Popup.openSettings)
@@ -492,16 +560,24 @@ const Popup = {
     // Tabs
     el.tabs.forEach((tab, index) => {
       tab.addEventListener('click', async () => {
+        if (
+          tab.classList.contains('tab--plus') &&
+          !(await Utils.requestDataPermissions(Utils.plusDataPermissions))
+        ) {
+          return
+        }
         el.tabs.forEach((tab) => tab.classList.remove('tab--active'))
         el.tabItems.forEach((item) => item.classList.add('tab-item--hidden'))
 
         tab.classList.add('tab--active')
         el.tabItems[index].classList.remove('tab-item--hidden')
+        el.popup.scrollTop = 0
 
         el.plusDownload.classList.remove('plus-download--hidden')
         el.footer.classList.remove('footer--hidden')
 
-        if (tab.classList.contains('tab--plus')) {
+        Popup.plusActive = tab.classList.contains('tab--plus')
+        if (Popup.plusActive) {
           await Popup.getPlus(url)
         }
       })
@@ -526,6 +602,8 @@ const Popup = {
       el.footerToggleOpen.classList.remove('footer__toggle--hidden')
     }
 
+    el.footerHeading.setAttribute('aria-expanded', String(!collapseFooter))
+
     el.footerHeading.addEventListener('click', async () => {
       const collapsed = el.footer.classList.contains('footer--collapsed')
 
@@ -537,6 +615,7 @@ const Popup = {
         'footer__toggle--hidden'
       )
 
+      el.footerHeading.setAttribute('aria-expanded', String(collapsed))
       await setOption('collapseFooter', !collapsed)
     })
 
@@ -554,14 +633,215 @@ const Popup = {
     })
 
     // Reload
-    el.emptyReload.addEventListener('click', (event) => {
-      chrome.tabs.reload({ bypassCache: true })
-    })
+    el.emptyReload.addEventListener('click', Popup.reloadPage)
 
     // Apply internationalization
     i18n()
 
+    const controls = [
+      [el.headerSwitchEnabled, 'disableOnDomain'],
+      [el.headerSwitchDisabled, 'enableOnDomain'],
+      [el.headerSettings, 'options'],
+      [el.headerThemeDark, 'themeUseDark'],
+      [el.headerThemeLight, 'themeUseLight'],
+    ]
+    controls.forEach(([control, key]) => {
+      const label = getMessage(key)
+      control.setAttribute('aria-label', label)
+      let title = control.querySelector('title')
+      if (!title) {
+        title = document.createElementNS('http://www.w3.org/2000/svg', 'title')
+        control.prepend(title)
+      }
+      title.textContent = label
+    })
+    ;[...controls.map(([control]) => control), el.footerHeading].forEach(
+      (control) => {
+        control.setAttribute('role', 'button')
+        control.setAttribute('tabindex', '0')
+        control.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault()
+            control.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+          }
+        })
+      }
+    )
+
     Popup.cache.categories = await Popup.driver('getCategories')
+  },
+
+  showNoResults(message = 'detectionsNoneYet') {
+    if (Popup.detectionsStopped || Popup.hasVisibleDetections) {
+      return
+    }
+    clearTimeout(Popup.skeletonTimer)
+    Popup.skeletonExpired = true
+    const unsupported = !/^https?:/i.test(Popup.cache?.url || '')
+    const disabled = Popup.domainDisabled
+    Popup.setDetectionLoading(false)
+    Popup.setDetectionStatus()
+    const label = document.querySelector('.empty__message')
+    label.removeAttribute('data-i18n')
+    label.textContent = getMessage(
+      disabled
+        ? 'detectionsDisabled'
+        : unsupported
+        ? 'detectionsUnsupported'
+        : message
+    )
+    document.querySelector('.empty').classList.remove('empty--hidden')
+    document.querySelector('.detections').classList.add('detections--hidden')
+    document.querySelector('.issue').classList.add('issue--hidden')
+    document.querySelector('.empty__reload').hidden = disabled || unsupported
+  },
+
+  beginDetectionWait() {
+    clearTimeout(Popup.skeletonTimer)
+    Popup.skeletonExpired = false
+    Popup.setDetectionStatus()
+    if (!Popup.hasVisibleDetections) {
+      document.querySelector('.empty').classList.add('empty--hidden')
+      Popup.setDetectionLoading(true)
+    }
+    Popup.skeletonTimer = setTimeout(() => {
+      Popup.skeletonExpired = true
+      Popup.showNoResults()
+    }, 2000)
+  },
+
+  async reloadPage(event) {
+    event.preventDefault()
+    const button = document.querySelector('.empty__reload')
+    if (button.disabled) {
+      return
+    }
+    button.disabled = true
+    try {
+      await promisify(chrome.tabs, 'reload', Popup.cache.tabId, {})
+      Popup.detectionSignature = null
+      Popup.hasFreshDetections = false
+      Popup.beginDetectionWait()
+      Popup.refreshDetections()
+    } catch {
+      Popup.showNoResults('detectionsReloadFailed')
+    } finally {
+      button.disabled = false
+    }
+  },
+
+  setDetectionLoading(loading) {
+    const skeleton = document.querySelector('.detection-skeleton')
+    skeleton.hidden = !loading
+    skeleton.setAttribute('aria-label', getMessage('detectionsLoading'))
+  },
+
+  setDetectionStatus(key) {
+    const status = document.querySelector('.detection-status')
+    status.removeAttribute('data-i18n')
+    status.textContent = key ? getMessage(key) : ''
+    status.hidden = !key
+  },
+
+  startDetections() {
+    document.querySelector('.detection-region').hidden = false
+    if (!Popup.detectionsStarted) {
+      Popup.detectionsStarted = true
+      Popup.renderQueue = Promise.resolve()
+      Popup.beginDetectionWait()
+      Popup.driver('getPopupCache')
+        .then((detections) => {
+          if (Array.isArray(detections) && detections.length) {
+            return Popup.renderDetections(detections, true)
+          }
+        })
+        .catch(() => {}) // The full response remains authoritative.
+      window.addEventListener('pagehide', () => {
+        Popup.detectionsStopped = true
+        clearTimeout(Popup.detectionsTimer)
+        clearTimeout(Popup.skeletonTimer)
+      })
+    }
+
+    Popup.refreshDetections()
+  },
+
+  renderDetections(detections, cached = false) {
+    Popup.renderQueue = Popup.renderQueue
+      .catch(() => {})
+      .then(async () => {
+        if (Popup.detectionsStopped || (cached && Popup.hasFreshDetections)) {
+          return
+        }
+
+        const visible = detections.some(
+          (detection) =>
+            detection?.confidence >= 50 &&
+            detection.slug !== 'cart-functionality'
+        )
+        if (cached && !visible) {
+          return
+        }
+        if (!cached) {
+          Popup.hasFreshDetections = true
+        }
+        Popup.hasVisibleDetections = visible
+        clearTimeout(Popup.skeletonTimer)
+
+        const signature = JSON.stringify(detections)
+
+        if (signature !== Popup.detectionSignature) {
+          await Popup.onGetDetections(detections)
+          Popup.detectionSignature = signature
+        }
+
+        if (!visible) {
+          Popup.showNoResults('noAppsDetected')
+        }
+        Popup.setDetectionLoading(false)
+        Popup.setDetectionStatus()
+      })
+
+    return Popup.renderQueue
+  },
+
+  async refreshDetections() {
+    if (Popup.detectionsBusy || Popup.detectionsStopped) {
+      return
+    }
+
+    clearTimeout(Popup.detectionsTimer)
+    Popup.detectionsBusy = true
+
+    try {
+      const response = await Popup.driver('getDetections', [true])
+      const { detections, scanComplete } = response || {}
+      if (!Array.isArray(detections)) {
+        throw new TypeError('Missing detection response')
+      }
+      const visible = detections.filter(
+        (detection) =>
+          detection?.confidence >= 50 && detection.slug !== 'cart-functionality'
+      )
+      if (visible.length || scanComplete) {
+        await Popup.renderDetections(detections)
+      } else if (Popup.skeletonExpired) {
+        Popup.showNoResults()
+      }
+    } catch {
+      Popup.setDetectionLoading(false)
+      if (Popup.hasVisibleDetections) {
+        Popup.setDetectionStatus('detectionsLoadFailed')
+      } else {
+        Popup.showNoResults('detectionsLoadFailed')
+      }
+    } finally {
+      Popup.detectionsBusy = false
+
+      if (!Popup.detectionsStopped) {
+        Popup.detectionsTimer = setTimeout(Popup.refreshDetections, 1000)
+      }
+    }
   },
 
   driver(func, args) {
@@ -618,10 +898,10 @@ const Popup = {
       .filter(({ slug }) => slug !== 'cart-functionality')
 
     if (!detections || !detections.length) {
-      el.empty.classList.remove('empty--hidden')
-      el.detections.classList.add('detections--hidden')
-      el.issue.classList.add('issue--hidden')
-      el.plusDownload.classList.add('plus-download--hidden')
+      Popup.showNoResults('noAppsDetected')
+      if (!Popup.plusActive) {
+        el.plusDownload.classList.add('plus-download--hidden')
+      }
 
       return
     }
@@ -629,7 +909,9 @@ const Popup = {
     el.empty.classList.add('empty--hidden')
     el.detections.classList.remove('detections--hidden')
     el.issue.classList.remove('issue--hidden')
-    el.plusDownload.classList.remove('plus-download--hidden')
+    if (!Popup.plusActive) {
+      el.plusDownload.classList.remove('plus-download--hidden')
+    }
 
     let firstChild
 
@@ -722,16 +1004,25 @@ const Popup = {
       el.detections.appendChild(Popup.templates.category.cloneNode(true))
     }
 
-    Array.from(document.querySelectorAll('a')).forEach((a) =>
-      a.addEventListener('click', (event) => {
-        event.preventDefault()
-        event.stopImmediatePropagation()
-
-        open(a.href)
-
-        return false
+    Popup.boundLinks = Popup.boundLinks || new WeakSet()
+    Array.from(document.querySelectorAll('a'))
+      .filter((a) => {
+        if (Popup.boundLinks.has(a)) {
+          return false
+        }
+        Popup.boundLinks.add(a)
+        return true
       })
-    )
+      .forEach((a) =>
+        a.addEventListener('click', (event) => {
+          event.preventDefault()
+          event.stopImmediatePropagation()
+
+          open(a.href)
+
+          return false
+        })
+      )
 
     i18n()
   },
@@ -789,6 +1080,9 @@ const Popup = {
       let response
 
       for (let attempt = 0; ; attempt += 1) {
+        if (!(await Utils.hasDataPermissions(Utils.plusDataPermissions))) {
+          throw new Error(getMessage('plusDataPermissionRequired'))
+        }
         response = await fetch(
           `https://api.wappalyzer.com/v2/plus/${encodeURIComponent(url)}`,
           {
@@ -1016,6 +1310,7 @@ const Popup = {
               : getMessage('plusErrorNoAccess')
 
           el.configure.classList.remove('plus-configure--hidden')
+          document.querySelector('.plus-connect').open = true
         } else if (error.response.status === 429) {
           el.errorMessage.textContent = getMessage('plusErrorTooManyRequests')
         } else if (

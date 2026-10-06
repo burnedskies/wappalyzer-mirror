@@ -846,7 +846,10 @@
     "js": {
       "NETO": ""
     },
-    "scriptSrc": "jquery\\.neto.*\\.js",
+    "scriptSrc": [
+      "assets\\.netostatic\\.com/ecommerce/[\\d.]+/assets/js/common/webstore/main\\.js",
+      "jquery\\.neto.*\\.js"
+    ],
     "website": "https://www.neto.com.au"
   },
   "Netop": {

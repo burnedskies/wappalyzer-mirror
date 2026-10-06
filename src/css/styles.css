@@ -30,17 +30,27 @@ body {
   font-size: .9rem;
   line-height: 1.5rem;
 	margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .body__popup {
-  min-width: 24rem;
+  /* Desktop action popups size their viewport from this intrinsic width. */
+  width: 31rem;
+  min-width: 31rem;
+  max-width: 31rem;
+}
+
+.body__popup--android {
+  width: 100%;
+  min-width: 0;
   max-width: 34rem;
 }
 
 .body__page {
   background: var(--color-secondary);
-  min-width: 24rem;
+  width: 100%;
+  min-width: min(24rem, 100vw);
   max-width: 34rem;
   margin: 4.5rem auto 0 auto;
 }
@@ -271,8 +281,8 @@ small {
   overflow: hidden;
 }
 
-.tab-item:nth-child(2) {
-  width: 31rem;
+.tab-item {
+  width: 100%;
 }
 
 .tab-item--hidden {
@@ -1052,4 +1062,315 @@ body.dynamic-icon .category__heading:hover .category__pin {
     stroke-dasharray: 100,200;
     stroke-dashoffset: -125px;
   }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding-inline: .75rem;
+  }
+
+  .header__link {
+    min-width: 0;
+  }
+
+  .header__logo {
+    max-width: 100%;
+    height: auto;
+    width: 10rem;
+  }
+
+  .tab {
+    padding-inline: .6rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .plus-download {
+    padding-inline: .5rem;
+  }
+
+  .detections {
+    columns: 1;
+  }
+
+  .panel__content th {
+    min-width: 0;
+  }
+
+  .panel__content td {
+    overflow-wrap: anywhere;
+  }
+
+  .category__heading {
+    white-space: normal;
+  }
+}
+
+/* Keep navigation visible without reserving blank space on shorter tabs. */
+.popup > .header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.popup > .tabs {
+  position: sticky;
+  top: 4.5rem;
+  z-index: 2;
+}
+
+.body__popup .detections {
+  column-gap: 1.5rem;
+}
+
+.body__popup .category__heading {
+  white-space: normal;
+}
+
+.body__popup .technology__link {
+  width: 100%;
+}
+
+.body__popup .technology__name {
+  overflow-wrap: anywhere;
+}
+
+.body__popup .footer__content {
+  max-width: none;
+}
+
+.body__popup .footer__content p {
+  margin-bottom: .75rem;
+}
+
+/* Preserve readable type and spacing while clarifying controls and metadata. */
+.body__popup .category__link {
+  font-weight: 600;
+}
+
+.body__popup .technology__version {
+  color: var(--color-text-lighten);
+  background: transparent;
+}
+
+.dark.body__popup .technology__version {
+  color: var(--color-text-dark-lighten);
+}
+
+.popup {
+  scrollbar-width: thin;
+  scrollbar-color: #b8b8b8 transparent;
+}
+
+.header__icon:hover {
+  background: rgba(255, 255, 255, .15);
+  border-radius: 3px;
+  outline: 4px solid rgba(255, 255, 255, .15);
+}
+
+.header__icon:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+.body__popup a:focus-visible,
+.footer__heading:focus-visible,
+.plus-configure__save:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.dark.body__popup a:focus-visible,
+.dark .footer__heading:focus-visible,
+.dark .plus-configure__save:focus-visible {
+  outline-color: white;
+}
+
+.plus-key-help {
+  font-size: .85rem;
+}
+
+.plus-key-status {
+  margin: 1rem 1.5rem;
+}
+
+.plus-key-status:empty {
+  display: none;
+}
+
+.plus-configure__save {
+  border: 0;
+  font-family: inherit;
+}
+
+.plus-configure__save:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.detection-status {
+  padding: .75rem 1.5rem;
+  color: var(--color-text-lighten);
+  font-size: .8rem;
+}
+
+.detection-skeleton {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.detection-skeleton[hidden] {
+  display: none;
+}
+
+/* Match the space and row structure of the results without moving the footer. */
+.detection-region {
+  min-height: 15rem;
+}
+
+.detection-skeleton__heading,
+.detection-skeleton__icon,
+.detection-skeleton__text {
+  display: block;
+  background: var(--color-border);
+  border-radius: .25rem;
+}
+
+.detection-skeleton__heading {
+  width: 55%;
+  height: .65rem;
+  margin-bottom: 1.25rem;
+}
+
+.detection-skeleton__row {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  margin: .85rem 0;
+}
+
+.detection-skeleton__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.detection-skeleton__text {
+  width: 65%;
+  height: .65rem;
+}
+
+.detection-skeleton__row:nth-child(odd) .detection-skeleton__text {
+  width: 45%;
+}
+
+.dark .detection-skeleton__heading,
+.dark .detection-skeleton__icon,
+.dark .detection-skeleton__text {
+  background: var(--color-border-dark);
+}
+
+.detection-region .empty {
+  height: auto;
+  margin: 0;
+  padding: 2rem 1.5rem;
+  text-align: left;
+}
+
+.empty__message {
+  display: block;
+  color: var(--color-text-lighten);
+}
+
+.empty__reload {
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+  border: 0;
+  border-radius: .25rem;
+  background: var(--color-primary);
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.empty__reload:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.plus-connect {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.plus-connect summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  list-style: none;
+  padding: .75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.plus-connect .plus-configure__form {
+  padding: 0 1.5rem 1rem;
+  background: transparent;
+  color: inherit;
+}
+
+.plus-free-note {
+  margin: .75rem 0 0;
+  font-size: .8rem;
+  line-height: 1.3rem;
+  color: var(--color-text-lighten);
+}
+
+
+.plus-error__heading {
+  display: block;
+  margin-bottom: .25rem;
+}
+
+.dark .plus-connect {
+  border-color: var(--color-border-dark);
+}
+
+.dark .plus-connect summary {
+  color: var(--color-anchor-dark);
+}
+
+.plus-configure > .message {
+  margin-bottom: 1rem;
+}
+
+.plus-offer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+}
+
+.plus-price {
+  font-size: .85rem;
+  white-space: nowrap;
+}
+
+.plus-connect summary::-webkit-details-marker {
+  display: none;
+}
+
+.plus-connect__chevron {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+}
+
+.plus-connect[open] .plus-connect__chevron {
+  transform: rotate(180deg);
 }

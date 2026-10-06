@@ -9,6 +9,8 @@ const Terms = {
    * Initialise terms
    */
   async init() {
+    await Utils.initDataConsent()
+
     const el = {
       body: document.body,
       headerThemeDark: document.querySelector('.header__theme--dark'),
@@ -35,8 +37,11 @@ const Terms = {
 
     // Terms
     el.termsButtonAccept.addEventListener('click', async () => {
+      const granted = await Utils.requestDataPermissions(
+        Utils.trackingDataPermissions
+      )
       await setOption('termsAccepted', true)
-      await setOption('tracking', true)
+      await setOption('tracking', granted)
 
       Terms.driver('closeCurrentTab')
     })
