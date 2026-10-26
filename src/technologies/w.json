@@ -427,7 +427,7 @@
       54
     ],
     "description": "WP SEO AI is a tool that optimizes brand visibility by positioning companies as expert answers across search engines and AI platforms like Google and GPT.",
-    "dom": "script[id*='seoaic_front_main_js-js']",
+    "dom": "script[id*='seoaic_front_main_js-js'], script#seoaiwp-form-tracking-js-extra, script#seoaiwp-form-tracking-js-after",
     "icon": "WPSEOAI.svg",
     "pricing": [
       "mid",
@@ -803,6 +803,19 @@
     "requires": "Cart Functionality",
     "saas": true,
     "website": "https://wake.tech/wake-commerce"
+  },
+  "Waku": {
+    "cats": [
+      18
+    ],
+    "description": "Waku is a React framework for building websites and web applications with React Server Components.",
+    "icon": "Waku.png",
+    "implies": "React",
+    "js": {
+      "__WAKU_HYDRATE__": "^true$"
+    },
+    "oss": true,
+    "website": "https://waku.gg"
   },
   "WalkMe": {
     "cats": [
@@ -2566,7 +2579,21 @@
       52
     ],
     "description": "WhatsApp Business is a free to download app available on Android and iPhone using which businesses can connect with their customers.",
-    "dom": "a[href*='api.whatsapp.com/send'], a[href*='web.whatsapp.com/send'], div[class*='wptwa-container'], a[href*='wa.link'][target='_blank'], link[href*='plugins/creame-whatsapp-me']",
+    "dom": {
+      "a[href*='api.whatsapp.com/send'], a[href*='web.whatsapp.com/send']": {
+        "attributes": {
+          "href": "^(?:https?:)?//(?:api|web)\\.whatsapp\\.com/send/?\\?(?:[^&#]*&)*phone=(?:\\+|%2b)?[1-9]\\d{1,14}(?:[&#]|$)"
+        }
+      },
+      "a[href*='wa.me/']": {
+        "attributes": {
+          "href": "^https?://wa\\.me/[1-9]\\d{1,14}(?:[?#]|$)"
+        }
+      },
+      "div[class*='wptwa-container'], a[href*='wa.link'][target='_blank'], link[href*='plugins/creame-whatsapp-me']": {
+        "exists": ""
+      }
+    },
     "icon": "WhatsApp.svg",
     "scriptSrc": [
       "/plugins/creame-whatsapp-me.*joinchat\\.min\\.js"
@@ -3010,6 +3037,9 @@
     "cats": [
       1
     ],
+    "cookies": {
+      "winter_session": ""
+    },
     "cpe": "cpe:2.3:a:wintercms:winter:*:*:*:*:*:*:*:*",
     "description": "Winter CMS is an open source content management framework built on the Laravel PHP framework for rapid development.",
     "icon": "WinterCMS.svg",

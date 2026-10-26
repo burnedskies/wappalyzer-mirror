@@ -996,6 +996,20 @@
     "saas": true,
     "website": "https://www.editplus.com"
   },
+  "Edito CMS": {
+    "cats": [
+      1
+    ],
+    "description": "Edito CMS is a content management system for websites and portals, with multisite management, editorial workflows and user permissions.",
+    "icon": "Edito CMS.svg",
+    "meta": {
+      "generator": "^(?:www\\.ideo\\.pl,\\s*)?edito - www\\.edito\\.pl$"
+    },
+    "pricing": [
+      "onetime"
+    ],
+    "website": "https://www.edito.pl"
+  },
   "Editor.js": {
     "cats": [
       24

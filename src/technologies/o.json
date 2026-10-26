@@ -2686,6 +2686,23 @@
     "scriptSrc": "cdn\\.ordersify\\.com/sdk/productalerts-shopify\\.js",
     "website": "https://ordersify.com/products/product-alerts"
   },
+  "Ordertracker": {
+    "cats": [
+      100
+    ],
+    "description": "Ordertracker is a Shopify app that provides branded order tracking pages, shipment updates, notifications, and product recommendations.",
+    "dom": ".ot-tracking-wrapper[data-shop$=\".myshopify.com\"][data-config] form#ot-tracking-form",
+    "icon": "Ordertracker.svg",
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "requires": "Shopify",
+    "saas": true,
+    "scriptSrc": "^(?:(?:https?:)?//[^/]+)?/apps/ordertracker/tracker(?:[?#]|$)",
+    "website": "https://www.ordertracker.com/shopify"
+  },
   "Oreed": {
     "cats": [
       21

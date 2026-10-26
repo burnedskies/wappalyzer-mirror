@@ -2178,6 +2178,31 @@
     "saas": true,
     "website": "https://cevoid.com"
   },
+  "CeyPay": {
+    "cats": [
+      41
+    ],
+    "description": "CeyPay is a cryptocurrency payment gateway that lets merchants accept payments from exchange wallets and receive settlement in local currency.",
+    "dom": {
+      "link[rel='stylesheet'][href*='/ceypay-payment-gateway/']": {
+        "attributes": {
+          "href": "^(?:https?://[^/?#]+)?/(?:[^?#]*/)?wp-content/plugins/ceypay-payment-gateway/(?:includes/\\.\\./)?assets/css/ceypay\\.css(?:[?#]|$)"
+        }
+      }
+    },
+    "icon": "CeyPay.svg",
+    "meta": {
+      "generator": "^CeyPay Payment Gateway(?: \\d+(?:\\.\\d+)+)?$"
+    },
+    "pricing": [
+      "low",
+      "payg",
+      "recurring"
+    ],
+    "requires": "WooCommerce",
+    "saas": true,
+    "website": "https://www.ceypay.io"
+  },
   "Cfixé": {
     "cats": [
       72
@@ -4766,6 +4791,27 @@
     "scriptSrc": "static\\.cloudflareinsights\\.com/beacon(?:\\.min)?\\.js",
     "website": "https://www.cloudflare.com"
   },
+  "Cloudflare R2": {
+    "cats": [
+      63
+    ],
+    "description": "Cloudflare R2 is an S3-compatible object storage service for storing and serving unstructured data.",
+    "dom": {
+      "img[src], video[src], audio[src], source[src]": {
+        "attributes": {
+          "src": "^(?:https?:)?//pub-[a-f0-9]{32}\\.r2\\.dev/"
+        }
+      }
+    },
+    "icon": "CloudFlare.svg",
+    "implies": "Cloudflare",
+    "pricing": [
+      "freemium",
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://www.cloudflare.com/products/r2/"
+  },
   "Cloudflare Rocket Loader": {
     "cats": [
       92
@@ -6949,23 +6995,6 @@
     "scriptSrc": "(?:app|js)\\.convertflow\\.co",
     "website": "https://www.convertflow.com"
   },
-  "ConvertKit": {
-    "cats": [
-      32,
-      75
-    ],
-    "description": "ConvertKit is an email marketing tool built for content creators.",
-    "dom": "form[action*='.convertkit.com'], link[href*='.convertkit.com']",
-    "icon": "ConvertKit.svg",
-    "pricing": [
-      "low",
-      "freemium",
-      "recurring"
-    ],
-    "saas": true,
-    "scriptSrc": "\\.convertkit\\.com",
-    "website": "https://convertkit.com"
-  },
   "Convertcart": {
     "cats": [
       32
@@ -7085,6 +7114,23 @@
     "saas": true,
     "scriptSrc": "cdn\\.convertri\\.com/",
     "website": "https://www.convertri.com"
+  },
+  "Converty": {
+    "cats": [
+      6
+    ],
+    "description": "Converty is an ecommerce platform for creating online stores and managing products, orders, payments, and shipping.",
+    "icon": "Converty.svg",
+    "js": {
+      "convertySDK.getStoreInfo": ""
+    },
+    "pricing": [
+      "freemium",
+      "payg",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://converty.shop"
   },
   "Converzee": {
     "cats": [
@@ -8941,6 +8987,7 @@
     "description": "c15t is an open source framework for managing cookies, consent, and privacy compliance.",
     "icon": "c15t.svg",
     "js": {
+      "c15t.pkg": "^@c15t/",
       "c15tStore.getInitialState": ""
     },
     "oss": true,

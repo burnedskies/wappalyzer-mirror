@@ -99,6 +99,32 @@
     "scriptSrc": "my\\.zadarma\\.com",
     "website": "https://zadarma.com"
   },
+  "Zahls.ch": {
+    "cats": [
+      41
+    ],
+    "description": "Zahls.ch is a Swiss payment platform for online payments, payment links, and embedded payment and donation forms.",
+    "dom": {
+      "iframe[allow*=\"payment\"]": {
+        "attributes": {
+          "src": "^https?://(?!www\\.|api\\.|login\\.|signup\\.|checkout\\.)[a-z0-9-]+\\.zahls\\.ch/(?:[a-z]{2}(?:-[a-z]{2})?/)?pay\\?(?:[^#]*&)?[ctp]id=[a-f0-9]{8}(?:[&#]|$)"
+        }
+      },
+      "iframe[allowpaymentrequest]": {
+        "attributes": {
+          "src": "^https?://checkout\\.zahls\\.ch/\\?pspId=\\d+(?:&|$)"
+        }
+      }
+    },
+    "icon": "Zahls.ch.svg",
+    "pricing": [
+      "low",
+      "payg",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.zahls.ch"
+  },
   "Zakeke": {
     "cats": [
       76
@@ -1171,6 +1197,31 @@
     ],
     "saas": true,
     "website": "https://www.zoho.com/"
+  },
+  "Zoho Bookings": {
+    "cats": [
+      72
+    ],
+    "description": "Zoho Bookings is online appointment scheduling software with embeddable booking pages, calendar synchronization, and automated reminders.",
+    "dom": {
+      "iframe[src*='.zohobookings.'][src*='/portal-embed']": {
+        "attributes": {
+          "src": "^https://[a-z0-9-]+\\.zohobookings\\.(?:com|eu)/portal-embed#/(?:customer/)?[a-z0-9_-]+(?:\\?|$)"
+        }
+      }
+    },
+    "icon": "Zoho Bookings.svg",
+    "js": {
+      "ZCB_APP.appLinkName": "^bookings$"
+    },
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "^https://static\\.zohocdn\\.com/bookings/V[0-9_]+/dist/common/assets/web-app-[a-f0-9]+\\.js(?:[?#]|$)",
+    "website": "https://www.zoho.com/bookings/"
   },
   "Zoho Commerce": {
     "cats": [

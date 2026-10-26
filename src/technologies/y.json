@@ -920,6 +920,26 @@
     "scripts": "\\.youcanbook\\.me",
     "website": "https://youcanbook.me"
   },
+  "YouDraw": {
+    "cats": [
+      6
+    ],
+    "description": "YouDraw is a Brazilian print-on-demand platform with hosted storefronts, product creation, and order fulfillment.",
+    "headers": {
+      "X-Generator": "^YouDraw YD Store$"
+    },
+    "icon": "YouDraw.png",
+    "meta": {
+      "generator": "^YouDraw YD Store$"
+    },
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://youdraw.com.br"
+  },
   "YouLead": {
     "cats": [
       32

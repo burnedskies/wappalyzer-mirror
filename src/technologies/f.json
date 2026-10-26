@@ -643,6 +643,7 @@
       "Fastly-Debug-Digest": "",
       "Vary": "Fastly-SSL",
       "X-Fastly-Request-ID": "",
+      "X-Served-By": "^cache-[a-z]{3}(?:-[a-z]+)?[0-9]+-[a-z]{3}(?:,\\s*cache-[a-z]{3}(?:-[a-z]+)?[0-9]+-[a-z]{3})*$",
       "server": "Fastly",
       "x-fastly-origin": "",
       "x-fastly-request-id": "",
@@ -982,6 +983,22 @@
     ],
     "saas": true,
     "website": "https://fenicio.io"
+  },
+  "Fenikya": {
+    "cats": [
+      6
+    ],
+    "description": "Fenikya is a hosted ecommerce platform for creating online stores and managing products, orders, marketplace integrations, payments, and shipping.",
+    "icon": "Fenikya.svg",
+    "meta": {
+      "generator": "^Fenikya$"
+    },
+    "pricing": [
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://fenikya.com"
   },
   "Fera": {
     "cats": [
@@ -3183,6 +3200,23 @@
     "scripts": "app\\.formwise\\.ai",
     "website": "https://www.formwise.ai"
   },
+  "FormalMonkey": {
+    "cats": [
+      1
+    ],
+    "description": "FormalMonkey is a content management system and visual website builder with managed hosting and self-hosted deployment options.",
+    "icon": "FormalMonkey.svg",
+    "js": {
+      "__GLOBAL_SEO__.faviconSizes": ""
+    },
+    "pricing": [
+      "low",
+      "onetime",
+      "freemium"
+    ],
+    "saas": true,
+    "website": "https://formalmonkey.com"
+  },
   "Formalize CSS": {
     "cats": [
       66
@@ -3227,7 +3261,6 @@
       "recurring"
     ],
     "saas": true,
-    "scripts": "format\\.com",
     "website": "https://www.format.com"
   },
   "Formbricks": {
@@ -4971,8 +5004,8 @@
     ],
     "description": "Fynd Platform is a subscription based software as a service where brands can mange their catalog, send marketing sms/emailers and sell their products.",
     "icon": "Fynd Platform.svg",
-    "implies": "Vue.js",
     "js": {
+      "FPI.event.events": "",
       "__fyndAction": ""
     },
     "pricing": [

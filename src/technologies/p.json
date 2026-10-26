@@ -905,12 +905,12 @@
       59
     ],
     "description": "Paraglide JS is a compiler-based i18n library that emits tree-shakable message functions for optimized localization workflows.",
-    "icon": "ParaglideJS.svg",
+    "icon": "ParaglideJS.png",
     "js": {
       "__paraglide": ""
     },
     "oss": true,
-    "website": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs"
+    "website": "https://paraglidejs.com"
   },
   "ParcelPanel": {
     "cats": [
@@ -2602,6 +2602,27 @@
     "scriptSrc": "booking-widget\\.phorestcdn\\.com/",
     "website": "https://www.phorest.com"
   },
+  "Phosphor Icons": {
+    "cats": [
+      17
+    ],
+    "description": "Phosphor Icons is an open-source icon library available as web fonts and framework components.",
+    "dom": {
+      "i:is(.ph, .ph-thin, .ph-light, .ph-bold, .ph-fill, .ph-duotone)": {
+        "attributes": {
+          "class": "(?:^|\\s)ph-(?!(?:thin|light|bold|fill|duotone)(?:\\s|$))[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?:\\s|$)"
+        }
+      },
+      "link[rel=\"stylesheet\"]": {
+        "attributes": {
+          "href": "^https?://(?:cdn\\.jsdelivr\\.net/npm|unpkg\\.com)/@phosphor-icons/web(?:@([0-9]+\\.[0-9]+\\.[0-9]+))?/src/(?:regular|thin|light|bold|fill|duotone)/style\\.css(?:[?#]|$)\\;version:\\1"
+        }
+      }
+    },
+    "icon": "Phosphor Icons.svg",
+    "oss": true,
+    "website": "https://phosphoricons.com"
+  },
   "Photo Gallery": {
     "cats": [
       87,
@@ -4145,6 +4166,29 @@
     "saas": true,
     "scripts": "analytics\\.plytix\\.com",
     "website": "https://www.plytix.com"
+  },
+  "PmWiki": {
+    "cats": [
+      8
+    ],
+    "cpe": "cpe:2.3:a:pmwiki:pmwiki:*:*:*:*:*:*:*:*",
+    "description": "PmWiki is an open-source wiki engine for creating and maintaining collaborative websites.",
+    "dom": {
+      "html:has(#wikitext) link[rel~='stylesheet'][href*='pmwiki.css']": {
+        "attributes": {
+          "href": "^[^?#]*/pub/skins/[^/?#]+/(?:css/)?pmwiki\\.css(?:[?#]|$)"
+        }
+      },
+      "html:has(#wikitext) script[src*='pmwiki-utils.js']": {
+        "attributes": {
+          "src": "^[^?#]*/pub/(?:lib/)?pmwiki-utils\\.js(?:[?#]|$)"
+        }
+      }
+    },
+    "icon": "PmWiki.svg",
+    "implies": "PHP",
+    "oss": true,
+    "website": "https://www.pmwiki.org"
   },
   "Po.st": {
     "cats": [

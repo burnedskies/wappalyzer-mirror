@@ -3345,6 +3345,23 @@
     "saas": true,
     "website": "https://www.loqate.com"
   },
+  "Lork": {
+    "cats": [
+      51
+    ],
+    "description": "Lork is an AI website builder for creating, editing, and publishing websites from text prompts.",
+    "icon": "Lork.png",
+    "js": {
+      "__lorkAnalyticsInstalled": "^true$"
+    },
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://lork.dev"
+  },
   "LotLinx": {
     "cats": [
       32

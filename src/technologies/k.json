@@ -1309,18 +1309,23 @@
   },
   "Kit": {
     "cats": [
-      32
+      32,
+      75
     ],
-    "description": "Kit is a platform that provides email, mobile, and social list management tools for organizing, managing, and engaging contact audiences across digital communication channels.",
+    "description": "Kit, formerly ConvertKit, is an email marketing platform for creators with signup forms, newsletters, and automation.",
+    "dom": "form[action*='.convertkit.com'], link[href*='.convertkit.com']",
     "icon": "Kit.svg",
     "pricing": [
+      "low",
       "freemium",
-      "mid",
       "recurring"
     ],
     "saas": true,
-    "scriptSrc": "www\\.fanbridge\\.com/",
-    "website": "https://kit.com/fanbridge"
+    "scriptSrc": [
+      "\\.convertkit\\.com",
+      "www\\.fanbridge\\.com/"
+    ],
+    "website": "https://kit.com"
   },
   "Kitcart": {
     "cats": [

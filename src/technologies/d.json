@@ -171,6 +171,24 @@
     "scriptSrc": "\\.dish\\.co",
     "website": "https://www.dish.co/XX"
   },
+  "DIVA": {
+    "cats": [
+      5
+    ],
+    "description": "DIVA is a product configuration and visualization platform for the furniture industry.",
+    "icon": "DIVA.png",
+    "js": {
+      "CrystaldesignDivaCore.useDivaCore": "",
+      "DivaUtils.getCurrentTraceId": ""
+    },
+    "pricing": [
+      "recurring",
+      "poa"
+    ],
+    "saas": true,
+    "scriptSrc": "^https?://cdn\\.jsdelivr\\.net/npm/@crystaldesign/diva-core@\\d+\\.\\d+\\.\\d+/build/umd/diva-core\\.umd\\.min\\.js(?:[?#]|$)",
+    "website": "https://diva-portal.de"
+  },
   "DM Polopoly": {
     "cats": [
       1

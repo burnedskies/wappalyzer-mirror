@@ -462,8 +462,8 @@
     ],
     "description": "Gcore is a public cloud and content delivery network (CDN) company.",
     "headers": {
-      "x-id": "^[\\w-]+-gc\\d{2}$",
-      "x-id-fe": "^[\\w-]+-gc\\d{2}$"
+      "x-id": "^[\\w-]+-gc\\d+$",
+      "x-id-fe": "^[\\w-]+-gc\\d+$"
     },
     "icon": "Gcore.svg",
     "pricing": [
@@ -4170,6 +4170,19 @@
     },
     "saas": true,
     "website": "https://www.freeguppy.org"
+  },
+  "Gupshup": {
+    "cats": [
+      52
+    ],
+    "description": "Gupshup is a conversational messaging platform that provides website chatbots and customer support automation.",
+    "icon": "Gupshup.svg",
+    "saas": true,
+    "scriptSrc": [
+      "^https?://web-widget\\.gupshup\\.io/v3/demo/static/js/sdk\\.js(?:[?#]|$)",
+      "^https?://[a-z0-9-]+\\.gupshup\\.io/libs/websdk/js/chatSDK\\.js(?:[?#]|$)"
+    ],
+    "website": "https://www.gupshup.ai"
   },
   "Gupy": {
     "cats": [

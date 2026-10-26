@@ -197,7 +197,7 @@
     "cats": [
       12
     ],
-    "cpe": "cpe:2.3:a:handlebars.js_project:handlebars.js:*:*:*:*:*:*:*:*",
+    "cpe": "cpe:2.3:a:handlebarsjs:handlebars:*:*:*:*:*:*:*:*",
     "description": "Handlebars is a JavaScript library used to create reusable webpage templates.",
     "dom": "script[type='text/x-handlebars-template']",
     "icon": "Handlebars.svg",

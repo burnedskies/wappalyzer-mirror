@@ -1543,6 +1543,22 @@
     "scriptSrc": "app\\.realsatisfied\\.com",
     "website": "https://www.realsatisfied.com"
   },
+  "RealWork": {
+    "cats": [
+      90
+    ],
+    "description": "RealWork is a review management and neighborhood marketing platform for home service businesses, with website widgets that display customer reviews and completed projects.",
+    "icon": "RealWork.svg",
+    "js": {
+      "rwlPlugin.init": "^true$"
+    },
+    "pricing": [
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "^https?://app\\.realworklabs\\.com/static/plugin/loader\\.js(?:[?#]|$)",
+    "website": "https://www.realworklabs.com"
+  },
   "Really Simple CAPTCHA": {
     "cats": [
       87
@@ -3623,6 +3639,31 @@
     ],
     "saas": true,
     "website": "https://www.revieve.com"
+  },
+  "Review Growth": {
+    "cats": [
+      90
+    ],
+    "description": "Review Growth is a review management platform with an embeddable widget for displaying customer reviews.",
+    "dom": {
+      "iframe[title=\"Review Display\"]": {
+        "attributes": {
+          "src": "^https?://(?:www\\.)?reviewgrowth\\.ai/wall/[a-z0-9_-]+(?:[?#]|$)"
+        }
+      },
+      "script[data-wall-id]:not([data-wall-id=\"\"])": {
+        "attributes": {
+          "src": "^https?://(?:www\\.)?reviewgrowth\\.ai/wall\\.js(?:[?#]|$)"
+        }
+      }
+    },
+    "icon": "Review Growth.png",
+    "pricing": [
+      "mid",
+      "recurring"
+    ],
+    "saas": true,
+    "website": "https://www.reviewgrowth.ai"
   },
   "Review Stars": {
     "cats": [

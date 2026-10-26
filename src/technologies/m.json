@@ -2948,6 +2948,7 @@
       25
     ],
     "dom": "div[class*='mermaid']",
+    "icon": "Mermaid.svg",
     "js": {
       "mermaid": ""
     },
@@ -5443,7 +5444,16 @@
       52
     ],
     "description": "Muchat is a customer support tool that uses artificial intelligence to deliver personalized conversations by leveraging customer data.",
-    "dom": "div[class^='muchat-chatbox'], style[data-emotion*='muchat-chatbox-bubble']",
+    "dom": {
+      "div[class^='muchat-chatbox'], style[data-emotion*='muchat-chatbox-bubble']": {
+        "exists": ""
+      },
+      "iframe[src*='widget.mu.chat/widget-v2']": {
+        "attributes": {
+          "src": "^https://widget\\.mu\\.chat/widget-v2\\?(?:[^#]*&)?website_token=[^&#]+(?:[&#]|$)"
+        }
+      }
+    },
     "icon": "Muchat.svg",
     "js": {
       "Muchat": ""

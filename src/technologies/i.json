@@ -3035,6 +3035,23 @@
     "website": "https://ipstack.com",
     "xhr": "api\\.ipstack\\.com"
   },
+  "ispmanager": {
+    "cats": [
+      9
+    ],
+    "cpe": "cpe:2.3:a:ispmanager:ispmanager:*:*:*:*:*:*:*:*",
+    "description": "ispmanager is a Linux hosting control panel for managing websites, domains, email, databases, and servers.",
+    "dom": "isp-root isp-login-form",
+    "icon": "ispmanager.svg",
+    "js": {
+      "pageInfo.url": "^https?://[^/]+/ispmgr(?:[?#]|$)"
+    },
+    "pricing": [
+      "low",
+      "recurring"
+    ],
+    "website": "https://www.ispmanager.com"
+  },
   "iubenda": {
     "cats": [
       67

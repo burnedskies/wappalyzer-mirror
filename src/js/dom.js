@@ -59,6 +59,8 @@
     // Fail quietly
   }
 
+  // Ask the isolated content script to detach this node before updating it.
+  script.dispatchEvent(new Event('wappalyzer:detach'))
   script.removeAttribute('data-wappalyzer')
   script.dataset.wappalyzerResult = JSON.stringify({ dom: detections })
   script.dispatchEvent(new Event('wappalyzer:response'))

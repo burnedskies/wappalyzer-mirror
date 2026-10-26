@@ -33,6 +33,32 @@
     "scripts": "cdn\\.b12\\.io",
     "website": "https://www.b12.io"
   },
+  "B2BKing": {
+    "cats": [
+      87
+    ],
+    "description": "B2BKing is a WooCommerce plugin for wholesale pricing, business registration, quote requests, and bulk ordering.",
+    "dom": {
+      "link[id='b2bking_main_style-css'][rel='stylesheet']": {
+        "attributes": {
+          "href": "/plugins/b2bking(?:-\\d+)?/(?:public/\\.\\./)?includes/assets/css/style(?:\\.min)?\\.css(?:[?#]|$)"
+        }
+      }
+    },
+    "icon": "B2BKing.svg",
+    "js": {
+      "b2bking_display_settings": ""
+    },
+    "oss": true,
+    "pricing": [
+      "low",
+      "recurring",
+      "onetime",
+      "freemium"
+    ],
+    "requires": "WooCommerce",
+    "website": "https://b2bkingplugin.com"
+  },
   "B2C Europe": {
     "cats": [
       99
@@ -1146,6 +1172,28 @@
     "saas": true,
     "website": "https://www.wpbeaverbuilder.com/"
   },
+  "Bed": {
+    "cats": [
+      6
+    ],
+    "description": "Bed is an ecommerce platform by Mooba for online stores and restaurants, with catalog, order, and payment management.",
+    "headers": {
+      "x-bed-platform": "^bed$"
+    },
+    "icon": "Bed.svg",
+    "js": {
+      "__BED__.platform": "^bed$"
+    },
+    "meta": {
+      "generator": "^Bed$"
+    },
+    "pricing": [
+      "recurring",
+      "payg"
+    ],
+    "saas": true,
+    "website": "https://bed.mooba.co"
+  },
   "BedBooking": {
     "cats": [
       93
@@ -1274,6 +1322,22 @@
     "saas": true,
     "scripts": "\\.beezer\\.com",
     "website": "https://www.beezer.com"
+  },
+  "Behold": {
+    "cats": [
+      5
+    ],
+    "description": "Behold provides embeddable Instagram galleries and JSON feeds for websites and apps.",
+    "dom": "behold-widget[feed-id]:not([feed-id=''])",
+    "icon": "Behold.svg",
+    "pricing": [
+      "low",
+      "freemium",
+      "recurring"
+    ],
+    "saas": true,
+    "scriptSrc": "^https?://w\\.behold\\.so/widget\\.js(?:[?#]|$)",
+    "website": "https://behold.so"
   },
   "Behzi": {
     "cats": [
@@ -2176,7 +2240,6 @@
     "cats": [
       66
     ],
-    "css": "--bits-(?:accordion|popover|select|tooltip)-",
     "description": "Bits UI is an open-source headless component library for building accessible Svelte interfaces.",
     "dom": "[id^='bits-'][data-accordion-root], [id^='bits-'][data-checkbox-root], [id^='bits-'][data-dialog-trigger], [id^='bits-'][data-dropdown-menu-trigger], [id^='bits-'][data-popover-trigger], [id^='bits-'][data-select-trigger], [id^='bits-'][data-tabs-root], [id^='bits-'][data-tooltip-trigger]",
     "icon": "Bits UI.svg",
@@ -4699,6 +4762,21 @@
     "scriptSrc": "/wp-content/themes/bricks/assets/",
     "website": "https://bricksbuilder.io"
   },
+  "Bricksforge": {
+    "cats": [
+      87
+    ],
+    "cpe": "cpe:2.3:a:bricksforge:bricksforge:*:*:*:*:*:wordpress:*:*",
+    "description": "Bricksforge is a WordPress plugin that extends Bricks with forms, animations, dynamic data, and workflow tools.",
+    "icon": "Bricksforge.png",
+    "pricing": [
+      "onetime",
+      "recurring"
+    ],
+    "requires": "Bricks",
+    "scriptSrc": "^https?://[^/?#]+/(?:[^?#]*/)?wp-content/plugins/bricksforge/assets/js/bricksforge_(?:elements|panel|scrollsmoother|transitions)(?:\\.min)?\\.js(?:[?#]|$)",
+    "website": "https://bricksforge.io"
+  },
   "Bricksite": {
     "cats": [
       51
@@ -4826,6 +4904,19 @@
     },
     "scriptSrc": "\\.brightspotcdn\\.com",
     "website": "https://www.brightspot.com"
+  },
+  "BrikPanel": {
+    "cats": [
+      87
+    ],
+    "description": "BrikPanel is a WooCommerce plugin for store management, sales reporting, visitor tracking, and abandoned cart recovery.",
+    "oss": true,
+    "requires": "WooCommerce",
+    "scriptSrc": [
+      "/wp-content/plugins/brikpanel-admin-panel-dashboard-for-woocommerce/front-end/products/brikpanel-variation-gallery\\.js(?:\\?ver=([0-9]+(?:\\.[0-9]+)+)(?:&|$)|[?#]|$)\\;version:\\1",
+      "/wp-content/plugins/brikpanel-admin-panel-dashboard-for-woocommerce/front-end/cart-abandonment/(?:cart-abandonment|brikpanel-consent-signal)\\.js(?:[?#]|$)"
+    ],
+    "website": "https://wordpress.org/plugins/brikpanel-admin-panel-dashboard-for-woocommerce/"
   },
   "Brilliant Web-to-Lead": {
     "cats": [

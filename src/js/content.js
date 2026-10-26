@@ -299,14 +299,20 @@ function inject(src, id, message) {
     const script = document.createElement('script')
     let settled = false
 
+    // Detach synchronously before the page bridge updates its attributes, which
+    // avoids a Chrome DevTools rendering race. Use the isolated world's remove()
+    // so page overrides cannot prevent cleanup or break detection responses.
+    const onDetach = () => script.remove()
+
     const settle = (value = []) => {
       if (settled) {
         return
       }
 
       settled = true
+      script.removeEventListener('wappalyzer:detach', onDetach)
       script.removeEventListener('wappalyzer:response', onResponse)
-      script.remove()
+      onDetach()
       resolve(value)
     }
 
@@ -321,6 +327,7 @@ function inject(src, id, message) {
       }
     }
 
+    script.addEventListener('wappalyzer:detach', onDetach)
     script.addEventListener('wappalyzer:response', onResponse)
     script.onload = () => settle()
     script.onerror = () => settle()
